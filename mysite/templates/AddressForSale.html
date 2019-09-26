@@ -2,18 +2,13 @@
 {% extends 'base/Navbar.html' %}
 {% load static %}
 {% block head_title %}نشر منزلك{% endblock %}
-
-  {% block content %}
-
+{% block content %}
   <style>
-
-
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
 /* Styles */
 #map {height: 498px;width:1350px;}
 }
-
 /* Large screens ----------- */
 @media only screen  and (min-width : 1824px) {
 /* Styles */
@@ -74,24 +69,12 @@
     margin: 0;
     /* background-position: 45% 100%; */
 }
-
-
-  </style>
-
-
-
-
-
-
+ </style>
 <link href="{% static 'css/shademaster.css' %}" type="text/css" rel="stylesheet" media="all" />
-
-
 <link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
 <link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
 <link href="{% static 'css/posting-landing.css' %}" type="text/css" rel="stylesheet" />
-
-
-            <style>
+<style>
             ol, ul {
     padding-right: 14px;
 }
@@ -107,25 +90,18 @@
     border-left-style: solid;
     right: 3.59em;
     transform: rotate(270deg);
-
 }
-
-
 .zsg-layout_lg .zsg-layout-width, .zsg-layout_lg .zsg-subfooter-content {
     max-width: 1350px;
 }
-
 .zsg-layout-top {
     padding-top: 0px;
 }
-
-
-  html{
+html{
     width:100%;
     overflow-x:hidden;
     position: absolute;
     }
-
 body {
 	font-size: 15px;
 	margin: 0;
@@ -134,7 +110,6 @@ body {
 	color: #545759
 	-webkit-overflow-scrolling: touch
 }
-
 select, select[disabled] {
       background-position: 8px;
 }
@@ -151,18 +126,11 @@ select:focus {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-
     }
-
-
 </style>
-
-
  <div class="zsg-layout-width zsg-layout-top zsg-layout-bottom" style="direction:rtl;text-align:right">
         <main class="zsg-layout-content" style="mirgin:0px;">
-
-
-                          <div style="direction:rtl;text-align:right;" id="landing-background" class="zsg-image">
+		<div style="direction:rtl;text-align:right;" id="landing-background" class="zsg-image">
                     <h1 id="posting-trapezoid" class="zsg-trapezoid zsg-trapezoid_darkblue zsg-trapezoid_br zsg-image-trapezoid trapezoid-mmm">الموقع</h1>
                     <div id="posting-landing-overlay" class="zsg-image-overlay overlay-mmm">
                         <div id="form-container">
@@ -172,8 +140,6 @@ select:focus {
                             <input id="isLoggedIn" type="hidden" value="true">
                             <input id="draftAddressString" type="hidden" value="">
                             <div id="posting-launch-form" class="null">
-
-
                                 <form accept-charset="UTF-8" method="post" name="addressForm" id="addressForm" class="zss-form posting-launch-form">
               {% csrf_token %}
                                     <div class="posting-launch-form-header" id="yui_3_18_1_1_1566204277246_119" style="direction:rtl;text-align:right">
@@ -183,12 +149,9 @@ select:focus {
                                             </li>
                                         </ul>
                                     </div>
-
-
                                     <div class="zsg-g" id="yui_3_18_1_1_1566204277246_115">
                                         <div id="posting-fields" class="zsg-md-1-1 zsg-lg-2-3">
                                             <fieldset id="addressFieldset">
-
                                                 <input class="form-control" type="text" name="address" value="" id="address" placeholder="عنوان الشارع" maxlength="44">
                                             </fieldset>
                                             <fieldset id="latitudeFieldset" class="no-clear">
@@ -207,7 +170,6 @@ select:focus {
                                                 </fieldset>
                                             </div>
                                             <button type="submit" class="posting-launch-form-cover-button zsg-button_alt" id="continueButton"> استمر <span class="posting-launch-form-spinner-placeholder"></span></button>
-
                                         </div>
                                         <div id="mmm-message" class="zsg-lg-1-3 zsg-md-1-1" style="text-align:right;">
                                             <h5 id="yui_3_18_1_1_1566204277246_132">تنبيه المشترين المحتملين أنك ترغب في البيع دون وضع منزلك رسميا في السوق</h5></div>
@@ -222,9 +184,6 @@ select:focus {
                     <dd><button href="#" id="map-link-for-sale" data-ga-action="ComingSoon">الخريطة</button></dd>
                       </dl>
             <div id="map" style="z-index:2;"></div>
-
-
-
                 <section class="zsg-content-section posting-launch-secondary-top">
                     <h2> لماذا النشر على فرص؟ </h2></section>
                 <section class="posting-launch-why-post zsg-content-section">
@@ -262,24 +221,11 @@ select:focus {
             </div>
         </main>
     </div>
-
-
-
-
-      {% include 'base/footer.html' %}
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-
-  <!-- Google Maps scripts. -->
-
-
-
-
-
+{% include 'base/footer.html' %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Google Maps scripts. -->
     <script>
         var map, marker ,infoWindow;
         var geocoder;
@@ -377,11 +323,7 @@ select:focus {
         }
         ,
 };
-
-
-
-
-        function initMap() {
+ function initMap() {
 
             // Display a map on the page
              map = new google.maps.Map(document.getElementById('map'), {
@@ -399,11 +341,7 @@ select:focus {
             });
 
          //map.controls[google.maps.ControlPosition.TOP_LEFT].push(document.getElementById('search-page-map-container'));
-
-
-
-            map.setTilt(45);
-
+map.setTilt(45);
             // Try HTML5 geolocation to get location
               infoWindow = new google.maps.InfoWindow;
               geocoder = new google.maps.Geocoder;
@@ -433,9 +371,7 @@ strokeColor: '#fff',
         strokeWeight:1.8,
     },
                     });
-
-
-                    marker.addListener('click', function() {alert(3);
+ marker.addListener('click', function() {alert(3);
                     });
   marker.addListener('mouseover', function() {
   infoWindow.setContent('منزلك');
@@ -462,17 +398,9 @@ strokeColor: '#fff',
         });
   });
 
-
-
-
-
-
-
-                    map.setCenter(pos);
-
-                    updateMarkerPosition(marker.getPosition());
-                    geocodePosition(pos);
-
+map.setCenter(pos);
+updateMarkerPosition(marker.getPosition());
+geocodePosition(pos);
                     // Add dragging event listeners.
                     google.maps.event.addListener(marker, 'dragstart', function() {
                         updateMarkerAddress('Dragging...');
@@ -511,10 +439,7 @@ strokeColor: '#fff',
                 if (!place.place_id) {
                     return;
                 }
-
-
                 geocoder.geocode({'placeId': place.place_id}, function (results, status) {
-
                     if (status !== 'OK') {
                         window.alert('فشل Geocoder بسبب: ' + status);
                         return;
@@ -522,8 +447,6 @@ strokeColor: '#fff',
                     map.setZoom(10);
                     map.setCenter(results[0].geometry.location);
                     // Set the position of the marker using the place ID and location.
-
-
                 });
 
             });
@@ -620,10 +543,7 @@ $('#longitude').val(citys[key].lng);
 });
     </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXMlFT_q3ELULT-AOhHcheUKy1eDccSTg&callback=initMap&libraries=places" async defer></script>
-
-
-
-  <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+<script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
    <script>
 jQuery("#map-link-for-sale").click(function() {
 
@@ -637,10 +557,5 @@ jQuery("#map-link-for-sale").click(function() {
             $('#map').addClass('active');
         }
 });
-
-
-
-
 </script>
-
-        {% endblock %}
+{% endblock %}
