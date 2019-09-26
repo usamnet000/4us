@@ -1,0 +1,1012 @@
+
+{% extends 'base/Navbar.html' %}
+{% load static %}
+{% block head_title %}تعديل الملف الشخصيء الخاص بك{% endblock %}
+  {% block content %}
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+
+<link href="{% static 'css/profile/profile.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/contact-card.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/manage-profile.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/public-action-bar.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/team-member-list.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/profile-tools.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/team-summary.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/profile-professional-summary.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/z-toggle-content.css' %}" type="text/css" rel="stylesheet" />
+<style>
+    .zsg-layout-abc-b, .zsg-layout-bc-b {
+    width: 100%;
+    padding-left: 120px;
+    margin-right: 0px;
+    margin-top: 33px;
+}
+
+
+  body{
+    overflow-x:hidden;
+    overflow-y:auto;
+text-align:right;
+  }
+  .zsg-layout-abc-c, .zsg-layout-bc-c {
+    width: 300px;
+    margin-right: -300px;
+}
+
+ol, ul {
+    padding-right: 40px;
+}
+
+@media only screen and (max-width: 767px){
+/* Styles */
+#cCol-pro-contact-info
+{
+display:none;
+}
+}
+@media only screen and (min-width: 768px){
+/* Styles */
+#cCol-pro-contact-info
+{
+display:block;
+}
+}
+.zsg-tabs>li {
+    display: inline-block;
+    padding-right: 0px;
+    top: 4px;
+    font-size:14px;
+
+}
+
+
+</style>
+
+
+
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link id="avast_os_ext_custom_font" href="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/fonts/fonts.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" id="sb-font-awesome-css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+<link href="{% static 'css/profile/ie.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/header.min.css' %}" type="text/css" rel="stylesheet" />
+<style>
+    @media screen and (max-width: 767px){
+.blog_page_filter_col_mobile {
+    position: relative;
+    margin-bottom: 0px;
+    z-index: 9;
+}
+.bpf_btn_in::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    bottom: 0;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.bpf_box_item {
+    width: 90%;
+    float: left;
+    padding: 10px 0 9px;
+}
+
+</style>
+
+
+
+
+        <main role="main">
+            <div class="blog_page">
+                <div class="page_banner">
+                    <div class="container">
+                        <div class="page_banner_title">نظرة عامة</div>
+                        <div class="page_banner_content">Get inspired with outdoor living tips from Shademaster.</div>
+                    </div>
+                </div>
+                <div class="blog_page_wrap">
+                    <div class="blog_page_content_wrap">
+                        <div class="blog_page_filter_col_mobile visible-xs">
+                            <div class="bpf_btn">
+                                <div class="container"> <span class="bpf_btn_in">خيارات الضبط:</span></div>
+                            </div>
+                            <div class="bpf_wrap_mobile" style="display: none;">
+                                <div class="container big-container bpf_container">
+                                    <div class="bpf_box_wrap">
+                                        <div class="bpf_box clearfix">
+                                            <div class="bpf_box_item">
+                                                <div class="bpfbi_title">حساب</div>
+                                                <ul class="bpfbi_items">
+                                                <li> <a href="/savedhomes/">المنازل المحفوظة</a></li>
+                                                <li> <a href="/EditProfile">الملف الشخصي</a></li>
+                                                <li> <a href="{% url 'Account' %}">إعدادت الحساب</a></li>
+                                                <li> <a href="{% url 'password_change' %}">كلمة المرور</a></li>
+                                                        </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="blog_page_content_col" style="">
+                            <div class="bp_items">
+                                <div class="bp_item element_anim_1 start_anim">
+                                    <div class="container big-container">
+                                        <div class="bp_item_wrap">
+                                            <div class="bp_item_in feature">
+
+
+
+    <link href="https://www.zillowstatic.com/static-profile/aa91e8a/static-profile/css/z-pages/edit-profile.css" type="text/css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" media="all" href="https://www.zillowstatic.com/s/?static.80d5e73=css/z-modules/upload-image-component.css,css/z-modules/image-upload-preview-pane.css" type="text/css">
+
+
+         <main class="zsg-layout-content" style="direction:rtl;padding:33px">
+    <header id="edit-form-header">
+        <h1 id="yui_3_18_1_1_1567957377165_359">تحرير معلومات الملف الشخصي</h1>
+        <p id="profile-prompts" class="profile-prompts zsg-content-component"><span class="profile-prompts-lightbulb"><span class="zsg-icon-circlebulb"></span></span>
+تريد تعديل تفضيلاتك؟ تغيير  <a href="{% url 'password_change'%}">كلمة المرور</a>الخاصة بك،و <a href="{% url 'ChangeEmail' %}">البريد الإلكتروني</a>، أو <a href="{% url 'Account' %}" class="contact-preferences">تفضيلات الاتصال</a>. </p>
+    </header>
+             <form accept-charset="UTF-8" name="ForSaleForm"  name="editForm" id="editForm" class="zsg-form auth-form profile-edit-form show-professional" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+        <fieldset id="yui_3_18_1_1_1567957377165_338">
+            <div class="screen-name-edit" id="screen-name-edit_toggleArea">
+                <div class="has-captions sub-section-content separator" id="yui_3_18_1_1_1567957377165_356">
+                    <ul class="form-field-wrapper" id="yui_3_18_1_1_1567957377165_355">
+                        <li class="zsg-form-field zsg-g full-name" id="yui_3_18_1_1_1567957377165_354">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="firstName">الاسم الكامل &nbsp;<span class="optional-field zsg-fineprint hide">(اختياري)</span></label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1 inline-form-fields preview-signature-full-name" id="yui_3_18_1_1_1567957377165_353">
+                                <div class="preview-signature-first-name">
+                                    <input type="text" name="firstName" value="{% if profile.firstName %}{{profile.firstName}}{% endif %}" id="firstName" placeholder="الاسم الاول" class="preview-signature" maxlength="20">
+                                </div>
+                                <div class="preview-signature-last-name">
+                                    <input type="text" name="lastName" value="{% if profile.lastName %}{{profile.lastName}}{% endif %}" id="lastName" placeholder="الاسم الأخير" class="preview-signature" maxlength="20">
+                                </div>
+                                <p class="zsg-form-help-text" id="yui_3_18_1_1_1567957377165_352">الرجاء إدخال اسمك الأول والأخير فقط. لا ألقاب أو نوبات.</p>
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1 screenname">
+                                <label for="screenName">الاسم الذي سيظهر</label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1 screenname">
+                                <input type="text" name="screenName" id="screenName" value="{% if profile.screenName %}{{profile.screenName}}{% else %}{{profile.user.username}}{% endif %}" maxlength="20">
+                                <div class="async-validator-feedback" id="feedback_screenName"></div>
+                                <p class="zsg-form-help-text preview-profile-url-container"> عنوان الملف الشخصي:
+<span id="preview-profile-url">https://4us.pythonanywhere.com/profile/{% if profile.screenName %}{{profile.screenName}}{% else %}{{profile.user.username}}{% endif %}/</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="zsg-content-component form-field-wrapper">
+                <li class="zsg-form-field zsg-g">
+                    <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                        <label>صورة الملف الشخصي &nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                    </div>
+                    <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                        <div id="profileImage" class="image-uploader">
+                            <div class="zsg-content-item" id="yui_3_18_1_1_1567957377165_38">
+                                <div id="profileImage_upload-wrap" class="yui3-widget yui3-image-upload upload-image-component" data-context-id="1567957376183">
+                                    <div data-iframe-src="" id="profileImage_upload-target" class="yui3-image-upload-content hide-instructions">
+
+
+<style>
+input[type=file] {
+ position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    border: solid transparent;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 4;
+}
+
+</style>
+                                          <div class="zsg-button" style="transform: scaleX(1);">
+                                              <span>إضافة صورة شخصية</span>
+                               <input id="upload_image" name="firstImage" type="file" accept="image/*" onchange="loadFile(event)" class="">
+                    </div>
+                                    </div>
+                                </div>
+                                <p class="zsg-form-help-text"> يجب أن تكون الصورة 180 بكسل 180 بكسل على الأقل وبتنسيق jpg. </p>
+                                <div class="message-bar error zsg-notification-text-error hide"></div>
+                            </div>
+                            <div id="profileImage_preview" class="yui3-widget yui3-image-upload-preview-list" data-context-id="1567957376183">
+                                <div class="firstImage"></div>
+                                 <ul class="preview-images yui3-widget yui3-image-upload-preview-list-content" id="yui_3_18_1_1_1567859632609_81">
+                                    <li id="X1-IA56lxghyghu601000000000_ihtbl" class="yui3-widget yui3-image-upload-preview yui3-image-upload-preview-content mainImage">
+                                        <p class="thumbnail" id="yui_3_18_1_1_1567859632609_197">
+                                            <img alt="" id="output" src="" class="thumbnail" width="70px" height="70px">
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a name="joinDirectory"></a>
+            <div class="zsg-form-field" id="yui_3_18_1_1_1567957377165_337">
+                <div class="zsg-form-field zsg-form-field_checkbox" id="yui_3_18_1_1_1567957377165_336">
+                    <input type="checkbox" name="proCheckbox" id="landlord-or-pro">
+                    <label for="landlord-or-pro" id="yui_3_18_1_1_1567957377165_335">أنا مالك أو مهني</label>
+                </div>
+            </div>
+            <div id="proInfo_toggleArea" class="professional Unknown">
+                <ul id="proType_toggleArea" class="zsg-content-component">
+                    <li class="zsg-form-field zsg-g">
+                        <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                            <label for="profession-category">المهنة</label>
+                        </div>
+                        <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                            <select name="proSelect" id="profession-category" >
+                                            <option value="0">إختر فئتك</option>
+                                            <option value="1">وكيل عقارات / وسيط</option>
+                                            <option value="2">مقرض عقاري</option>
+                                            <option value="3">خدمات تحسين المنزل</option>
+                                            <option value="4">مالك</option>
+                                            <option value="5">مصور فوتوغرافي</option>
+                                            <option value="6">باني منازل</option>
+                                            <option value="7">مدير الملكية</option>
+                                            <option value="8">العقارات المهنية الأخرى</option>
+                          </select>
+                        </div>
+                    </li>
+                </ul>
+                <div class="has-captions sub-section-content non-lender-fields separator">
+                    <ul class="edit-profile-professional-fields form-field-wrapper">
+                        <li class="zsg-form-field zsg-g is-landlord hide">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <div class="zsg-form-field zsg-form-field_checkbox">
+                                    <input id="community-pillar-checkbox" name="communityPillar" type="checkbox">
+                                    <label for="community-pillar-checkbox">أنا ركيزة المجتمع&nbsp;</label>
+                                </div>
+                            </div>
+                            <div class="label zsg-lg-1-1 zsg-sm-1-1">
+                                <p class="zsg-fineprint">  وافق ملاك العقار المجتمعي على تعديل عملية الفرز القياسية للمستأجرين من أجل مساعدة المتقدمين الذين لديهم دخول منخفضة ، أو بطالة في العمل  - على الحصول على سكن. يعلم ملاك العقارات أن تأمين الإسكان الآمن والموثوق هو في كثير من الأحيان الخطوة الأولى نحو مستقبل أفضل ، ويريدون مساعدة الجميع في مجتمعهم على إيجاد طريقهم إلى المنزل.  </p>
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g non-landlord">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="title">عنوان المهنه &nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                <input type="text" name="Title" value="" id="title" maxlength="35" class="longtext">
+                                <p id="pro-title-hint" class="zsg-form-help-text non-landlord"> ليس لدينا تصنيف فئتك حتى الان ، لكننا سنضيفها إلى "دليل المحترفين" قريبًا.</p>
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="companyName">الاسم التجاري</label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                <input type="text" name="companyName" value="" id="companyName" maxlength="70" class="longtext">
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="companyAddress">عنوان العمل</label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                <input type="text" name="companyAddress" value="" id="companyAddress" maxlength="80" class="longtext">
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="companyCity">المدينة</label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1 company-address inline-form-fields">
+                                <select name="companyCity" id="companyCity" class="state-select">
+                {% for value, name in form.fields.city.choices %}
+                                                <option value="{{ value }}">{{ name }}</option>
+                                                    {% endfor %}
+
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g" id="business-phone-edit">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="phoneCompany">هاتف العمل</label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1"><span class="area-code">
+                                <input type="text" name="phoneCompany" value="" id="phoneCompany" size="12" maxlength="12" pattern="\d*" placeholder="967555555555" class="numeric phone-3 area-code-input"></span>&nbsp;
+                                          </li>
+                        <li class="zsg-form-field zsg-g" id="mobile-phone-edit">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="CellPhone">الهاتف الخلوي &nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1"><span class="area-code"><input id="CellPhone" type="text" name="CellPhone" value="" id="areaCode_0" size="12" maxlength="12" pattern="\d*" placeholder="967555555555" class="numeric phone-3 area-code-input"></span>&nbsp;
+                                    </li>
+
+                        <li class="zsg-form-field zsg-g non-landlord">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="professional-licenses">التراخيص المهني <span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                <div id="professional-licenses">
+                                    <div class="professional-license-field zsg-form-field zsg-g">
+                                        <div class="sub-label zsg-lg-1-5 zsg-sm-1-1">
+                                            <label for="license-description">وصف:</label>
+                                        </div>
+                                        <div class="sub-field zsg-lg-4-5 zsg-sm-1-1">
+                                            <input type="text" name="otherLicenseDescription" value="" id="license-description" placeholder="أدخل عنوان الترخيص و / أو الحالة الصادرة" maxlength="128">
+                                        </div>
+                                    </div>
+                                    <div id="license-number-container">
+                                        <div id="license-number-section" class="zsg-content-item">
+                                            <div class="professional-license-field zsg-g">
+                                                <div class="sub-label zsg-lg-1-5 zsg-sm-1-1">
+                                                    <label for="license-number">رقم الترخيص#:</label>
+                                                </div>
+                                                <div id="license-number-input-container" class="sub-field zsg-lg-3-5 zsg-sm-1-1">
+                                                    <input type="text" name="otherLicenseNumber" value="" id="license-number" placeholder="أدخل رقم الترخيص" maxlength="128">
+                                                </div>
+                                                <div class="add-more-wrapper zsg-lg-1-5 zsg-sm-1-1"><a id="add-license" class="add-more-link">أضف المزيد</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul id="professional-license-list"></ul>
+                                    <p id="professional-license-instruction" class="zsg-form-help-text">
+لإضافة تراخيص متعددة ، أدخل الترخيص الأول # والوصف ثم انقر فوق "إضافة المزيد". كرر ذلك حتى تنتهي من إضافة التراخيص. </p>
+                                </div>
+                                <input type="text" name="otherProfessionalLicenses" value="[]" id="otherProfessionalLicenses" class="hide">
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g non-landlord">
+                            <div id="edit-service-areas-container">
+                                <div>
+                                    <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                        <label for="serviceAreasInput">مناطق الخدمة&nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                                    </div>
+                                    <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                        <div class="Flex-sc-1qcb5a7-0 eJNXnu">
+                                            <div display="inline-flex" class="Flex-sc-1qcb5a7-0 ServiceAreasEdit__StyledServiceAreasInput-sc-139zt27-0 hGupqf ServiceAreasInput__StyledInputContainer-sc-1iwfvhd-2 bQMEGz">
+                                                <div class="Flex-sc-1qcb5a7-0 daLwBh">
+                                                    <input name="serviceAreasInput" id="serviceAreasInput" placeholder="الحي ، المدينة ، المديرية ، إلخ." type="text" class="Input-sc-7nzn9k-0 ServiceAreasInput__StyledInput-sc-1iwfvhd-0 fHAQnh" value="">
+                                                </div>
+                                                <div class="Flex-sc-1qcb5a7-0 ServiceAreasInput__TextButtonWrapper-sc-1iwfvhd-3 dxtZHI">
+                                                   <div class="add-more-wrapper zsg-lg-1-5 zsg-sm-1-1"><a id="add-service" class="add-more-link">أضف المزيد</a></div>
+                                                </div>
+                                            </div>
+                                            <div display="flex" class="Flex-sc-1qcb5a7-0 emXzCJ"></div>
+                                            <p class="FormHelp-q8q8kh-0 ServiceAreasEdit__HelpText-sc-139zt27-2 lmOutU">أدخل المناطق التي تخدمها. لإضافة مناطق متعددة ، أدخل منطقتك الأولى في المربع وانقر على "إضافة المزيد". ثم كرر مع منطقة الخدمة القادمة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="zsg-form-field zsg-g non-landlord">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="languageFluency">إجادة اللغة &nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                <div id="language">
+                                    <ul id="language-list" class="yui3-toggle-content-minimized zsg-g">
+                                        <li class="zsg-lg-1-2 zsg-form-field zsg-form-field_checkbox">
+                                            <input type="checkbox" name="Arabic" id="checkbox_ll_0">
+                                            <label for="checkbox_ll_0">عربي</label>
+                                        </li>
+                                        <li class="zsg-lg-1-2 zsg-form-field zsg-form-field_checkbox">
+                                            <input type="checkbox" name="English" id="checkbox_ll_1">
+                                            <label for="checkbox_ll_1">أنجليزي</label>
+                                        </li>
+                                        <li class="minimize zsg-lg-1-1">&nbsp;</li>
+                                        <li class="yui3-toggle-content-link-block zsg-lg-1-1"><a href="#" class="yui3-toggle-content-link"><span class="maximize">أكثر </span><span class="minimize">أقل </span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g non-landlord">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="yearsExperience">في العمل منذ&nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                <select name="yearsExperience" id="yearsExperience">
+                                    <option value="0" selected="selected"></option>
+                                    <option value="1">2019</option>
+                                    <option value="2">2018</option>
+                                    <option value="3">2017</option>
+                                    <option value="4">2016</option>
+                                    <option value="5">2015</option>
+                                    <option value="6">2014</option>
+                                    <option value="7">2013</option>
+                                    <option value="8">2012</option>
+                                    <option value="9">2011</option>
+                                    <option value="10">2010</option>
+                                    <option value="11">2009</option>
+                                    <option value="12">2008</option>
+                                    <option value="13">2007</option>
+                                    <option value="14">2006</option>
+                                    <option value="15">2005</option>
+                                    <option value="16">2004</option>
+                                    <option value="17">2003</option>
+                                    <option value="18">2002</option>
+                                    <option value="19">2001</option>
+                                    <option value="20">2000</option>
+                                    <option value="21">1999</option>
+                                    <option value="22">1998</option>
+                                    <option value="23">1997</option>
+                                    <option value="24">1996</option>
+                                    <option value="25">1995</option>
+                                    <option value="26">1994</option>
+                                    <option value="27">1993</option>
+                                    <option value="28">1992</option>
+                                    <option value="29">1991</option>
+                                    <option value="30">1990</option>
+                                    <option value="31">1989</option>
+                                    <option value="32">1988</option>
+                                    <option value="33">1987</option>
+                                    <option value="34">1986</option>
+                                    <option value="35">1985</option>
+                                    <option value="36">1984</option>
+                                    <option value="37">1983</option>
+                                    <option value="38">1982</option>
+                                    <option value="39">1981</option>
+                                    <option value="40">1980</option>
+                                    <option value="41">1979</option>
+                                    <option value="42">1978</option>
+                                    <option value="43">1977</option>
+                                    <option value="44">1976</option>
+                                    <option value="45">1975</option>
+                                    <option value="46">1974</option>
+                                    <option value="47">1973</option>
+                                    <option value="48">1972</option>
+                                    <option value="49">1971</option>
+                                    <option value="50">1970</option>
+                                    <option value="51">1969</option>
+                                    <option value="52">1968</option>
+                                    <option value="53">1967</option>
+                                    <option value="54">1966</option>
+                                    <option value="55">1965</option>
+                                    <option value="56">1964</option>
+                                    <option value="57">1963</option>
+                                    <option value="58">1962</option>
+                                    <option value="59">1961</option>
+                                    <option value="60">1960</option>
+                                    <option value="61">1959</option>
+                                    <option value="62">1958</option>
+                                    <option value="63">1957</option>
+                                    <option value="64">1956</option>
+                                    <option value="65">1955</option>
+                                    <option value="66">1954</option>
+                                    <option value="67">1953</option>
+                                    <option value="68">1952</option>
+                                    <option value="69">1951</option>
+                                    <option value="70">1950</option>
+                                    <option value="71">1949</option>
+                                    <option value="72">1948</option>
+                                    <option value="73">1947</option>
+                                    <option value="74">1946</option>
+                                    <option value="75">1945</option>
+                                    <option value="76">1944</option>
+                                    <option value="77">1943</option>
+                                    <option value="78">1942</option>
+                                    <option value="79">1941</option>
+                                    <option value="80">1940</option>
+                                    <option value="81">1939</option>
+                                    <option value="82">1938</option>
+                                    <option value="83">1937</option>
+                                    <option value="84">1936</option>
+                                    <option value="85">1935</option>
+                                    <option value="86">1934</option>
+                                    <option value="87">1933</option>
+                                    <option value="88">1932</option>
+                                    <option value="89">1931</option>
+                                    <option value="90">1930</option>
+                                    <option value="91">1929</option>
+                                    <option value="92">1928</option>
+                                    <option value="93">1927</option>
+                                    <option value="94">1926</option>
+                                    <option value="95">1925</option>
+                                    <option value="96">1924</option>
+                                    <option value="97">1923</option>
+                                    <option value="98">1922</option>
+                                    <option value="99">1921</option>
+                                    <option value="100">1920</option>
+                                    <option value="101">1919</option>
+                                    <option value="102">1918</option>
+                                    <option value="103">1917</option>
+                                    <option value="104">1916</option>
+                                    <option value="105">1915</option>
+                                    <option value="106">1914</option>
+                                    <option value="107">1913</option>
+                                    <option value="108">1912</option>
+                                    <option value="109">1911</option>
+                                    <option value="110">1910</option>
+                                    <option value="111">1909</option>
+                                    <option value="112">1908</option>
+                                    <option value="113">1907</option>
+                                    <option value="114">1906</option>
+                                    <option value="115">1905</option>
+                                    <option value="116">1904</option>
+                                    <option value="117">1903</option>
+                                    <option value="118">1902</option>
+                                    <option value="119">1901</option>
+                                    <option value="120">1900</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="zsg-g">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1 non-landlord">
+                                <label for="servicesOffered"> التخصصات (4 كحد أقصى)&nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                                <div id="servicesError" class="zsg-notification-bar services-error hide"><strong>الوصول الأقصى</strong>
+                                    <p>لقد اشتركت بالفعل في أكبر عدد من التخصصات (<strong>4</strong>).</p>
+                                    <p>يرجى إلغاء تحديد اختيار موجود لاختيار اختيار مختلف.</p>
+                                </div>
+                                <div>
+                                    <p class="zsg-form-help-text">من أجل تقليل ارتباك المستهلك ، تقتصر إيجابيات الآن على الظهور في الدليل المهني فقط للتخصصات المتعلقة بنوع الحساب.</p>
+                                    <p class="zsg-form-help-text">لا يزال بإمكانك إدراج التخصصات خارج نوع حسابك وستظهر في ملفك الشخصي.</p>
+                                </div>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1 non-landlord">
+                                <div id="services">
+                                    <div id="service-category-agent" class="service-category zsg-content-item hide">
+                                        <div class="specialty-label zsg-content-item">تخصصات الوكيل</div>
+                                        <ul class="zsg-g">
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_23" id="checkbox_as_0" class="cb">
+                                                <label for="checkbox_as_0">وكيل المشتري</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_24" id="checkbox_as_1" class="cb">
+                                                <label for="checkbox_as_1">وكيل قائمة</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_25" id="checkbox_as_2" class="cb">
+                                                <label for="checkbox_as_2">ناقل</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_26" id="checkbox_as_3" class="cb">
+                                                <label for="checkbox_as_3">حبس الرهن</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_27" id="checkbox_as_4" class="cb">
+                                                <label for="checkbox_as_4">بيع قصير</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_28" id="checkbox_as_5" class="cb">
+                                                <label for="checkbox_as_5">مستشار</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2" id="yui_3_18_1_1_1567957377165_171">
+                                                <input type="checkbox" name="Checkbox_29" id="checkbox_as_6" class="cb">
+                                                <label for="checkbox_as_6">آخر</label>
+                                                <div class="other-input hide">
+                                                    <input type="text" name="TextField" value="" id="TextField" class="text-field">
+                                                    <p class="zsg-form-help-text">خدمات منفصلة مع فواصل</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="service-category-homeimprovement" class="service-category zsg-content-item hide">
+                                        <div class="specialty-label zsg-content-item">تخصصات تحسين المنزل</div>
+                                        <ul class="zsg-g">
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Architecture" id="checkbox_his_28" class="cb">
+                                                <label for="checkbox_his_28">هندسة معمارية</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="HomeBuilding" id="checkbox_his_29" class="cb">
+                                                <label for="checkbox_his_29">بناءا منازل</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Carpentry" id="checkbox_his_30" class="cb">
+                                                <label for="checkbox_his_30">نجارة</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Electrical" id="checkbox_his_31" class="cb">
+                                                <label for="checkbox_his_31">كهرباء</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Engineering" id="checkbox_his_32" class="cb">
+                                                <label for="checkbox_his_32">هندسة</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="GeneralContracting" id="checkbox_his_33" class="cb">
+                                                <label for="checkbox_his_33">مقاولات عامة</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="InteriorDesign" id="checkbox_his_34" class="cb">
+                                                <label for="checkbox_his_34">تصميم داخلي</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Manufacturing" id="checkbox_his_35" class="cb">
+                                                <label for="checkbox_his_35">تصنيع</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Landscaping" id="checkbox_his_36" class="cb">
+                                                <label for="checkbox_his_36">مناظر طبيعية</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Painting" id="checkbox_his_37" class="cb">
+                                                <label for="checkbox_his_37">رسام</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Plumbing" id="checkbox_his_38" class="cb">
+                                                <label for="checkbox_his_38">أنابيب المياه</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Retail" id="checkbox_his_39" class="cb">
+                                                <label for="checkbox_his_39">قطاعي</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2" id="yui_3_18_1_1_1567957377165_177">
+                                                <input type="checkbox" name="IOther" id="checkbox_his_40" class="cb">
+                                                <label for="checkbox_his_40">آخر</label>
+                                                <div class="other-input hide">
+                                                    <input type="text" name="TextField_0" value="" id="TextField_0" class="text-field">
+                                                    <p class="zsg-form-help-text">خدمات منفصلة مع فواصل</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="service-category-photographer" class="service-category zsg-content-item hide">
+                                        <div class="specialty-label zsg-content-item">تخصصات المصور</div>
+                                        <ul class="zsg-g">
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="VideoWalkthrough" id="checkbox_phs_41" class="cb">
+                                                <label for="checkbox_phs_41">فيديو تجول</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Hi-ResPhoto" id="checkbox_phs_42" class="cb">
+                                                <label for="checkbox_phs_42">دقة صور</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="AerialPhotography" id="checkbox_phs_43" class="cb">
+                                                <label for="checkbox_phs_43">التصوير الجوي</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Video" id="checkbox_phs_44" class="cb">
+                                                <label for="checkbox_phs_44">فيديو</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="TwilightPhotography" id="checkbox_phs_45" class="cb">
+                                                <label for="checkbox_phs_45">تصوير الشفق</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="3DTour" id="checkbox_phs_46" class="cb">
+                                                <label for="checkbox_phs_46">جولة ثلاثية الأبعاد</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="FloorPlan" id="checkbox_phs_47" class="cb">
+                                                <label for="checkbox_phs_47">مخطط الطابق</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="MarketingService" id="checkbox_phs_48" class="cb">
+                                                <label for="checkbox_phs_48">خدمة التسويق</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="service-category-builder" class="service-category zsg-content-item hide">
+                                        <div class="specialty-label zsg-content-item">تخصصات البناء</div>
+                                        <ul class="zsg-g">
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="CustomHome" id="checkbox_bs_51" class="cb">
+                                                <label for="checkbox_bs_51">منزل مخصص</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="ProductionHome" id="checkbox_bs_52" class="cb">
+                                                <label for="checkbox_bs_52">منزل الإنتاج</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Community" id="checkbox_bs_53" class="cb">
+                                                <label for="checkbox_bs_53">55+ مجتمع</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="SustainableDesignConstruction" id="checkbox_bs_54" class="cb">
+                                                <label for="checkbox_bs_54">التصميم المستدام &amp; اعمال بناء</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="MasterPlannedCommunity" id="checkbox_bs_55" class="cb">
+                                                <label for="checkbox_bs_55">ماجستير المجتمع المخطط</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="service-category-inspector" class="service-category zsg-content-item hide">
+                                        <div class="specialty-label zsg-content-item">Inspector Specialties</div>
+                                        <ul class="zsg-g">
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_56" id="checkbox_inss_56" class="cb">
+                                                <label for="checkbox_inss_56">General Inspection</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_57" id="checkbox_inss_57" class="cb">
+                                                <label for="checkbox_inss_57">Pest Inspection</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_58" id="checkbox_inss_58" class="cb">
+                                                <label for="checkbox_inss_58">Chimney Inspection</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_59" id="checkbox_inss_59" class="cb">
+                                                <label for="checkbox_inss_59">Sewer Inspection</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_60" id="checkbox_inss_60" class="cb">
+                                                <label for="checkbox_inss_60">Roof Inspection</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="service-category-propertymanagement" class="service-category zsg-content-item hide">
+                                        <div class="specialty-label zsg-content-item">Property Management Specialties</div>
+                                        <ul class="zsg-g">
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_61" id="checkbox_pms_15" class="cb">
+                                                <label for="checkbox_pms_15">Property Management</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_62" id="checkbox_pms_16" class="cb">
+                                                <label for="checkbox_pms_16">Community Pillar</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_63" id="checkbox_pms_18" class="cb">
+                                                <label for="checkbox_pms_18">Vacation / Short-term Rental</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="service-category-investor" class="service-category zsg-content-item hide">
+                                        <div class="specialty-label zsg-content-item">Investor Specialties</div>
+                                        <ul class="zsg-g">
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_64" id="checkbox_invs_61" class="cb">
+                                                <label for="checkbox_invs_61">Fixer Upper</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_65" id="checkbox_invs_62" class="cb">
+                                                <label for="checkbox_invs_62">Tax Lien</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_66" id="checkbox_invs_63" class="cb">
+                                                <label for="checkbox_invs_63">Move-in Ready</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Checkbox_67" id="checkbox_invs_64" class="cb">
+                                                <label for="checkbox_invs_64">Quick Close</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="service-category-realestate" class="service-category zsg-content-item">
+                                        <div class="specialty-label zsg-content-item">التخصصات العقارية الأخرى</div>
+                                        <ul class="zsg-g">
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Appraisal" id="checkbox_ores_7" class="cb">
+                                                <label for="checkbox_ores_7">توصيه</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="CommercialRE" id="checkbox_ores_8" class="cb">
+                                                <label for="checkbox_ores_8">البحث التجاري</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Escrow" id="checkbox_ores_9" class="cb">
+                                                <label for="checkbox_ores_9">الضمان</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Insurance" id="checkbox_ores_11" class="cb">
+                                                <label for="checkbox_ores_11">تأمين</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Legal" id="checkbox_ores_12" class="cb">
+                                                <label for="checkbox_ores_12">قانوني</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Moving" id="checkbox_ores_13" class="cb">
+                                                <label for="checkbox_ores_13">متحرك</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Notary" id="checkbox_ores_14" class="cb">
+                                                <label for="checkbox_ores_14">كاتب عدل</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="Staging" id="checkbox_ores_19" class="cb">
+                                                <label for="checkbox_ores_19">مجرب</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2">
+                                                <input type="checkbox" name="OTitle" id="checkbox_ores_20" class="cb">
+                                                <label for="checkbox_ores_20">معنوان</label>
+                                            </li>
+                                            <li class="zsg-form-field zsg-form-field_checkbox zsg-lg-1-2" id="yui_3_18_1_1_1567957377165_183">
+                                                <input type="checkbox" name="OOther" id="checkbox_ores_21" class="cb">
+                                                <label for="checkbox_ores_21">آخر</label>
+                                                <div class="other-input hide">
+                                                    <input type="text" name="TextField_1" value="" id="TextField_1" class="text-field">
+                                                    <p class="zsg-form-help-text">Separate services with commas</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <ul class="form-field-wrapper">
+                            <li class="zsg-form-field zsg-g">
+                                <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                    <label for="videoUrl">ملف الفيديو الشخصي&nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                                </div>
+                                <div class="video-url-field field zsg-lg-3-4 zsg-sm-1-1">
+                                    <input type="text" name="videoUrl" value="" id="videoUrl">
+                                    <p class="video-url-info zsg-form-help-text">الصق "مشاركة" عنوان URL من YouTube.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <li class="zsg-form-field zsg-g non-landlord">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="website">موقع الكتروني &nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                <input type="text" name="website" value="" id="website" class="longtext" maxlength="255">
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g non-landlord">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="blog">مدونة &nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                <input type="text" name="blog" value="" id="blog" placeholder="www.yourblog.com" class="longtext" maxlength="255">
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g non-landlord">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="facebook">فيسبوك &nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                <input type="text" name="facebook" value="" id="facebook" placeholder="www.facebook.com/[username]" class="longtext" maxlength="255">
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g non-landlord">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="twitter">تويتر &nbsp;<span class="optional-field zsg-fineprint">(اختياري)</span></label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                <input type="text" name="twitter" value="" id="twitter" placeholder="twitter.com/[username]" class="longtext" maxlength="255">
+                            </div>
+                        </li>
+                        <li class="zsg-form-field zsg-g non-landlord">
+                            <div class="label zsg-lg-1-4 zsg-sm-1-1">
+                                <label for="linkedIn">LinkedIn &nbsp;<span class="optional-field zsg-fineprint">(Optional)</span></label>
+                            </div>
+                            <div class="field zsg-lg-3-4 zsg-sm-1-1">
+                                <input type="text" name="linkedIn" value="" id="linkedIn" placeholder="www.linkedin.com/in/[username]" class="longtext" maxlength="255">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </fieldset>
+        <div id="image-upload-submit" class="zsg-g">
+            <div class="label zsg-lg-1-4 zsg-sm-1-1"></div>
+            <ul class="zsg-lg-3-4 zsg-sm-1-1 action zsg-button-group">
+                <li>
+                    <button type="submit" title="Submit" class="zsg-button_primary edit-submit">حفظ</button>
+                </li>
+                <li>
+
+                    <button id="reset" name="SubmitButton" class="zsg-button">إلغاء</button>
+                </li>
+            </ul>
+        </div>
+        <div class="zsg-form-field zsg-g">
+            <div class="label zsg-lg-1-4 zsg-sm-1-1"></div>
+            <div class="zsg-lg-3-4 zsg-sm-1-1">
+                <p class="hide zsg-notification-text-error" id="disclaimer-error">يجب عليك أولاً الموافقة على شروط الاستخدام قبل أن تتمكن من تحميل صورة</p>
+            </div>
+        </div>
+    </form>
+</main>
+
+
+
+
+
+
+                                                <!--<div class="bpf_box_wrap"><div class="bpf_box"><div class="bpf_box_item"><div class="bpfbi_title">Categories</div><ul class="bpfbi_items"><li> <a href="https://www.shademaster.com.au/category/verandahs">Verandahs</a></li><li> <a href="https://www.shademaster.com.au/category/patio">patio</a></li><li> <a href="https://www.shademaster.com.au/category/outdoor-areas">outdoor areas</a></li><li> <a href="https://www.shademaster.com.au/category/gazebos">gazebos</a></li><li> <a href="https://www.shademaster.com.au/category/outdoor-rooms">outdoor rooms</a></li></ul></div><div class="bpf_box_item"><div class="bpfbi_title">Date</div><ul class="bpfbi_items"><li><a href='https://www.shademaster.com.au/2016/10'>October 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/05'>May 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/04'>April 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/03'>March 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/02'>February 2016</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/11'>November 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/10'>October 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/09'>September 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/08'>August 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/07'>July 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/06'>June 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/05'>May 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/04'>April 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/03'>March 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/02'>February 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/01'>January 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2014/12'>December 2014</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2014/10'>October 2014</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2014/09'>September 2014</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2014/07'>July 2014</a>&nbsp;(1)</li></ul></div></div></div> --></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="blog_page_filter_col" style="padding-top: 0px;">
+                            <div class="container big-container bpf_container">
+                                <div class="bpf_box_wrap">
+                                    <div class="bpf_box bpf_box_sc">
+                                        <div class="bpf_box_item">
+                                            <div class="bpfbi_title">خيارات الضبط</div>
+                                            <ul class="bpfbi_items">
+                                                <li> <a href="/savedhomes/">المنازل المحفوظة</a></li>
+                                                <li> <a href="/EditProfile">الملف الشخصي</a></li>
+                                                <li> <a href="{% url 'Account' %}">إعدادت الحساب</a></li>
+                                                <li> <a href="{% url 'password_change' %}">كلمة المرور</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <!-- /wrapper -->
+    <!-- Instagram Feed JS -->
+
+
+
+
+
+      {% include 'footer.html' %}
+
+<style>
+    .h-c-footer.h-c-footer--topmargin {
+    margin-top: 150px;
+
+}
+</style>
+
+ <script>
+  var loadFile = function(event) {
+
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    alert(URL.createObjectURL(event.target.files[0]));
+  };
+</script>
+        <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+<script>
+$('#cookieBar').hide();
+    if (window.matchMedia("(max-width: 767px)").matches) {
+
+$('#pedt-menu_toolbar-lnk').css({'left':'50%','right':'100%'});
+$('.ctcd-profile-image-container').css({'right':'23%'});
+$('.ctcd-agent-type, .ctcd-community-pillar, .ctcd-name, .ctcd-non-region-context .ctcd-all-activity, .ctcd-team-rank ').css({'position':'relative','right':'17%'});
+
+}
+
+
+$(".blog_page_filter_col_mobile").on("click", function(evt) {
+if ($('.bpf_btn').hasClass("open")) {
+$('.bpf_btn').removeClass('open');
+$('.bpf_wrap_mobile').hide();
+}
+else
+{
+$('.bpf_btn').addClass('open');
+$('.bpf_wrap_mobile').show();
+}
+});
+
+$('#reset').click( function(){
+$('#upload_image').val('');
+$('#output').attr('src', '');
+return false;
+});
+
+</script>
+
+{% endblock %}

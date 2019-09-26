@@ -1,0 +1,7 @@
+﻿@keyframes zsgLoaderSpin{0%{transform:rotate(0)}
+100%{transform:rotate(360deg)}
+}
+.professional-summary .profile-information-list dd,.professional-summary .profile-information-list dt{font-style:normal;margin-bottom:0;font-size:13px;font-size:.86666667rem}
+.professional-summary .profile-information-list dd{padding-left:10px;word-wrap:break-word}
+.professional-summary .profile-information-list ul{list-style-position:initial}
+.professional-summary .profile-information-websites .websites-separator:last-child{display:none}

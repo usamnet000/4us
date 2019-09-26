@@ -1,0 +1,646 @@
+
+{% extends 'base/Navbar.html' %}
+{% load static %}
+{% block head_title %}نشر منزلك{% endblock %}
+
+  {% block content %}
+
+  <style>
+
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+#map {height: 498px;width:1350px;}
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+#map {height: 498px;width:1350px;}
+}
+/* mobile iphone 5,se screens ----------- */
+@media only screen and (min-width : 320px) and (max-width : 321px){
+/* Styles */
+#map {height: 568px;width:320px;}
+}
+
+/* mobile screens ----------- */
+@media only screen and (min-width : 321px) and (max-width : 370px){
+/* Styles */
+#map {height: 660px;width:360px;}
+}
+/* mobile iphone 5,6,7 screens ----------- */
+@media only screen and (min-width : 370px) and (max-width : 375px){
+/* Styles */
+#map {height: 667px;width:375px;}
+}
+@media only screen and (min-width : 375px) and (max-width : 411px){
+/* Styles */
+#map {height: 812px;width:375px;}
+}
+/* mobile pexel screens ----------- */
+@media only screen and (min-width : 411px) and (max-width : 412px){
+/* Styles */
+#map {height: 731px;width:411px;}
+}
+
+/* mobile nexux 6 screens ----------- */
+@media only screen and (min-width : 412px) and (max-width : 500px){
+/* Styles */
+#map {height: 732px;width:412px;}
+}
+
+/* iPads ----------- */
+@media only screen and (min-width : 600px) and (max-width : 1024px) {
+/* Styles */
+#map {height: 1024px;width:768px;}
+}
+@media only screen and (min-width : 1024px) and (max-width : 1030px) {
+/* Styles */
+#map {height: 1220px;width:1024px;}
+}
+
+.zsg-layout_lg .zsg-layout-width, .zsg-layout_lg .zsg-subfooter-content {
+    max-width: 1350px;
+    padding-left: 0px;
+
+}
+@media only screen and (max-width: 600px)
+#landing-background {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 0 10px;
+    margin: 0;
+    /* background-position: 45% 100%; */
+}
+
+
+  </style>
+
+
+
+
+
+
+<link href="{% static 'css/shademaster.css' %}" type="text/css" rel="stylesheet" media="all" />
+
+
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/posting-landing.css' %}" type="text/css" rel="stylesheet" />
+
+
+            <style>
+            ol, ul {
+    padding-right: 14px;
+}
+.zsg-layout-width, .zsg-subfooter-content {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 0px;
+}
+.zsg-step-content:after, .zsg-steps>li>a:after, .zsg-trapezoid_br:after, .zsg-trapezoid_tr:after {
+    border-left-width: 2em;
+    border-left-style: solid;
+    right: 3.59em;
+    transform: rotate(270deg);
+
+}
+
+
+.zsg-layout_lg .zsg-layout-width, .zsg-layout_lg .zsg-subfooter-content {
+    max-width: 1350px;
+}
+
+.zsg-layout-top {
+    padding-top: 0px;
+}
+
+
+  html{
+    width:100%;
+    overflow-x:hidden;
+    position: absolute;
+    }
+
+body {
+	font-size: 15px;
+	margin: 0;
+	font-family: 'overpass', sans-serif;
+	overflow-y: hidden;
+	color: #545759
+	-webkit-overflow-scrolling: touch
+}
+
+select, select[disabled] {
+      background-position: 8px;
+}
+select:hover, select[disabled]:hover {
+      background-position: 8px;
+}
+select:focus {
+      background-position: 8px;
+}
+.foot_label
+    {
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    }
+
+
+</style>
+
+
+ <div class="zsg-layout-width zsg-layout-top zsg-layout-bottom" style="direction:rtl;text-align:right">
+        <main class="zsg-layout-content" style="mirgin:0px;">
+
+
+                          <div style="direction:rtl;text-align:right;" id="landing-background" class="zsg-image">
+                    <h1 id="posting-trapezoid" class="zsg-trapezoid zsg-trapezoid_darkblue zsg-trapezoid_br zsg-image-trapezoid trapezoid-mmm">الموقع</h1>
+                    <div id="posting-landing-overlay" class="zsg-image-overlay overlay-mmm">
+                        <div id="form-container">
+                            <input id="newPostingPath" type="hidden" value="true">
+                            <input id="postingRental" type="hidden" value="false">
+                            <input id="currentUserEmail" type="hidden" value="usamnet000@outlook.com">
+                            <input id="isLoggedIn" type="hidden" value="true">
+                            <input id="draftAddressString" type="hidden" value="">
+                            <div id="posting-launch-form" class="null">
+
+
+                                <form accept-charset="UTF-8" method="post" name="addressForm" id="addressForm" class="zss-form posting-launch-form">
+              {% csrf_token %}
+                                    <div class="posting-launch-form-header" id="yui_3_18_1_1_1566204277246_119" style="direction:rtl;text-align:right">
+                                        <ul class="zsg-tabs zsg-tabs-posting-landing" id="yui_3_18_1_1_1566204277246_118">
+                                            <li id="yui_3_18_1_1_1566204277246_130">
+                                                <label id="yui_3_18_1_1_1566204277246_129">العقار لغرض البيع</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="zsg-g" id="yui_3_18_1_1_1566204277246_115">
+                                        <div id="posting-fields" class="zsg-md-1-1 zsg-lg-2-3">
+                                            <fieldset id="addressFieldset">
+
+                                                <input class="form-control" type="text" name="address" value="" id="address" placeholder="عنوان الشارع" maxlength="44">
+                                            </fieldset>
+                                            <fieldset id="latitudeFieldset" class="no-clear">
+                                                <input type="text" name="latitude" value="" id="latitude" placeholder="خط العرض" maxlength="10"/>
+                                            </fieldset>
+                                            <fieldset id="longitudeFieldset">
+                                                <input type="text" name="longitude" value="" id="longitude" maxlength="41" placeholder="خط الطول" class="medium-form-el"/>
+                                            </fieldset>
+                                            <div class="posting-landing-address-block">
+                                                <fieldset id="cityFieldset" class="no-clear">
+                                                    <select name="citySelection" id="citySelection">
+                                                        {% for value, name in form.fields.city_option.choices %}
+                                                        <option value="{{ value }}">{{ name }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                            <button type="submit" class="posting-launch-form-cover-button zsg-button_alt" id="continueButton"> استمر <span class="posting-launch-form-spinner-placeholder"></span></button>
+
+                                        </div>
+                                        <div id="mmm-message" class="zsg-lg-1-3 zsg-md-1-1" style="text-align:right;">
+                                            <h5 id="yui_3_18_1_1_1566204277246_132">تنبيه المشترين المحتملين أنك ترغب في البيع دون وضع منزلك رسميا في السوق</h5></div>
+                                    </div>
+                                    <div class="alert-mod is-hidden"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <dl class="zsg-content-section other-posting-options"><dt style="font-size:15px;">هل هذا موقع دقيق لمنزلك؟</dt>
+                    <dd><button href="#" id="map-link-for-sale" data-ga-action="ComingSoon">الخريطة</button></dd>
+                      </dl>
+            <div id="map" style="z-index:2;"></div>
+
+
+
+                <section class="zsg-content-section posting-launch-secondary-top">
+                    <h2> لماذا النشر على فرص؟ </h2></section>
+                <section class="posting-launch-why-post zsg-content-section">
+                    <ul>
+                        <li>
+                            <div id="mmm-upsell" class="">
+                                <p class="posting-launch-why-post-icon1 seller-landing-page-sprite"></p>
+                                <h5>الموقع يقدم خدمة تُمكن المستخدم من الإعلان في الموقع بعدد غير محدود من الصور.الموقع لا يقوم ببيع السلع!</h5>
+                                <div class="posting-launch-why-post-blurb-mobile">
+                                    <h3>مجاني</h3>
+                                    <p> الموقع يقدم خدمة تُمكن المستخدم من الإعلان في الموقع بعدد غير محدود من الصور.الموقع لا يقوم ببيع السلع!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="posting-launch-why-post-icon2 seller-landing-page-sprite"></p>
+                            <div id="mmm-home-shoppers-message" class="">
+                                <h5>يمكن للمشترين في المنزل رؤية قائمتك على الموقع في أجهزة الكمبيوتر المحمولة واجهزة الهواتف الذكية.</h5>
+                                <div class="posting-launch-why-post-blurb-mobile">
+                                    <h3>سوق منزلك للمشترين</h3>
+                                    <p>يمكن للمشترين في المنزل رؤية قائمتك على الموقع في أجهزة المحمولةوالهواتف الذكية.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="posting-launch-why-post-icon3 seller-landing-page-sprite"></p>
+                            <h5>يتلقى المتسوقون في المنزل رسائل بريد إلكتروني فورية حول قوائم جديدة.</h5>
+                            <div class="posting-launch-why-post-blurb-mobile">
+                                <h3>البيع بنجاح</h3>
+                                <p>يتلقى المتسوقون في المنزل رسائل بريد إلكتروني فورية حول قوائم جديدة.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+
+
+
+
+      {% include 'base/footer.html' %}
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+  <!-- Google Maps scripts. -->
+
+
+
+
+
+    <script>
+        var map, marker ,infoWindow;
+        var geocoder;
+    var citys={
+"Hodeidah": {
+"lat": "14.797812",
+"lng": "42.954516",
+},
+"Taiz": {
+"lat": "13.579522",
+"lng": "44.020908",
+},
+"Hadramout": {
+"lat": "14.542481",
+"lng": "49.124244",
+},
+"Ibb": {
+"lat": "13.940771",
+"lng": "44.177343",
+},
+"Hajjah": {
+"lat": "15.694247",
+"lng": "43.605821",
+},
+"Dhamar": {
+"lat": "14.542742",
+"lng": "44.405145",
+},
+"Lahj": {
+"lat": "13.056667",
+"lng": "44.881944",
+},
+"AlBayda": {
+"lat": "13.985226",
+"lng": "45.572719",
+},
+"Shabwah": {
+"lat": "14.537665",
+"lng": "46.831868",
+"population": "37315"
+},
+"ALamrah": {
+"lat": "16.207869",
+"lng": "52.17605",
+},
+"Marib": {
+"lat": "15.460977",
+"lng": "45.325301",
+},
+"Dali": {
+"capital": "admin",
+"lat": "13.695723",
+"lng": "44.73137",
+"population": ""
+},
+"Abyan": {
+"lat": "13.772103",
+"lng": "46.017855",
+},
+"Aden": {
+"lat": "12.7794399",
+"lng": "45.0366707",
+},
+"Sana'a": {
+"lat": "15.3547201",
+"lng": "44.2066689",
+},
+"Socotra": {
+"lat": "12.463420",
+"lng": "53.823738",
+},
+"Sa'ada": {
+"lat": "16.9402103",
+"lng": "43.7639313",
+},
+"AlMahweet": {
+"lat": "15.469083422267913",
+"lng": "43.545561656904965",
+},
+"Hollow": {
+"lat": "16.573803460933934",
+"lng": "45.68044344046052",
+},
+"Omran": {
+"lat": "15.661100170992132",
+"lng": "43.94838014700349",
+},
+"Rima": {
+"lat": "14.623500461630151",
+"lng": "43.678955078125",
+}
+        ,
+        "Aldla": {
+            "lat": "13.837700525696128", "lng": "44.728650032617224",
+        }
+        ,
+};
+
+
+
+
+        function initMap() {
+
+            // Display a map on the page
+             map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -33.865143, lng: 151.209900},
+                mapTypeId: 'roadmap',
+                zoom: 10,
+                  panControl: false,
+  zoomControl: true,
+  mapTypeControl: true,
+  scaleControl: false,
+  streetViewControl: false,
+  overviewMapControl: false,
+  rotateControl: false,
+  fullscreenControl: false,
+            });
+
+         //map.controls[google.maps.ControlPosition.TOP_LEFT].push(document.getElementById('search-page-map-container'));
+
+
+
+            map.setTilt(45);
+
+            // Try HTML5 geolocation to get location
+              infoWindow = new google.maps.InfoWindow;
+              geocoder = new google.maps.Geocoder;
+            var  input = document.getElementById('address');
+
+            var autocomplete = new google.maps.places.Autocomplete(
+                input, {placeIdOnly: true});
+                autocomplete.bindTo('bounds', map);
+                autocomplete.setComponentRestrictions({'country': ['ye']});
+//
+            // Try HTML5 geolocation.
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                var pos =new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+                    marker = new google.maps.Marker({
+                        position: pos,
+                        map: map,
+                        draggable: true,
+                        title: 'Your position',
+    icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 7,
+        fillColor: "#FC384A",
+        fillOpacity: 0.8,
+strokeColor: '#fff',
+        strokeWeight:1.8,
+    },
+                    });
+
+
+                    marker.addListener('click', function() {alert(3);
+                    });
+  marker.addListener('mouseover', function() {
+  infoWindow.setContent('منزلك');
+  infoWindow.open(map, marker);
+
+marker.setIcon({
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 7,
+            fillColor: "#03C04A",
+            fillOpacity: 0.8,
+strokeColor: '#fff',
+        strokeWeight: 1.8,
+        });
+  });
+  marker.addListener('mouseout', function() {
+  infoWindow.close();
+marker.setIcon({
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 7,
+            fillColor: "#FC384A",
+            fillOpacity: 0.8,
+strokeColor: '#fff',
+        strokeWeight: 1.8,
+        });
+  });
+
+
+
+
+
+
+
+                    map.setCenter(pos);
+
+                    updateMarkerPosition(marker.getPosition());
+                    geocodePosition(pos);
+
+                    // Add dragging event listeners.
+                    google.maps.event.addListener(marker, 'dragstart', function() {
+                        updateMarkerAddress('Dragging...');
+                    });
+
+                    google.maps.event.addListener(marker, 'drag', function() {
+                        updateMarkerStatus('Dragging...');
+                        updateMarkerPosition(marker.getPosition());
+                    });
+
+                    google.maps.event.addListener(marker, 'dragend', function() {
+                        updateMarkerStatus('Drag ended');
+                        geocodePosition(marker.getPosition());
+                        map.panTo(marker.getPosition());
+                    });
+
+                    google.maps.event.addListener(map, 'click', function(e) {
+                        updateMarkerPosition(e.latLng);
+                        geocodePosition(marker.getPosition());
+                        marker.setPosition(e.latLng);
+                        map.panTo(marker.getPosition());
+                    });
+
+                }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+
+            //
+            autocomplete.addListener('place_changed', function () {
+                var place = autocomplete.getPlace();
+
+                if (!place.place_id) {
+                    return;
+                }
+
+
+                geocoder.geocode({'placeId': place.place_id}, function (results, status) {
+
+                    if (status !== 'OK') {
+                        window.alert('فشل Geocoder بسبب: ' + status);
+                        return;
+                    }
+                    map.setZoom(10);
+                    map.setCenter(results[0].geometry.location);
+                    // Set the position of the marker using the place ID and location.
+
+
+                });
+
+            });
+
+        }
+
+        //
+        function geocodePosition(pos) {
+            geocoder.geocode({
+                latLng: pos
+            }, function(responses) {
+                if (responses && responses.length > 0) {
+                    updateMarkerAddress(responses[0].formatted_address);
+                } else {
+                    updateMarkerAddress('لم يتم معرفة العنوان');
+                }
+            });
+        }
+        function updateMarkerStatus(str) {
+          //  document.getElementById('markerStatus').innerHTML = str;
+        }
+        function updateMarkerPosition(latLng) {
+            $("#latitude").val(latLng.lat());
+            $("#longitude").val(latLng.lng());
+            getCityName(new google.maps.LatLng(latLng.lat(), latLng.lng()));
+        }
+        function updateMarkerAddress(str) {
+            $("#address").val(str);
+        }
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+            infoWindow.open(map);
+        }
+        function getCityName(pos)
+        {
+            geocoder.geocode({latLng: pos}, function(results, status) {
+            console.log(result, status);
+    if (status == google.maps.GeocoderStatus.OK) {
+        if (results[1]) {
+            var country = null, countryCode = null, city = null, cityAlt = null;
+            var c, lc, component;
+            for (var r = 0, rl = results.length; r < rl; r += 1) {
+                var result = results[r];
+
+                if (!city && result.types[0] === 'locality') {
+                    for (c = 0, lc = result.address_components.length; c < lc; c += 1) {
+                        component = result.address_components[c];
+
+                        if (component.types[0] === 'locality') {
+                            city = component.long_name;
+                            break;
+                        }
+                    }
+                }
+                else if (!city && !cityAlt && result.types[0] === 'administrative_area_level_1') {
+                    for (c = 0, lc = result.address_components.length; c < lc; c += 1) {
+                        component = result.address_components[c];
+
+                        if (component.types[0] === 'administrative_area_level_1') {
+                            cityAlt = component.long_name;
+                            break;
+                        }
+                    }
+                } else if (!country && result.types[0] === 'country') {
+                    country = result.address_components[0].long_name;
+                    countryCode = result.address_components[0].short_name;
+                }
+
+                if (city && country) {
+                    break;
+                }
+            }
+
+            console.log("City: " + city + ", City2: " + cityAlt + ", Country: " + country + ", Country Code: " + countryCode);
+        }
+    }
+});
+}
+
+$('#citySelection').change(function(){
+if($("#address").val() == "لم يتم معرفة العنوان")
+{
+var key = $(this).val();
+var latlng=new google.maps.LatLng(citys[key].lat, citys[key].lng);
+map.setCenter(latlng);
+marker.setPosition(latlng);
+$('#latitude').val(citys[key].lat);
+$('#longitude').val(citys[key].lng);
+}
+
+});
+    </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXMlFT_q3ELULT-AOhHcheUKy1eDccSTg&callback=initMap&libraries=places" async defer></script>
+
+
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+   <script>
+jQuery("#map-link-for-sale").click(function() {
+
+        if ($('#map').hasClass("active")) {
+        alert(1);
+            $('#mape').hide();
+            $('#map').removeClass('active');
+        } else {
+        alert(2);
+            $('#map').show();
+            $('#map').addClass('active');
+        }
+});
+
+
+
+
+</script>
+
+        {% endblock %}

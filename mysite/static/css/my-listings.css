@@ -1,0 +1,784 @@
+﻿.hdp-video img,
+.hdp-video span,
+.hdp-video-on .listing-3d .hdp-3d-button img,
+.hdp-video-on .listing-3d .hdp-3d-button span,
+.hdp-video-on .listing-3d .hdp-no-3d-button img,
+.hdp-video-on .listing-3d .hdp-no-3d-button span,
+.hdp-video-on .listing-video .hdp-no-video-button img,
+.hdp-video-on .listing-video .hdp-no-video-button span,
+.hdp-video-on .listing-video .hdp-video-button img,
+.hdp-video-on .listing-video .hdp-video-button span {
+    vertical-align: middle
+}
+
+.type-icon {
+    border-radius: 5px;
+    display: inline-block;
+    height: 10px;
+    margin-right: 6px;
+    width: 10px
+}
+
+.premarket .type-icon,
+.rent .type-icon,
+.sale .type-icon,
+.sold .type-icon,
+.zest .type-icon {
+    margin-right: -21px
+}
+
+.Pending .type-icon,
+.comingSoon .type-icon,
+.for-sale .type-icon,
+.forSale .type-icon,
+.forSaleOffer .type-icon,
+.forSaleWithOffer .type-icon,
+.sale .type-icon,
+.type-coming-soon .type-icon,
+.type-comingSoon .type-icon,
+.type-for-sale .type-icon,
+.type-forSale .type-icon,
+.type-forSaleWithOffer .type-icon,
+.type-pending .type-icon {
+    background-color: #c00
+}
+
+.type-favorite .Pending .type-icon,
+.type-favorite .comingSoon .type-icon,
+.type-favorite .for-sale .type-icon,
+.type-favorite .forSale .type-icon,
+.type-favorite .forSaleOffer .type-icon,
+.type-favorite .forSaleWithOffer .type-icon,
+.type-favorite .sale .type-icon,
+.type-favorite .type-coming-soon .type-icon,
+.type-favorite .type-comingSoon .type-icon,
+.type-favorite .type-for-sale .type-icon,
+.type-favorite .type-forSale .type-icon,
+.type-favorite .type-forSaleWithOffer .type-icon,
+.type-favorite .type-pending .type-icon {
+    display: inline-block;
+    padding-top: 2px;
+    height: 12px;
+    width: 12px;
+    position: relative
+}
+
+.type-favorite .Pending .type-icon:after,
+.type-favorite .Pending .type-icon:before,
+.type-favorite .comingSoon .type-icon:after,
+.type-favorite .comingSoon .type-icon:before,
+.type-favorite .for-sale .type-icon:after,
+.type-favorite .for-sale .type-icon:before,
+.type-favorite .forSale .type-icon:after,
+.type-favorite .forSale .type-icon:before,
+.type-favorite .forSaleOffer .type-icon:after,
+.type-favorite .forSaleOffer .type-icon:before,
+.type-favorite .forSaleWithOffer .type-icon:after,
+.type-favorite .forSaleWithOffer .type-icon:before,
+.type-favorite .sale .type-icon:after,
+.type-favorite .sale .type-icon:before,
+.type-favorite .type-coming-soon .type-icon:after,
+.type-favorite .type-coming-soon .type-icon:before,
+.type-favorite .type-comingSoon .type-icon:after,
+.type-favorite .type-comingSoon .type-icon:before,
+.type-favorite .type-for-sale .type-icon:after,
+.type-favorite .type-for-sale .type-icon:before,
+.type-favorite .type-forSale .type-icon:after,
+.type-favorite .type-forSale .type-icon:before,
+.type-favorite .type-forSaleWithOffer .type-icon:after,
+.type-favorite .type-forSaleWithOffer .type-icon:before,
+.type-favorite .type-pending .type-icon:after,
+.type-favorite .type-pending .type-icon:before {
+    background-color: #c00;
+    margin-top: 1px;
+    position: absolute;
+    content: "";
+    left: 7px;
+    width: 7px;
+    height: 10px;
+    border-radius: 7px 7px 0 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+.type-favorite .Pending .type-icon:after,
+.type-favorite .comingSoon .type-icon:after,
+.type-favorite .for-sale .type-icon:after,
+.type-favorite .forSale .type-icon:after,
+.type-favorite .forSaleOffer .type-icon:after,
+.type-favorite .forSaleWithOffer .type-icon:after,
+.type-favorite .sale .type-icon:after,
+.type-favorite .type-coming-soon .type-icon:after,
+.type-favorite .type-comingSoon .type-icon:after,
+.type-favorite .type-for-sale .type-icon:after,
+.type-favorite .type-forSale .type-icon:after,
+.type-favorite .type-forSaleWithOffer .type-icon:after,
+.type-favorite .type-pending .type-icon:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%
+}
+
+.for-rent .type-icon,
+.forRent .type-icon,
+.rent .type-icon,
+.type-for-rent .type-icon,
+.type-forRent .type-icon {
+    background-color: #93f
+}
+
+.type-favorite .for-rent .type-icon,
+.type-favorite .forRent .type-icon,
+.type-favorite .rent .type-icon,
+.type-favorite .type-for-rent .type-icon,
+.type-favorite .type-forRent .type-icon {
+    display: inline-block;
+    padding-top: 2px;
+    height: 12px;
+    width: 12px;
+    position: relative
+}
+
+.type-favorite .for-rent .type-icon:after,
+.type-favorite .for-rent .type-icon:before,
+.type-favorite .forRent .type-icon:after,
+.type-favorite .forRent .type-icon:before,
+.type-favorite .rent .type-icon:after,
+.type-favorite .rent .type-icon:before,
+.type-favorite .type-for-rent .type-icon:after,
+.type-favorite .type-for-rent .type-icon:before,
+.type-favorite .type-forRent .type-icon:after,
+.type-favorite .type-forRent .type-icon:before {
+    background-color: #93f;
+    margin-top: 1px;
+    position: absolute;
+    content: "";
+    left: 7px;
+    width: 7px;
+    height: 10px;
+    border-radius: 7px 7px 0 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+.type-favorite .for-rent .type-icon:after,
+.type-favorite .forRent .type-icon:after,
+.type-favorite .rent .type-icon:after,
+.type-favorite .type-for-rent .type-icon:after,
+.type-favorite .type-forRent .type-icon:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%
+}
+
+.MMM .type-icon,
+.pre-market .type-icon,
+.preMarket .type-icon,
+.premarket .type-icon,
+.type-MMM .type-icon,
+.type-pre-market .type-icon {
+    background-color: #08f
+}
+
+.type-favorite .MMM .type-icon,
+.type-favorite .pre-market .type-icon,
+.type-favorite .preMarket .type-icon,
+.type-favorite .premarket .type-icon,
+.type-favorite .type-MMM .type-icon,
+.type-favorite .type-pre-market .type-icon {
+    display: inline-block;
+    padding-top: 2px;
+    height: 12px;
+    width: 12px;
+    position: relative
+}
+
+.type-favorite .MMM .type-icon:after,
+.type-favorite .MMM .type-icon:before,
+.type-favorite .pre-market .type-icon:after,
+.type-favorite .pre-market .type-icon:before,
+.type-favorite .preMarket .type-icon:after,
+.type-favorite .preMarket .type-icon:before,
+.type-favorite .premarket .type-icon:after,
+.type-favorite .premarket .type-icon:before,
+.type-favorite .type-MMM .type-icon:after,
+.type-favorite .type-MMM .type-icon:before,
+.type-favorite .type-pre-market .type-icon:after,
+.type-favorite .type-pre-market .type-icon:before {
+    background-color: #08f;
+    margin-top: 1px;
+    position: absolute;
+    content: "";
+    left: 7px;
+    width: 7px;
+    height: 10px;
+    border-radius: 7px 7px 0 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+.type-favorite .MMM .type-icon:after,
+.type-favorite .pre-market .type-icon:after,
+.type-favorite .preMarket .type-icon:after,
+.type-favorite .premarket .type-icon:after,
+.type-favorite .type-MMM .type-icon:after,
+.type-favorite .type-pre-market .type-icon:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%
+}
+
+.recently-sold .type-icon,
+.recentlySold .type-icon,
+.sold .type-icon,
+.type-recently-sold .type-icon,
+.type-recentlySold .type-icon {
+    background-color: #fc0
+}
+
+.type-favorite .recently-sold .type-icon,
+.type-favorite .recentlySold .type-icon,
+.type-favorite .sold .type-icon,
+.type-favorite .type-recently-sold .type-icon,
+.type-favorite .type-recentlySold .type-icon {
+    display: inline-block;
+    padding-top: 2px;
+    height: 12px;
+    width: 12px;
+    position: relative
+}
+
+.type-favorite .recently-sold .type-icon:after,
+.type-favorite .recently-sold .type-icon:before,
+.type-favorite .recentlySold .type-icon:after,
+.type-favorite .recentlySold .type-icon:before,
+.type-favorite .sold .type-icon:after,
+.type-favorite .sold .type-icon:before,
+.type-favorite .type-recently-sold .type-icon:after,
+.type-favorite .type-recently-sold .type-icon:before,
+.type-favorite .type-recentlySold .type-icon:after,
+.type-favorite .type-recentlySold .type-icon:before {
+    background-color: #fc0;
+    margin-top: 1px;
+    position: absolute;
+    content: "";
+    left: 7px;
+    width: 7px;
+    height: 10px;
+    border-radius: 7px 7px 0 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+.type-favorite .recently-sold .type-icon:after,
+.type-favorite .recentlySold .type-icon:after,
+.type-favorite .sold .type-icon:after,
+.type-favorite .type-recently-sold .type-icon:after,
+.type-favorite .type-recentlySold .type-icon:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%
+}
+
+.allHomes .type-icon,
+.not-for-sale .type-icon,
+.type-allHomes .type-icon,
+.type-not-for-sale .type-icon,
+.type-notForSale .type-icon,
+.type-off-market .type-icon,
+.zest .type-icon,
+.zestimate .type-icon {
+    background-color: #999
+}
+
+.type-favorite .allHomes .type-icon,
+.type-favorite .not-for-sale .type-icon,
+.type-favorite .type-allHomes .type-icon,
+.type-favorite .type-not-for-sale .type-icon,
+.type-favorite .type-notForSale .type-icon,
+.type-favorite .type-off-market .type-icon,
+.type-favorite .zest .type-icon,
+.type-favorite .zestimate .type-icon {
+    display: inline-block;
+    padding-top: 2px;
+    height: 12px;
+    width: 12px;
+    position: relative
+}
+
+.type-favorite .allHomes .type-icon:after,
+.type-favorite .allHomes .type-icon:before,
+.type-favorite .not-for-sale .type-icon:after,
+.type-favorite .not-for-sale .type-icon:before,
+.type-favorite .type-allHomes .type-icon:after,
+.type-favorite .type-allHomes .type-icon:before,
+.type-favorite .type-not-for-sale .type-icon:after,
+.type-favorite .type-not-for-sale .type-icon:before,
+.type-favorite .type-notForSale .type-icon:after,
+.type-favorite .type-notForSale .type-icon:before,
+.type-favorite .type-off-market .type-icon:after,
+.type-favorite .type-off-market .type-icon:before,
+.type-favorite .zest .type-icon:after,
+.type-favorite .zest .type-icon:before,
+.type-favorite .zestimate .type-icon:after,
+.type-favorite .zestimate .type-icon:before {
+    background-color: #999;
+    margin-top: 1px;
+    position: absolute;
+    content: "";
+    left: 7px;
+    width: 7px;
+    height: 10px;
+    border-radius: 7px 7px 0 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+.type-favorite .allHomes .type-icon:after,
+.type-favorite .not-for-sale .type-icon:after,
+.type-favorite .type-allHomes .type-icon:after,
+.type-favorite .type-not-for-sale .type-icon:after,
+.type-favorite .type-notForSale .type-icon:after,
+.type-favorite .type-off-market .type-icon:after,
+.type-favorite .zest .type-icon:after,
+.type-favorite .zestimate .type-icon:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%
+}
+
+.posting-new-listing-block {
+    margin-bottom: 30px;
+    margin-top: 35px
+}
+
+.posting-new-listing-block .posting-new-listing-block-sm {
+    background-color: #d9f0f9;
+    padding: 15px
+}
+
+.posting-new-listing-block .hdp-video-new-posting-sm {
+    background-color: #FFF
+}
+
+.posting-new-listing-block .post-new-listing-title {
+    font-weight: 700
+}
+
+.posting-new-listing-block .post-new-listing-link {
+    margin-left: 30px
+}
+
+.posting-new-listing-block .post-new-listing-link-sm {
+    margin-top: 15px
+}
+
+.new-feature {
+    font-size: 12px;
+    color: #ff7800;
+    text-transform: uppercase;
+    margin-left: 6px
+}
+
+.active-inactive-choice-block {
+    margin-bottom: 0!important
+}
+
+.inactive-listings-spacer {
+    height: 9px
+}
+
+.sort-by-block {
+    margin: 15px 0;
+    width: 100%
+}
+
+.sort-by-block td {
+    text-align: right
+}
+
+.sort-by-block td:last-child {
+    width: 200px
+}
+
+.sort-by-block label {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    margin-right: 15px
+}
+
+.sort-by-block .sort-by-form {
+    margin-bottom: 0
+}
+
+.zsg-image {
+    max-width: 100%
+}
+
+.listing-price {
+    font-size: 19px
+}
+
+.listing-lifespan,
+.open-house {
+    font-size: 13px;
+    margin-top: 5px
+}
+
+.listing-address {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.listing-lifespan {
+    color: #0a923d
+}
+
+.hdp-video-on .hdp-video-on-text {
+    color: #999
+}
+
+.open-house {
+    color: #ff7800
+}
+
+.questions-etc-block {
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+.questions-etc-block .questions-email-link {
+    margin-left: 10px
+}
+
+.questions-etc-block .questions-map-link {
+    margin-left: 80px
+}
+
+.questions-etc-block .questions-map-link-sm {
+    margin-top: 10px
+}
+
+.premier-package-banner {
+    background-color: #0a923d;
+    font-size: 16px;
+    padding: 15px
+}
+
+.premier-package-banner table {
+    width: 100%
+}
+
+.premier-package-banner td {
+    color: #fff
+}
+
+.premier-package-banner .expando {
+    text-align: right;
+    zoom: 1.5;
+    color: #fff
+}
+
+.feature-my-listings-block label {
+    margin-bottom: 10px
+}
+
+.feature-my-listings-block h4 {
+    margin-top: 20px;
+    color: #aaa
+}
+
+.feature-my-listings-block .feature-my-listings-note {
+    margin: 10px 0;
+    color: #aaa;
+    font-size: 13px
+}
+
+.no-listings {
+    margin-top: 10px;
+    color: #aaa
+}
+
+.featured-caption {
+    background: rgba(3, 192, 74, .9);
+    color: #fff;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.facts-brushed-aside {
+    position: absolute;
+    right: 89%
+}
+
+.actions-block-narrow {
+    background: #0074e4;
+    height: 125px;
+    width: 89%;
+    margin-left: 40px;
+    padding: 10px
+}
+
+.actions-block-narrow a:active,
+.actions-block-narrow a:focus,
+.actions-block-narrow a:hover,
+.actions-block-narrow a:link,
+.actions-block-narrow a:visited {
+    color: #fff;
+    font-weight: lighter
+}
+
+.actions-block-narrow table {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle
+}
+
+.page-blanket {
+    background: rgba(255, 255, 255, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2
+}
+
+.page-blanket table {
+    position: absolute;
+    bottom: 17px;
+    width: 100%
+}
+
+.page-blanket td {
+    padding: 3px 20px
+}
+
+.page-blanket a {
+    padding: 20px
+}
+
+.contacts-block {
+    margin-top: 5px
+}
+
+.mobile-web:not(.tablet-web) .owners-ad-wrapper {
+    margin: 0 -10px
+}
+
+.mobile-web:not(.tablet-web) .owners-ad-wrapper .owners-ad {
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px
+}
+
+.hdp-video {
+    border-radius: 2px;
+    margin-top: 15px;
+    color: #FFF;
+    text-align: center
+}
+
+.hdp-video div {
+    display: inline-block
+}
+
+@media screen and (min-width:481px) {
+    .hdp-video img {
+        margin-right: 15px
+    }
+}
+
+@media screen and (max-width:480px) {
+    .hdp-video {
+        margin-top: 20px;
+        padding: 12px
+    }
+    .hdp-video img {
+        margin-right: 10px
+    }
+}
+
+@media screen and (max-width:380px) {
+    .hdp-video {
+        padding: 6px
+    }
+    .hdp-video img {
+        margin-right: 4px
+    }
+}
+
+.listing-3d,
+.listing-video {
+    display: inline-block;
+    margin-right: 20px
+}
+
+.listing-3d:last-child,
+.listing-video:last-child {
+    margin-right: 0
+}
+
+.hdp-video-on .listing-3d .hdp-3d-button,
+.hdp-video-on .listing-video .hdp-video-button {
+    border-radius: 2px;
+    margin-top: 15px;
+    color: #FFF;
+    text-align: center;
+    background-color: #05AE69
+}
+
+.hdp-video-on .listing-3d .hdp-3d-button div,
+.hdp-video-on .listing-video .hdp-video-button div {
+    display: inline-block
+}
+
+@media screen and (min-width:481px) {
+    .hdp-video-on .listing-3d .hdp-3d-button img,
+    .hdp-video-on .listing-video .hdp-video-button img {
+        margin-right: 15px
+    }
+}
+
+@media screen and (max-width:480px) {
+    .hdp-video-on .listing-3d .hdp-3d-button,
+    .hdp-video-on .listing-video .hdp-video-button {
+        margin-top: 20px;
+        padding: 12px
+    }
+    .hdp-video-on .listing-3d .hdp-3d-button img,
+    .hdp-video-on .listing-video .hdp-video-button img {
+        margin-right: 10px
+    }
+}
+
+@media screen and (max-width:380px) {
+    .hdp-video-on .listing-3d .hdp-3d-button,
+    .hdp-video-on .listing-video .hdp-video-button {
+        padding: 6px
+    }
+    .hdp-video-on .listing-3d .hdp-3d-button img,
+    .hdp-video-on .listing-video .hdp-video-button img {
+        margin-right: 4px
+    }
+}
+
+.hdp-video-on .listing-3d .hdp-no-3d-button,
+.hdp-video-on .listing-video .hdp-no-video-button {
+    border-radius: 2px;
+    margin-top: 15px;
+    color: #FFF;
+    text-align: center;
+    background-color: #B8B8B8
+}
+
+.hdp-video-on .listing-3d .hdp-no-3d-button div,
+.hdp-video-on .listing-video .hdp-no-video-button div {
+    display: inline-block
+}
+
+@media screen and (min-width:481px) {
+    .hdp-video-on .listing-3d .hdp-no-3d-button img,
+    .hdp-video-on .listing-video .hdp-no-video-button img {
+        margin-right: 15px
+    }
+}
+
+@media screen and (max-width:480px) {
+    .hdp-video-on .listing-3d .hdp-no-3d-button,
+    .hdp-video-on .listing-video .hdp-no-video-button {
+        margin-top: 20px;
+        padding: 12px
+    }
+    .hdp-video-on .listing-3d .hdp-no-3d-button img,
+    .hdp-video-on .listing-video .hdp-no-video-button img {
+        margin-right: 10px
+    }
+}
+
+@media screen and (max-width:380px) {
+    .hdp-video-on .listing-3d .hdp-no-3d-button,
+    .hdp-video-on .listing-video .hdp-no-video-button {
+        padding: 6px
+    }
+    .hdp-video-on .listing-3d .hdp-no-3d-button img,
+    .hdp-video-on .listing-video .hdp-no-video-button img {
+        margin-right: 4px
+    }
+}
+
+.listing-3d .icon-3d-home {
+    margin-right: 4px!important;
+    vertical-align: text-bottom;
+    width: 18px
+}
+
+.zsg-button.hdp-3d-button:focus,
+.zsg-button.hdp-3d-button:hover,
+.zsg-button.hdp-video-button:focus,
+.zsg-button.hdp-video-button:hover {
+    background: linear-gradient(to top, #05AE69, #05AE69) repeat-x
+}
+
+.zsg-button.hdp-no-3d-button:focus,
+.zsg-button.hdp-no-3d-button:hover,
+.zsg-button.hdp-no-video-button:focus,
+.zsg-button.hdp-no-video-button:hover {
+    background: linear-gradient(to top, #B8B8B8, #B8B8B8) repeat-x
+}
+
+.hdp-video-on a:active,
+.hdp-video-on a:focus,
+.hdp-video-on a:hover,
+.hdp-video-on a:link,
+.hdp-video-on a:visited {
+    color: #55A4FF
+}
+
+.hdp-video-on .new-feature {
+    color: #05AE69
+}
+
+.hdp-video-on .zsg-badge_orange {
+    background-color: #B8B8B8
+}
+
+.hdp-video-on .zsg-icon-three-squares-stacked {
+    color: #55A4FF
+}
+
+.hdp-video-on-tab a {
+    color: #999!important
+}
+
+.hdp-video-on-tab .zsg-tab_active a:active,
+.hdp-video-on-tab .zsg-tab_active a:focus,
+.hdp-video-on-tab .zsg-tab_active a:hover,
+.hdp-video-on-tab .zsg-tab_active a:link,
+.hdp-video-on-tab .zsg-tab_active a:visited {
+    color: #55A4FF!important
+}

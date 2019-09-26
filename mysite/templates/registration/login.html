@@ -1,0 +1,362 @@
+
+
+{% extends 'base/Navbar.html' %}
+{% load static %}
+
+  {% block content %}
+
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=optional">
+   <style>
+
+
+        @font-face {
+            font-family: Ivar Headline;
+            font-display: optional;
+            src: url(/static/font/IvarHeadline-SemiBold-extended.woff2) format("woff2"), url(/static/font/IvarHeadline-SemiBold-extended.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+            unicode-range: u+0000-001f, u+0080-200f, u+2020-faff, u+fb10-ffff
+        }
+
+        @font-face {
+            font-family: Ivar Headline;
+            font-display: optional;
+            src: url(/static/font/IvarHeadline-SemiBold-core.woff2) format("woff2"), url(/static/font/IvarHeadline-SemiBold-core.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+            unicode-range: u+0020-007f, u+201?, u+fb0?
+        }
+
+    </style>
+
+<link href="{% static 'css/reg-login.css' %}" type="text/css" rel="stylesheet" />
+<style>
+#react-auth-lightbox
+{
+direction:rtl;
+text-align:right;
+}
+.zsg-tabs>li:first-child {
+    display: inline-block;
+    padding-right: 0px;
+    padding-left: 34px;
+    top: 1px;
+}
+.password-input input[type=password] {
+    padding-right: 5px;
+}
+
+.zsg-input-overlay_right input {
+    padding-right: 5px;
+}
+</style><br><br>
+
+            <div id="react-auth-lightbox">
+                <div id="reg-login-app">
+                    <div class="act-auth-container">
+                        <div class="user-account login">
+                            <div class="module-wrap">
+                                <div class="module-head">
+                                    <h2>مرحبا بكم في فرص</h2></div>
+                                <div class="module-body">
+                                    <div class="module-nav">
+
+                                            <ul class="hdp-video-on-tab zsg-tabs zsg-tabs_lg active-inactive-choice-block">
+ <li class="zsg-tab_active"> <input id="tab1" type="radio" name="tab" class="hide-radiobutton" checked><label for="tab1" class="tab">تسجيل الدخول</label>
+
+<li class="zsg-tab_active"><input id="tab2" type="radio" name="tab" class="hide-radiobutton"><label for="tab2" class="tab">جديد</label>
+ </ul>
+                                    </div>
+
+
+                                    <form class="zsg-form" id="login" method="POST">
+                                                {% csrf_token %}
+                                        <div class="zsg-form-field">
+                                            <input type="hidden" id="inputs-authToken" autocomplete="off" value="">
+                                        </div>
+                                        <div class="zsg-form-field">
+                                            {{ formLogin.username }}
+                                             <p class="zsg-form-error-text">البريد إلكتروني</p>
+                                        </div>
+                                        <div class="zsg-form-field">
+                                           {{ formLogin.password }}
+                                            <p class="zsg-form-error-text"> كلمة المرور</p>
+                                        </div>
+                                        <div class="zsg-form-field">
+                                            <div class="submit-div zsg-lg-1-2 zsg-sm-1-1">
+                                                <input name="login" type="submit" class="zsg-button_primary zsg-button_fullsize" value="تسجيل دخول">
+                                            </div>
+                                            <div class="lower-right-panel zsg-lg-1-2 zsg-sm-1-1"><a href="{% url 'password_reset' %}">هل نسيت كلمة المرور؟</a></div>
+                                        </div>
+                                    </form>
+
+
+
+
+                                     <form class="zsg-form hide" id="register" method="POST">
+                                                 {% csrf_token %}
+                                        <div class="zsg-form-field">
+                                            <input type="hidden" id="inputs-authToken" autocomplete="off" value="">
+                                        </div>
+                                        <div class="zsg-form-field">
+                                            {{ formRegister.username }}
+                                  {% for error in formRegister.username.errors %}
+                                     <div class="auth-validation-message validation-fail"><span class="validation-icon zsg-icon-circle-x"></span><span class="validation-text">{{ error }}</span></div>
+                                {% endfor %}
+                                        </div>
+                                        <div class="password-input">
+                                            <div class="zsg-form-field">
+                                                <div class="zsg-input-overlay_right password">
+                                                     {{ formRegister.password1 }}
+                                 {% for error in formRegister.password1.errors %}
+                                     <div class="auth-validation-message validation-fail"><span class="validation-icon zsg-icon-circle-x"></span><span class="validation-text">{{ error }}</span></div>
+                                {% endfor %}
+                                                      <div class="zsg-input-overlay-text_left">
+                                                        <div class="password-strength-meter"><span tabindex="0" role="button"><div class="overlay-content"><span id="strength-label" class="strength-label"></span><span class="strength-donut"><div class="zsg-donut"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path class="zsg-donut-path zsg-donut-path_background" d="M50,7.5 A42.5,42.5,0,1,1,49.99999,7.5" style="stroke-width: 15px;"></path><path class="zsg-donut-path zsg-donut-path_foreground" d="M50,7.5 A42.5,42.5,0,0,1,50,7.5" style="stroke-width: 15px; stroke: rgb(255, 255, 255);"></path></svg><div class="zsg-donut-content"></div></div></span></div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="validation-messages">
+                                            <li>
+                                                <div id="LeastThanNight" class="auth-validation-message validation-neutral"><span class="validation-icon "></span><span class="validation-text">على الاقل ثمانية حروف</span></div>
+                                            </li>
+                                            <li>
+                                                <div id="MixlatterAndNumber" class="auth-validation-message validation-neutral"><span class="validation-icon "></span><span class="validation-text">مزج بين حروف والارقام</span></div>
+                                            </li>
+                                        </ul>
+                                </div>
+
+                                                                     <div class="password-input">
+                                            <div class="zsg-form-field">
+                                                <div class="zsg-input-overlay_right password">
+                                                     {{ formRegister.password2 }}
+                                 {% for error in formRegister.password2.errors %}
+                                                    <div class="auth-validation-message validation-fail"><span class="validation-icon zsg-icon-circle-x"></span><span class="validation-text">{{ error }}</span></div>
+                                {% endfor %}
+
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="zsg-form-field zsg-form-field_checkbox" id="yui_3_18_1_1_1567443346923_67">
+                                    <input name="proCheck" id="proCheck" type="checkbox" value="false">
+                                    <label for="proCheck" id="yui_3_18_1_1_1567443346923_65">أنا مالك أو مهني</label>
+                                </div>
+                                <div class="professional hide" id="yui_3_18_1_1_1567443346923_76">
+                                    <h3>معلومات مهنية</h3>
+                                    <div class="zsg-form-field" id="yui_3_18_1_1_1567443346923_75">
+                                        <select name="proSelect">
+                                            <option value="0">إختر فئتك</option>
+                                            <option value="1">وكيل عقارات / وسيط</option>
+                                            <option value="2">مقرض عقاري</option>
+                                            <option value="3">خدمات تحسين المنزل</option>
+                                            <option value="4">مالك</option>
+                                            <option value="5">مصور فوتوغرافي</option>
+                                            <option value="6">باني منازل</option>
+                                            <option value="7">مدير الملكية</option>
+                                            <option value="8">العقارات المهنية الأخرى</option>
+                                        </select>
+                                        <p class="zsg-form-error-text">يرجى اختيار فئة المهنية</p>
+                                    </div>
+                                    <div class="name-fields zsg-g">
+                                        <div class="zsg-lg-1-2 zsg-sm-1-1">
+                                            <div class="zsg-form-field">
+                                                <input type="text" name="inputs-firstName" placeholder="الاسم الأول" autocomplete="off" value="">
+                                                <p class="zsg-form-error-text">أدخل اسمك الأول ، لا يتجاوز 20 حرفًا</p>
+                                            </div>
+                                        </div>
+                                        <div class="zsg-lg-1-2 zsg-sm-1-1">
+                                            <div class="zsg-form-field">
+                                                <input type="text" name="inputs-lastName" placeholder="اللقب" autocomplete="off" value="">
+                                                <p class="zsg-form-error-text">أدخل اللقب ، لا يتجاوز 20 حرفًا</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="zsg-lg-1-2 sm-hide"></div>
+                                    </div>
+                                    <div class="phone-fields zsg-g">
+                    <div class="zsg-lg-1-2 zsg-sm-1-1">
+                                            <div class="zsg-form-field">
+                                                <input type="text" name="inputs-phone" placeholder="رقم الهاتف" maxlength="12" autocomplete="off" value="">
+                                                <p class="zsg-form-error-text">أدخل رقم الهاتف</p>
+                                            </div>
+                                        </div>
+                                        <div class="phone-ext-field zsg-lg-1-2 zsg-sm-1-1">
+                                            <div class="zsg-g">
+                                                <div class="extension-label zsg-lg-1-5">
+                                                    <label for="extension">المفتاح</label>
+                                                </div>
+                                                <div class="zsg-lg-2-5">
+                                                    <div class="zsg-form-field">
+                                                        <input type="tel" name="extension" placeholder="967" maxlength="5" autocomplete="off" value="">
+                                                        <p class="zsg-form-error-text">المفتاح لا يمكن أن يتجاوز 5 أرقام</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="community-pillar-field zsg-form-field zsg-form-field_checkbox">
+                                        <input id="isCommunityPillar" type="checkbox" value="false">
+                                        <label for="isCommunityPillar">ركيزة المجتمع</label>
+                                    </div>
+                                    <p class="zsg-fineprint community-pillar-field">
+                                        وافق ملاك العقار المجتمعي على تعديل عملية الفرز القياسية للمستأجرين من أجل مساعدة المتقدمين الذين لديهم دخول منخفضة ، أو بطالة في العمل  - على الحصول على سكن. يعلم ملاك العقارات أن تأمين الإسكان الآمن والموثوق هو في كثير من الأحيان الخطوة الأولى نحو مستقبل أفضل ، ويريدون مساعدة الجميع في مجتمعهم على إيجاد طريقهم إلى المنزل. </p>
+                                </div>
+                                <div class="zsg-form-field">
+                                    <div class="submit-div zsg-lg-1-2 zsg-sm-1-1">
+                                        <input name="register" type="submit" class="zsg-button_primary zsg-button_fullsize" value="تسجيل">
+                                    </div>
+                                    <div class="lower-right-panel zsg-lg-1-2 zsg-sm-1-1">
+                                        <div class="zsg-fineprint">
+                                            <p>أوافق على <a href="{% url 'Terms' %}" target="_blank">شروط</a> استخدام فرص</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                </form>
+
+
+
+                                </div>
+                                <div class="module-footer line-top"><span>أو الإتصال على: </span><span class="social-logins"><a href="{% url 'social:begin' 'facebook' %}" class="btn-social-connect btn-facebook"><span class="zsg-icon-facebook"></span></a>
+                                    <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn-social-connect btn-google-plus">
+                                        <div class="z-google-g-logo z-google-g-logo_badge social-icon-google-g" style="padding: 6px; border-radius: 30px;">
+                                            <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1">
+                                                <g class="symbols" fill="none" fill-rule="evenodd">
+                                                    <g class="super-g">
+                                                        <path d="M9,3.48 C10.69,3.48 11.83,4.21 12.48,4.82 L15.02,2.34 C13.46,0.89 11.43,0 9,0 C5.48,0 2.44,2.02 0.96,4.96 L3.87,7.22 C4.6,5.05 6.62,3.48 9,3.48 L9,3.48 Z" fill="#EA4335"></path>
+                                                        <path d="M17.64,9.2 C17.64,8.46 17.58,7.92 17.45,7.36 L9,7.36 L9,10.7 L13.96,10.7 C13.86,11.53 13.32,12.78 12.12,13.62 L14.96,15.82 C16.66,14.25 17.64,11.94 17.64,9.2 L17.64,9.2 Z" fill="#4285F4"></path>
+                                                        <path d="M3.88,10.78 C3.69,10.22 3.58,9.62 3.58,9 C3.58,8.38 3.69,7.78 3.87,7.22 L0.96,4.96 C0.35,6.18 0,7.55 0,9 C0,10.45 0.35,11.82 0.96,13.04 L3.88,10.78 L3.88,10.78 Z" fill="#FBBC05"></path>
+                                                        <path d="M9,18 C11.43,18 13.47,17.2 14.96,15.82 L12.12,13.62 C11.36,14.15 10.34,14.52 9,14.52 C6.62,14.52 4.6,12.95 3.88,10.78 L0.97,13.04 C2.45,15.98 5.48,18 9,18 L9,18 Z" fill="#34A853"></path>
+                                                        <polygon points="0 0 18 0 18 18 0 18"></polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+
+<script>
+
+if("{{page}}" == 2 )
+{
+$('#login').addClass('hide');
+$('#register').removeClass('hide');
+$('#tab2').click();
+}
+else
+{
+$('#login').removeClass('hide');
+$('#register').addClass('hide');
+}
+$(document).on('click', '#tab1', function() {
+$('#login').removeClass('hide');
+$('#register').addClass('hide');
+});
+$(document).on('click', '#tab2', function() {
+$('#login').addClass('hide');
+$('#register').removeClass('hide');
+});
+
+$(document).on('click', '#proCheck', function() {
+if ($(this).is(":checked")) {
+$('.professional').removeClass('hide');
+}
+else
+{
+$('.professional').addClass('hide');
+}
+});
+
+
+</script>
+
+        <script>
+
+            function validatePassword(password) {
+
+                // Do not show anything when the length of password is zero.
+                if (password.length === 0) {
+                    document.getElementById("strength-label").innerHTML = "";
+                    return;
+                }
+                // Create an array and push all possible values that you want in password
+                var matchedCase = new Array();
+                matchedCase.push("[$@$!%*#?&]"); // Special Charector
+                matchedCase.push("[A-Z]");      // Uppercase Alpabates
+                matchedCase.push("[0-9]");      // Numbers
+                matchedCase.push("[a-z]");     // Lowercase Alphabates
+
+
+                // Check the conditions
+                var ctr = 0;
+
+                for (var i = 0; i < matchedCase.length; i++) {
+                    if (new RegExp(matchedCase[i]).test(password)) {
+                        ctr++;
+                    }
+                }
+
+    if (password.length > 7) {
+                  strength = "متوسط";
+                  $(".zsg-donut-path_foreground").attr("d","M50,7.5 A42.5,42.5,0,0,1,50,92.5");
+                  $(".zsg-donut-path_foreground").attr("style","stroke-width:15px;stroke:rgb(255, 110, 1)");
+
+//$('#LeastThanNight').next('span').removeClass('zsg-icon-circle-x');
+                }
+                else
+                {
+//$('#LeastThanNight').next('.validation-icon').addClass('zsg-icon-circle-x');
+}
+                // Display it
+                var color = "";
+                var strength = "";
+                switch (ctr) {
+                    case 0:
+                    case 1:
+                        strength = "ضعيف";
+                        $(".zsg-donut-path_foreground").attr("d","M50,7.5 A42.5,42.5,0,0,1,50,7.5");
+                        $(".zsg-donut-path_foreground").attr("style","stroke-width:15px;stroke:rgb(255, 255, 255)");
+                        break;
+                    case 2:
+                        strength = "متوسط";
+                        $(".zsg-donut-path_foreground").attr("d","M50,7.5 A42.5,42.5,0,0,1,50,92.5");
+                        $(".zsg-donut-path_foreground").attr("style","stroke-width:15px;stroke:rgb(255, 110, 1)");
+                        break;
+                    case 3:
+                        strength = "ممتاز";
+                        $(".zsg-donut-path_foreground").attr("d","M50,7.5 A42.5,42.5,0,1,1,49.99999,7.5");
+                        $(".zsg-donut-path_foreground").attr("style","stroke-width: 15px; stroke: rgb(58, 206, 9)");
+                        break;
+                    default:
+
+$('#MixlatterAndNumber').removeClass('validation-neutral').addClass('validation-fail');
+$('#MixlatterAndNumber').next('span').addClass('zsg-icon-circle-x');
+
+
+                }
+
+                document.getElementById("strength-label").innerHTML = strength;
+                document.getElementById("strength-label").style.color = color;
+            }
+        </script>
+
+{% endblock %}

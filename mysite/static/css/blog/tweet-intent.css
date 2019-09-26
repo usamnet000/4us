@@ -1,0 +1,25 @@
+﻿.ui-widget-overlay{
+	z-index: 9998!important;
+}
+.ui-widget-content{
+	z-index: 9999!important;
+}
+#tweet-intent-dialog { 
+	padding: 5px; 
+	background: #fff;
+}
+#tweet-intent-dialog label { 
+	font-weight: bold; 
+	margin-top: 10px;
+}
+#tweet-intent-dialog input { 
+	display: block; 
+	width: 100%;
+}
+#tweet-intent-dialog .tweet-text { font-style: italic; }
+
+a.tweet-intent {
+	font-weight: bold;
+	padding-right: 20px;
+	background: url('../images/bird_blue.png') no-repeat right #def;
+}

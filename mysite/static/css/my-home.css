@@ -1,0 +1,497 @@
+﻿.type-icon {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    height: 10px;
+    margin-right: 6px;
+    width: 10px
+}
+
+.sale .type-icon,
+.sold .type-icon,
+.zest .type-icon,
+.premarket .type-icon,
+.rent .type-icon {
+    margin-right: -21px
+}
+
+.for-sale .type-icon,
+.type-forSale .type-icon,
+.type-forSaleWithOffer .type-icon,
+.forSaleWithOffer .type-icon,
+.forSaleOffer .type-icon,
+.forSale .type-icon,
+.sale .type-icon,
+.type-for-sale .type-icon,
+.type-comingSoon .type-icon,
+.type-coming-soon .type-icon,
+.comingSoon .type-icon,
+.Pending .type-icon,
+.type-pending .type-icon {
+    background-color: #c00
+}
+
+.type-favorite .for-sale .type-icon,
+.type-favorite .type-forSale .type-icon,
+.type-favorite .type-forSaleWithOffer .type-icon,
+.type-favorite .forSaleWithOffer .type-icon,
+.type-favorite .forSaleOffer .type-icon,
+.type-favorite .forSale .type-icon,
+.type-favorite .sale .type-icon,
+.type-favorite .type-for-sale .type-icon,
+.type-favorite .type-comingSoon .type-icon,
+.type-favorite .type-coming-soon .type-icon,
+.type-favorite .comingSoon .type-icon,
+.type-favorite .Pending .type-icon,
+.type-favorite .type-pending .type-icon {
+    display: inline-block;
+    padding-top: 2px;
+    height: 12px;
+    width: 12px;
+    position: relative
+}
+
+.type-favorite .for-sale .type-icon:before,
+.type-favorite .type-forSale .type-icon:before,
+.type-favorite .type-forSaleWithOffer .type-icon:before,
+.type-favorite .forSaleWithOffer .type-icon:before,
+.type-favorite .forSaleOffer .type-icon:before,
+.type-favorite .forSale .type-icon:before,
+.type-favorite .sale .type-icon:before,
+.type-favorite .type-for-sale .type-icon:before,
+.type-favorite .type-comingSoon .type-icon:before,
+.type-favorite .type-coming-soon .type-icon:before,
+.type-favorite .comingSoon .type-icon:before,
+.type-favorite .Pending .type-icon:before,
+.type-favorite .type-pending .type-icon:before,
+.type-favorite .for-sale .type-icon:after,
+.type-favorite .type-forSale .type-icon:after,
+.type-favorite .type-forSaleWithOffer .type-icon:after,
+.type-favorite .forSaleWithOffer .type-icon:after,
+.type-favorite .forSaleOffer .type-icon:after,
+.type-favorite .forSale .type-icon:after,
+.type-favorite .sale .type-icon:after,
+.type-favorite .type-for-sale .type-icon:after,
+.type-favorite .type-comingSoon .type-icon:after,
+.type-favorite .type-coming-soon .type-icon:after,
+.type-favorite .comingSoon .type-icon:after,
+.type-favorite .Pending .type-icon:after,
+.type-favorite .type-pending .type-icon:after {
+    background-color: #c00;
+    margin-top: 1px;
+    position: absolute;
+    content: "";
+    left: 7px;
+    width: 7px;
+    height: 10px;
+    border-radius: 7px 7px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+.type-favorite .for-sale .type-icon:after,
+.type-favorite .type-forSale .type-icon:after,
+.type-favorite .type-forSaleWithOffer .type-icon:after,
+.type-favorite .forSaleWithOffer .type-icon:after,
+.type-favorite .forSaleOffer .type-icon:after,
+.type-favorite .forSale .type-icon:after,
+.type-favorite .sale .type-icon:after,
+.type-favorite .type-for-sale .type-icon:after,
+.type-favorite .type-comingSoon .type-icon:after,
+.type-favorite .type-coming-soon .type-icon:after,
+.type-favorite .comingSoon .type-icon:after,
+.type-favorite .Pending .type-icon:after,
+.type-favorite .type-pending .type-icon:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%
+}
+
+.for-rent .type-icon,
+.type-forRent .type-icon,
+.forRent .type-icon,
+.rent .type-icon,
+.type-for-rent .type-icon {
+    background-color: #93f
+}
+
+.type-favorite .for-rent .type-icon,
+.type-favorite .type-forRent .type-icon,
+.type-favorite .forRent .type-icon,
+.type-favorite .rent .type-icon,
+.type-favorite .type-for-rent .type-icon {
+    display: inline-block;
+    padding-top: 2px;
+    height: 12px;
+    width: 12px;
+    position: relative
+}
+
+.type-favorite .for-rent .type-icon:before,
+.type-favorite .type-forRent .type-icon:before,
+.type-favorite .forRent .type-icon:before,
+.type-favorite .rent .type-icon:before,
+.type-favorite .type-for-rent .type-icon:before,
+.type-favorite .for-rent .type-icon:after,
+.type-favorite .type-forRent .type-icon:after,
+.type-favorite .forRent .type-icon:after,
+.type-favorite .rent .type-icon:after,
+.type-favorite .type-for-rent .type-icon:after {
+    background-color: #93f;
+    margin-top: 1px;
+    position: absolute;
+    content: "";
+    left: 7px;
+    width: 7px;
+    height: 10px;
+    border-radius: 7px 7px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+.type-favorite .for-rent .type-icon:after,
+.type-favorite .type-forRent .type-icon:after,
+.type-favorite .forRent .type-icon:after,
+.type-favorite .rent .type-icon:after,
+.type-favorite .type-for-rent .type-icon:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%
+}
+
+.pre-market .type-icon,
+.type-MMM .type-icon,
+.MMM .type-icon,
+.preMarket .type-icon,
+.premarket .type-icon,
+.type-pre-market .type-icon {
+    background-color: #08f
+}
+
+.type-favorite .pre-market .type-icon,
+.type-favorite .type-MMM .type-icon,
+.type-favorite .MMM .type-icon,
+.type-favorite .preMarket .type-icon,
+.type-favorite .premarket .type-icon,
+.type-favorite .type-pre-market .type-icon {
+    display: inline-block;
+    padding-top: 2px;
+    height: 12px;
+    width: 12px;
+    position: relative
+}
+
+.type-favorite .pre-market .type-icon:before,
+.type-favorite .type-MMM .type-icon:before,
+.type-favorite .MMM .type-icon:before,
+.type-favorite .preMarket .type-icon:before,
+.type-favorite .premarket .type-icon:before,
+.type-favorite .type-pre-market .type-icon:before,
+.type-favorite .pre-market .type-icon:after,
+.type-favorite .type-MMM .type-icon:after,
+.type-favorite .MMM .type-icon:after,
+.type-favorite .preMarket .type-icon:after,
+.type-favorite .premarket .type-icon:after,
+.type-favorite .type-pre-market .type-icon:after {
+    background-color: #08f;
+    margin-top: 1px;
+    position: absolute;
+    content: "";
+    left: 7px;
+    width: 7px;
+    height: 10px;
+    border-radius: 7px 7px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+.type-favorite .pre-market .type-icon:after,
+.type-favorite .type-MMM .type-icon:after,
+.type-favorite .MMM .type-icon:after,
+.type-favorite .preMarket .type-icon:after,
+.type-favorite .premarket .type-icon:after,
+.type-favorite .type-pre-market .type-icon:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%
+}
+
+.recently-sold .type-icon,
+.type-recentlySold .type-icon,
+.sold .type-icon,
+.recentlySold .type-icon,
+.type-recently-sold .type-icon {
+    background-color: #fc0
+}
+
+.type-favorite .recently-sold .type-icon,
+.type-favorite .type-recentlySold .type-icon,
+.type-favorite .sold .type-icon,
+.type-favorite .recentlySold .type-icon,
+.type-favorite .type-recently-sold .type-icon {
+    display: inline-block;
+    padding-top: 2px;
+    height: 12px;
+    width: 12px;
+    position: relative
+}
+
+.type-favorite .recently-sold .type-icon:before,
+.type-favorite .type-recentlySold .type-icon:before,
+.type-favorite .sold .type-icon:before,
+.type-favorite .recentlySold .type-icon:before,
+.type-favorite .type-recently-sold .type-icon:before,
+.type-favorite .recently-sold .type-icon:after,
+.type-favorite .type-recentlySold .type-icon:after,
+.type-favorite .sold .type-icon:after,
+.type-favorite .recentlySold .type-icon:after,
+.type-favorite .type-recently-sold .type-icon:after {
+    background-color: #fc0;
+    margin-top: 1px;
+    position: absolute;
+    content: "";
+    left: 7px;
+    width: 7px;
+    height: 10px;
+    border-radius: 7px 7px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+.type-favorite .recently-sold .type-icon:after,
+.type-favorite .type-recentlySold .type-icon:after,
+.type-favorite .sold .type-icon:after,
+.type-favorite .recentlySold .type-icon:after,
+.type-favorite .type-recently-sold .type-icon:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%
+}
+
+.not-for-sale .type-icon,
+.type-notForSale .type-icon,
+.type-allHomes .type-icon,
+.type-not-for-sale .type-icon,
+.zestimate .type-icon,
+.allHomes .type-icon,
+.zest .type-icon,
+.type-off-market .type-icon {
+    background-color: #999
+}
+
+.type-favorite .not-for-sale .type-icon,
+.type-favorite .type-notForSale .type-icon,
+.type-favorite .type-allHomes .type-icon,
+.type-favorite .type-not-for-sale .type-icon,
+.type-favorite .zestimate .type-icon,
+.type-favorite .allHomes .type-icon,
+.type-favorite .zest .type-icon,
+.type-favorite .type-off-market .type-icon {
+    display: inline-block;
+    padding-top: 2px;
+    height: 12px;
+    width: 12px;
+    position: relative
+}
+
+.type-favorite .not-for-sale .type-icon:before,
+.type-favorite .type-notForSale .type-icon:before,
+.type-favorite .type-allHomes .type-icon:before,
+.type-favorite .type-not-for-sale .type-icon:before,
+.type-favorite .zestimate .type-icon:before,
+.type-favorite .allHomes .type-icon:before,
+.type-favorite .zest .type-icon:before,
+.type-favorite .type-off-market .type-icon:before,
+.type-favorite .not-for-sale .type-icon:after,
+.type-favorite .type-notForSale .type-icon:after,
+.type-favorite .type-allHomes .type-icon:after,
+.type-favorite .type-not-for-sale .type-icon:after,
+.type-favorite .zestimate .type-icon:after,
+.type-favorite .allHomes .type-icon:after,
+.type-favorite .zest .type-icon:after,
+.type-favorite .type-off-market .type-icon:after {
+    background-color: #999;
+    margin-top: 1px;
+    position: absolute;
+    content: "";
+    left: 7px;
+    width: 7px;
+    height: 10px;
+    border-radius: 7px 7px 0 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%
+}
+
+.type-favorite .not-for-sale .type-icon:after,
+.type-favorite .type-notForSale .type-icon:after,
+.type-favorite .type-allHomes .type-icon:after,
+.type-favorite .type-not-for-sale .type-icon:after,
+.type-favorite .zestimate .type-icon:after,
+.type-favorite .allHomes .type-icon:after,
+.type-favorite .zest .type-icon:after,
+.type-favorite .type-off-market .type-icon:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%
+}
+
+.actions-block-narrow {
+    background: #006aff;
+    height: 125px;
+    width: 89%;
+    margin-left: 40px;
+    padding: 10px;
+    color: #a7a6ab
+}
+
+.actions-block-narrow a:link,
+.actions-block-narrow a:hover,
+.actions-block-narrow a:focus,
+.actions-block-narrow a:active,
+.actions-block-narrow a:visited {
+    color: #fff;
+    font-weight: lighter
+}
+
+.actions-block-narrow table {
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle
+}
+
+.actions-mini-menu {
+    position: absolute;
+    right: 2px;
+    zoom: 2;
+    color: #006aff
+}
+
+.coming-soon-banner-my-zillow {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-image: url('data:image/png;base64,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');
+    background-size: 75px 75px;
+    z-index: 1;
+    margin-left: 3px;
+    margin-top: 3px
+}
+
+.coming-soon-banner-my-zillow.mobile {
+    margin-left: 0;
+    margin-top: 0
+}
+
+.facts-brushed-aside {
+    position: absolute;
+    right: 89%
+}
+
+.listing-address {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.listing-lifespan {
+    color: #17b036;
+    font-size: 13px;
+    margin-top: 5px
+}
+
+.listing-price {
+    font-size: 19px
+}
+
+.listing-row {
+    min-height: 135px
+}
+
+.listing-type-text {
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 8px;
+    text-transform: uppercase
+}

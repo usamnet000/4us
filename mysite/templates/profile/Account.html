@@ -1,0 +1,369 @@
+
+{% extends 'base/Navbar.html' %}
+{% load static %}
+{% block head_title %}أعدادات الحساب{% endblock %}
+  {% block content %}
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+
+<link href="{% static 'css/profile/profile.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/contact-card.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/manage-profile.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/public-action-bar.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/team-member-list.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/profile-tools.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/team-summary.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/profile-professional-summary.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/z-toggle-content.css' %}" type="text/css" rel="stylesheet" />
+<style>
+    .zsg-layout-abc-b, .zsg-layout-bc-b {
+    width: 100%;
+    padding-left: 120px;
+    margin-right: 0px;
+    margin-top: 33px;
+}
+
+
+  body{
+    overflow-x:hidden;
+    overflow-y:auto;
+text-align:right;
+  }
+  .zsg-layout-abc-c, .zsg-layout-bc-c {
+    width: 300px;
+    margin-right: -300px;
+}
+
+
+@media only screen and (max-width: 767px){
+/* Styles */
+#cCol-pro-contact-info
+{
+display:none;
+}
+}
+@media only screen and (min-width: 768px){
+/* Styles */
+#cCol-pro-contact-info
+{
+display:block;
+}
+}
+.zsg-tabs>li {
+    display: inline-block;
+    padding-right: 0px;
+    top: 4px;
+    font-size:14px;
+
+}
+
+
+</style>
+
+
+
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link id="avast_os_ext_custom_font" href="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/fonts/fonts.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" id="sb-font-awesome-css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+<link href="{% static 'css/profile/ie.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/header.min.css' %}" type="text/css" rel="stylesheet" />
+<style>
+    @media screen and (max-width: 767px){
+.blog_page_filter_col_mobile {
+    position: relative;
+    margin-bottom: 0px;
+    z-index: 9;
+}
+.bpf_btn_in::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    bottom: 0;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.bpf_box_item {
+    width: 90%;
+    float: left;
+    padding: 10px 0 9px;
+}
+
+</style>
+
+
+
+
+        <main role="main">
+            <div class="blog_page">
+                <div class="page_banner">
+                    <div class="container">
+                        <div class="page_banner_title">نظرة عامة</div>
+                        <div class="page_banner_content">Get inspired with outdoor living tips from Shademaster.</div>
+                    </div>
+                </div>
+                <div class="blog_page_wrap">
+                    <div class="blog_page_content_wrap">
+                        <div class="blog_page_filter_col_mobile visible-xs">
+                            <div class="bpf_btn">
+                                <div class="container"> <span class="bpf_btn_in">خيارات الضبط:</span></div>
+                            </div>
+                            <div class="bpf_wrap_mobile" style="display: none;">
+                                <div class="container big-container bpf_container">
+                                    <div class="bpf_box_wrap">
+                                        <div class="bpf_box clearfix">
+                                            <div class="bpf_box_item">
+                                                <div class="bpfbi_title">حساب</div>
+                                                <ul class="bpfbi_items">
+                                                <li> <a href="/savedhomes/">المنازل المحفوظة</a></li>
+                                                <li> <a href="/EditProfile">الملف الشخصي</a></li>
+                                                <li> <a href="{% url 'Account' %}">إعدادت الحساب</a></li>
+                                                <li> <a href="{% url 'password_change' %}">كلمة المرور</a></li>
+                                                        </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="blog_page_content_col" style="">
+                            <div class="bp_items">
+                                <div class="bp_item element_anim_1 start_anim">
+                                    <div class="container big-container">
+                                        <div class="bp_item_wrap">
+                                            <div class="bp_item_in feature">
+
+
+
+    <link href="https://www.zillowstatic.com/static-profile/aa91e8a/static-profile/css/z-pages/edit-profile.css" type="text/css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" media="all" href="https://www.zillowstatic.com/s/?static.80d5e73=css/z-modules/upload-image-component.css,css/z-modules/image-upload-preview-pane.css" type="text/css">
+
+
+
+
+        <div class="zsg-layout-width zsg-layout-top zsg-layout-bottom" style="direction:rtl;text-align:right;">
+            <main class="zsg-layout-content">
+                <section class="user-account-settings">
+                    <header>
+                        <h1>إعدادات الحساب</h1></header>
+                    <div class="zsg-content-component">
+                        <div class="zsg-form user-account-consumer-details">
+                            <div class="zsg-form-field zsg-g">
+                                <div class="zsg-lg-2-5 zsg-sm-1-1">
+                                    <label for="username-field">البريد الإلكتروني <span class="zsg-fineprint">(<a href="{% url 'ChangeEmail' %}">تحرير البريد الإلكتروني</a>)</span></label>
+                                </div>
+                                <div class="zsg-lg-3-5 zsg-sm-1-1">
+                                    <input id="username-field" readonly="true" type="text" value="{{user.username}}">
+                                </div>
+                            </div>
+                            <div class="zsg-form-field zsg-g">
+                                <div class="zsg-lg-2-5 zsg-sm-1-1">
+                                    <label for="password-field">كلمه المرور <span class="zsg-fineprint"> (<a href="{% url 'password_change' %}">ضع كلمة مرور</a>) </span></label>
+                                </div>
+                                <div class="zsg-lg-3-5 zsg-sm-1-1">
+                                    <input id="password-field" readonly="true" type="text" value="******">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zsg-form">
+                            <div class="zsg-form-field zsg-form-field_checkbox zsg-g">
+                                <div class="zsg-lg-2-5 zsg-md-hide zsg-sm-hide"></div>
+                                <div class="zsg-lg-3-5 zsg-md-1-1 zsg-sm-1-1">
+                                    <input data-zuid="140600236" tabindex="17" id="allowOtherToContactMe" type="checkbox" class="leftcheck">
+                                    <label for="allowOtherToContactMe">السماح لمستخدمي فرص الآخرين بالاتصال بك</label>
+                                    <p id="allowOtherToContactMe-success-unsubscribed" class="success hide"></p>
+                                    <p id="allowOtherToContactMe-success" class="success hide"></p>
+                                    <p id="allowOtherToContactMe-success-unsubscribed-failure" class="success hide">حدثت مشكلة أثناء حفظ الإعداد. الرجاء معاودة المحاولة في وقت لاحق.</p>
+                                    <p id="allowOtherToContactMe-success-failure" class="success hide">حدثت مشكلة أثناء حفظ الإعداد. الرجاء معاودة المحاولة في وقت لاحق</p>
+                                </div>
+                            </div>
+                        </div>
+                        <form method="post" action="/myzillow/Account,smsAgentNotificationsForm.sdirect" name="smsAgentNotificationsForm" id="smsAgentNotificationsForm" class="zsg-form">
+                            <div class="zsg-form-field zsg-form-field_checkbox zsg-g">
+                                <div class="zsg-lg-2-5 zsg-md-hide zsg-sm-hide"></div>
+                                <div class="zsg-lg-3-5 zsg-md-1-1 zsg-sm-1-1">
+                                    <input type="checkbox" name="smsAllNotificationsCheckbox" checked="checked" id="enableAllSmsNotifications" class="leftcheck" onclick="submit();">
+                                    <label for="enableAllSmsNotifications">اسمح لـ فرص بإرسال رسائل نصية إلي</label>
+                                </div>
+                            </div>
+                        </form>
+                        <section class="zsg-content-section zsg-separator"></section>
+                        <section class="zsg-content-section zsg-separator">
+                            <h3>حذف الحساب</h3>
+                            <p>سيتم فقد جميع المنازل والتفضيلات المحفوظة نهائيًا إذا قمت بحذف حسابك.</p>
+                            <p>تلقي الكثير من رسائل البريد الإلكتروني؟ إلغاء الاشتراك من قائمتنا البريدية بدلاً من ذلك.</p>
+                            <p>لتغيير عنوان بريدك الإلكتروني ، ما عليك سوى النقر على "تعديل البريد الإلكتروني" بجوار عنوان بريدك الإلكتروني أعلاه.</p>
+                            <ul class="zsg-button-group">
+                                <li><a href="{% url 'login' %}" id="delete-account-redirect" class="zsg-button">حذف الحساب </a></li>
+                                <li><a href="{% url 'Profile' %}" id="Subscription" class="zsg-button_primary">إلغاء الاشتراك </a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <section class="google-plus zsg-content-component zsg-g">
+                        <div class="zsg-lg-2-5 zsg-md-hide zsg-sm-hide"></div>
+                        <div class="zsg-lg-3-5 zsg-md-1-1 zsg-sm-1-1">
+                            <h3>تسجيل الدخول إلى Google</h3>
+                            <p>مرتبط حسابات فرص و Google.</p>
+                            <button type="submit" class="zsg-button_primary"><span class="matched">تعطيل تسجيل الدخول إلى Google</span></button>
+                        </div>
+                    </section>
+                </section>
+            </main>
+        </div>
+
+
+
+
+
+                                                <!--<div class="bpf_box_wrap"><div class="bpf_box"><div class="bpf_box_item"><div class="bpfbi_title">Categories</div><ul class="bpfbi_items"><li> <a href="https://www.shademaster.com.au/category/verandahs">Verandahs</a></li><li> <a href="https://www.shademaster.com.au/category/patio">patio</a></li><li> <a href="https://www.shademaster.com.au/category/outdoor-areas">outdoor areas</a></li><li> <a href="https://www.shademaster.com.au/category/gazebos">gazebos</a></li><li> <a href="https://www.shademaster.com.au/category/outdoor-rooms">outdoor rooms</a></li></ul></div><div class="bpf_box_item"><div class="bpfbi_title">Date</div><ul class="bpfbi_items"><li><a href='https://www.shademaster.com.au/2016/10'>October 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/05'>May 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/04'>April 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/03'>March 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/02'>February 2016</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/11'>November 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/10'>October 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/09'>September 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/08'>August 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/07'>July 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/06'>June 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/05'>May 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/04'>April 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/03'>March 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/02'>February 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/01'>January 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2014/12'>December 2014</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2014/10'>October 2014</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2014/09'>September 2014</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2014/07'>July 2014</a>&nbsp;(1)</li></ul></div></div></div> --></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="blog_page_filter_col" style="padding-top: 0px;">
+                            <div class="container big-container bpf_container">
+                                <div class="bpf_box_wrap">
+                                    <div class="bpf_box bpf_box_sc">
+                                        <div class="bpf_box_item">
+                                            <div class="bpfbi_title">خيارات الضبط</div>
+                                            <ul class="bpfbi_items">
+                                                <li> <a href="/savedhomes/">المنازل المحفوظة</a></li>
+                                                <li> <a href="/EditProfile">الملف الشخصي</a></li>
+                                                <li> <a href="{% url 'Account' %}">إعدادت الحساب</a></li>
+                                                <li> <a href="{% url 'password_change' %}">كلمة المرور</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <!-- /wrapper -->
+    <!-- Instagram Feed JS -->
+
+
+
+
+
+      {% include 'footer.html' %}
+
+<style>
+    .h-c-footer.h-c-footer--topmargin {
+    margin-top: 150px;
+
+}
+</style>
+
+ <script>
+  var loadFile = function(event) {
+  document.getElementById('null_preview').style.display= "block";
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+
+
+        <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+
+
+<script>
+
+    if (window.matchMedia("(max-width: 767px)").matches) {
+
+$('#pedt-menu_toolbar-lnk').css({'left':'50%','right':'100%'});
+$('.ctcd-profile-image-container').css({'right':'23%'});
+$('.ctcd-agent-type, .ctcd-community-pillar, .ctcd-name, .ctcd-non-region-context .ctcd-all-activity, .ctcd-team-rank ').css({'position':'relative','right':'17%'});
+
+}
+
+
+$(".blog_page_filter_col_mobile").on("click", function(evt) {
+if ($('.bpf_btn').hasClass("open")) {
+$('.bpf_btn').removeClass('open');
+$('.bpf_wrap_mobile').hide();
+}
+else
+{
+$('.bpf_btn').addClass('open');
+$('.bpf_wrap_mobile').show();
+}
+});
+
+
+
+$('#allowOtherToContactMe').click( function(){
+if ($(this).is(":checked")) {
+$.ajax({
+    type: "GET",
+    data: {'allowOtherToContactMe': 1},   // This is the important boolean!
+});
+}
+else
+{
+$.ajax({
+    type: "GET",
+    data: {'allowOtherToContactMe': 0},   // This is the important boolean!
+});
+}
+});
+
+$('#smsAllNotificationsCheckbox').click( function(){
+if ($(this).is(":checked")) {
+$.ajax({
+    type: "GET",
+    data: {'smsAllNotificationsCheckbox': 1},   // This is the important boolean!
+});
+}
+else
+{
+$.ajax({
+    type: "GET",
+    data: {'smsAllNotificationsCheckbox': 0},   // This is the important boolean!
+});
+}
+});
+
+
+$('#delete-account-redirect').click( function(){
+$.ajax({
+    type: "GET",
+    data: {'deleteAccount': 1},   // This is the important boolean!
+});
+});
+
+$('#Subscription').click( function(){
+$.ajax({
+    type: "GET",
+    data: {'Subscription': 1},   // This is the important boolean!
+});
+});
+
+</script>
+
+{% endblock %}

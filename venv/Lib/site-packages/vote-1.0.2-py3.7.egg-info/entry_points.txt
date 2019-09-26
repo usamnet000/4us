@@ -1,0 +1,3 @@
+[console_scripts]
+vote = vote.main:main
+

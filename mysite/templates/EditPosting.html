@@ -1,0 +1,1997 @@
+﻿
+{% extends 'base/Navbar.html' %}
+{% load static %}
+{% block head_title %}تعديل قائمة{% endblock %}
+
+  {% block content %}
+
+<script type='text/javascript' >
+var mainCal=0;
+</script>
+
+
+
+<link href="{% static 'css/shademaster.css' %}" type="text/css" rel="stylesheet" media="all" />
+
+
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+
+
+<link href="{% static 'css/posting-form.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/image-uploader.css' %}" type="text/css" rel="stylesheet" />
+
+
+
+
+
+<link href="{% static 'css/css/mdb.min.css' %}" rel="stylesheet">
+
+	<!-- Stylesheets -->
+<link rel="stylesheet" href='{% static "css/css/bootstrap.min.css" %}'/>
+<link rel="stylesheet" href="{% static 'css/css/style.css' %}"/>
+
+<style>
+
+.zoom-in
+{
+    display:inline-block;
+    border:0;
+    position: relative;
+    -webkit-transition: all 50ms ease-in;
+    -webkit-transform: scale(0.0);
+    -ms-transition: all 50ms ease-in;
+    -ms-transform: scale(0.0);
+    -moz-transition: all 50ms ease-in;
+    -moz-transform: scale(0.0);
+    transition: all 50ms ease-in;
+    transform: scale(0.0);
+
+}
+.zoom-out
+{
+    -webkit-transition: all 120ms ease-in;
+    -webkit-transform: scale(1.0);
+    -ms-transition: all 120ms ease-in;
+    -ms-transform: scale(1.0);
+    -moz-transition: all 120ms ease-in;
+    -moz-transform: scale(1.0);
+    transition: all 120ms ease-in;
+    transform: scale(1.0);
+}
+
+</style>
+            <style>
+
+
+            .icon-gallery-image{width:20em;min-height:60px;background-image:url(static/img/image.svg)}
+
+            ol, ul {
+    padding-right: 14px;
+    direction:rtl;
+    text-align:right;
+}
+.zsg-layout-width, .zsg-subfooter-content {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 0px;
+}
+.zsg-step-content:after, .zsg-steps>li>a:after, .zsg-trapezoid_br:after, .zsg-trapezoid_tr:after {
+    border-left-width: 2em;
+    border-left-style: solid;
+    right: 3.34em;
+    transform: rotate(270deg);
+
+}
+
+
+.zsg-layout_lg .zsg-layout-width, .zsg-layout_lg .zsg-subfooter-content {
+    max-width: 1350px;
+}
+
+.zsg-layout-top {
+    padding-top: 0px;
+}
+
+  html{
+    width:100%;
+
+
+    position: absolute;
+    }
+
+body {
+	line-height: 1.2;
+	font-size: 15px;
+	margin: 0;
+	font-family: 'overpass', sans-serif;
+	overflow-y: scroll;
+	color: #545759
+	-webkit-overflow-scrolling: touch
+}
+
+.dp_top {
+    background-color: #f1f1f2;
+    text-align: center;
+    /* padding: 71px 0 18px; */
+    min-height: 250px;
+}
+
+.zsg-link:visited, .zsg-link_primary:visited, a:visited {
+    color: #fff;
+}
+
+.btn-primar ,
+.btn-primar:hover {
+    color: #fff;
+    background-color: #7CA5BA;
+    border-color: #688a9c;
+}
+
+.btn-primar:active,
+.btn-primar:visited,
+.btn-primar:focus {
+    background-color:#6a8d9e ;
+    border-color: #374952;
+}
+
+.zsg-button_primary,
+.zsg-button_primary:hover,
+.zsg-button_primary:active,
+.zsg-button_primary:visited,
+.zsg-button_primary:focus
+{
+    background: #7CA5BA;
+    color: #FFF;
+}
+
+</style>
+
+<style>
+
+@charset "UTF-8";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css";
+@import 'https://fonts.googleapis.com/css?family=Nunito:300,400,700';
+.list_checkbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list_checkbox li {
+  margin: 0 3px 0 3px !important;
+  flex-basis: calc(50% - 9px);
+}
+
+label {
+  cursor: pointer;
+  color: #383A3F;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.99em;
+  /*padding-right: 0.95em;*/
+}
+.main_menu_checkbox
+{
+font-size: 1.3em;
+}
+label:hover:not(.pricelabel,.label-text-hover) {
+  color: #7CA5BA;
+}
+.zsg-content-item,.zsg-content-item:hover
+{
+color: #000;
+}
+
+label input[type="checkbox"] + .label-text:hover:before {
+  color: #7CA5BA;
+}
+label input[type="checkbox"] {
+  display: none;
+}
+label input[type="checkbox"] + .label-text:before {
+  content: "";
+  color: #dddfe6;
+  font-family: "fontAwesome";
+  line-height: 1;
+  width: 1em;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+label input[type="checkbox"]:checked + .label-text:before {
+  content: "";
+  color: #7CA5BA;
+  animation: tick 150ms ease-in;
+}
+label input[type="checkbox"]:disabled + .label-text:before {
+   content: "";
+  color: #dddfe6;
+}
+
+@keyframes tick {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+  .filter-checkbox-list
+  {
+  background: #FAFAFA;
+  }
+  .vertical-align-center
+  {
+  word-spacing: normal;display: inline-block;vertical-align: top;padding: 0 10px;height: 50px;
+  }
+  .word-warp
+  {
+  word-break: break-all;white-space: normal;
+  }
+</style>
+
+
+
+
+<link href="{% static 'css/css/jquery.dm-uploader.min.css' %}" type="text/css" rel="stylesheet" media="all" />
+
+<style>
+    /*
+	First: A couple styles to make the demo page look good
+ */
+
+
+
+
+/* These are for the single examle */
+.preview-img {
+	width: 64px;
+	height: 64px;
+}
+
+
+hr {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+#files {
+    overflow-y: scroll !important;
+    min-height: 320px;
+}
+@media (min-width: 768px) {
+	#files {
+		min-height: 0;
+	}
+}
+
+
+.dm-uploader {
+	border: 1px solid #ddd;
+	text-align: center;
+}
+.dm-uploader.active {
+	border-color: red;
+
+	border-style: solid;
+}
+.icon-gallery-image {
+    width: 50%;
+    min-height: 60px;
+    background-image: url(static/img/image.svg);
+}
+
+
+select
+{
+    padding: 3px 4px 2px;
+}
+
+
+    .input-container {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .icon {
+      padding: 10px;
+      background: dodgerblue;
+      color: white;
+      min-width: 50px;
+      text-align: center;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+    }
+
+
+    .zsg-datepicker-wrapper .zsg-datepicker-link
+    {
+        color: #7ca5ba;
+}
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#posting-additional-information-details a:not([href]){
+    color: inherit;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+#posting-additional-information-details {
+color:#7CA5BA;
+}
+
+.zsg-content-component:hover,
+.zsg-content-component:hover {
+color:#77B9F7;
+}
+.z-moreless-content
+{
+font-size:16px;
+}
+
+.label-text-hover .zsg-link:visited, .label-text-hover .zsg-link_primary:visited,.label-text-hover a:visited {
+    color: #006AFF;
+}
+.h-c-footer__site-links
+{
+text-align:right;
+}
+input,select,input:focus,select:focus
+{
+color:#000;
+}
+.zsg-button_primary:focus, .zsg-button_primary:hover {
+    background-color: #6c91af;
+    background: linear-gradient(to top, #7ca5ba, #4285b5);
+    background-repeat: repeat-x;
+    color: #FFF;
+    border-color: #7ca5ba;
+}
+.cookieBarInner
+{
+text-align:right;
+}
+</style>
+
+<!--/Blue select-->
+
+
+<section class="dp_top" style="padding: 0px;">
+
+        <div class="rf_quicklinks_wrap on" style="direction:rtl;text-align:right;z-index:1">
+            <div class="menu-quicklinks-container">
+                <ul id="menu-quicklinks" class="rf_quicklinks">
+                    <li id="menu-item-1" class="menu-item menu-item-type-post_type_archive menu-item-object-roofing_design menu-item-359 rfq_item" data-index="0">
+                        <a id="menu-item-link-1" class="rfq_link" href="" data-title="look at all design options"><img class="rfq_icon svg_inject img-responsive" src="https://www.shademaster.com.au/wp-content/uploads/2017/04/rd1.svg">
+                            <div class="rfq_title">للبيع
+                                <br> من قبل المالك</div>
+                        </a>
+                    </li>
+                    <li id="menu-item-2" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586 rfq_item" data-index="1">
+                        <a id="menu-item-link-2" class="rfq_link" href="" data-title="decide a structural style"><img class="rfq_icon svg_inject img-responsive" src="https://www.shademaster.com.au/wp-content/uploads/2017/04/rd2.svg">
+                            <div class="rfq_title">سينهيء
+                                <br> البناء قريباً</div>
+                        </a>
+                    </li>
+                    <li id="menu-item-3" class="menu-item menu-item-type-post_type_archive menu-item-object-roofing_panel menu-item-460 rfq_item" data-index="2">
+                        <a id="menu-item-link-3" class="rfq_link" href="" data-title="Pick roof panels"><img class="rfq_icon svg_inject img-responsive" src="https://www.shademaster.com.au/wp-content/uploads/2017/04/rd3.svg">
+                            <div class="rfq_title">للبيع
+                                <br> من قبل الوكيل</div>
+                        </a>
+                    </li>
+                    <li id="menu-item-4" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-545 current_page_item menu-item-600 rfq_item" data-index="3">
+                        <a id="menu-item-link-4" class="rfq_link" href="" data-title="Colour selector"><img class="rfq_icon svg_inject img-responsive" src="https://www.shademaster.com.au/wp-content/uploads/2017/04/rd4.svg">
+                            <div class="rfq_title">بناء
+                                <br> جديد</div>
+                        </a>
+                    </li>
+                    <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394 rfq_item" data-index="4">
+                        <a id="menu-item-link-5" class="rfq_link" href="" data-title="Get a quote"><img class="rfq_icon svg_inject img-responsive" src="https://www.shademaster.com.au/wp-content/uploads/2017/04/rd5.svg">
+                            <div class="rfq_title">بيت
+                                <br> مفتوح</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="rf_quicklinks_dots visible-xs"></div>
+            <div class="rf_quicklinks_arrows visible-xs"></div>
+        </div>
+
+
+    <div class="container" style="padding-top:40px;direction:rtl;"><div class="title_58 element_anim_1 start_anim"><span style="font-size: 58px;font-weight: 700;line-height: 1.2;letter-spacing: .025em;color: #7ca5ba;">اختيار النوع<span>
+
+</div><div class="text element_anim_2 start_anim"><p style="font-size: 20px;font-weight: 600;line-height: 1.5;color: #929496;">
+انشر مرة واحدة وسيتم إدراج منزلك في موقع فرص ، للوصول إلى المشترين على أكبر شبكة عقارية على الويب. بالإضافة إلى ذلك ، يتلقى المتسوقون في المنزل رسائل بريد إلكتروني حول المنازل الجديدة في السوق - بما في ذلك منزلك.</p><br></div></div> </section>
+
+
+	<!-- Page info end -->
+		<div class="container" style="direction:rtl;text-align:right; ">
+  <main >
+    <div class="wow fadeIn"><br>
+      <div class="row">
+        <div class="col-md-8 mb-4">
+          <div class="card">
+
+            <form accept-charset="UTF-8" name="ForSaleForm"  id="ForSaleForm" method="POST" class="card-body" >
+              {% csrf_token %}
+
+              <h3 id="type">نوع العقار</h3>
+                <input type="hidden" id="propertyType" name="propertyType">
+
+              <div class='hideable_shipping_form'>
+
+                <div class="md-form mb-5">
+                  <input type='text' placeholder='حدد السعر الخاص بك' id='price' name='price' class='form-control' value="{{listing.price}}" />
+                  <label for="price" class="">السعر</label>
+                </div>
+
+
+    <main role="main" class="container pt-2">
+        <div class="row">
+            <div class="col-md-12 col-sm-12" id="dropZoneFile">
+
+                <div id="drag-and-drop-zone" class="dm-uploader p-5 text-center">
+                                  <div class="dropZoneContent"><span class="icon-gallery-image"></span>
+                                                                    <div class="dragHint" >قم بسحب وإسقاط الصور هنا للتحميل.</div>
+                                                                </div>
+<style>
+    .btn.btn-sm {
+    padding: .5rem 1.6rem;
+    font-size: .64rem;
+}
+
+.btn-block {
+     display: block;
+     width: 100%;
+}
+</style>
+            <h3 class="mb-5 mt-5 text-muted"></h3>
+
+                    <div class="btn btn-primar btn-block btn-sm mb-5">
+                        <span>إضافة صورة جديدة</span>
+                        <input type="file" title="اضغط لأضافة ملفات" multiple="">
+                    </div>
+                </div>
+                <!-- /uploader -->
+
+            </div>
+            <div id="dropZonelist" class="col-md-6 col-sm-12" style="display:none">
+                <div class="card h-100">
+                    <div class="card-header">
+                        قائمة الملفات
+                    </div>
+
+                    <ul class="list-unstyled p-2 d-flex flex-column col" id="files">
+                        <li class="text-muted text-center empty">ليس هناك ملف محمل.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /file list -->
+
+        <!-- File item template -->
+        <script type="text/html" id="files-template">
+            <li class="media">
+
+                <img class="preview-img" style="margin-left: 1rem!important;" src="https://danielmg.org/assets/image/noimage.jpg?v=v10" alt="Generic placeholder image">
+
+
+                <div class="media-body mb-1">
+                    <p class="mb-2">
+                        <strong>%%filename%%</strong> - الحالة: <span class="text-muted">إنتظار</span>
+                    </p>
+                    <div class="progress mb-2">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+
+                    <hr class="mt-1 mb-1" />
+                </div>
+            </li>
+        </script>
+
+    </main>
+    <!-- /container -->
+
+<br>
+
+                        <section id="homeFactsEditor" name="homeFactsEditor" class="zsg-content-component zsg-separator">
+                            <br>
+                            <h2 id="factHome">حقائق المنزل</h2>
+                            <div class="zsg-g">
+                                <div class="zsg-lg-1-2-ext zsg-sm-1-1 posting-home-facts-form-field-spacing posting-grid_left">
+
+                                    <div class="zsg-g posting-home-facts-form-field-spacing hide-vacant-land">
+                                        <div class="posting-home-facts-form-field-spacing">
+                                            <div class="zsg-lg-1-1 zsg-form-field">
+                                                <label for="roomsTotal">عدد الغرف</label>
+                                                <input name="roomsTotal" type="number" id="roomsTotal" pattern="\d*" class="" value="{{listing.roomsTotal}}">
+                                            </div>
+                                            <div class="zsg-lg-1-2-ext zsg-form-field">
+                                                <label for="Bathrooms">الحمامات</label>
+                                                <input name="Bathrooms" type="number" id="Bathrooms" pattern="\d*" class="" value="{{listing.Bathrooms}}">
+                                            </div>
+                                            <div class="zsg-lg-1-2-ext zsg-form-field">
+                                                <label for="bedrooms">غرف النوم</label>
+                                                <input name="bedrooms" type="number" id="bedrooms" pattern="\d*" class="" value="{{listing.bedrooms}}">
+                                            </div>
+                                            <div class="zsg-lg-1-2-ext zsg-form-field">
+                                                <label for="Receptionrooms">غرف الإستقبال</label>
+                                                <input name="Receptionrooms" type="number" id="Receptionrooms" pattern="\d*" class="" value="{{listing.Receptionrooms}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="zsg-form-field hide-vacant-land">
+                                        <label for="livingArea"> مساحة المعيشة</label>
+                                        <input name="livingArea" type="tel" value="{{listing.livingArea}}" id="livingArea" class=" commaFormat">
+                                    </div>
+                                    <div class="zsg-form-field">
+                                        <label for="lotSize"> المساحة الكلية</label>
+                                        <div class="zsg-g">
+                                            <div class="zsg-lg-1-2-ext">
+                                                <input name="lotSize" type="tel" value="{{listing.lotSize}}" id="lotSize" class="null commaFormat">
+                                            </div>
+                                            <div class="zsg-lg-1-2-ext">
+                                                <select name="unitType" id="unitType" class="">
+                                                    <option value="{{ listing.unitType }}">{{ listing.get_unitType_display }}</option>
+                {% for value, name in form.fields.unit_option.choices %}
+                                                    {% if  value != listing.unitType %}
+                  <option value="{{ value }}">{{ name }}</option>
+                                                    {% endif %}
+                                                    {% endfor %}
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="zsg-form-field hide-vacant-land">
+                                        <label for="yearBuilt">بنيت عام</label>
+                                        <input name="yearBuilt" type="number" value="{{listing.yearBuilt}}" id="yearBuilt" pattern="\d*" class="">
+                                    </div>
+                                    <div class="zsg-form-field hide-vacant-land">
+                                        <label for="remodelYear"> اعيد الإنشاء عام
+                                            <a id="major-remodel-year-tooltip-link" class="zsg-tooltip-launch zsg-icon-circle-question"></a>
+                                        </label>
+                                        <input name="remodelYear" type="number" value="{{listing.remodelYear}}" id="remodelYear" pattern="\d*" class="">
+
+                                            <div style="display:none;background:#fff;direction:rtl;text-align:right;" id="major-remodel-year-tooltip">
+                                                <div id="major-remodel-year-tooltip-div" class="zsg-tooltip zsg-tooltip_open zsg-tooltip_animating zsg-tooltip_opening zsg-tooltip_align-left">
+                                                    <div id="major-remodel-year-tooltip-zoom" class="zsg-tooltip-content">
+                                                        <a class="zsg-icon-x-thick zsg-tooltip-close-no-handler"  style="top: 7.5px;" tabindex="0" role="button"></a>
+
+                                                        <p style="color: #ffffff;">
+                                                            تغيير عام الإنشاء يغير هذه من القيم المنزلية ويضيف ما لا يقل عن 10 ٪ إلى قيمة المنزل. إضافة سنة إعادة الإنشاء "إعادة تشغيل" يندرج تحت بند التقيم الخاص بك .</p><span class="zsg-tooltip-arrow" style="top: 78.5px;"></span></div>
+                                                </div>
+                                            </div>
+
+                                    </div>
+                                </div>
+                                <div class="zsg-lg-1-2-ext zsg-sm-1-1 posting-grid_right">
+                                    <div class="zsg-form-field hide-vacant-land">
+                                        <label for="hoaPrice">مستحقات الإيجار</label>
+                                        <div class="zsg-input-overlay_left "><span class="zsg-input-overlay-text_left">Rye</span>
+                                            <input name="hoaPrice" type="tel" value="{% if listing.hoaPrice != None %}{{listing.hoaPrice}}{%endif%}" id="hoaPrice" class="commaFormat commaFormat">
+                                        </div><span class="zsg-fineprint">لكل شهر</span></div>
+                                    <div class="zsg-g zsg-content-item posting-home-facts-form-field-spacing hide-vacant-land">
+                                        <div class="zsg-lg-1-2-ext">
+                                            <div class="zsg-form-field">
+                                                <label for="groundTankSize">مساحة الخزان الأرضيء</label>
+                                                <input name="groundTankSize" type="tel" value="{% if listing.groundTankSize != None %}{{listing.groundTankSize}}{%endif%}" id="groundTankSize" class=" commaFormat">
+                                            </div>
+                                        </div>
+                                        <div class="zsg-lg-1-2-ext">
+                                            <div class="zsg-form-field">
+                                                <label for="garageSize">مساحة الجراش متر مربع</label>
+                                                <input name="garageSize" type="tel" value="{% if listing.garageSize != None %}{{listing.garageSize}}{%endif%}" id="garageSize" class=" commaFormat">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="zsg-form-field">
+                                        <label for="homeDescription">وصف عن منزلك</label>
+                                        <textarea name="homeDescription" id="homeDescription" class="">{{listing.homeDescription}}</textarea>
+                                        <div class="hide zsg-notification-text-error editing-listing-warning-text">ملاحظة:لا يمكن تغيير وصف هذة القائمة إلا عن طريق وكيل القائمة.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+
+                        <section id="openHouseContent" name="openHouseContent" class="zsg-content-component zsg-separator hide-vacant-land">
+                            <h2>مفتوح منزلك</h2>
+                            <div class="zsg-content-item">هذه طريقة رائعة لعرض منزلك وجذب المزيد من الاهتمام.</div>
+                            <div id="openHouseContent_toggleArea" class="">
+                                <div class="open-house-date zsg-form-field">
+                                    <div id="cal1" class="zsg-g">
+                                        <div class="zsg-lg-1-2-ext zsg-sm-1-1 posting-grid_left posting-open-house-date">
+                                            <div class="zsg-form-field">
+                                                <label>التأريخ</label>
+                                                <div class="zsg-datepicker-wrapper">
+   <input name="dateField" type="text" value="" id="wrappertext" min="2019-08-22" max="2020-08-22" class="zsg-datepicker">
+<a id="wrapper" href="" class="zsg-datepicker-link"><span class="zsg-icon-calendar"></span>
+</a>
+                                                    {% include 'base/calendar.html' %}
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="zsg-lg-1-4 zsg-sm-1-2 posting-grid_right posting-open-house-start-time">
+                                            <div class="zsg-form-field">
+                                                <label>من الساعة</label>
+                                                <select name="timeDropDownStart" id="timeDropDownStart" class="time-dropdown">
+                                                    <option value="0">8:00 AM</option>
+                                                    <option value="1">8:30 AM</option>
+                                                    <option value="2">9:00 AM</option>
+                                                    <option value="3">9:30 AM</option>
+                                                    <option value="4">10:00 AM</option>
+                                                    <option value="5">10:30 AM</option>
+                                                    <option value="6">11:00 AM</option>
+                                                    <option value="7">11:30 AM</option>
+                                                    <option value="8">12:00 PM</option>
+                                                    <option value="9">12:30 PM</option>
+                                                    <option value="10" selected="selected">1:00 PM</option>
+                                                    <option value="11">1:30 PM</option>
+                                                    <option value="12">2:00 PM</option>
+                                                    <option value="13">2:30 PM</option>
+                                                    <option value="14">3:00 PM</option>
+                                                    <option value="15">3:30 PM</option>
+                                                    <option value="16">4:00 PM</option>
+                                                    <option value="17">4:30 PM</option>
+                                                    <option value="18">5:00 PM</option>
+                                                    <option value="19">5:30 PM</option>
+                                                    <option value="20">6:00 PM</option>
+                                                    <option value="21">6:30 PM</option>
+                                                    <option value="22">7:00 PM</option>
+                                                    <option value="23">7:30 PM</option>
+                                                    <option value="24">8:00 PM</option>
+                                                    <option value="25">8:30 PM</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="zsg-lg-1-4 zsg-sm-1-2">
+                                            <div class="zsg-form-field">
+                                                <label>إلى الساعة</label>
+                                                <select name="timeDropDownEnd" id="timeDropDownEnd" class="time-dropdown">
+                                                    <option value="0">8:00 AM</option>
+                                                    <option value="1">8:30 AM</option>
+                                                    <option value="2">9:00 AM</option>
+                                                    <option value="3">9:30 AM</option>
+                                                    <option value="4">10:00 AM</option>
+                                                    <option value="5">10:30 AM</option>
+                                                    <option value="6">11:00 AM</option>
+                                                    <option value="7">11:30 AM</option>
+                                                    <option value="8">12:00 PM</option>
+                                                    <option value="9">12:30 PM</option>
+                                                    <option value="10">1:00 PM</option>
+                                                    <option value="11">1:30 PM</option>
+                                                    <option value="12">2:00 PM</option>
+                                                    <option value="13">2:30 PM</option>
+                                                    <option value="14">3:00 PM</option>
+                                                    <option value="15">3:30 PM</option>
+                                                    <option value="16" selected="selected">4:00 PM</option>
+                                                    <option value="17">4:30 PM</option>
+                                                    <option value="18">5:00 PM</option>
+                                                    <option value="19">5:30 PM</option>
+                                                    <option value="20">6:00 PM</option>
+                                                    <option value="21">6:30 PM</option>
+                                                    <option value="22">7:00 PM</option>
+                                                    <option value="23">7:30 PM</option>
+                                                    <option value="24">8:00 PM</option>
+                                                    <option value="25">8:30 PM</option>
+                                                </select>
+                                            </div>
+                                        </div>
+     </div>
+
+                                    <a style="color:#000;padding-right: 20px;" id="cal1Remove" href="#1" class="removeCal">حذف</a><br>
+                                <div style="padding-top: 10px;" class="zsg-content-item"><a style="padding-right: 20px;color:#000" id="cal1Add" href="#2" class="addCal">أضافة تأريخ أخر</a></div>
+
+                            </div>
+                            <div class=" hide zsg-notification-text-error feed-warning-text">سيتم استبدال هذا التغيير بواسطة الخلاصة.</div>
+                        </section>
+
+
+                            <section id="additionalInfoEditor" class="zsg-content-component zsg-separator">
+                                <h2>معلومة اضافية</h2>
+                                <div class="zsg-g">
+                                    <div id="posting-additional-information-what-i-love" class="zsg-lg-1-2-ext posting-grid_right zsg-sm-1-1 hide-vacant-land">
+                                        <div class="zsg-form-field">
+                                            <label for="whatYouLoveDescription">ما أحب في هذا المنزل</label>
+                                            <textarea name="whatYouLoveDescription" id="whatYouLoveDescription" class="">{{listing.whatYouLoveDescription}}</textarea><span class="zsg-fineprint">قل ما تحب عنه وما الذي يجعله فريدًا ، وتحدث عن الحي ونمط الحياة الذي يوفره.</span></div>
+                                    </div>
+                                </div>
+                                <div id="posting-additional-information-details" class="hide-vacant-land">
+                                    <div class="posting-additional-information-details-group_right posting-grid_right zsg-content-component z-moreless"><a id="devices-down" class="zsg-h4 zsg-icon-expando-down z-moreless-toggle z-moreless-content">تفاصيل الغرف</a>
+                                        <div id="devices-content-div" class="z-moreless-content hide"><a id="devices-up" class="zsg-h4 zsg-icon-expando-up z-moreless-toggle">تفاصيل الغرف</a>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">الأجهزة</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                        <label for="id81481">
+                                                            <input name="id81481" data-attribute-id="81" id="id81481" type="checkbox" class="home-fact-attribute" data-name="Dishwasher" data-code="481" {% if listing.Dishwasher %}checked="checked" {% endif %}>
+                                                            <span class="label-text">غسالة أطباق</span>
+                                        </label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id81482">
+                                                            <input name="id81482" data-attribute-id="81" id="id81482" type="checkbox" class="home-fact-attribute" data-name="Dryer" data-code="482" {% if listing.Dryer %}checked="checked" {% endif %}>
+                                                            <span class="label-text">مجفف</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id81483">
+                                                            <input name="id81483" data-attribute-id="81" id="id81483" type="checkbox" class="home-fact-attribute" data-name="Freezer" data-code="483" {% if listing.Freezer %}checked="checked" {% endif %}>
+                                                            <span class="label-text">الفريزر</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id81484">
+                                                            <input name="id81484" data-attribute-id="81" id="id81484" type="checkbox" class="home-fact-attribute" data-name="Garbage disposal" data-code="484" {% if listing.GarbageDisposal %}checked="checked" {% endif %}>
+                                                            <span class="label-text">التخلص من القمامة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id81485">
+                                                            <input name="id81485" data-attribute-id="81" id="id81485" type="checkbox" class="home-fact-attribute" data-name="Microwave" data-code="485" {% if listing.Microwave %}checked="checked" {% endif %}>
+                                                            <span class="label-text">الميكروويف</span></label>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id81486">
+                                                            <input name="id81486" data-attribute-id="81" id="id81486" type="checkbox" class="home-fact-attribute" data-name="Oven" data-code="486" {% if listing.Oven %}checked="checked" {% endif %}>
+                                                            <span class="label-text">الفرن</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id81487">
+                                                            <input name="id81487" data-attribute-id="81" id="id81487" type="checkbox" class="home-fact-attribute" data-name="Refrigerator" data-code="487" {% if listing.Refrigerator %}checked="checked" {% endif %}>
+                                                            <span class="label-text">ثلاجة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id81489">
+                                                            <input name="id81489" data-attribute-id="81" id="id81489" type="checkbox" class="home-fact-attribute" data-name="Washer" data-code="489" {% if listing.Washer %}checked="checked" {% endif %}>
+                                                            <span class="label-text">غسالة</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-h4 posting-multi-select-header">غرفة الرشان</div>
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+
+                                                            <input type="radio" name="RadioGroup_Rashan" value="0" id="id817"  {% if listing.RadioGroup_Rashan %}checked="checked" {% endif %}>
+                                                            <label for="id817"><span class="label-text">الإنتهاء منه</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="RadioGroup_Rashan" value="1" id="id818" {% if listing.RadioGroup_Rashan %}checked="checked" {% endif %}>
+                                                            <label for="id818"><span class="label-text">الإنتهاء منه جزئيا</span></label>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <input type="radio" name="RadioGroup_Rashan" value="2" id="id819" {% if listing.RadioGroup_Rashan %}checked="checked" {% endif %}>
+                                                            <label for="id819"><span class="label-text">لم ينتهيء بعد</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="RadioGroup_Rashan" value="3" id="id8461" {% if listing.RadioGroup_Rashan %}checked="checked" {% endif %}>
+                                                            <label for="id8461"><span class="label-text">لا يوجد</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">غطاء للأرضية</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id82490">
+                                                            <input name="id82490" data-attribute-id="82" id="id82490" type="checkbox" class="home-fact-attribute" data-name="Carpet" data-code="490" {% if listing.ACarpet %}checked="checked" {% endif %}>
+                                                            <span class="label-text">سجادة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id82491">
+                                                            <input name="id82491" data-attribute-id="82" id="id82491" type="checkbox" class="home-fact-attribute" data-name="Concrete" data-code="491" {% if listing.AConcrete %}checked="checked" {% endif %}>
+                                                            <span class="label-text">الخرسانة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id82492">
+                                                            <input name="id82492" data-attribute-id="82" id="id82492" type="checkbox" class="home-fact-attribute" data-name="Tiles" data-code="492" {% if listing.ATiles %}checked="checked" {% endif %}>
+                                                            <span class="label-text">بلاط</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id82494">
+                                                            <input name="id82494" data-attribute-id="82" id="id82494" type="checkbox" class="home-fact-attribute" data-name="Linoleum" data-code="494" {% if listing.ALinoleum %}checked="checked" {% endif %}>
+                                                            <span class="label-text">مشمع</span></label>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id82496">
+                                                            <input name="id82496" data-attribute-id="82" id="id82496" type="checkbox" class="home-fact-attribute" data-name="Softwood" data-code="496" {% if listing.ADSoftwood %}checked="checked" {% endif %}>
+                                                            <span class="label-text">خشب مرن</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id82498">
+                                                            <input name="id82498" data-attribute-id="82" id="id82498" type="checkbox" class="home-fact-attribute" data-name="Other" data-code="498" {% if listing.ADOther %}checked="checked" {% endif %}>
+                                                            <span class="label-text">آخر</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">غرف أظافية</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id83499">
+                                                            <input name="id83499" data-attribute-id="83" id="id83499" type="checkbox" class="home-fact-attribute" data-name="BreakfastNook" data-code="499" {% if listing.BreakfastNook %}checked="checked" {% endif %}>
+                                                            <span class="label-text">زاوية الإفطار</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id83500">
+                                                            <input name="id83500" data-attribute-id="83" id="id83500" type="checkbox" class="home-fact-attribute" data-name="DiningRoom" data-code="500" {% if listing.DiningRoom %}checked="checked" {% endif %}>
+                                                            <span class="label-text">غرفة العشاء</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id83501">
+                                                            <input name="id83501" data-attribute-id="83" id="id83501" type="checkbox" class="home-fact-attribute" data-name="FamilyRoom" data-code="501" {% if listing.FamilyRoom %}checked="checked" {% endif %}>
+                                                            <span class="label-text">غرفة العائلة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id83502">
+                                                            <input name="id83502" data-attribute-id="83" id="id83502" type="checkbox" class="home-fact-attribute" data-name="LaundryRoom" data-code="502" {% if listing.LaundryRoom %}checked="checked" {% endif %}>
+                                                            <span class="label-text">غرفة الغسيل</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id83503">
+                                                            <input name="id83503" data-attribute-id="83" id="id83503" type="checkbox" class="home-fact-attribute" data-name="Library" data-code="503" {% if listing.Library %}checked="checked" {% endif %}>
+                                                            <span class="label-text">مكتبة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id83504">
+                                                            <input name="id83504" data-attribute-id="83" id="id83504" type="checkbox" class="home-fact-attribute" data-name="MasterBath" data-code="504" {% if listing.MasterBath %}checked="checked" {% endif %}>
+                                                            <span class="label-text">حمام منفصل</span></label>
+                                                        </li>
+
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id83506">
+                                                            <input name="id83506" data-attribute-id="83" id="id83506" type="checkbox" class="home-fact-attribute" data-name="Office" data-code="506" {% if listing.Office %}checked="checked" {% endif %}>
+                                                            <span class="label-text">مكتب</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id83509">
+                                                            <input name="id83509" data-attribute-id="83" id="id83509" type="checkbox" class="home-fact-attribute" data-name="Workshop" data-code="509" {% if listing.Workshop %}checked="checked" {% endif %}>
+                                                            <span class="label-text">ورشة عمل</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component zsg-g_gutterless">
+                                                <div class="zsg-form-field zsg-lg-1-2 zsg-sm-1-1">
+                                                    <label for="roomCount"> مجموع الغرف<span id="total-rooms-tooltip-link" data-target-id="total-rooms-tooltip" class="zsg-tooltip-launch zsg-icon-circle-question"></span>
+
+                                                        <div style="display:none" id="total-rooms-tooltip">
+                                                <div id="total-rooms-tooltip-div" class="zsg-tooltip zsg-tooltip_open zsg-tooltip_animating zsg-tooltip_opening zsg-tooltip_align-left">
+                                                    <div id="total-rooms-tooltip-zoom" class="zsg-tooltip-content">
+                                                        <a class="zsg-icon-x-thick zsg-tooltip-close-no-handler"  style="top: 7.5px;" tabindex="0" role="button"></a>
+                                                              <h5 style="color:#fff">مجموع الغرف</h5>
+                                                            <p style="color:#fff">تشمل غرف النوم والحمامات والمطبخ وغرفة المعيشة / الأسرة / غرف الطعام / الإستقبال.</p>
+                                                            <p style="color:#fff">لا تشمل غرف المرافق ، والطوابق السفلية ، والمداخل أو الممرات.</p>
+
+                                                      <span class="zsg-tooltip-arrow" style="top: 78.5px;"></span></div>
+                                                </div>
+                                            </div>
+
+                                                    </label>
+                                                    <input name="roomCount" type="number" value="{{listing.roomCount}}" id="roomCount" pattern="\d*" class="" >
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">ميزات داخلية</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="attic">
+                                                            <input type="checkbox" name="attic" id="attic" {% if listing.attic %}checked="checked" {% endif %}>
+                                                            <span class="label-text">علبه</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="cableReady">
+                                                            <input type="checkbox" name="cableReady" id="cableReady" {% if listing.cableReady %}checked="checked" {% endif %}>
+                                                            <span class="label-text">كابل جاهز</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="ceilingFan">
+                                                            <input type="checkbox" name="ceilingFan" id="ceilingFan" {% if listing.ceilingFan %}checked="checked" {% endif %}>
+                                                            <span class="label-text">مراوح السقف</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="doublePaneWindows">
+                                                            <input type="checkbox" name="doublePaneWindows" id="doublePaneWindows" {% if listing.doublePaneWindows %}checked="checked" {% endif %}>
+                                                            <span class="label-text">نوافذ الستروم/البن</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="fireplace">
+                                                            <input type="checkbox" name="fireplace" id="fireplace" {% if listing.fireplace %}checked="checked" {% endif %}>
+                                                            <span class="label-text">المدفأة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="intercom">
+                                                            <input type="checkbox" name="intercom" id="intercom" {% if listing.intercom %}checked="checked" {% endif %}>
+                                                            <span class="label-text">نظام الاتصال الداخلي</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="jettedTub">
+                                                            <input type="checkbox" name="jettedTub" id="jettedTub" {% if listing.jettedTub %}checked="checked" {% endif %}>
+                                                            <span class="label-text">حوض مياه معدنية</span></label>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="securitySystem">
+                                                            <input type="checkbox" name="securitySystem" id="securitySystem" {% if listing.securitySystem %}checked="checked" {% endif %}>
+                                                            <span class="label-text">نظام الأمن</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="posting-additional-information-details-group_left posting-grid_left zsg-content-component z-moreless"><a id="moreless-down" class="zsg-h4 zsg-icon-expando-down z-moreless-toggle z-moreless-content">تفاصيل آخرى مساعدة</a>
+                                        <div id="moreless-content-div" class="z-moreless-content hide"><a id="moreless-up" class="zsg-h4 zsg-icon-expando-up z-moreless-toggle">تفاصيل آخرى مساعدة</a>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">نوع التبريد</div>
+<ul class="zsg-form-group zsg-lg-1-2">
+    <li>
+        <label for="id1822">
+        <input name="id1822" data-attribute-id="18" id="id1822" type="checkbox" class="home-fact-attribute" data-name="Central" data-code="22" {% if listing.CCentral %}checked="checked" {% endif %}>
+         <span class="label-text">مركزي</span></label>
+    </li>
+    <li id="">
+        <label for="id1823">
+        <input name="id1823" data-attribute-id="18" id="id1823" type="checkbox" class="home-fact-attribute" data-name="Evaporative" data-code="23" {% if listing.CEvaporative %}checked="checked" {% endif %}>
+         <span class="label-text">التبخير </span></label>
+    </li>
+    <li>
+        <label for="id1824">
+        <input name="id1824" data-attribute-id="18" id="id1824" type="checkbox" class="home-fact-attribute" data-name="Geothermal" data-code="24" {% if listing.CGeothermal %}checked="checked" {% endif %}>
+         <span class="label-text">الطاقة الحرارية الأرضية</span></label>
+    </li>
+    <li>
+        <label for="id18260">
+        <input name="id18260" data-attribute-id="18" id="id18260" type="checkbox" class="home-fact-attribute" data-name="Refrigeration" data-code="260" {% if listing.CRefrigeration %}checked="checked" {% endif %}>
+         <span class="label-text">تبريد</span></label>
+    </li>
+</ul>
+
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+    <li>
+        <label for="id1826">
+        <input name="id1826" data-attribute-id="18" id="id1826" type="checkbox" class="home-fact-attribute" data-name="Solar" data-code="26" {% if listing.CSolar %}checked="checked" {% endif %}>
+         <span class="label-text">الطاقة الشمسية</span></label>
+    </li>
+    <li>
+        <label for="id1827">
+        <input name="id1827" data-attribute-id="18" id="id1827" type="checkbox" class="home-fact-attribute" data-name="Wall" data-code="27" {% if listing.CWall %}checked="checked" {% endif %}>
+         <span class="label-text">حائط</span></label>
+    </li>
+    <li>
+        <label for="id1825">
+        <input name="id1825" data-attribute-id="18" id="id1825" type="checkbox" class="home-fact-attribute" data-name="Other" data-code="25" {% if listing.COther %}checked="checked" {% endif %}>
+         <span class="label-text">آخر</span></label>
+    </li>
+    <li>
+        <label for="id18465">
+        <input name="id18465" data-attribute-id="18" id="id18465" type="checkbox" class="home-fact-attribute" data-name="None" data-code="465" data-dependents="input[id^=id18]:not(#id18465)" data-dependent-actions="disable|deselect" {% if listing.CNone %}checked="checked" {% endif %}>
+         <span class="label-text">لا شيء</span></label>
+    </li>
+</ul>
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">نوع التدفئة</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id1749">
+                                                            <input name="id1749" data-attribute-id="17" id="id1749" type="checkbox" class="home-fact-attribute" data-name="Forced air" data-code="49" {% if listing.HForcedAir %}checked="checked" {% endif %}>
+                                                            <span class="label-text">الهواء القسري</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id17750">
+                                                            <input name="id17750" data-attribute-id="17" id="id17750" type="checkbox" class="home-fact-attribute" data-name="Geothermal" data-code="750" {% if listing.HGeothermal %}checked="checked" {% endif %}>
+                                                            <span class="label-text">الطاقة الحرارية الأرضية</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1750">
+                                                            <input name="id1750" data-attribute-id="17" id="id1750" type="checkbox" class="home-fact-attribute" data-name="Heat pump" data-code="50" {% if listing.HHeatPump %}checked="checked" {% endif %}>
+                                                            <span class="label-text">مضخة الحرارة</span></label>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id1752">
+                                                            <input name="id1752" data-attribute-id="17" id="id1752" type="checkbox" class="home-fact-attribute" data-name="Radiant" data-code="52" {% if listing.HRadiant %}checked="checked" {% endif %}>
+                                                            <span class="label-text">مشع</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1754">
+                                                            <input name="id1754" data-attribute-id="17" id="id1754" type="checkbox" class="home-fact-attribute" data-name="Stove" data-code="54" {% if listing.HStove %}checked="checked" {% endif %}>
+                                                            <span class="label-text">موقد</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1755">
+                                                            <input name="id1755" data-attribute-id="17" id="id1755" type="checkbox" class="home-fact-attribute" data-name="Wall" data-code="55" {% if listing.HWall %}checked="checked" {% endif %}>
+                                                            <span class="label-text">حائط </span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1751">
+                                                            <input name="id1751" data-attribute-id="17" id="id1751" type="checkbox" class="home-fact-attribute" data-name="Other" data-code="51" {% if listing.HOther %}checked="checked" {% endif %}>
+                                                            <span class="label-text">آخر </span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">وقود التدفئة</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id1639">
+                                                            <input name="id1639" data-attribute-id="16" id="id1639" type="checkbox" class="home-fact-attribute" data-name="Coal" data-code="39" {% if listing.FCoal %}checked="checked" {% endif %}>
+                                                            <span class="label-text">فحم </span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1640">
+                                                            <input name="id1640" data-attribute-id="16" id="id1640" type="checkbox" class="home-fact-attribute" data-name="Electric" data-code="40" {% if listing.FElectric %}checked="checked" {% endif %}>
+                                                            <span class="label-text">كهرباء </span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1641">
+                                                            <input name="id1641" data-attribute-id="16" id="id1641" type="checkbox" class="home-fact-attribute" data-name="Gas" data-code="41" {% if listing.FGas %}checked="checked" {% endif %}>
+                                                            <span class="label-text">غاز </span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1643">
+                                                            <input name="id1643" data-attribute-id="16" id="id1643" type="checkbox" class="home-fact-attribute" data-name="Oil" data-code="43" {% if listing.FOil %}checked="checked" {% endif %}>
+                                                            <span class="label-text">نفط </span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1645">
+                                                            <input name="id1645" data-attribute-id="16" id="id1645" type="checkbox" class="home-fact-attribute" data-name="Propane / Butane" data-code="45" {% if listing.FPropaneButane %}checked="checked" {% endif %}>
+                                                            <span class="label-text">البروبان / البوتان </span></label>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id1646">
+                                                            <input name="id1646" data-attribute-id="16" id="id1646" type="checkbox" class="home-fact-attribute" data-name="Solar" data-code="46" {% if listing.FSolar %}checked="checked" {% endif %}>
+                                                            <span class="label-text">الطاقة الشمسية</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1647">
+                                                            <input name="id1647" data-attribute-id="16" id="id1647" type="checkbox" class="home-fact-attribute" data-name="Wood / Pellet" data-code="47" {% if listing.FWoodPellet %}checked="checked" {% endif %}>
+                                                            <span class="label-text">الخشب</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1644">
+                                                            <input name="id1644" data-attribute-id="16" id="id1644" type="checkbox" class="home-fact-attribute" data-name="Other" data-code="44" {% if listing.FOther %}checked="checked" {% endif %}>
+                                                            <span class="label-text">آخر</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id16464">
+                                                            <input name="id16464" data-attribute-id="16" id="id16464" type="checkbox" class="home-fact-attribute" data-name="None" data-code="464" data-dependents="input[id^=id16]:not(#id16464)" data-dependent-actions="disable|deselect" {% if listing.FNone %}checked="checked" {% endif %}>
+                                                            <span class="label-text">لا شيء</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="posting-additional-information-details-group_left posting-grid_left zsg-content-component z-moreless"><a id="build-down" class="zsg-h4 zsg-icon-expando-down z-moreless-toggle z-moreless-content">تفاصيل البناء</a>
+                                        <div id="build-content-div" class="z-moreless-content hide"><a id="build-up" class="zsg-h4 zsg-icon-expando-up z-moreless-toggle">تفاصيل البناء</a>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">بناء المرافق</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="basketballCourt">
+                                                            <input type="checkbox" name="basketballCourt" id="basketballCourt" {% if listing.basketballCourt %}checked="checked" {% endif %}>
+                                                            <span class="label-text">ملعب كرة السلة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="doorman">
+                                                            <input type="checkbox" name="doorman" id="doorman" {% if listing.doorman %}checked="checked" {% endif %}>
+                                                            <span class="label-text">غرفة بواب</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="elevator">
+                                                            <input type="checkbox" name="elevator" id="elevator" {% if listing.elevator %}checked="checked" {% endif %}>
+                                                            <span class="label-text">مصعد</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="fitnessCenter">
+                                                            <input type="checkbox" name="fitnessCenter" id="fitnessCenter" {% if listing.fitnessCenter %}checked="checked" {% endif %}>
+                                                            <span class="label-text">مركز اللياقة البدنية</span></label>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="gatedEntry">
+                                                            <input type="checkbox" name="gatedEntry" id="gatedEntry" {% if listing.gatedEntry %}checked="checked" {% endif %}>
+                                                            <span class="label-text">بوابات الدخول</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="nearTransportation">
+                                                            <input type="checkbox" name="nearTransportation" id="nearTransportation" {% if listing.nearTransportation %}checked="checked" {% endif %}>
+                                                            <span class="label-text">بالقرب من المواصلات</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="tennisCourt">
+                                                            <input type="checkbox" name="tennisCourt" id="tennisCourt" {% if listing.tennisCourt %}checked="checked" {% endif %}>
+                                                            <span class="label-text">ملعب تنس</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-h4 posting-multi-select-header">الطراز المعماري</div>
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                          <li>
+
+                                                            <input type="radio" name="RadioGroup_Architectural" value="1" id="id195" {% if listing.RadioGroup_Architectural %}checked="checked" {% endif %}>
+                                                                <label for="id195"><span class="label-text">معاصر</span></label>
+
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="RadioGroup_Architectural" value="2" id="id1955">
+                                                            <label for="id1955"><span class="label-text">حرفي</span></label>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <input type="radio" name="RadioGroup_Architectural" value="3" id="id199">
+                                                            <label for="id199"><span class="label-text">حديث</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="RadioGroup_Architectural" value="4" id="id1910">
+                                                            <label for="id1910"><span class="label-text">أخر</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">الخارج</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id1228">
+                                                            <input name="id1228" data-attribute-id="12" id="id1228" type="checkbox" class="home-fact-attribute" data-name="Brick" data-code="28" {% if listing.Brick %}checked="checked" {% endif %}>
+                                                            <span class="label-text">قالب طوب</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1229">
+                                                            <input name="id1229" data-attribute-id="12" id="id1229" type="checkbox" class="home-fact-attribute" data-name="Cement / Concrete" data-code="29" {% if listing.CementConcrete %}checked="checked" {% endif %}>
+                                                            <span class="label-text">خرسانة مسلحة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1234">
+                                                            <input name="id1234" data-attribute-id="12" id="id1234" type="checkbox" class="home-fact-attribute" data-name="Stone" data-code="34" {% if listing.Stone %}checked="checked" {% endif %}>
+                                                            <span class="label-text">حجر</span></label>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id1232">
+                                                            <input name="id1232" data-attribute-id="12" id="id1232" type="checkbox" class="home-fact-attribute" data-name="Other" data-code="32" {% if listing.EOther %}checked="checked" {% endif %}>
+                                                            <span class="label-text">آخر</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component zsg-g_gutterless condoFloorFieldsetClass" id="floor-fieldset">
+                                                <div class="zsg-form-field zsg-lg-1-2 zsg-sm-1-1">
+                                                    <label for="FloorCount">عدد الطوابق</label>
+                                                    <input name="FloorCount" type="number" value="{{listing.FloorCount}}" id="FloorCount" pattern="\d*" class="">
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component zsg-g_gutterless unitCountFieldsetClass" id="unit-fieldset">
+                                                <div class="zsg-form-field zsg-lg-1-2 zsg-sm-1-1">
+                                                    <label for="ApartmentsCount"># عدد الشقق</label>
+                                                    <input name="ApartmentsCount" type="number" value="{{listing.ApartmentsCount}}" id="ApartmentsCount" pattern="\d*" class="">
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">وسائل الراحة في الهواء الطلق</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="barbecueArea">
+                                                            <input type="checkbox" name="barbecueArea" id="barbecueArea" {% if listing.barbecueArea %}checked="checked" {% endif %}>
+                                                            <span class="label-text">منطقة الشواء</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="dock">
+                                                            <input type="checkbox" name="dock" id="dock" {% if listing.dock %}checked="checked" {% endif %}>
+                                                            <span class="label-text">الرصيف</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="garden">
+                                                            <input type="checkbox" name="garden" id="garden" {% if listing.garden %}checked="checked" {% endif %}>
+                                                            <span class="label-text">حديقة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="hotTubSpa">
+                                                            <input type="checkbox" name="hotTubSpa" id="hotTubSpa" {% if listing.hotTubSpa %}checked="checked" {% endif %}>
+                                                            <span class="label-text">حوض استحمام ساخن / منتجع صحي</span></label>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="pool">
+                                                            <input type="checkbox" name="pool" id="pool" {% if listing.pool %}checked="checked" {% endif %}>
+                                                            <span class="label-text">حوض السباحة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="rvParking">
+                                                            <input type="checkbox" name="rvParking" id="rvParking" {% if listing.rvParking %}checked="checked" {% endif %}>
+                                                            <span class="label-text">رف وقوف السيارات</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="sauna">
+                                                            <input type="checkbox" name="sauna" id="sauna" {% if listing.sauna %}checked="checked" {% endif %}>
+                                                            <span class="label-text">ساونا</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="sprinklerSystem">
+                                                            <input type="checkbox" name="sprinklerSystem" id="sprinklerSystem" {% if listing.sprinklerSystem %}checked="checked" {% endif %}>
+                                                            <span class="label-text">نظام الري</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">موقف سيارات:</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+
+                                                        <li>
+                                                            <label for="id1457">
+                                                            <input name="id1457" data-attribute-id="14" id="id1457" type="checkbox" class="home-fact-attribute" data-name="Garage - Attached" data-code="57" {% if listing.PGarageAttached %}checked="checked" {% endif %}>
+                                                            <span class="label-text">جراش - مرفق</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1458">
+                                                            <input name="id1458" data-attribute-id="14" id="id1458" type="checkbox" class="home-fact-attribute" data-name="Garage - Detached" data-code="58" {% if listing.PGarageDetached %}checked="checked" {% endif %}>
+                                                            <span class="label-text">جراش - منفصل</span></label>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id1460">
+                                                            <input name="id1460" data-attribute-id="14" id="id1460" type="checkbox" class="home-fact-attribute" data-name="OffStreet" data-code="60" {% if listing.POffStreet %}checked="checked" {% endif %}>
+                                                            <span class="label-text">خارج الشارع</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1461">
+                                                            <input name="id1461" data-attribute-id="14" id="id1461" type="checkbox" class="home-fact-attribute" data-name="OnStreet" data-code="61" {% if listing.POnStreet %}checked="checked" {% endif %}>
+                                                            <span class="label-text">في الشارع</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id14462">
+                                                            <input name="id14462" data-attribute-id="14" id="id14462" type="checkbox" class="home-fact-attribute" data-name="None" data-code="462" data-dependents="input[id^=id14]:not(#id14463)" data-dependent-actions="disable|deselect" {% if listing.PNone %}checked="checked" {% endif %}>
+                                                            <span class="label-text">لا شيء</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component zsg-g_gutterless">
+                                                <div class="zsg-form-field zsg-lg-1-2 zsg-sm-1-1">
+                                                    <label for="garageSpaces"># مساحات وقوف السيارات</label>
+                                                    <input name="garageSpaces" type="number" value="{{listing.garageSpaces}}" id="garageSpaces" pattern="\d*" class="">
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header"> سقف البيت</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li>
+                                                            <label for="id1168">
+                                                            <input name="id1168" data-attribute-id="11" id="id1168" type="checkbox" class="home-fact-attribute" data-name="Asphalt" data-code="68" {% if listing.RAsphalt %}checked="checked" {% endif %}>
+                                                            <span class="label-text">أسفلت</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1171">
+                                                            <input name="id1171" data-attribute-id="11" id="id1171" type="checkbox" class="home-fact-attribute" data-name="Metal" data-code="71" {% if listing.RMetal %}checked="checked" {% endif %}>
+                                                            <span class="label-text">خرسانة</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1172">
+                                                            <input name="id1172" data-attribute-id="11" id="id1172" type="checkbox" class="home-fact-attribute" data-name="Tiles" data-code="72" {% if listing.RTiles %}checked="checked" {% endif %}>
+                                                            <span class="label-text">بلاط</span></label>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                            <div class="zsg-content-component">
+                                                <div class="zsg-form-field zsg-g_gutterless">
+                                                    <div class="zsg-h4 posting-multi-select-header">المشهد</div>
+                                                    <ul class="zsg-form-group zsg-lg-1-2">
+                                                        <li><label for="id1378">
+                                                            <input name="id1378" data-attribute-id="13" id="id1378" type="checkbox" class="home-fact-attribute" data-name="onSea" data-code="78" {% if listing.VOnSea %}checked="checked" {% endif %}>
+                                                            <span class="label-text">على البحر</span></label>
+                                                        </li>
+                                                        <li><label for="id1379">
+                                                            <input name="id1379" data-attribute-id="13" id="id1379" type="checkbox" class="home-fact-attribute" data-name="Mountain" data-code="79" {% if listing.VMountain %}checked="checked" {% endif %}>
+                                                            <span class="label-text">على الجبل</span></label>
+                                                        </li>
+                                                        <li><label for="id1380">
+                                                            <input name="id1380" data-attribute-id="13" id="id1380" type="checkbox" class="home-fact-attribute" data-name="OnStreet" data-code="80" {% if listing.VOnStreet %}checked="checked" {% endif %}>
+                                                            <span class="label-text">على الشارع</span></label>
+                                                        </li>
+                                                        <li>
+                                                            <label for="id1381">
+                                                            <input name="id1381" data-attribute-id="13" id="id1381" type="checkbox" class="home-fact-attribute" data-name="Other" data-code="81" {% if listing.VOther %}checked="checked" {% endif %}>
+                                                            <span class="label-text">آخر</span></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+
+
+                                          <section id="contact" name="contact" class="zsg-content-component zsg-separator">
+                            <h2>معلومات للتواصل</h2>
+                            <div class="zsg-g zsg-content-component">
+                                <p class="zsg-lg-1-2 zsg-sm-1-1 posting-grid_left"> سيقوم المشترون المحتملون بالاتصال بك من خلال عنوان البريد الإلكتروني الذي تستخدمه للتسجيل في فرص. يجب عليك أيضًا إضافة رقم هاتفك إلى القائمة هنا.  </p>
+                            </div>
+                            <div class="zsg-g">
+                                <div class="zsg-lg-1-2 zsg-sm-1-1 posting-grid_left zsg-content-component">
+                                    <div class="zsg-form-field">
+                                        <label for="fullPhoneNumber">رقم الهاتف</label>
+                                        <input name="fullPhoneNumber" type="tel" value="{% if listing.fullPhoneNumber != None %}{{listing.fullPhoneNumber}}{%endif%}" id="fullPhoneNumber" size="20" maxlength="20" placeholder="+967555555555" class="phoneNumberFormat">
+                                    <div class="hide zsg-notification-text-error editing-phone-warning-text">رقم الهاتف على سبيل المثال +967555555555.</div>
+                                     <input id="latitude" name="latitude" type="hidden" value="{{listing.place.latitude}}"/>
+                                        <input id="longitude" name="longitude" type="hidden" value="{{listing.place.latitude}}"/>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <div class="save-draft-message zsg-fineprint">تم حفظ جميع التغييرات</div>
+
+      <div class="zsg-tooltip" id="buyer-agent-tooltip">يعمل وكيل المشتري مع المشتري لمساعدته في العثور على المنزل وشرائه. يتم دفع عمولة الوكيل ، وعادة ما تكون 2-3 ٪ من سعر البيع ، من قبل البائع. </div>
+                    <section class="submit-module">
+                        <div class="zsg-form-field zsg-form-field_checkbox">
+                          <label for="terms" class="zsg-fineprint">
+                            <input type="checkbox" name="terms" id="terms">
+                              <span class="label-text label-text-hover">
+أوافق على ما يلي: (1) أنا (أو لدي صلاحية التصرف نيابة عن) صاحب هذا المنزل ؛ (2) لن أقدم معلومات أو معلومات غير صحيحة<a href="GoodNeighborPolicy/" target="_blank" tabindex="-1">أو أذكر تفضيلًا تمييزيًا</a>; وسألتزم بشروط  <a href="Terms/" target="_blank" tabindex="-1">استخدام فرص</a> و <a href="Quality/" target="_blank" tabindex="-1">سياسة جودة البيانات في فرص</a>.
+                          </span></label>
+                        </div>
+                        <div class="zsg-form-actions">
+                            <button type="submit" id="LoginRequiredSubmit" title="Submit" class="zsg-button_primary btn-md">نشر للبيع</button>
+                        </div>
+
+                    </section>
+
+
+                </form>
+          </div>
+
+        </div>
+
+      </div>
+
+        <div class="col-md-4 mb-4">
+<div class="col-md-12 mb-4">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-muted">تأكيد الموقع</span>
+    <span class="badge badge-secondary badge-pill">{{ order.items.count }}</span>
+    </h4>
+
+
+
+                    <div class="card p-2">
+    <div class="row">
+      <div class="col">
+        <div id="map" style="height: 200px;"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+            <div class="input-group-append">
+                <div id="buttonCorrect" class="button_el border btn-sm" style="transform: scale(0.9);"> <span>نعم ، هو الموقع الصحيح</span></div>
+                <div id="go-back" class="button_el border btn-sm white" style="transform: scale(0.9);"> <span>لا ، اسمحوا لي تغييره</span></div>
+            </div>
+
+                    <div id="confirmAddress" class="card p-2" style="display: none;z-index: 4343;width: 260px;position: fixed;bottom: 0px;right: 0px;padding: 12px;margin: 18px;margin-right: 38px;">
+    <div class="row">
+      <div class="col">
+   نشكرك على التأكيد.
+      </div>
+    </div></div>
+
+
+
+
+</div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </main>
+
+
+
+
+
+</div></main></div>
+
+
+
+
+
+      {% include 'footer.html' %}
+
+<!-- Bootstrap scripts. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- Google Maps scripts. -->
+  <script>
+       $('.zsg-icon-x-thick').css({
+            'transform': 'translate(-1180%, -4%)',
+        });
+        $('#major-remodel-year-tooltip-div').css({
+            'transform-origin': 'left 78.5px',
+            'top': '911px',
+            'left': '282px',
+        });
+
+
+        $('#total-rooms-tooltip-div').css({
+            'transform-origin': 'left 78.5px',
+            'top': '2280px',
+            'left': '316px',
+        });
+
+     var map, marker ,infoWindow;
+        var geocoder;
+
+        function initMap() {
+
+            // Display a map on the page
+             map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -33.865143, lng: 151.209900},
+                mapTypeId: 'roadmap',
+                zoom: 10,
+                  panControl: false,
+  zoomControl: true,
+  mapTypeControl: true,
+  scaleControl: false,
+  streetViewControl: false,
+  overviewMapControl: false,
+  rotateControl: false,
+  fullscreenControl: false,
+            });
+
+             map.setTilt(45);
+
+            // Try HTML5 geolocation.
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+
+                var pos =new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+                    marker = new google.maps.Marker({
+                        position: pos,
+                        map: map,
+                        draggable: true,
+                        title: 'Your position',
+    icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 7,
+        fillColor: "#FC384A",
+        fillOpacity: 0.8,
+strokeColor: '#fff',
+        strokeWeight:1.8,
+    },
+                    });
+
+
+  marker.addListener('mouseover', function() {
+
+marker.setIcon({
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 7,
+            fillColor: "#03C04A",
+            fillOpacity: 0.8,
+strokeColor: '#fff',
+        strokeWeight: 1.8,
+        });
+  });
+  marker.addListener('mouseout', function() {
+marker.setIcon({
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 7,
+            fillColor: "#FC384A",
+            fillOpacity: 0.8,
+strokeColor: '#fff',
+        strokeWeight: 1.8,
+        });
+  });
+
+                    map.setCenter(pos);
+                    updateMarkerPosition(marker.getPosition());
+
+
+                    // Add dragging event listeners.
+                    google.maps.event.addListener(marker, 'dragstart', function() {
+                        updateMarkerAddress('Dragging...');
+                    });
+
+                    google.maps.event.addListener(marker, 'drag', function() {
+                        updateMarkerStatus('Dragging...');
+                        updateMarkerPosition(marker.getPosition());
+                    });
+
+                    google.maps.event.addListener(marker, 'dragend', function() {
+                        updateMarkerStatus('Drag ended');
+                        map.panTo(marker.getPosition());
+                    });
+
+                    google.maps.event.addListener(map, 'click', function(e) {
+                        updateMarkerPosition(e.latLng);
+                        marker.setPosition(e.latLng);
+                        map.panTo(marker.getPosition());
+                    });
+
+                }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                // Browser doesn't support Geolocation
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+
+        }
+        function updateMarkerStatus(str) {
+          //  document.getElementById('markerStatus').innerHTML = str;
+        }
+        function updateMarkerPosition(latLng) {
+            $("#latitude").val(latLng.lat());
+            $("#longitude").val(latLng.lng());
+        }
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+            infoWindow.open(map);
+        }
+    </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXMlFT_q3ELULT-AOhHcheUKy1eDccSTg&callback=initMap&libraries=places" async defer></script>
+
+
+   <script>
+jQuery(".rfq_link").click(function() {
+            $('.menu-item').removeClass('current-menu-item');
+           if (jQuery(this).attr("id") === "menu-item-link-1") {
+            jQuery("#menu-item-1").addClass('current-menu-item');
+            jQuery("#type").html("للبيع من قبل المالك");
+            $('input[name="propertyType"]').val("1");
+           }
+           else if (jQuery(this).attr("id") === "menu-item-link-2") {
+           jQuery("#menu-item-2").addClass('current-menu-item');
+           jQuery("#type").html("سينهيء البناء قريبا");
+           $('input[name="propertyType"]').val("2");
+           }
+           else if (jQuery(this).attr("id") === "menu-item-link-3") {
+           jQuery("#menu-item-3").addClass('current-menu-item');
+           jQuery("#type").html("للبيع من قبل الوكيل");
+           $('input[name="propertyType"]').val("3");
+           }
+           else if (jQuery(this).attr("id") === "menu-item-link-4") {
+           jQuery("#menu-item-4").addClass('current-menu-item');
+           jQuery("#type").html("بناء جديد");
+           $('input[name="propertyType"]').val("4");
+           }
+           else if (jQuery(this).attr("id") === "menu-item-link-5") {
+           jQuery("#menu-item-5").addClass('current-menu-item');
+           jQuery("#type").html("بيت مفتوح");
+           $('input[name="propertyType"]').val("2");
+           }
+
+return false;
+});
+
+
+function numberWithCommas(x) {
+
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+$("input#price").keypress(function(event){
+// skip for arrow keys
+
+
+  if(event.which >= 37 && event.which <= 40) return;
+
+  // format number
+  $(this).val(function(index, value) {
+    return value
+    .replace(/\D/g, "")
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    ;
+  });
+});
+
+var confirmAddress=false;
+$("#go-back").click(function(event){
+location.href="{% url 'For-Sale-Address' %}";
+});
+$("#buttonCorrect").click(function(event){
+  $("#buttonCorrect").hide(700);
+             $('#confirmAddress').delay(500).show();
+setTimeout(function() {
+             $('#confirmAddress').hide();
+             confirmAddress=true;
+
+  }, 2500);
+
+
+
+});
+
+
+function onload_func()
+{
+$.ajax({
+    type: "GET",
+    data: {'removePhotoOnLoad': 1},   // This is the important boolean!
+    success: function(data){
+    allDataPlaces=JSON.parse(data);
+        console.log(data);
+    }
+});
+}
+onload_func();
+
+
+function getCookie(c_name)
+{
+    if (document.cookie.length > 0)
+    {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start != -1)
+        {
+            c_start = c_start + c_name.length + 1;
+            c_end = document.cookie.indexOf(";", c_start);
+            if (c_end == -1) c_end = document.cookie.length;
+            return unescape(document.cookie.substring(c_start,c_end));
+        }
+    }
+    return "";
+ }
+
+$(function () {
+    $.ajaxSetup({
+        headers: { "X-CSRFToken": getCookie("csrftoken") }
+    });
+});
+
+var oneOnTime=1;
+jQuery("#major-remodel-year-tooltip-link").click(function() {
+
+    if ($('#major-remodel-year-tooltip').hasClass("active")) {
+$('#major-remodel-year-tooltip-zoom').removeClass('zoom-out').addClass('zoom-in');
+        $('#major-remodel-year-tooltip').hide();
+        $('#major-remodel-year-tooltip').removeClass('active');
+
+    } else {
+        $('#major-remodel-year-tooltip').show();
+        $('#major-remodel-year-tooltip').addClass('active');
+$('#major-remodel-year-tooltip-zoom').removeClass('zoom-in').addClass('zoom-out');
+oneOnTime=1;
+}
+});
+
+var oneOnTimeC=1;
+jQuery("#total-rooms-tooltip-link").click(function() {
+
+    if ($('#total-rooms-tooltip').hasClass("active")) {
+$('#total-rooms-tooltip-zoom').removeClass('zoom-out').addClass('zoom-in');
+        $('#total-rooms-tooltip').hide();
+        $('#total-rooms-tooltip').removeClass('active');
+
+    } else {
+        $('#total-rooms-tooltip').show();
+        $('#total-rooms-tooltip').addClass('active');
+$('#total-rooms-tooltip-zoom').removeClass('zoom-in').addClass('zoom-out');
+oneOnTimeC=1;
+}
+});
+
+$(document).on("click", function(e) {
+if ($('#major-remodel-year-tooltip').hasClass("active")) {
+if (oneOnTime>2)
+{
+$('#major-remodel-year-tooltip-zoom').removeClass('zoom-out').addClass('zoom-in');
+        $('#major-remodel-year-tooltip').hide();
+        $('#major-remodel-year-tooltip').removeClass('active');
+    }
+}
+oneOnTime+=1;
+
+if ($('#total-rooms-tooltip').hasClass("active")) {
+if (oneOnTimeC>2)
+{
+$('#total-rooms-tooltip-zoom').removeClass('zoom-out').addClass('zoom-in');
+        $('#total-rooms-tooltip').hide();
+        $('#total-rooms-tooltip').removeClass('active');
+    }
+}
+oneOnTimeC+=1;
+
+    if ($('.calendar').hasClass("active")) {
+        $('.calendar').hide();
+        $('.calendar').removeClass('active');
+        }
+});
+
+
+
+wrappers = [];
+wrappers.push("wrappertext");
+jQuery("#wrapper").click(function() {
+$(this).parent().append($('.calendar'));
+
+    if (!$('.calendar').hasClass("active")) {
+        $('.calendar').show();
+        $('.calendar').addClass('active');
+
+
+wrappers.forEach(wrappers1 => {
+             $('#'+wrappers1).data('clicked', false);
+
+            });
+$("#wrappertext").data('clicked', true);
+
+}
+return false;
+});
+
+
+jQuery("#cal1Add").click(function() {
+mainCal+=1;
+
+$("#cal1").append('<div class="fieldDate zsg-lg-1-2-ext zsg-sm-1-1 posting-grid_left posting-open-house-date"> <div class="zsg-form-field"> <div class="zsg-datepicker-wrapper"> <input name="dateField'+mainCal+'" type="text" value="" id="wrappertext'+mainCal+'" min="2019-08-22" max="2020-08-22" class="zsg-datepicker zsg-datepicker-link-text"><a id="wrapper'+mainCal+'" href="" class="zsg-datepicker-link zsg-datepicker-link-dyn"><span class="zsg-icon-calendar"></span></a></div> </div> </div> <div class="fieldStartTime zsg-lg-1-4 zsg-sm-1-2 posting-grid_right posting-open-house-start-time"> <div class="zsg-form-field"> <select name="timeDropDownStart'+mainCal+'" id="timeDropDownStart'+mainCal+'" class="time-dropdown"> <option value="0">8:00 AM</option> <option value="1">8:30 AM</option> <option value="2">9:00 AM</option> <option value="3">9:30 AM</option> <option value="4">10:00 AM</option> <option value="5">10:30 AM</option> <option value="6">11:00 AM</option> <option value="7">11:30 AM</option> <option value="8">12:00 PM</option> <option value="9">12:30 PM</option> <option value="10" selected="selected">1:00 PM</option> <option value="11">1:30 PM</option> <option value="12">2:00 PM</option> <option value="13">2:30 PM</option> <option value="14">3:00 PM</option> <option value="15">3:30 PM</option> <option value="16">4:00 PM</option> <option value="17">4:30 PM</option> <option value="18">5:00 PM</option> <option value="19">5:30 PM</option> <option value="20">6:00 PM</option> <option value="21">6:30 PM</option> <option value="22">7:00 PM</option> <option value="23">7:30 PM</option> <option value="24">8:00 PM</option> <option value="25">8:30 PM</option> </select> </div> </div> <div class="fieldEndTime zsg-lg-1-4 zsg-sm-1-2"> <div class="zsg-form-field"><select name="timeDropDownEnd'+mainCal+'" id="timeDropDownEnd'+mainCal+'" class="time-dropdown"> <option value="0">8:00 AM</option> <option value="1">8:30 AM</option> <option value="2">9:00 AM</option> <option value="3">9:30 AM</option> <option value="4">10:00 AM</option> <option value="5">10:30 AM</option> <option value="6">11:00 AM</option> <option value="7">11:30 AM</option> <option value="8">12:00 PM</option> <option value="9">12:30 PM</option> <option value="10">1:00 PM</option> <option value="11">1:30 PM</option> <option value="12">2:00 PM</option> <option value="13">2:30 PM</option> <option value="14">3:00 PM</option> <option value="15">3:30 PM</option> <option value="16" selected="selected">4:00 PM</option> <option value="17">4:30 PM</option> <option value="18">5:00 PM</option> <option value="19">5:30 PM</option> <option value="20">6:00 PM</option> <option value="21">6:30 PM</option> <option value="22">7:00 PM</option> <option value="23">7:30 PM</option> <option value="24">8:00 PM</option> <option value="25">8:30 PM</option> </select> </div> </div></div>');
+wrappers.push('wrappertext'+mainCal);
+
+$('a.zsg-datepicker-link-dyn').on( 'click', function(e) {
+
+if (!$(this).parent().find(".calendar").hasClass("active")) {
+$(this).parent().append($('.calendar'));
+//alert($(this).parent().find(".calendar").attr('class'));
+        $(this).parent().find(".calendar").show();
+        $(this).parent().find(".calendar").addClass('active');
+
+wrappers.forEach(wrappers1 => {
+             $('#'+wrappers1).data('clicked', false);
+            });
+                $('#'+$(this).parent().find(".zsg-datepicker-link-text").attr('id')).data('clicked', true);
+                //alert($(this).parent().find(".zsg-datepicker-link-text").attr('id'));
+                }
+        return false;
+});
+
+return false;
+});
+
+
+jQuery("#cal1Remove").click(function() {
+if(mainCal>0){
+if(mainCal==1){$("#wrapper").parent().append($('.calendar'));}
+wrappers.pop();
+mainCal-=1;
+const listItems1 = document.querySelectorAll('.fieldDate');
+const listItems2 =document.querySelectorAll('.fieldStartTime');
+const listItems3 =document.querySelectorAll('.fieldEndTime');
+listItems1[listItems1.length-1].remove();
+listItems2[listItems2.length-1].remove();
+listItems3[listItems3.length-1].remove();
+}
+
+return false;
+});
+
+
+ $('form').on('submit', function(event) {
+      event.preventDefault();
+
+    if(!confirmAddress || !$('input[name="propertyType"]').val() || !$("#terms").is(":checked")){
+    $('.zsg-notification-bar_solid').remove();
+    $('#contact').append('<p class="zsg-notification-bar_solid zsg-notification-bar_error" id="yui_3_18_1_1_1567138357403_216">كانت هناك معلومات ناقصة في معالجة طلبك. حاول أكمال البيانات مرة أخرى. إذا استمرت المشكلة ، فاتصل بخدمة العملاء.</p>');
+    return false;
+    }
+
+   if($('input#price').val() == '')
+   {
+$('input#price').css({
+    'border-color': '#FF5A50'});
+    }
+
+   $('input#price').one('keypress', function () {
+$('input#price').css({
+    'border-color': ''});
+});
+
+   if($('input#Bathrooms').val() == '')
+   {
+$('input#Bathrooms').css({
+    'border-color': '#FF5A50'});
+    }
+
+   $('input#Bathrooms').one('keypress', function () {
+$('input#Bathrooms').css({
+    'border-color': ''});
+});
+
+   if($('input#bedrooms').val() == '')
+   {
+$('input#bedrooms').css({
+    'border-color': '#FF5A50'});
+    }
+
+   $('input#bedrooms').one('keypress', function () {
+$('input#bedrooms').css({
+    'border-color': ''});
+});
+
+   if($('input#Receptionrooms').val() == '')
+   {
+$('input#Receptionrooms').css({
+    'border-color': '#FF5A50'});
+    }
+
+   $('input#Receptionrooms').one('keypress', function () {
+$('input#Receptionrooms').css({
+    'border-color': ''});
+});
+
+       if($('input#livingArea').val() == '')
+   {
+$('input#livingArea').css({
+    'border-color': '#FF5A50'});
+    }
+
+   $('input#livingArea').one('keypress', function () {
+$('input#livingArea').css({
+    'border-color': ''});
+});
+
+ if($('input#lotSize').val() == '')
+   {
+$('input#lotSize').css({
+    'border-color': '#FF5A50'});
+    }
+
+   $('input#lotSize').one('keypress', function () {
+$('input#lotSize').css({
+    'border-color': ''});
+});
+
+
+
+
+
+        $.ajax({
+          data: $(this).serialize(),
+          type: $(this).attr('method'),
+          url: $(this).attr('action'),
+          success: function(data) {
+          if(data.status == "ok"){
+    $('.zsg-notification-bar_solid').remove();
+location.href="/homedetails/{{listing.pk}}";
+}
+          else
+          {
+          alert(data.message);
+          }
+          },
+          error: function(xhr, status, error) {
+          $('.editing-phone-warning-text').removeClass('hide');
+          $('.zsg-notification-bar_solid').remove();
+          $('#contact').append('<p class="zsg-notification-bar_solid zsg-notification-bar_error" id="yui_3_18_1_1_1567138357403_216">هناك خطأ ما. الرجاء معاودة المحاولة في وقت لاحق.</p>');   // shit happens friends!
+          }
+        });
+      });
+
+
+
+jQuery('#moreless-up,#moreless-down').click(function() {
+if (jQuery(this).attr("id") === "moreless-down") {
+$('#moreless-content-div').removeClass('hide');
+$('#moreless-down').addClass('hide');
+    } else {
+$('#moreless-content-div').addClass('hide');
+$('#moreless-down').removeClass('hide');
+}
+});
+jQuery('#devices-up,#devices-down').click(function() {
+if (jQuery(this).attr("id") === "devices-down") {
+$('#devices-content-div').removeClass('hide');
+$('#devices-down').addClass('hide');
+    } else {
+$('#devices-content-div').addClass('hide');
+$('#devices-down').removeClass('hide');
+}
+});
+jQuery('#build-up,#build-down').click(function() {
+if (jQuery(this).attr("id") === "build-down") {
+$('#build-content-div').removeClass('hide');
+$('#build-down').addClass('hide');
+    } else {
+$('#build-content-div').addClass('hide');
+$('#build-down').removeClass('hide');
+}
+});
+</script>
+
+
+
+    <!-- /container -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/prism.min.js" integrity="sha256-hK55yYjZp3vXqUhowkWYVaoavcWSYRR6fE8sgHqyt5A=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.9.0/components/prism-javascript.min.js" integrity="sha256-tLhIAW/D2zypVjXCB31wyVYzDzNzxbGmymQKKTT7P8c=" crossorigin="anonymous"></script>
+
+
+    <script src="{% static 'js/js/jquery.dm-uploader.min.js'%}"></script>
+    <script src="{% static 'js/js/demo-ui.js'%}"></script>
+
+
+    <script src="{% static 'js/js/images.js' %}"></script>
+
+
+
+    <!-- File item template -->
+
+
+{% endblock %}

@@ -1,0 +1,2206 @@
+﻿.commented-out-styles .uploader-intro {
+    margin-bottom: 10px
+}
+
+.commented-out-styles .is-disabled {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+    filter: alpha(opacity=25);
+    opacity: .25
+}
+
+.commented-out-styles .footnote {
+    font-size: .846em;
+    line-height: 1.2em
+}
+
+.commented-out-styles form.posting-form {
+    margin: 0
+}
+
+.commented-out-styles .posting-form fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0
+}
+
+.commented-out-styles .posting-form label {
+    cursor: pointer;
+    line-height: 1em
+}
+
+.commented-out-styles .posting-form legend {
+    border: 0;
+    padding: 0;
+    white-space: normal
+}
+
+.commented-out-styles .posting-form button,
+.commented-out-styles .posting-form input,
+.commented-out-styles .posting-form select,
+.commented-out-styles .posting-form textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline
+}
+
+.commented-out-styles .posting-form button,
+.commented-out-styles .posting-form input {
+    line-height: normal
+}
+
+.commented-out-styles .posting-form button,
+.commented-out-styles .posting-form input[type=button],
+.commented-out-styles .posting-form input[type=reset],
+.commented-out-styles .posting-form input[type=submit] {
+    cursor: pointer;
+    -webkit-appearance: button
+}
+
+.commented-out-styles .posting-form button[disabled],
+.commented-out-styles .posting-form input[disabled] {
+    cursor: default
+}
+
+.commented-out-styles .posting-form button:focus,
+.commented-out-styles .posting-form button:hover {
+    background: #8B4;
+    background: -webkit-linear-gradient(#ADDB71, #8B4, #8B4, #8B4);
+    border-color: #9CC861 #8B4 #6C9339;
+    text-decoration: none;
+    color: #fff
+}
+
+.commented-out-styles .posting-form input[type=checkbox],
+.commented-out-styles .posting-form input[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+.commented-out-styles .posting-form input[type=search] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box
+}
+
+.commented-out-styles .posting-form input[type=search]::-webkit-search-cancel-button,
+.commented-out-styles .posting-form input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+.commented-out-styles .posting-form button::-moz-focus-inner,
+.commented-out-styles .posting-form input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+.commented-out-styles .posting-form input:invalid,
+.commented-out-styles .posting-form textarea:invalid {
+    background-color: #f0dddd
+}
+
+.commented-out-styles .posting-form input[type=text],
+.commented-out-styles .posting-form textarea {
+    border: 1px solid #D2D2D2;
+    border-top-color: #AEAEAE;
+    max-width: 90%;
+    background: url(data:image/gif;base64,R0lGODlhAQACAIAAAPj7/t7t/yH5BAAAAAAALAAAAAABAAIAAAICDAoAOw==) top left repeat-x #fff;
+    padding: 3px 2px
+}
+
+.commented-out-styles .posting-form::-webkit-input-placeholder {
+    color: #999
+}
+
+.commented-out-styles .posting-form .field {
+    margin-bottom: 10px
+}
+
+.commented-out-styles .posting-form .required>label:after {
+    content: "*";
+    color: #A02528;
+    padding-left: .2ex;
+    font-weight: 700
+}
+
+.commented-out-styles .posting-form .field>input,
+.commented-out-styles .posting-form .field>select,
+.commented-out-styles .posting-form .field>textarea {
+    padding-top: 3px
+}
+
+.commented-out-styles .posting-form .field.fleft {
+    float: left;
+    width: 18em
+}
+
+.commented-out-styles .posting-form textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+    height: 60px;
+    width: 50%
+}
+
+.commented-out-styles .posting-form button {
+    cursor: pointer;
+    font-size: 13px;
+    font-family: Arial, Verdana, sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-indent: 0;
+    text-align: center;
+    display: inline-block;
+    padding: 0 9px;
+    margin: 0 5px 0 0;
+    zoom: 1;
+    background: #36B;
+    background: -webkit-linear-gradient(#6991D4, #36B, #36B);
+    border-radius: 3px;
+    border: 1px solid #36B;
+    border-top-color: #38F;
+    border-bottom-color: #163C7D;
+    vertical-align: middle;
+    white-space: nowrap;
+    line-height: 24px;
+    -o-border-image: initial;
+    border-image: initial
+}
+
+.commented-out-styles .posting-form .checkboxes {
+    line-height: 1.6
+}
+
+.commented-out-styles .posting-form .vs {
+    color: #C60005;
+    margin-bottom: -1em;
+    font-weight: 700;
+    display: none;
+    padding: 10px;
+    background: #FFFDCC
+}
+
+.commented-out-styles .posting-form .vs ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.commented-out-styles .posting-form .error {
+    color: #C60005;
+    padding-top: 3px
+}
+
+.commented-out-styles .posting-form p.error {
+    margin: 10px 0 0;
+    padding: 2px
+}
+
+.commented-out-styles body.invalid .posting-form .error-prone input,
+.commented-out-styles body.invalid .posting-form .error-prone textarea {
+    border: 1px solid #C60005;
+    border-top: 1px solid #D70005
+}
+
+.commented-out-styles body.invalid .posting-form .error,
+.commented-out-styles body.invalid .posting-form .vs {
+    display: block
+}
+
+.commented-out-styles body.invalid .posting-form .correct .error {
+    display: none
+}
+
+.commented-out-styles body.invalid .posting-form .correct input {
+    border: 1px solid #D2D2D2;
+    border-top-color: #AEAEAE
+}
+
+.commented-out-styles form.left label,
+.commented-out-styles form.right label {
+    float: left;
+    padding-top: 5px;
+    width: 150px
+}
+
+.commented-out-styles form.left .fleft,
+.commented-out-styles form.right .fleft {
+    float: none;
+    width: auto
+}
+
+.commented-out-styles form.right label {
+    text-align: right
+}
+
+.commented-out-styles .posting-form input.medium {
+    width: 123px
+}
+
+.commented-out-styles .posting-form li fieldset.checkboxes,
+.commented-out-styles .posting-form li fieldset.radios {
+    padding-top: 5px!important
+}
+
+.commented-out-styles .posting-form fieldset.checkboxes label,
+.commented-out-styles .posting-form fieldset.radios label {
+    float: none;
+    line-height: 1em;
+    margin-left: 5px;
+    padding: 0;
+    width: auto
+}
+
+.commented-out-styles .posting-form fieldset.inline li {
+    float: left;
+    margin-right: 25px
+}
+
+.commented-out-styles .posting-form .full label {
+    display: block;
+    float: none;
+    margin-bottom: 2px;
+    width: auto
+}
+
+.commented-out-styles input.small {
+    width: 70px
+}
+
+.commented-out-styles .radio input {
+    width: auto
+}
+
+.commented-out-styles form .checkbox label,
+.commented-out-styles form .radio label {
+    display: block!important;
+    float: none;
+    line-height: 1.2em;
+    margin: 0 0 0 20px;
+    padding: 0;
+    width: auto
+}
+
+.commented-out-styles .posting-form .availability .sub-label {
+    margin-right: 20px;
+    width: auto
+}
+
+.commented-out-styles #phone-verification ul {
+    margin: 20px 0 5px
+}
+
+.commented-out-styles #phone-verification li {
+    display: inline-block;
+    width: 33%;
+    zoom: 1
+}
+
+.commented-out-styles #phone-verification h5 {
+    margin-bottom: 5px
+}
+
+.commented-out-styles #phone-verification label {
+    margin-right: 10px
+}
+
+.commented-out-styles .status-wrapper {
+    margin-bottom: 15px
+}
+
+.commented-out-styles .status-wrapper .error {
+    background: 0 0;
+    border: none;
+    color: #F66;
+    float: none;
+    margin: 0;
+    padding: 0
+}
+
+.commented-out-styles .ico-item img {
+    margin: 0 5px -3px 0
+}
+
+.commented-out-styles hr.seperator-line {
+    border: none;
+    border-bottom: 1px solid #D6DCE2;
+    margin: 17px 0 20px
+}
+
+.commented-out-styles .updates p {
+    margin-bottom: 15px
+}
+
+.commented-out-styles .updates h2 {
+    border-bottom: 0;
+    margin-top: 5px
+}
+
+.commented-out-styles table.full {
+    width: 100%
+}
+
+.commented-out-styles #container.fullpage-layout {
+    margin-top: 15px
+}
+
+.commented-out-styles #content fieldset {
+    display: block;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    line-height: 1.7em
+}
+
+.commented-out-styles #content fieldset h2 {
+    border: none;
+    font-size: 1.4em
+}
+
+.commented-out-styles h2.expander {
+    border: none;
+    color: #36b;
+    font-size: 1.5em;
+    line-height: 2em;
+    margin-bottom: 10px
+}
+
+.commented-out-styles h2.expander a.title {
+    padding: 0 0 1px 25px;
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icon_plus_large.gif) 0 1px no-repeat
+}
+
+.commented-out-styles h2.expander a.title:hover {
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icon_plus_large_on.gif) 0 1px no-repeat
+}
+
+.commented-out-styles h2.expander a.expanded {
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icon_minus_large.gif) 0 1px no-repeat
+}
+
+.commented-out-styles h2.expander a.expanded:hover {
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icon_minus_large_on.gif) 0 1px no-repeat
+}
+
+.commented-out-styles li#mmm-blade {
+    padding-top: 0
+}
+
+.commented-out-styles .callout {
+    font-weight: 700;
+    color: #d61
+}
+
+.commented-out-styles h4.callout {
+    font-size: 1.6em
+}
+
+.commented-out-styles h2.callout {
+    font-size: 1.2em;
+    margin: 5px 0
+}
+
+.commented-out-styles li .intro {
+    font-weight: 700
+}
+
+.commented-out-styles li .desc {
+    clear: left;
+    display: block
+}
+
+.commented-out-styles div.personality {
+    float: left;
+    width: 100px
+}
+
+.commented-out-styles #introFeatures {
+    float: right;
+    width: 300px;
+    margin-bottom: .5em;
+    padding-left: 5px
+}
+
+.commented-out-styles #introFeatures.mmm-intro {
+    padding-bottom: 2em
+}
+
+.commented-out-styles .featuredListings {
+    line-height: 1.4em;
+    font-weight: 400
+}
+
+.commented-out-styles h3.featuredListings {
+    padding: .5em 0
+}
+
+.commented-out-styles #introFeatures h3.featuredListings {
+    float: left
+}
+
+.commented-out-styles #introFeatures .tooltip dt,
+.commented-out-styles #introFeatures .tooltip p {
+    margin-bottom: 1em
+}
+
+.commented-out-styles #see-pricing {
+    clear: both;
+    min-height: 16px;
+    margin: 1em 0 2em;
+    font-weight: 700
+}
+
+.commented-out-styles #see-pricing a {
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icons/btnicons_tiled.png) -587px -273px no-repeat;
+    padding-left: 20px;
+    text-decoration: underline
+}
+
+.commented-out-styles #see-pricing a:hover {
+    background-position: -587px -248px
+}
+
+.commented-out-styles #posting-launch-form #home-info-form.post-mmm {
+    margin-top: 15px
+}
+
+.commented-out-styles #content div.bubble.posting-bubble {
+    margin-bottom: .75em
+}
+
+.commented-out-styles .bubble-footnote {
+    color: #999;
+    margin-left: .5em
+}
+
+.commented-out-styles #creditCard .formField,
+.commented-out-styles #home-info-form .formField {
+    clear: left;
+    margin: 2px 0
+}
+
+.commented-out-styles #home-info-form .formField {
+    margin: 5px 0
+}
+
+.commented-out-styles .formField .label,
+.commented-out-styles .formField label,
+.commented-out-styles .postedBy .field-label {
+    text-align: right;
+    line-height: 1.3
+}
+
+.commented-out-styles #home-info-form .formField .label,
+.commented-out-styles #home-info-form .formField label,
+.commented-out-styles #home-info-form .postedBy .field-label {
+    font-weight: 700;
+    width: 100px;
+    padding-right: 5px
+}
+
+.commented-out-styles #home-info-form .postedBy .field-label.render-tooltip {
+    width: 123px
+}
+
+.commented-out-styles #priceOnlyForm .formField .label,
+.commented-out-styles #priceOnlyForm .formField label {
+    width: 117px
+}
+
+.commented-out-styles #home-info-form .formField.price {
+    width: 100%
+}
+
+.commented-out-styles #home-info-form .formField.sameLine {
+    clear: none;
+    float: left
+}
+
+.commented-out-styles #home-info-form .formField.sameLine label {
+    width: 42px;
+    padding: 2px 5px 2px 0;
+    text-align: right;
+    white-space: nowrap
+}
+
+.commented-out-styles #home-info-form #address {
+    width: 215px
+}
+
+.commented-out-styles #priceOnlyForm #address {
+    width: 230px;
+    float: left;
+    line-height: 1.6em
+}
+
+.commented-out-styles #home-info-form #unitNumberField,
+.commented-out-styles #home-info-form #zipCodeField {
+    width: 65px
+}
+
+.commented-out-styles #home-info-form #cityField,
+.commented-out-styles #home-info-form .priceField {
+    width: 115px
+}
+
+.commented-out-styles #home-info-form select {
+    width: 50px
+}
+
+.commented-out-styles #home-info-form .price label {
+    position: relative;
+    padding-right: 15px;
+    width: 90px
+}
+
+.commented-out-styles #home-info-form .price .dollar {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    font-weight: 400
+}
+
+.commented-out-styles a.change {
+    margin-top: -1px;
+    float: right;
+    display: block;
+    padding-right: 8px;
+    width: 42px;
+    height: 15px;
+    text-decoration: none;
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icons/btnicons_tiled.png) 0 -448px no-repeat
+}
+
+.commented-out-styles a.change:hover {
+    background-position: -50px -448px
+}
+
+.commented-out-styles a.change span {
+    visibility: hidden
+}
+
+.commented-out-styles #home-info-form .postedBy {
+    width: 430px;
+    margin-top: 0
+}
+
+.commented-out-styles .postedBy .field-label {
+    float: left
+}
+
+.commented-out-styles .postedBy .field-label dl {
+    font-weight: 400
+}
+
+.commented-out-styles #priceOnlyForm .postedBy .field-label {
+    width: 117px
+}
+
+.commented-out-styles .postedBy li,
+.commented-out-styles .postedBy ul {
+    display: inline;
+    float: left;
+    font-size: 1em
+}
+
+.commented-out-styles .postedBy input {
+    margin-right: 3px
+}
+
+.commented-out-styles #home-info-form .postedBy label {
+    font-weight: 400;
+    width: auto;
+    padding-right: 15px;
+    float: none;
+    display: inline-block
+}
+
+.commented-out-styles #c-column #zillow-audience-module,
+.commented-out-styles #zillow-audience-module .module-head {
+    margin: 0
+}
+
+.commented-out-styles #c-column #user-target-module {
+    margin-bottom: 15px
+}
+
+.commented-out-styles #user-target-module ul#whyuse li {
+    list-style: disc inside
+}
+
+.commented-out-styles #user-target-module ul#whyuse {
+    padding-bottom: .5em
+}
+
+.commented-out-styles #user-target-module ul#whyuse li,
+.commented-out-styles ul#listingInfo li {
+    margin-top: .5em
+}
+
+.commented-out-styles ul#listingInfo {
+    clear: left
+}
+
+.commented-out-styles ul#listingInfo,
+.commented-out-styles ul#listingInfo li {
+    list-style: disc
+}
+
+.commented-out-styles ul#listingInfo li {
+    line-height: 1.4em;
+    margin-left: 1.25em;
+    margin-bottom: 1em
+}
+
+.commented-out-styles #user-target-module ul#whyuse li.last {
+    margin-bottom: 0
+}
+
+.commented-out-styles #user-target-module ul#whyuse li a {
+    text-decoration: none
+}
+
+.commented-out-styles #user-target-module p {
+    margin: .5em 0 1em;
+    line-height: 1.4em
+}
+
+.commented-out-styles #blessed-msg {
+    margin-bottom: 20px;
+    padding-left: 10px
+}
+
+.commented-out-styles #content div.bubble.posting {
+    clear: both;
+    margin: 2em 0 0
+}
+
+.commented-out-styles #content div.bubble.posting div.inner {
+    padding: 15px
+}
+
+.commented-out-styles a.edit:hover {
+    background-position: -50px -350px
+}
+
+.commented-out-styles .actions a.edit {
+    margin-top: 33px;
+    padding-right: 1px;
+    text-transform: lowercase;
+    width: 160px
+}
+
+.commented-out-styles .generic-box .module-head .actions a.edit span {
+    line-height: normal;
+    visibility: visible
+}
+
+.commented-out-styles #home-listing,
+.commented-out-styles .home-listing {
+    padding: 15px;
+    border: 1px solid #acf;
+    width: 445px;
+    position: relative;
+    margin: 3px 0 0
+}
+
+.commented-out-styles .home-listing .featured-listing {
+    display: block;
+    height: 13px;
+    width: 56px;
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icons/btnicons_tiled.png) -544px -1301px no-repeat #fff;
+    margin: 0 0 3px -5px
+}
+
+.commented-out-styles #home-listing .featured-listing {
+    display: block;
+    height: 13px;
+    width: 56px;
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icons/btnicons_tiled.png) -544px -1301px no-repeat #fff;
+    margin: 0 6px 0 2px;
+    position: absolute;
+    right: 5px
+}
+
+.commented-out-styles #home-listing .photo,
+.commented-out-styles #home-listing .property-info,
+.commented-out-styles .home-listing .photo,
+.commented-out-styles .home-listing .property-info {
+    float: left;
+    line-height: 2em;
+    padding: 0 10px;
+    width: 320px
+}
+
+.commented-out-styles #home-listing .photo .type-icon,
+.commented-out-styles #home-listing .property-info .type-icon,
+.commented-out-styles .home-listing .photo .type-icon,
+.commented-out-styles .home-listing .property-info .type-icon {
+    line-height: 14px
+}
+
+.commented-out-styles #home-listing .photo,
+.commented-out-styles .home-listing .photo {
+    padding: 0;
+    width: 101px;
+    height: 76px;
+    border: 1px solid #555
+}
+
+.commented-out-styles #home-listing .adr,
+.commented-out-styles .home-listing .adr {
+    font-weight: 700;
+    line-height: 1em;
+    padding-bottom: 6px;
+    width: 330px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.commented-out-styles #home-listing ul,
+.commented-out-styles .home-listing ul {
+    clear: both
+}
+
+.commented-out-styles #home-listing .listing,
+.commented-out-styles .home-listing .listing {
+    line-height: 1.3em
+}
+
+.commented-out-styles #home-listing .listing .zestimate,
+.commented-out-styles .home-listing .listing .zestimate {
+    height: auto;
+    margin-top: -5px
+}
+
+.commented-out-styles #home-listing ul li,
+.commented-out-styles .home-listing ul li {
+    float: left
+}
+
+.commented-out-styles #home-listing ul.action-links li,
+.commented-out-styles .home-listing ul.action-links li {
+    float: none
+}
+
+.commented-out-styles .listing li.type-MMM span.tool-icon,
+.commented-out-styles .listing li.type-forRent span.tool-icon,
+.commented-out-styles .listing li.type-forSale span.tool-icon,
+.commented-out-styles .listing li.type-recentlySold span.tool-icon {
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icons/tool_strip.png) 0 -173px no-repeat;
+    width: 12px;
+    float: left
+}
+
+.commented-out-styles .listing li.type-recentlySold span.tool-icon {
+    background-position: 0 -5073px
+}
+
+.commented-out-styles .listing li.type-MMM span.tool-icon {
+    background-position: 0 -373px
+}
+
+.commented-out-styles .listing li.type-forRent span.tool-icon {
+    background-position: 0 -5673px
+}
+
+.commented-out-styles .attributes {
+    padding-top: 7px
+}
+
+.commented-out-styles .attributes.forSale {
+    padding-top: 20px
+}
+
+.commented-out-styles .attributes li {
+    line-height: 1.25em;
+    padding-right: 0
+}
+
+.commented-out-styles .attributes li.prop-cola {
+    width: 82px
+}
+
+.commented-out-styles .attributes li.prop-colb,
+.commented-out-styles .attributes li.prop-colc {
+    width: 116px
+}
+
+.commented-out-styles .type {
+    font-weight: 700;
+    padding-left: 3px
+}
+
+.commented-out-styles #pets-ok {
+    clear: left;
+    line-height: 1.2em
+}
+
+.commented-out-styles .adSummary,
+.commented-out-styles .listingSummary {
+    margin-top: 15px;
+    margin-bottom: 7px
+}
+
+.commented-out-styles .adSummary td,
+.commented-out-styles .adSummary th,
+.commented-out-styles .listingSummary td,
+.commented-out-styles .listingSummary th {
+    border-bottom: 1px solid #acf
+}
+
+.commented-out-styles .adSummary th,
+.commented-out-styles .listingSummary th {
+    font-weight: 700;
+    padding: 3px 0
+}
+
+.commented-out-styles .adSummary td,
+.commented-out-styles .listingSummary td {
+    padding: 5px 0
+}
+
+.commented-out-styles .adSummary .endDate,
+.commented-out-styles .adSummary .startDate,
+.commented-out-styles .listingSummary .endDate,
+.commented-out-styles .listingSummary .startDate {
+    width: 140px
+}
+
+.commented-out-styles .adSummary .price,
+.commented-out-styles .listingSummary .price {
+    width: 82px
+}
+
+.commented-out-styles .extend .price {
+    width: 76px
+}
+
+.commented-out-styles .ad-extend .price {
+    width: 89px
+}
+
+.commented-out-styles .renew .price {
+    width: 95px
+}
+
+.commented-out-styles .extend-listing #content .generic-box .module-head {
+    border-top-width: 1px
+}
+
+.commented-out-styles .listing-confirm #content .mod {
+    border: 1px solid #d6dce2
+}
+
+.commented-out-styles .adSummary .address,
+.commented-out-styles .listingSummary .address {
+    width: 355px
+}
+
+.commented-out-styles .adSummary .address.blessed,
+.commented-out-styles .listingSummary .address.blessed {
+    width: 430px
+}
+
+.commented-out-styles p.listingMsg {
+    float: left;
+    width: 500px
+}
+
+.commented-out-styles p.run-time {
+    float: left
+}
+
+.commented-out-styles p.total {
+    float: right;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-right: 48px
+}
+
+.commented-out-styles p.note {
+    clear: left;
+    padding-top: 25px;
+    padding-right: 5px
+}
+
+.commented-out-styles #cc-billing-info p {
+    padding: 0 0 15px
+}
+
+.commented-out-styles #cc-billing-info .module-body {
+    padding: 7px 10px
+}
+
+.commented-out-styles .affidavit {
+    clear: both;
+    margin: 0 0 5px
+}
+
+.commented-out-styles .affidavit input {
+    float: left
+}
+
+.commented-out-styles .affidavit label {
+    display: block;
+    padding-left: 20px
+}
+
+.commented-out-styles .credit-card-selector {
+    padding-bottom: 20px;
+    float: left;
+    width: 500px;
+    position: relative
+}
+
+.commented-out-styles .credit-card-module .credit-card-selector {
+    width: auto;
+    padding-bottom: 0;
+    float: none
+}
+
+.commented-out-styles .credit-card-module {
+    float: right;
+    width: 480px
+}
+
+.commented-out-styles #new-card-form.show-saved {
+    display: none
+}
+
+.commented-out-styles .credit-card-selector dd,
+.commented-out-styles .credit-card-selector dt {
+    padding: 2px 0
+}
+
+.commented-out-styles .credit-card-module .credit-card-selector dt,
+.commented-out-styles .credit-card-selector dt {
+    width: 125px
+}
+
+.commented-out-styles .credit-card-selector dt {
+    color: #555;
+    float: left;
+    clear: left;
+    text-align: left;
+    padding-right: 5px;
+    font-weight: 700
+}
+
+.commented-out-styles .saved-card-actions {
+    padding: 0 130px;
+    text-align: right;
+    margin: 1em 0;
+    line-height: 26px
+}
+
+.commented-out-styles .saved-card-actions button {
+    float: left
+}
+
+.commented-out-styles .credit-card-selector dd {
+    float: left;
+    width: 335px!important
+}
+
+.commented-out-styles .credit-card-selector dd input {
+    width: 300px;
+    border: 1px solid #acf;
+    padding: 2px 0
+}
+
+.commented-out-styles .credit-card-selector dd input.checkbox {
+    width: 16px;
+    border: none
+}
+
+.commented-out-styles .credit-card-selector .disabled {
+    color: #999
+}
+
+.commented-out-styles #addSavedCardForm .credit-card-selector {
+    padding: 10px 0
+}
+
+.commented-out-styles .credit-card-selector input#verificationCode,
+.commented-out-styles .credit-card-selector input#zip {
+    width: 125px;
+    margin-right: 3px
+}
+
+.commented-out-styles .credit-card-selector #cardBrand,
+.commented-out-styles .credit-card-selector #state {
+    width: 130px;
+    padding: 2px 0
+}
+
+.commented-out-styles .credit-card-selector #state {
+    width: 127px!important
+}
+
+.commented-out-styles .chargeMsg {
+    margin-bottom: 15px;
+    clear: left
+}
+
+.commented-out-styles form#billingForm,
+.commented-out-styles form#subscriberForm {
+    clear: left
+}
+
+.commented-out-styles #cc-billing-info #Form_0 .button-disabled,
+.commented-out-styles #cc-billing-info #Form_0 button,
+.commented-out-styles #posting-launch-form button,
+.commented-out-styles form#billingForm #billing-submit-disabled,
+.commented-out-styles form#billingForm button,
+.commented-out-styles form#subscriberForm button {
+    clear: left;
+    float: left
+}
+
+.commented-out-styles #billing-summary .module-body,
+.commented-out-styles #review-listing .module-body {
+    padding: 7px 10px;
+    border: 0
+}
+
+.commented-out-styles #billing-summary .module-head {
+    border: 0
+}
+
+.commented-out-styles .ie #billing-submit-disabled span {
+    padding: 0
+}
+
+.commented-out-styles form#billingForm #billing-submit-disabled.button-disabled {
+    float: left
+}
+
+.commented-out-styles form#billingForm #billing-submit-disabled.button-disabled span {
+    padding: 3px 0 6px
+}
+
+.commented-out-styles .agreeCheckboxComp {
+    float: left
+}
+
+.commented-out-styles a.help span {
+    padding-top: 2px
+}
+
+.commented-out-styles .requireMsg {
+    float: left;
+    margin-top: 5px;
+    padding-left: 15px
+}
+
+.commented-out-styles .avsMsg {
+    clear: both;
+    padding-top: 15px
+}
+
+.commented-out-styles #home-info-form .field-label,
+.commented-out-styles #home-info-form .formField,
+.commented-out-styles #home-info-form .label,
+.commented-out-styles #home-info-form input,
+.commented-out-styles #home-info-form label,
+.commented-out-styles #home-info-form select {
+    padding: 2px 0;
+    float: left
+}
+
+.commented-out-styles #home-info-form input[type=radio] {
+    padding: 0;
+    float: none
+}
+
+.commented-out-styles #home-info-form #streetFormField {
+    width: 325px
+}
+
+.commented-out-styles #home-info-form #unitFormField,
+.commented-out-styles #home-info-form #zipFormField {
+    width: 121px
+}
+
+.commented-out-styles #home-info-form #cityFormField {
+    width: 225px
+}
+
+.commented-out-styles #home-info-form #stateFormField {
+    width: 100px
+}
+
+.commented-out-styles #home-info-form #priceFormField {
+    width: 450px
+}
+
+.commented-out-styles p.error {
+    margin: 0 5px 10px;
+    padding: 2px
+}
+
+.commented-out-styles p.top {
+    padding: 5px
+}
+
+.commented-out-styles #saleDateFormField p.error {
+    clear: left;
+    float: left
+}
+
+.commented-out-styles #saleDateFormField #saleDateField {
+    left: -17px;
+    position: relative
+}
+
+.commented-out-styles #saleDateFormField a.dateCalendar {
+    left: 148px
+}
+
+.commented-out-styles #home-info-form #priceFormField p.error,
+.commented-out-styles p.affidavit-error {
+    float: left
+}
+
+.commented-out-styles p.affidavit-error {
+    margin-top: 5px
+}
+
+.commented-out-styles .credit-card-selector p.error {
+    float: none;
+    margin-left: 0
+}
+
+.commented-out-styles h4.pageConfirm {
+    margin: 15px 0 10px
+}
+
+.commented-out-styles h4.pageConfirm.custSvc {
+    margin-bottom: 5px
+}
+
+.commented-out-styles .pageContent {
+    margin-top: 2em;
+    margin-left: 1.5em
+}
+
+.commented-out-styles .pageContent.listingConfirm {
+    margin: 0
+}
+
+.commented-out-styles .listingConfirm p {
+    line-height: 1.5em;
+    margin-bottom: 1em
+}
+
+.commented-out-styles p.buttonWrapper {
+    display: block;
+    margin: 15px 0
+}
+
+.commented-out-styles div.continue {
+    clear: left;
+    margin-left: 105px;
+    padding-top: 15px
+}
+
+.commented-out-styles #priceOnlyForm div.continue {
+    margin-left: 117px
+}
+
+.commented-out-styles #property-listings .home-listing .hlisting .attributes .prop-cola {
+    width: 72px
+}
+
+.commented-out-styles #property-listings .home-listing .hlisting .attributes .prop-colb,
+.commented-out-styles #property-listings .home-listing .hlisting .attributes .prop-colc {
+    width: 90px
+}
+
+.commented-out-styles #property-listings .home-listing {
+    border-bottom: 1px solid #CCC;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+
+.commented-out-styles #property-listings .module-head h5 span.col2_desc {
+    padding-right: 10px;
+    width: 100px
+}
+
+.commented-out-styles #property-listings .col1_desc {
+    width: 300px
+}
+
+.commented-out-styles ul#nextLinks li {
+    margin: 3px 0
+}
+
+.commented-out-styles ul#nextLinks li span.fblikeLbl {
+    vertical-align: top
+}
+
+.commented-out-styles div.messaging.info div.info-inner {
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icons/tool_strip.png) 0 -4600px no-repeat
+}
+
+.commented-out-styles div.messaging.info div.info-inner p {
+    margin: 0 0 0 30px;
+    min-height: 16px
+}
+
+.commented-out-styles div.messaging.info div.info-inner p strong {
+    color: #555
+}
+
+.commented-out-styles #address-missing-number {
+    clear: left;
+    margin-bottom: 0
+}
+
+.commented-out-styles #address-missing-number h4 {
+    background-position: 0 -5797px
+}
+
+.commented-out-styles .actions a.printPage {
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icons/tool_strip.png) 0 -1700px no-repeat;
+    clear: left;
+    display: block;
+    float: right;
+    height: 16px;
+    line-height: normal;
+    margin-top: 8px;
+    padding-left: 20px;
+    text-decoration: none
+}
+
+.commented-out-styles #c-column .c-column-fsbo {
+    margin-top: 0
+}
+
+.commented-out-styles .openHouseList h3 {
+    float: left;
+    width: 101px
+}
+
+.commented-out-styles .openHouseList dd {
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee
+}
+
+.commented-out-styles .openHouseList li.openHouse dd {
+    float: left
+}
+
+.commented-out-styles .openHouseList ul.home-info {
+    padding-left: 111px
+}
+
+.commented-out-styles .openHouseList ul.home-info li.address {
+    overflow: hidden
+}
+
+.commented-out-styles .openHouseList ul.home-info li.address a {
+    white-space: nowrap
+}
+
+.commented-out-styles .openHouseList ul.home-info ul.attributes {
+    padding-top: 0
+}
+
+.commented-out-styles .openHouseList ul.home-info ul.attributes li {
+    display: inline-block;
+    zoom: 1;
+    margin-right: 2px;
+    width: 78px
+}
+
+.commented-out-styles .openHouseList dd img {
+    border: none
+}
+
+.commented-out-styles .openHouse {
+    list-style-type: none
+}
+
+.commented-out-styles .openHouseList .ForSaleByOwnerPrice,
+.commented-out-styles .openHouseList .ForSalePrice,
+.commented-out-styles .openHouseList .MakeMeMovePrice,
+.commented-out-styles .openHouseList .RecentlySoldPrice {
+    font-weight: 700;
+    padding-left: 17px;
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icons/tool_strip.png) 0 -173px no-repeat
+}
+
+.commented-out-styles .openHouseList .MakeMeMovePrice {
+    background-position: 0 -373px
+}
+
+.commented-out-styles .openHouseList .RecentlySoldPrice {
+    background-position: 0 -5073px
+}
+
+.commented-out-styles .openHouseList .ForSaleByOwnerPrice strong,
+.commented-out-styles .openHouseList .ForSalePrice strong,
+.commented-out-styles .openHouseList .MakeMeMovePrice strong,
+.commented-out-styles .openHouseList .RecentlySoldPrice strong {
+    color: #d61
+}
+
+.commented-out-styles .openHouseList .photo-container {
+    border: 1px solid #36B;
+    height: 76px;
+    overflow: hidden;
+    padding: 1px;
+    text-align: center
+}
+
+.commented-out-styles .openHouseList .photo-count {
+    line-height: 1.8;
+    margin-left: 26px;
+    font-weight: 400
+}
+
+.commented-out-styles .postlets {
+    padding-left: 11px
+}
+
+.commented-out-styles .postlets li {
+    padding: 2px 2px 2px 18px
+}
+
+.commented-out-styles #postfreelisting {
+    margin-top: 15px!important;
+    margin-bottom: 50px!important
+}
+
+.commented-out-styles .postletss-logo {
+    float: right;
+    margin-top: -100px
+}
+
+.commented-out-styles .postlets-link {
+    text-decoration: underline!important
+}
+
+.commented-out-styles #postlets-module a,
+.commented-out-styles .button-choices a,
+.commented-out-styles .multiSelectList a {
+    text-decoration: none
+}
+
+.commented-out-styles .header-div {
+    border-top: 0
+}
+
+.commented-out-styles .postlets-h1-orange {
+    color: #D61!important
+}
+
+.commented-out-styles .postlets-header-subtext {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 10px
+}
+
+.commented-out-styles .posting-launch-form {
+    margin-top: -17px;
+    padding-bottom: 15px;
+    margin-left: 4px
+}
+
+.commented-out-styles .black {
+    color: #000
+}
+
+.commented-out-styles .for-rent {
+    margin-top: -86px
+}
+
+.commented-out-styles .gray {
+    color: #999
+}
+
+.commented-out-styles #saleCalendarView .yui-calendar .calnavleft,
+.commented-out-styles #saleCalendarView .yui-calendar .calnavleft:hover {
+    background-position: 180px 0
+}
+
+.commented-out-styles #saleCalendarView .yui-calendar .calnavright,
+.commented-out-styles #saleCalendarView .yui-calendar .calnavright:hover {
+    background-position: 28px 0
+}
+
+.commented-out-styles .agent-positings .home-listing {
+    width: 440px
+}
+
+.commented-out-styles .step {
+    clear: left;
+    padding-top: 10px
+}
+
+.commented-out-styles .step .index,
+.commented-out-styles .step .instruction {
+    float: left
+}
+
+.commented-out-styles .step .instruction {
+    width: 425px
+}
+
+.commented-out-styles .step .index {
+    width: 10px;
+    height: 10px;
+    background-color: #36b;
+    color: #fff;
+    margin-right: 15px;
+    padding: 3px 5px 7px;
+    text-align: center
+}
+
+.commented-out-styles textarea.htmlcode {
+    width: 425px;
+    height: 100px;
+    margin-top: 10px
+}
+
+.commented-out-styles .instruction .preview {
+    float: right;
+    padding-left: 16px;
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icons/btnicons_tiled.png) -588px -822px no-repeat
+}
+
+.commented-out-styles .fsbo .outer .inner h2,
+.commented-out-styles .fsbo .postlets,
+.commented-out-styles .fsbo .postletss-logo {
+    float: left
+}
+
+.commented-out-styles .fsbo .postlets {
+    padding-left: 0;
+    margin-right: 50px;
+    margin-left: 3px
+}
+
+.commented-out-styles .fsbo .postletss-logo {
+    margin: 3px 0 0 75px
+}
+
+.commented-out-styles .fsbo .postlets li {
+    padding-left: 16px
+}
+
+.commented-out-styles .fsbo .outer .inner h2,
+.commented-out-styles .fsbo .outer-border,
+.commented-out-styles .fsbo .postlets-header-subtext {
+    margin: 0
+}
+
+.commented-out-styles .fsbo .postlets-header-subtext {
+    padding-top: 4px;
+    padding-bottom: 12px
+}
+
+.commented-out-styles .fsbo #home-info-form .postedBy {
+    margin-top: 4px
+}
+
+.commented-out-styles .fsbo .social-item {
+    display: inline-block;
+    margin-bottom: 10px;
+    zoom: 1
+}
+
+.commented-out-styles .fsbo .inner-border .social-item {
+    width: 25%
+}
+
+.commented-out-styles .fsbo .featured-post-text,
+.commented-out-styles .fsbo .postlets-text {
+    padding-left: 0;
+    padding-right: 6px
+}
+
+.commented-out-styles .fsbo .postlets-text {
+    padding-top: 10px
+}
+
+.commented-out-styles .fsbo .outer-border h1 {
+    color: #555
+}
+
+.commented-out-styles .fsbo .outer .inner h2 {
+    font-size: 17px;
+    margin-bottom: 1px
+}
+
+.commented-out-styles .fsbo #postfreelisting {
+    margin-bottom: 10px!important
+}
+
+.commented-out-styles .fsbo .seperator-line {
+    border-bottom: 1px solid #D6DCE2;
+    margin: 17px 0 20px
+}
+
+.commented-out-styles .fsbo .postlets li {
+    padding: 0 2px 4px 17px
+}
+
+.commented-out-styles .premier-upsell .outerBorder {
+    border: 1px solid #c5ea93;
+    margin-bottom: 10px
+}
+
+.commented-out-styles .premier-upsell .innerBorder {
+    border: 3px solid #ecf9da;
+    background: #fff;
+    padding: 5px;
+    line-height: 1.5em
+}
+
+.commented-out-styles .premier-upsell ul {
+    list-style: disc inside;
+    margin: 5px 0
+}
+
+.commented-out-styles .premier-upsell h3 {
+    color: #36B
+}
+
+.commented-out-styles .postings #pagetitle {
+    color: #555;
+    margin: 0 0 15px
+}
+
+.commented-out-styles #congrats #pagetitle {
+    margin-bottom: 8px
+}
+
+.commented-out-styles .postings .bd p {
+    clear: none;
+    line-height: 1.4;
+    margin-bottom: 5px
+}
+
+.commented-out-styles #intro {
+    margin: 5px 0 10px
+}
+
+.commented-out-styles #intro .img {
+    margin-bottom: 15px
+}
+
+.commented-out-styles #intro .img img {
+    margin-left: 8px
+}
+
+.commented-out-styles .postings #next-steps .bd {
+    padding: 0 5px 5px
+}
+
+.commented-out-styles .postings #next-steps .bd>ul {
+    margin: 10px 0 -10px
+}
+
+.commented-out-styles .postings #next-steps .bd>ul>li {
+    clear: both;
+    height: 19px;
+    margin-bottom: 15px
+}
+
+.commented-out-styles .postings #next-steps li span {
+    clear: both;
+    display: block;
+    float: left;
+    width: 130px
+}
+
+.commented-out-styles .postings #next-steps li .zts {
+    clear: none;
+    display: inline-block;
+    float: none;
+    height: 13px;
+    width: 13px
+}
+
+.commented-out-styles .mod .inner,
+.commented-out-styles ul.multiSelectList {
+    clear: both
+}
+
+.commented-out-styles .postings #next-steps li input {
+    margin-top: -5px;
+    width: 320px
+}
+
+.commented-out-styles .postings #next-steps li li {
+    display: inline;
+    float: none;
+    margin-right: 15px
+}
+
+.commented-out-styles .postings #next-steps li a {
+    font-weight: 400;
+    text-decoration: none
+}
+
+.commented-out-styles .postings .outer-border .module-body {
+    border: none
+}
+
+.commented-out-styles .postings .outer-border .no-header .module-body {
+    padding: 0
+}
+
+.commented-out-styles #openHouseEditor select {
+    margin-right: 6px
+}
+
+.commented-out-styles #postlets-module .postletss-logo {
+    float: none;
+    margin: 10px auto 15px;
+    text-align: center
+}
+
+.commented-out-styles #postlets-module .post-to {
+    margin: 10px 0
+}
+
+.commented-out-styles #postlets-module .post-to li {
+    margin-bottom: 11px
+}
+
+.commented-out-styles #postlets-module .post-to .no-ico {
+    padding-left: 26px
+}
+
+.commented-out-styles #postlets-module hr.seperator-line {
+    margin: 0 0 12px
+}
+
+.commented-out-styles #postlets-module .ico-item img {
+    margin-right: 10px
+}
+
+.commented-out-styles .media .img {
+    float: left;
+    margin: 0 20px 20px 0
+}
+
+.commented-out-styles .media .img img {
+    display: block
+}
+
+.commented-out-styles .form .module-body {
+    padding-top: 10px
+}
+
+.commented-out-styles .button-choices {
+    clear: both;
+    margin: 12px 0 5px
+}
+
+.commented-out-styles .button-choices li {
+    display: inline;
+    margin-right: 12px
+}
+
+.commented-out-styles .bubble-footnote:before {
+    content: '*';
+    margin-left: -7px;
+    position: absolute
+}
+
+.commented-out-styles dl textarea {
+    width: 100%;
+    height: 6em
+}
+
+.commented-out-styles #depositAndFees {
+    position: relative
+}
+
+.commented-out-styles #depositAndFees label.input-tip {
+    width: 24em!important
+}
+
+.commented-out-styles #content fieldset .two-col dt {
+    width: 18em
+}
+
+.commented-out-styles #postingStatusEditor dt .dollar,
+.commented-out-styles #rentalInfoEditor dt .dollar {
+    display: block;
+    float: right;
+    font-weight: 400;
+    padding-right: 2px
+}
+
+.commented-out-styles #rentalInfoEditor dd#description {
+    width: 43em;
+    margin-left: 0
+}
+
+.commented-out-styles #rentalInfoEditor dd#description textarea {
+    margin-top: 2px;
+    float: left
+}
+
+.commented-out-styles #availableNowFields label {
+    padding-right: 1em
+}
+
+.commented-out-styles #availableNowFields #dateAvailableDateField {
+    margin-left: -10px;
+    width: 105px
+}
+
+.commented-out-styles .dateCalendar {
+    position: relative;
+    left: 122px
+}
+
+.commented-out-styles .dateCalendar.afterfield {
+    left: 0;
+    padding-left: 2px;
+    padding-right: 5px
+}
+
+.commented-out-styles .multiSelectList ul {
+    position: absolute;
+    width: 240px;
+    padding: 3px 10px 10px;
+    background: #fff;
+    border: 1px solid #acf;
+    z-index: 999;
+    margin-top: -1px
+}
+
+.commented-out-styles #content .multiSelectList li {
+    margin-bottom: 0
+}
+
+.commented-out-styles .multiSelectList li li {
+    margin-bottom: 3px
+}
+
+.commented-out-styles .multiSelectList li li label {
+    display: block
+}
+
+.commented-out-styles .multiSelectList li li a {
+    background-position-y: -770px
+}
+
+.commented-out-styles .multiSelectList li li a:hover {
+    background-position-y: -745px
+}
+
+.commented-out-styles .multiSelectList a {
+    font-weight: 700;
+    padding-left: 20px;
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/icons/btnicons_tiled.png) -587px -775px no-repeat
+}
+
+.commented-out-styles .multiSelectList a:hover {
+    background-position: -587px -750px
+}
+
+.commented-out-styles .multiTitle {
+    text-indent: -20px;
+    padding: 3px 10px 3px 30px;
+    border: 1px solid transparent
+}
+
+.commented-out-styles .multiSelectList .expanded {
+    width: 220px;
+    border-color: #acf
+}
+
+.commented-out-styles .multiSelectList .expanded .specified {
+    display: none!important
+}
+
+.commented-out-styles .multiSelectList .expanded a {
+    background-position: -587px -650px
+}
+
+.commented-out-styles .multiSelectList .expanded a:hover {
+    background-position: -587px -625px
+}
+
+.commented-out-styles #homeFactsEditor div .two-col dt {
+    width: 13em
+}
+
+.commented-out-styles #homeFactsEditor div .two-col dd {
+    margin-left: 13em
+}
+
+.commented-out-styles #homeFactsEditor dt label {
+    font-weight: 700
+}
+
+.commented-out-styles #descriptionEditor ul label,
+.commented-out-styles #neighborhoodEditor .neighborDescription dt label {
+    font-weight: 400
+}
+
+.commented-out-styles #homeFactsEditor dd input {
+    width: 4em;
+    border: 1px solid #acacac
+}
+
+.commented-out-styles #homeFactsEditor dd input.disabled {
+    background-color: #eee
+}
+
+.commented-out-styles #homeFactsEditor dd select {
+    width: 13em
+}
+
+.commented-out-styles #homeFactsEditor #fractionalPart,
+.commented-out-styles #homeFactsEditor #unitTypeSelection {
+    width: 5em;
+    margin-left: 5px
+}
+
+.commented-out-styles #homeFactsEditor .col2 dl.two-col dt {
+    width: 20em
+}
+
+.commented-out-styles #homeFactsEditor .col2 dl.two-col dd {
+    margin-left: 20em
+}
+
+.commented-out-styles #content #postingStatusEditor .two-col dt.mmm-tooltip {
+    width: auto
+}
+
+.commented-out-styles #content #postingStatusEditor .two-col .tooltip dd {
+    clear: left;
+    margin: auto;
+    width: auto
+}
+
+.commented-out-styles #postingStatusEditor #emailVisibility {
+    color: #999;
+    padding-right: 5px
+}
+
+.commented-out-styles #content fieldset .two-col #makeMeMoveData dd {
+    margin-left: 20em
+}
+
+.commented-out-styles #descriptionEditor ul {
+    width: 24.8%;
+    float: left;
+    margin-bottom: 10px
+}
+
+.commented-out-styles #descriptionEditor ul.tags {
+    clear: both;
+    float: none;
+    width: auto
+}
+
+.commented-out-styles #descriptionEditor ul li {
+    clear: both;
+    margin-bottom: 2px
+}
+
+.commented-out-styles #descriptionEditor ul li.category-header {
+    text-decoration: underline;
+    margin-bottom: 8px
+}
+
+.commented-out-styles #descriptionEditor dl {
+    clear: left;
+    margin-bottom: 10px
+}
+
+.commented-out-styles #descriptionEditor dl label {
+    display: block;
+    margin-bottom: 2px
+}
+
+.commented-out-styles .tags input {
+    width: 98%
+}
+
+.commented-out-styles #descriptionEditor .descriptions {
+    clear: none;
+    float: left;
+    width: 320px
+}
+
+.commented-out-styles dl.first {
+    margin-right: 20px
+}
+
+.commented-out-styles .sidebyside dd,
+.commented-out-styles .sidebyside dt {
+    float: left;
+    padding-bottom: 5px
+}
+
+.commented-out-styles .sidebyside dt {
+    width: 130px
+}
+
+.commented-out-styles .sidebyside dd {
+    width: 270px;
+    margin-right: 20px
+}
+
+.commented-out-styles .sidebyside dd input {
+    width: 100%
+}
+
+.commented-out-styles #neighborhoodEditor .clearfix {
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/dotted_x_blue.gif) bottom left repeat-x;
+    padding-bottom: 10px;
+    margin-bottom: 10px
+}
+
+.commented-out-styles .neighborName {
+    clear: left
+}
+
+.commented-out-styles .neighborName dd {
+    margin-bottom: 10px
+}
+
+.commented-out-styles .neighborDescription dd,
+.commented-out-styles .neighborDescription dt {
+    clear: left;
+    margin-bottom: 2px
+}
+
+.commented-out-styles .yui-cal2upwrapper {
+    z-index: 999
+}
+
+.commented-out-styles #openHouseEditor input {
+    border: 1px solid #acacac
+}
+
+.commented-out-styles #cal1,
+.commented-out-styles #cal2,
+.commented-out-styles #cal3 {
+    display: inline-block
+}
+
+.commented-out-styles #openHouseEditor .addCal {
+    display: block;
+    clear: left
+}
+
+.commented-out-styles .datePicker {
+    float: left;
+    clear: left;
+    padding-bottom: 10px
+}
+
+.commented-out-styles * html .yui-cal2upwrapper {
+    height: 1%
+}
+
+.commented-out-styles .yui-cal2upwrapper:after {
+    content: '.';
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0
+}
+
+.commented-out-styles .yui-calcontainer {
+    float: left;
+    padding: 5px;
+    background-color: #F7F9FB;
+    border: 1px solid #7B9EBD;
+    z-index: 2000
+}
+
+.commented-out-styles .yui-calcontainer .title {
+    font: 100% sans-serif;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 5px;
+    height: auto;
+    position: relative
+}
+
+.commented-out-styles .yui-calcontainer .title .close-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none
+}
+
+.commented-out-styles .yui-calcontainer .cal2up {
+    float: left
+}
+
+.commented-out-styles .yui-calendar .calnavleft,
+.commented-out-styles .yui-calendar .calnavleft:hover {
+    position: absolute;
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/btnsm_prevset_off.gif) no-repeat;
+    cursor: pointer;
+    width: 7px;
+    height: 13px;
+    top: 1px;
+    margin-left: -10px;
+    color: transparent;
+    text-indent: -9999em
+}
+
+.commented-out-styles .gte-ie9 .yui-calendar .calnavleft,
+.commented-out-styles .gte-ie9 .yui-calendar .calnavleft:hover {
+    margin-left: 10px
+}
+
+.commented-out-styles .yui-calendar .calnavright,
+.commented-out-styles .yui-calendar .calnavright:hover {
+    position: absolute;
+    background: url(/static-posting-path/8fbf7ba/static-posting-path/css/z-pages/static/images/btnsm_nextset_off.gif) no-repeat;
+    cursor: pointer;
+    top: 1px;
+    width: 7px;
+    margin-left: 3px;
+    height: 13px;
+    color: transparent;
+    text-indent: -9999em
+}
+
+.commented-out-styles .yui-calendar {
+    font: 100% sans-serif;
+    text-align: center;
+    border-spacing: 0;
+    border-collapse: separate
+}
+
+.commented-out-styles .yui-calendar td.calcell {
+    padding: .1em .2em;
+    border: 1px solid #E0E0E0;
+    background-color: #FFF
+}
+
+.commented-out-styles .yui-calendar td.calcell a {
+    color: #003DB8;
+    text-decoration: none
+}
+
+.commented-out-styles .yui-calendar td.calcell.today {
+    border: 1px solid #000
+}
+
+.commented-out-styles .yui-calendar td.calcell.oom {
+    cursor: default;
+    color: #999;
+    background-color: #EEE;
+    border: 1px solid #E0E0E0
+}
+
+.commented-out-styles .yui-calendar td.calcell.selected {
+    color: #003DB8;
+    background-color: #FFF19F;
+    border: 1px solid #F90
+}
+
+.commented-out-styles .yui-calendar td.calcell.calcellhover {
+    cursor: pointer;
+    color: #FFF;
+    background-color: #F90;
+    border: 1px solid #F90
+}
+
+.commented-out-styles .yui-calendar td.calcell.calcellhover a {
+    color: #FFF
+}
+
+.commented-out-styles .yui-calendar td.calcell.restricted {
+    text-decoration: line-through
+}
+
+.commented-out-styles .yui-calendar td.calcell.previous {
+    color: #CCC
+}
+
+.commented-out-styles .yui-calendar td.calcell.highlight1 {
+    background-color: #CF9
+}
+
+.commented-out-styles .yui-calendar td.calcell.highlight2 {
+    background-color: #9CF
+}
+
+.commented-out-styles .yui-calendar td.calcell.highlight3 {
+    background-color: #FCC
+}
+
+.commented-out-styles .yui-calendar td.calcell.highlight4 {
+    background-color: #CF9
+}
+
+.commented-out-styles .yui-calendar .calhead {
+    border: 1px solid #E0E0E0;
+    vertical-align: middle;
+    background-color: #FFF
+}
+
+.commented-out-styles .yui-calendar .calheader {
+    position: relative;
+    width: 100%;
+    text-align: center
+}
+
+.commented-out-styles .yui-calendar .calheader img {
+    border: none
+}
+
+.commented-out-styles .yui-calendar .calweekdaycell {
+    color: #666;
+    font-weight: 400
+}
+
+.commented-out-styles .yui-calendar .calfoot {
+    background-color: #EEE
+}
+
+.commented-out-styles .yui-calendar .calrowfoot,
+.commented-out-styles .yui-calendar .calrowhead {
+    color: #666;
+    font-size: 9px;
+    font-style: italic;
+    font-weight: 400;
+    width: 15px
+}
+
+.commented-out-styles .yui-calendar .calrowhead {
+    border-right-width: 2px
+}
+
+.commented-out-styles .yui-calendar a:hover {
+    background: inherit
+}
+
+.commented-out-styles p#clear {
+    clear: left;
+    padding-top: 10px
+}
+
+.commented-out-styles form.left #HFEditorContent_toggleArea .multiSelectList li li label {
+    width: 220px
+}
+
+.commented-out-styles .header-fresh #postlets-module .postletss-logo,
+.commented-out-styles .postings.header-fresh #next-steps .bd>ul {
+    margin-top: 0;
+    padding-top: 10px
+}

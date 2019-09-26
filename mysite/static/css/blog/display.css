@@ -1,0 +1,103 @@
+﻿.z-ad.skyscraper {
+    margin: auto;
+}
+
+.z-ad.leaderboard {
+    margin: 20px 0 0;
+}
+
+.z-ad {
+    max-width: 100%;
+    text-align: center;
+}
+
+.z-ad-shortcode-wrap {
+    margin-bottom: 20px;
+}
+
+.z-ad.linked-images img {
+    margin: 0 auto;
+    max-width: 100%;
+    width: auto;
+}
+
+.z-ad.linked-images {
+    text-align: center;
+}
+
+.z-ad.skyscraper.linked-images img.leaderboard,
+.z-ad.skyscraper.linked-images img.skyscraper-backup {
+    display: none;
+}
+
+.z-ad.leaderboard.linked-images img.skyscraper {
+    display: none;
+}
+
+.z-ad.text-with-button {
+    background: #7ed320;
+    text-align: center;
+    padding: 30px;
+}
+
+.z-ad.text-with-button h3,
+.z-ad.text-with-button h4 {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: none;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.z-ad.text-with-button h4 {
+    font-size: 18px;
+}
+
+.z-ad.text-with-button a.btn {
+    padding: 5px 40px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .z-ad.linked-images {
+        width: auto !important;
+    }
+    .widget .z-ad.linked-images {
+        margin-left: -20px;
+        margin-right: -20px;
+        max-width: none;
+    }
+    .z-ad.skyscraper.linked-images img.leaderboard,
+    .z-ad.skyscraper.linked-images img.skyscraper-backup {
+        display: block;
+    }
+    .z-ad.linked-images {
+        text-align: center !important;
+    }
+    .z-ad.linked-images img.skyscraper {
+        display: none;
+    }
+    .z-ad.linked-images img.skyscraper-backup {
+        margin: auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .z-ad.skyscraper.linked-images img.leaderboard,
+    .z-ad.skyscraper.linked-images img.skyscraper-backup {
+        display: none;
+    }
+    .z-ad.skyscraper.linked-images img.skyscraper {
+        display: block;
+        margin: auto;
+    }
+    .z-ad-shortcode-wrap img.skyscraper {
+        display: block!important;
+    }
+    .z-ad-shortcode-wrap img.leaderboard {
+        display: none!important;
+    }
+}

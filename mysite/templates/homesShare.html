@@ -1,0 +1,19 @@
+{% load humanize %}
+{% load l10n %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" href="{% static 'css/listings.css'%}"/>
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+
+        <h1>{{ user_name }}</h1>
+
+        <style> .list-card { direction: rtl; text-align: right; } .list-card-link.list-card-info { padding: 0px; }.cqIMNg { color: rgb(42, 42, 51); -webkit-font-smoothing: antialiased; font-family: Tahoma, Geneva, sans-serif; font-weight: 400; font-size: 12px; line-height: 18px; letter-spacing: 0px; text-transform: none; margin: 0px;} </style>
+        <div class="sc-229c99-1 BPgEU"> <a href="{{urlListing}}"> </a><div><a href="{{urlListing}}"> </a><div class="Card-q5fj7u-0 sc-1tpxfko-3 edrtqn sc-1rrp580-2 fbgbsJ"><a href="{{urlListing}}"> </a><article class="list-card list-card_not-saved" id="listing_75567919" data-index="0" role="presentation"><a href="{{urlListing}}"> </a><a href="{{urlListing}}" class="list-card-link list-card-info" aria-label="للبيع / {{address}}"> <h5 class="">{{address}}</h5> <div class="list-card-type"><span class="list-card-type-icon zsg-icon-pre-market"></span>المنزل معروض للبيع</div> <div class="list-card-heading cqIMNg"> <div class=""> <span class="zsg-icon-for-sale sc-1tpxfko-2 jvNSRK"></span> {{price|intword|localize}} ريال</div><br> <span class="list-card-label"> <!-- -->المساحة</span>{{lot}}</div> </a> <div class="list-card-top"> <div class="list-card-variable-text list-card-img-overlay">{{time|naturaltime}}</div> <div></div> <a href="{{urlListing}}" class="list-card-link list-card-img" aria-label="للببع ar{address}}"><img src="{{image}}" alt="{{address}}"></a> </div> </article> </div> </div> </div>
+            <h2>{{ subject }}</h2>
+    </body>
+</html>

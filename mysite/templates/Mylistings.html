@@ -1,0 +1,553 @@
+
+
+{% extends 'base/Navbar.html' %}
+{% load static %}
+    {% block head_title %}القائمة الرئيسية{% endblock %}
+  {% block content %}
+	<!-- Stylesheets -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.rtl.css' %}" >
+<link rel="stylesheet" href="{% static 'css/css/owl.carousel.min.css' %}"/>
+
+    <style>
+ol, ul {
+    padding-right: 14px;
+}
+
+        @media (min-width:74.125rem) {
+            .appbar-container {
+                text-align: center
+            }
+        }
+
+        .breadcrumbs {
+            display: none
+        }
+
+        @media (min-width:48.1875rem) {
+            .breadcrumbs {
+                display: block;
+                line-height: 3.5rem;
+                margin: 0;
+                padding: 0 1rem;
+                white-space: nowrap
+            }
+            .breadcrumbs svg {
+                fill: #5f6368;
+                height: 1.5rem;
+                margin: -.4375rem .5rem;
+                width: 1.5rem
+            }
+            .rtl .breadcrumbs svg {
+                transform: scaleX(-1)
+            }
+            article.page {
+                margin-top: 0
+            }
+            div.primary-nav {
+                padding-top: 0
+            }
+        }
+
+        .breadcrumbs-item {
+            display: inline-block
+        }
+
+        .breadcrumbs-item a {
+            color: #5f6368;
+            font-size: .875rem
+        }
+
+        .breadcrumbs-item a:hover {
+            text-decoration: none
+        }
+
+        .breadcrumbs-item:last-child a {
+            color: #3c4043;
+            font-weight: 600
+        }
+
+
+
+
+
+
+        .cc h2>a,
+        .cc h3>a,
+        .cc h4>a {
+            color: #202124
+        }
+
+        .cc h2>a:hover,
+        .cc h3>a:hover,
+        .cc h4>a:hover {
+            text-decoration: none
+        }
+.item
+{
+direction:rtl
+}
+
+
+#content-main
+{
+    float: right;
+}
+.sidebar
+{
+float: left;
+    position: absolute;
+    left: 0;
+}
+
+body {
+    font-family: "Open Sans",Gotham,gotham,Tahoma,Geneva,sans-serif;
+    font-size: 14px;
+    line-height: 1.714285714;
+    color: #333;
+    background-color: #fff;
+}
+.section-title
+{
+background:#fff;
+}
+
+.section-title {
+	color: #aaa;
+	font-size: 15px;
+	font-weight: 600;
+	margin: 30px 0;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%
+}
+
+.section-title:after,
+.section-title:before {
+	background-color: #aaa;
+	content: '';
+	display: inline-block;
+	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%
+}
+
+.section-title:before {
+	left: .5em;
+	margin-right: -50%
+}
+
+.section-title:after {
+	right: .5em;
+	margin-left: -50%
+}
+.link_formatter
+{
+padding-right: 244px;
+}
+    </style>
+
+
+                <div class="appbar-bottom">
+                    <ul style="direction:rtl" class="breadcrumbs" data-stats-ve="9" role="navigation">
+                        <li class="breadcrumbs-item" itemscope="itemscope" itemtype=""><a onclick="return false" style="font-size:13px;color:#2d2d28" aria-label="انت على موعد مع فرص 4us" href="" itemprop="url"><span title="انت على موعد مع فرص 4us" itemprop="title">انت على موعد مع فرص 4us</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+
+<div style="padding: 1px;background: #f1f1f1;"></div>
+
+
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+
+<link href="{% static 'css/prexit.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/all-mylisting.css' %}" type="text/css" rel="stylesheet" />
+
+<style>
+
+aside.sidebar section.widget h3 {
+    color: #4777a2;
+    font-size: 20px;
+}
+body.page-frame-service #z-header-bg a:visited, body.page-frame-service .wrap.container a:visited, body.page-frame-service body.single-post .wrap#z-header-bg a:visited, body.single-post body.page-frame-service .wrap#z-header-bg a:visited {
+    color: #7ca5ba;
+}
+.post-image {
+    content: '';
+    display: block;
+    overflow: hidden;
+    position: relative;
+    background-color: #F1F1F4;
+}
+</style>
+
+
+
+<script>var count=0;
+var countpub=0;
+</script>
+
+        <!-- #header_navigation_container -->
+        <div id="z-header-bg" style="background-image:url({% static 'img/Cabin-5bb9fc.jpg' %});background-position:center center">
+            <div id="z-header" class="home">
+                <div class="toast alert alert-success alert-dismissible" role="alert">
+                    <div class="container">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="zsg-times"></span></button>
+                    </div>
+                </div>
+                <div id="z-header-text">
+                    <div class="container">
+                        <h1 class="header-title">موقع فرص</h1>
+                        <h3 class="header-desc">دائما على ، توجيه <strong>منزلك</strong></h3>
+                        <div id="featured-articles" class="owl-carousel owl-loaded owl-drag " style="visibility: visible;">
+
+                                        <div class="item">
+                                            <h5 class="post-title"><a href="">هذه الحافلة المدرسية منزل صغير ... لأسرة مكونة من 6 أفراد!</a></h5>
+                                            <div class="post-category">
+                                                <a href="">
+                                                    <i class="zsg-fa-home"></i>
+                                                </a>
+                                            </div>
+                                            <p class="post-author">
+                                                بواسطة<a href="" title="Posts by Lindsay Cohen" rel="nofollow">ليندساي كوهين</a> في <strong>24 يوليو 2019</strong>
+                                            </p>
+                                        </div>
+
+
+
+                                        <div class="item">
+                                            <h5 class="post-title"><a href="">6 خيام من شأنها أن تجعلك تحلم مغامرتك القادمة</a></h5>
+                                            <div class="post-category">
+                                                <a href="">
+                                                    <i class="zsg-fa-home"></i>
+                                                </a>
+                                            </div>
+                                            <p class="post-author">
+                                                بواسطة <a href="" title="Posts by Lindsay Cohen" rel="nofollow">ليندساي كوهين</a> في <strong>24 يوليو 2019</strong>
+                                            </p>
+                                        </div>
+
+
+                                        <div class="item">
+                                            <h5 class="post-title"><a href="">سيارة نقل؟ RV؟ باص المدرسة؟ 6 أسئلة لطرحها قبل اختيار منزل على عجلات</a></h5>
+                                            <div class="post-category">
+                                                <a href="">
+                                                   <i class="zsg-fa-wrench"></i>
+                                                </a>
+                                            </div>
+                                            <p class="post-author">
+                                                بواسطة <a href="" title="" rel="nofollow">روبنسون </a> في <strong>24 يوليو 2019</strong>
+                                            </p>
+                                        </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="wrap container" role="document" style="position: relative;direction:rtl">
+        <div class="content content-main">
+
+
+    <div class="zsg-layout-width zsg-layout-top" >
+
+            <h1>القائمة ({{ count }})</h1>
+
+    <style>
+.hide-radiobutton,
+.group .check{
+	display:none;
+}
+
+.tab{
+	 font-size: 15px;
+	 margin: 0 15px 1px 0;
+}
+</style>
+
+
+
+<ul class="hdp-video-on-tab zsg-tabs zsg-tabs_lg active-inactive-choice-block">
+ <li class="zsg-tab_active"> <input id="tab1" type="radio" name="tab" class="hide-radiobutton" checked><label for="tab1" class="tab">القائمة النشطة</label>
+
+<li class="zsg-tab_active"><input id="tab2" type="radio" name="tab" class="hide-radiobutton"><label for="tab2" class="tab">القائمة الغير نشطة</label>
+ </ul>
+
+
+
+            <main id="content-main" class="main" role="main" style="min-height: 0px;">
+                <div id="posts">
+
+{% if listings_pub %}
+        {% for listing_item in listings_pub %}
+
+      <script>countpub+=1;</script>
+                    <article class="post story pub">
+                        <div class="row">
+                            <div class="col-sm-4" style="right: 0;">
+                                <div class="post-image" style="background-image:url({{ listing_item.Photos.first.image.url }});background-position:center center">
+                                </div>
+                            </div>
+                            <div class="col-sm-8" style="left: 0;">
+                                <p class="post-detail">
+                                    <span class="post-category"><a href=""><i class="zsg-fa-lightbulb-o"></i> {{listing_item.place.get_city_display}} </a></span> /
+                                    <i class="zsg-fa-pencil"></i> {{listing_item.price }}</p>
+                                <h5 class="post-title"><a href="">{{listing_item.place.address}}</a></h5>
+                                <p class="post-author">
+                                    بواسطة <a href="" title="Posts by Brendon DeSimone" rel="nofollow">{{listing_item.user.username}}</a> على <strong> {{listing_item.list_date}} </strong>
+                                </p>
+                                 {% if listing_item.homeDescription %}
+
+                                <p class="post-excerpt">
+                                   {{listing_item.homeDescription}} </p>
+                                <a href="" class="post-permalink">قراءة القصة الكاملة <i class="zsg-chevron-right"></i></a>
+
+                                {% else %}
+
+                                <p class="post-excerpt">
+                                   لا يوجد وصف </p>
+
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <a class="link_formatter" href="{% url 'delete' listing_item.pk %}" style="color:#7ca5ba">حذف</a>
+                    </article>
+
+    {% endfor %}
+
+
+ {% if listings_pub.has_other_pages %}
+
+                <section id="pageination_pub" class="pagination" style="">
+			{% for page in listings_pub.paginator.page_range %}
+         {% if not listings_nopub.paginator.num_pages == page and page < 6%}
+                   <a class="page-numbers" href="?page1={{ page }}"> <span aria-current="page" class="page-numbers {% if listings_pub.number == page  %}current{% endif %}">{{ page }}</span></a>
+      {% endif %}
+                    {% endfor %}
+             <span class="page-numbers dots">…</span>
+                <a class="page-numbers" href="?page1={{listings_nopub.paginator.num_pages}}">{{listings_nopub.paginator.num_pages}}</a>
+          {% if listings_pub.has_next %}
+            <a crel="next" class="next page-numbers" href="?page1={{ listings_pub.next_page_number }}" aria-label="Next">
+              <i class="zsg-chevron-right"></i>
+            </a>
+          {% endif %}
+</section>
+      {% endif %}
+
+
+                    {% endif %}
+
+
+{% if listings_nopub %}
+     {% for listing_item in listings_nopub %}
+
+
+<script>count+=1;</script>
+                     <article class="post story nopub hide">
+                        <div class="row">
+                            <div class="col-sm-4" style="right: 0;">
+                                <div class="post-image" style="background-image:url({{ listing_item.Photos.first.image.url }});background-position:center center">
+                                </div>
+                            </div>
+                            <div class="col-sm-8" style="left: 0;">
+                                <p class="post-detail">
+                                    <span class="post-category"><a href=""><i class="zsg-fa-lightbulb-o"></i> {{listing_item.place.get_city_display}} </a></span> /
+                                    <i class="zsg-fa-pencil"></i> {{listing_item.price }}</p>
+                                <h5 class="post-title"><a href="">{{listing_item.place.address}}</a></h5>
+                                <p class="post-author">
+                                    بواسطة <a href="" title="Posts by Brendon DeSimone" rel="nofollow">{{listing_item.user.username}}</a> على <strong> {{listing_item.list_date}} </strong>
+                                </p>
+                                 {% if listing_item.homeDescription %}
+
+                                <p class="post-excerpt">
+                                   {{listing_item.homeDescription}} </p>
+                                <a href="" class="post-permalink">قراءة القصة الكاملة <i class="zsg-chevron-right"></i></a>
+
+                                {% else %}
+
+                                <p class="post-excerpt">
+                                   ليس هناك وصف </p>
+
+                                {% endif %}
+                            </div>
+                        </div>
+                        <a class="link_formatter" href="{% url 'delete' listing_item.pk %}">حذف</a>
+                    </article>
+
+
+
+    {% endfor %}
+
+
+ {% if listings_nopub.has_other_pages %}
+
+                <section id="pageination_nopub" class="pagination hide" style="">
+			{% for page in listings_nopub.paginator.page_range %}
+                    {% if not listings_nopub.paginator.num_pages == page and page < 6%}
+                   <a class="page-numbers" href="?page2={{ page }}"> <span aria-current="page" class="page-numbers {% if listings_nopub.number == page  %}current{% endif %}">{{ page }}</span></a>
+{% endif %}
+                    {% endfor %}
+             <span class="page-numbers dots">…</span>
+                <a class="page-numbers" href="?page2={{listings_nopub.paginator.num_pages}}">{{listings_nopub.paginator.num_pages}}</a>
+          {% if listings_nopub.has_next %}
+            <a crel="next" class="next page-numbers" href="?page2={{ listings_nopub.next_page_number }}" aria-label="Next">
+              <i class="zsg-chevron-right"></i>
+            </a>
+          {% endif %}
+</section>
+      {% endif %}
+
+                        {% endif %}
+
+
+        </main></div>
+
+
+            <!-- /.main -->
+            <aside class="sidebar" role="complementary">
+                <section class="widget zblog-social-shares-4 widget_zblog-social-shares">
+                    <h3>معظم قصص النجاح</h3>
+                    <ul>
+                          {% for topic in topics %}
+                        <li><a href="{% url 'topic_posts' topic.pk %}">{{topic.subject}}</a><span class="facebook-count"><label>فيس بوك</label></span></li>
+                                  {% endfor %}
+                               </ul>
+                </section>
+                <section class="widget recent-posts-7 widget_recent_entries">
+                    <h3>قصص حديثة</h3>
+                    <ul>
+                         {% for topic in topics %}
+                        <li>
+                            <a href="{% url 'topic_posts' topic.pk %}">{{topic.subject}}</a>
+                            <span class="post-date">{{topic.last_updated|date:"M d, Y"}}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+                <div class="sidebar-bg-fill"></div>
+            </aside>
+            <!-- /.sidebar -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.wrap -->
+
+
+
+
+
+        <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+      {% include 'footer.html' %}
+
+
+
+<script>
+if(!countpub){$('#content-main').append('<div id="listings-pub"><div class="no-listings">لا يوجد قائمة نشطة</div>');}
+if(countpub){$('#pageination_pub').removeClass('hide');}
+$(document).on('click', '#tab1', function() {
+if(countpub && count )
+{
+$('.pub').removeClass('hide');
+$('#pageination_pub').removeClass('hide');
+$('.nopub').addClass('hide');
+$('#pageination_nopub').addClass('hide');
+}
+else if(!countpub && count )
+{
+$('#content-main').append('<div id="listings-pub"><div class="no-listings">لا يوجد قائمة نشطة</div>');
+$('.nopub').addClass('hide');
+$('#pageination_nopub').addClass('hide');
+}
+else if(countpub && !count )
+{
+$('.pub').removeClass('hide');
+$('#listings-no-pub').remove();
+$('#pageination_pub').removeClass('hide');
+}
+else if(!countpub && !count )
+{
+$('#content-main').append('<div id="listings-pub"><div class="no-listings">لا يوجد قائمة نشطة</div>');
+$('#listings-no-pub').remove();
+}
+});
+$(document).on('click', '#tab2', function() {
+if(countpub && count )
+{
+$('.nopub').removeClass('hide');
+$('.pub').addClass('hide');
+$('#pageination_pub').addClass('hide');
+$('#pageination_nopub').removeClass('hide');
+}
+else if(!countpub && count )
+{
+$('.nopub').removeClass('hide');
+$('#listings-pub').remove();
+$('#pageination_nopub').removeClass('hide');
+}
+else if(countpub && !count )
+{
+$('#pageination_pub').addClass('hide');
+$('.pub').addClass('hide');
+$('#content-main').append('<div id="listings-no-pub"><div class="no-listings">لا يوجد قائمة غير نشطة</div>');
+}
+else if(!countpub && !count )
+{
+$('#listings-pub').remove();
+$('#content-main').append('<div id="listings-no-pub"><div class="no-listings">لا يوجد قائمة غير نشطة</div>');
+}
+});
+        </script>
+
+
+	<script src="{% static 'js/js/owl.carousel.min.js' %}"></script>
+
+<script>
+    jQuery(".owl-carousel").owlCarousel({
+  autoplay: true,
+  lazyLoad: true,
+  loop: true,
+  margin: 20,
+
+  animateOut: 'fadeOut',
+  animateIn: 'fadeIn',
+
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 9000,
+  smartSpeed: 900,
+  nav: true,
+  responsive : {
+			0 : {
+				items: 1,
+			},
+			480 : {
+				items: 2,
+			},
+			768 : {
+				items: 3,
+			},
+			1200 : {
+				items: 4,
+			}
+		}
+});
+
+
+</script>
+
+
+{% endblock %}

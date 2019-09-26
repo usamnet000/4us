@@ -1,0 +1,2412 @@
+
+{% extends 'base/Navbar.html' %}
+{% load static %}
+{% block head_title %}الملف الشخصيء الخاص بك{% endblock %}
+  {% block content %}
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+
+<link href="{% static 'css/profile/profile.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/contact-card.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/manage-profile.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/public-action-bar.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/team-member-list.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/profile-tools.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/team-summary.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/profile-professional-summary.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/z-toggle-content.css' %}" type="text/css" rel="stylesheet" />
+
+<link rel='stylesheet' href="{% static 'css/profile/croppie.css' %}">
+
+<style>
+
+#upload-demo{
+	width: 250px;
+	height: 250px;
+  padding-bottom:25px;
+}
+    .zsg-layout-abc-b, .zsg-layout-bc-b {
+    width: 100%;
+    padding-left: 120px;
+    margin-right: 0px;
+    margin-top: 33px;
+}
+
+
+  body{
+    overflow-x:hidden;
+    overflow-y:auto;
+text-align:right;
+  }
+  .zsg-layout-abc-c, .zsg-layout-bc-c {
+    width: 300px;
+    margin-right: -300px;
+}
+
+@media only screen and (max-width: 767px){
+/* Styles */
+#cCol-pro-contact-info
+{
+display:none;
+}
+}
+@media only screen and (min-width: 768px){
+/* Styles */
+#cCol-pro-contact-info
+{
+display:block;
+}
+}
+.zsg-tabs>li {
+    display: inline-block;
+    padding-right: 0px;
+    top: 4px;
+    font-size:14px;
+
+}
+
+
+
+input[type=file] {
+position: absolute;
+    /* right: 0; */
+    top: 40%;
+    bottom: 50%;
+    margin: 0;
+    border: solid transparent;
+    width: 100%;
+    z-index: 111111;
+    opacity: 0;
+}
+
+</style>
+
+    <script>
+        ! function(c) {
+            var s = window.staticClientProfilerJsonp;
+            window.staticClientProfilerJsonp = function(e, n, t) {
+                for (var r, i, o, a = 0, u = []; a < e.length; a++) i = e[a], f[i] && u.push(f[i][0]), f[i] = 0;
+                for (r in n) Object.prototype.hasOwnProperty.call(n, r) && (c[r] = n[r]);
+                for (s && s(e, n, t); u.length;) u.shift()();
+                if (t)
+                    for (a = 0; a < t.length; a++) o = l(l.s = t[a]);
+                return o
+            };
+            var t = {},
+                f = {
+                    2: 0
+                };
+
+            function l(e) {
+                if (t[e]) return t[e].exports;
+                var n = t[e] = {
+                    i: e,
+                    l: !1,
+                    exports: {}
+                };
+                return c[e].call(n.exports, n, n.exports, l), n.l = !0, n.exports
+            }
+            l.m = c, l.c = t, l.d = function(e, n, t) {
+                l.o(e, n) || Object.defineProperty(e, n, {
+                    configurable: !1,
+                    enumerable: !0,
+                    get: t
+                })
+            }, l.n = function(e) {
+                var n = e && e.__esModule ? function() {
+                    return e.default
+                } : function() {
+                    return e
+                };
+                return l.d(n, "a", n), n
+            }, l.o = function(e, n) {
+                return Object.prototype.hasOwnProperty.call(e, n)
+            }, l.p = "", l.oe = function(e) {
+                throw e
+            }
+        }([function(e, n, t) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            });
+            var r = n.DYNAMIC_EVENT_DURATION_SUFFIX = "_intervalDuration",
+                i = n.DYNAMIC_EVENT_FAILED_SUFFIX = "_intervalFailed",
+                o = n.DYNAMIC_EVENT_END_SUFFIX = "_intervalEnded",
+                a = (n.DYNAMIC_EVENT_END_NAME = "profileIntervalDidEnd", n.DYNAMIC_EVENT_END_SUFFIXES_REGEX = new RegExp("(" + [r, i, o].join("|") + ")$"), n.DYNAMIC_EVENT_BUBBLES = !0, n.DYNAMIC_EVENT_CANCELABLE = !0, n.DYNAMIC_EVENT_END_MARK_SUFFIX = "_dynamicEventEndMark", n.DYNAMIC_EVENT_DURATION_SUFFIX_NEW = "_dynamicEventDuration");
+            n.DYNAMIC_EVENT_END_SUFFIXES_REGEX_NEW = new RegExp("(" + a + ")$"), n.ERROR_TIMESTAMP_VALUE = -1, n.DEFAULT_BEACON_DATA = {
+                eventsStart: [],
+                eventsEnd: [],
+                trackedEventDetails: [],
+                staticDimensions: {}
+            }
+        }, function(e, n, t) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            }), n.DEFAULT_APP_CONFIG = void 0;
+            var r = function() {
+                    function r(e, n) {
+                        for (var t = 0; t < n.length; t++) {
+                            var r = n[t];
+                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    return function(e, n, t) {
+                        return n && r(e.prototype, n), t && r(e, t), e
+                    }
+                }(),
+                i = function(e) {
+                    {
+                        if (e && e.__esModule) return e;
+                        var n = {};
+                        if (null != e)
+                            for (var t in e) Object.prototype.hasOwnProperty.call(e, t) && (n[t] = e[t]);
+                        return n.default = e, n
+                    }
+                }(t(2));
+            t(7);
+            var u = t(0),
+                c = a(t(11)),
+                o = t(12),
+                s = a(t(13)),
+                f = t(14),
+                l = a(t(15)),
+                m = t(3),
+                p = t(4),
+                d = a(t(16)),
+                y = t(17),
+                v = a(t(19)),
+                E = a(t(20));
+
+            function a(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+
+            function h(e) {
+                if (Array.isArray(e)) {
+                    for (var n = 0, t = Array(e.length); n < e.length; n++) t[n] = e[n];
+                    return t
+                }
+                return Array.from(e)
+            }
+            var g = window.performance,
+                T = i.default,
+                w = n.DEFAULT_APP_CONFIG = {
+                    beaconUrl: null,
+                    enableBeaconing: !1,
+                    pageLoadBeaconDelay: 100,
+                    beaconCallback: null,
+                    trackedEventDetails: {
+                        eventDetails: [{
+                            clientProfilerLoaded: {
+                                dynamicEvent: !0
+                            }
+                        }]
+                    },
+                    staticDimensions: {
+                        pageName: "UNKNOWN"
+                    }
+                },
+                b = function() {
+                    function a(e) {
+                        var n = this,
+                            t = 1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : this.beacon;
+                        if (function(e, n) {
+                                if (!(e instanceof n)) throw new TypeError("Cannot call a class as a function")
+                            }(this, a), (0, v.default)(E.default.name, "54a99d8"), ["_handleProfileIntervalEnd", "beacon", "clearAllBeaconHistory", "getPerformanceEntries", "getProfiles", "profile", "profileIntervalBegin", "profileIntervalEnd", "profileIntervalFail"].forEach(function(e) {
+                                n[e] = n[e].bind(n)
+                            }), this.appConfig = T(w, e), this.staticEntryQueue = new c.default, this.dynamicEntryQueue = new c.default, this.navigationTimings = new y.NavigationTimings, this.resourceTimings = new y.ResourceTimings, this.eventStartQueue = [], this.eventEndQueue = [], this.appConfig.enableBeaconing) {
+                            var r;
+                            (0, f.initClientProfilerEvents)({
+                                beaconFn: this.beacon,
+                                pageLoadBeaconDelay: this.appConfig.pageLoadBeaconDelay,
+                                pageName: this.appConfig.staticDimensions.pageName,
+                                profileFn: this.profile
+                            });
+                            var i = this.appConfig.trackedEventDetails,
+                                o = (0, s.default)(i);
+                            (r = this.eventStartQueue).push.apply(r, h(o)), this.eventEndQueue.push((0, p.createEventEndObj)("clientProfilerLoaded", 0)), t.bind(this)()
+                        }
+                        this.constants = {
+                            DYNAMIC_EVENT_END_NAME: u.DYNAMIC_EVENT_END_NAME
+                        }
+                    }
+                    return r(a, [{
+                        key: "beacon",
+                        value: function() {
+                            var e = this.appConfig,
+                                n = e.beaconCallback,
+                                t = e.beaconUrl,
+                                r = e.staticDimensions,
+                                i = e.trackedEventDetails,
+                                o = (0, d.default)(this.eventStartQueue),
+                                a = [].concat(h((0, d.default)(this.eventEndQueue)), [this.navigationTimings.getTimeToFirstByteOnce(), this.navigationTimings.getTimeToInteractiveOnce(), this.resourceTimings.getFullyLoadedTimeOnce()]).filter(function(e) {
+                                    return 0 < Object.keys(e).length
+                                });
+                            if (0 < o.length || 0 < a.length) {
+                                var u = {
+                                    beaconUrl: t,
+                                    eventEndObjs: a,
+                                    eventStartNames: o,
+                                    staticDimensions: r,
+                                    trackedEventDetails: i.eventDetails
+                                };
+                                (0, l.default)(u), n && n(u)
+                            }
+                        }
+                    }, {
+                        key: "profile",
+                        value: function(e) {
+                            var n = 1 < arguments.length && void 0 !== arguments[1] && arguments[1];
+                            if (e)
+                                if (n || g.getEntriesByName(e).length) n && (this.dynamicEntryQueue.queueBeaconEntry(e), window.performance.mark(e), this.appConfig.enableBeaconing && this.eventStartQueue.push(e));
+                                else {
+                                    this.staticEntryQueue.queueBeaconEntry(e), window.performance.mark(e);
+                                    try {
+                                        window.performance.measure(e, void 0, e)
+                                    } catch (e) {}
+                                    if (this.appConfig.enableBeaconing) {
+                                        var t = (0, m.getLatestPerfEntryByName)(e),
+                                            r = (0, m.perfEntryToEventEndObj)(t);
+                                        this.eventEndQueue.push(r)
+                                    }
+                                }
+                        }
+                    }, {
+                        key: "profileIntervalBegin",
+                        value: function(e) {
+                            this.profile(e, !0)
+                        }
+                    }, {
+                        key: "profileIntervalEnd",
+                        value: function(e, n) {
+                            if ((0, o.dynamicEventHelper)(e, !0, this.dynamicEntryQueue.queueBeaconEntry, n), this.appConfig.enableBeaconing) {
+                                var t = (0, o.getDynamicEventEndObj)(e, n);
+                                this._handleProfileIntervalEnd(e, t)
+                            }
+                        }
+                    }, {
+                        key: "profileIntervalFail",
+                        value: function(e) {
+                            if ((0, o.dynamicEventHelper)(e, !1, this.dynamicEntryQueue.queueBeaconEntry), this.appConfig.enableBeaconing) {
+                                var n = (0, p.createEventEndObj)(e, u.ERROR_TIMESTAMP_VALUE);
+                                this._handleProfileIntervalEnd(e, n)
+                            }
+                        }
+                    }, {
+                        key: "_handleProfileIntervalEnd",
+                        value: function(e, n) {
+                            this.eventEndQueue.push(n), this.beacon(), g.clearMarks(e)
+                        }
+                    }, {
+                        key: "getPerformanceEntries",
+                        value: function() {
+                            var e = [].concat(h(this.staticEntryQueue.getBeaconEntryQueue())),
+                                n = [].concat(h(this.dynamicEntryQueue.getBeaconEntryQueue())),
+                                t = e.reduce(function(e, n) {
+                                    return [].concat(h(e), h(g.getEntriesByName(n)))
+                                }, []),
+                                r = n.reduce(function(e, n) {
+                                    return [].concat(h(e), h(g.getEntriesByName(n)))
+                                }, []),
+                                i = [].concat(h(t), h(r));
+                            return (0, o.getCompletedDynamicEvents)(r).forEach(m.clearPerformanceMeasure), i
+                        }
+                    }, {
+                        key: "clearAllBeaconHistory",
+                        value: function() {
+                            this.staticEntryQueue.clearBeaconEntryQueue(), this.dynamicEntryQueue.clearBeaconEntryQueue()
+                        }
+                    }, {
+                        key: "getProfiles",
+                        value: function() {
+                            var e = this.getPerformanceEntries(),
+                                n = (0, p.objectToTimingArray)(this.navigationTimings.getTimeToFirstByteOnce()),
+                                t = (0, p.objectToTimingArray)(this.navigationTimings.getTimeToInteractiveOnce()),
+                                r = (0, p.objectToTimingArray)(this.resourceTimings.getFullyLoadedTimeOnce()),
+                                i = [].concat(h(e.map(m.formatPerformanceEntry)), h(n), h(t), h(r));
+                            return this.clearAllBeaconHistory(), i
+                        }
+                    }, {
+                        key: "appConfig",
+                        set: function(e) {
+                            this.internalAppConfig = T(this.internalAppConfig || {}, e)
+                        },
+                        get: function() {
+                            return this.internalAppConfig
+                        }
+                    }]), a
+                }();
+            n.default = b
+        }, function(e, n, t) {
+            var r;
+            r = function() {
+                "use strict";
+                var i = function(e) {
+                    return !(!(r = e) || "object" != typeof r || (n = e, "[object RegExp]" === (t = Object.prototype.toString.call(n)) || "[object Date]" === t || n.$$typeof === o));
+                    var n, t, r
+                };
+                var o = "function" == typeof Symbol && Symbol.for ? Symbol.for("react.element") : 60103;
+
+                function a(e, n) {
+                    return !1 !== n.clone && n.isMergeableObject(e) ? s((t = e, Array.isArray(t) ? [] : {}), e, n) : e;
+                    var t
+                }
+
+                function u(e, n, t) {
+                    return e.concat(n).map(function(e) {
+                        return a(e, t)
+                    })
+                }
+
+                function c(n, t, r) {
+                    var i = {};
+                    return r.isMergeableObject(n) && Object.keys(n).forEach(function(e) {
+                        i[e] = a(n[e], r)
+                    }), Object.keys(t).forEach(function(e) {
+                        r.isMergeableObject(t[e]) && n[e] ? i[e] = function(e, n) {
+                            if (!n.customMerge) return s;
+                            var t = n.customMerge(e);
+                            return "function" == typeof t ? t : s
+                        }(e, r)(n[e], t[e], r) : i[e] = a(t[e], r)
+                    }), i
+                }
+
+                function s(e, n, t) {
+                    (t = t || {}).arrayMerge = t.arrayMerge || u, t.isMergeableObject = t.isMergeableObject || i;
+                    var r = Array.isArray(n);
+                    return r === Array.isArray(e) ? r ? t.arrayMerge(e, n, t) : c(e, n, t) : a(n, t)
+                }
+                return s.all = function(e, t) {
+                    if (!Array.isArray(e)) throw new Error("first argument should be an array");
+                    return e.reduce(function(e, n) {
+                        return s(e, n, t)
+                    }, {})
+                }, s
+            }, e.exports = r()
+        }, function(e, n, t) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            }), n.perfEntryToEventEndObj = n.getLatestPerfEntryByName = n.formatPerformanceEntry = n.clearPerformanceMeasure = n.isPerformanceMeasure = n.isPerformanceMark = void 0;
+            var a = t(4),
+                u = t(0),
+                r = window.performance,
+                i = "mark",
+                o = "measure",
+                c = n.isPerformanceMark = function(e) {
+                    return e.entryType === i
+                },
+                s = n.isPerformanceMeasure = function(e) {
+                    return e.entryType === o
+                };
+            n.clearPerformanceMeasure = function(e) {
+                r.clearMeasures(e.name)
+            }, n.formatPerformanceEntry = function(e) {
+                var n = e.name,
+                    t = e.startTime,
+                    r = e.duration,
+                    i = 0;
+                return c(e) ? i = t : s(e) && (i = r), (0, a.formatTiming)(n, i)
+            }, n.getLatestPerfEntryByName = function(e) {
+                var n = r.getEntriesByName(e);
+                return n[n.length - 1]
+            }, n.perfEntryToEventEndObj = function(e) {
+                var n = e.name,
+                    t = e.startTime,
+                    r = e.duration,
+                    i = u.ERROR_TIMESTAMP_VALUE,
+                    o = n;
+                return c(e) ? i = t : s(e) && (i = r, o = n.replace(u.DYNAMIC_EVENT_END_SUFFIXES_REGEX_NEW, "")), (0, a.createEventEndObj)(o, i)
+            }
+        }, function(e, n, t) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            });
+            var r = n.formatTiming = function(e, n) {
+                return Math.round(n) + " " + e
+            };
+            n.objectToTimingArray = function(n) {
+                return Object.keys(n).map(function(e) {
+                    return r(e, n[e])
+                })
+            }, n.createEventEndObj = function(e, n) {
+                return t = {}, r = e, i = Math.round(n), r in t ? Object.defineProperty(t, r, {
+                    value: i,
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0
+                }) : t[r] = i, t;
+                var t, r, i
+            }
+        }, function(Ld, Md) {
+            var Nd;
+            Nd = function() {
+                return this
+            }();
+            try {
+                Nd = Nd || Function("return this")() || eval("this")
+            } catch (e) {
+                "object" == typeof window && (Nd = window)
+            }
+            Ld.exports = Nd
+        }, , function(e, n, t) {
+            "use strict";
+            t(8), t(9),
+                function() {
+                    if ("PerformanceLongTaskTiming" in window) {
+                        var n = window.__tti = {
+                            e: []
+                        };
+                        n.o = new PerformanceObserver(function(e) {
+                            n.e = n.e.concat(e.getEntries())
+                        }), n.o.observe({
+                            entryTypes: ["longtask"]
+                        })
+                    }
+                }()
+        }, function(e, n) {
+            try {
+                var t = new window.CustomEvent("test");
+                if (t.preventDefault(), !0 !== t.defaultPrevented) throw new Error("Could not prevent default")
+            } catch (e) {
+                var r = function(e, n) {
+                    var t, r;
+                    return n = n || {
+                        bubbles: !1,
+                        cancelable: !1,
+                        detail: void 0
+                    }, (t = document.createEvent("CustomEvent")).initCustomEvent(e, n.bubbles, n.cancelable, n.detail), r = t.preventDefault, t.preventDefault = function() {
+                        r.call(this);
+                        try {
+                            Object.defineProperty(this, "defaultPrevented", {
+                                get: function() {
+                                    return !0
+                                }
+                            })
+                        } catch (e) {
+                            this.defaultPrevented = !0
+                        }
+                    }, t
+                };
+                r.prototype = window.Event.prototype, window.CustomEvent = r
+            }
+        }, function(g, T, e) {
+            (function(E) {
+                var h;
+                ! function(a) {
+                    "use strict";
+                    void 0 === a && (a = {}), void 0 === a.performance && (a.performance = {}), a._perfRefForUserTimingPolyfill = a.performance, a.performance.userTimingJsNow = !1, a.performance.userTimingJsNowPrefixed = !1, a.performance.userTimingJsUserTiming = !1, a.performance.userTimingJsUserTimingPrefixed = !1, a.performance.userTimingJsPerformanceTimeline = !1, a.performance.userTimingJsPerformanceTimelinePrefixed = !1;
+                    var r, e, n = [],
+                        t = [],
+                        i = null;
+                    if ("function" != typeof a.performance.now) {
+                        for (a.performance.userTimingJsNow = !0, t = ["webkitNow", "msNow", "mozNow"], r = 0; r < t.length; r++)
+                            if ("function" == typeof a.performance[t[r]]) {
+                                a.performance.now = a.performance[t[r]], a.performance.userTimingJsNowPrefixed = !0;
+                                break
+                            }
+                        var o = +new Date;
+                        a.performance.timing && a.performance.timing.navigationStart ? o = a.performance.timing.navigationStart : void 0 !== E && "function" == typeof E.hrtime && (o = E.hrtime(), a.performance.now = function() {
+                            var e = E.hrtime(o);
+                            return 1e3 * e[0] + 1e-6 * e[1]
+                        }), "function" != typeof a.performance.now && (Date.now ? a.performance.now = function() {
+                            return Date.now() - o
+                        } : a.performance.now = function() {
+                            return +new Date - o
+                        })
+                    }
+                    var u = function() {},
+                        c = function() {},
+                        s = [],
+                        f = !1,
+                        l = !1;
+                    if ("function" != typeof a.performance.getEntries || "function" != typeof a.performance.mark) {
+                        for ("function" == typeof a.performance.getEntries && "function" != typeof a.performance.mark && (l = !0), a.performance.userTimingJsPerformanceTimeline = !0, n = ["webkit", "moz"], t = ["getEntries", "getEntriesByName", "getEntriesByType"], r = 0; r < t.length; r++)
+                            for (e = 0; e < n.length; e++) i = n[e] + t[r].substr(0, 1).toUpperCase() + t[r].substr(1), "function" == typeof a.performance[i] && (a.performance[t[r]] = a.performance[i], a.performance.userTimingJsPerformanceTimelinePrefixed = !0);
+                        u = function(e) {
+                            s.push(e), "measure" === e.entryType && (f = !0)
+                        };
+                        var m = function() {
+                            f && (s.sort(function(e, n) {
+                                return e.startTime - n.startTime
+                            }), f = !1)
+                        };
+                        if (c = function(e, n) {
+                                for (r = 0; r < s.length;) s[r].entryType === e && (void 0 === n || s[r].name === n) ? s.splice(r, 1) : r++
+                            }, "function" != typeof a.performance.getEntries || l) {
+                            var p = a.performance.getEntries;
+                            a.performance.getEntries = function() {
+                                m();
+                                var e = s.slice(0);
+                                return l && p && (Array.prototype.push.apply(e, p.call(a.performance)), e.sort(function(e, n) {
+                                    return e.startTime - n.startTime
+                                })), e
+                            }
+                        }
+                        if ("function" != typeof a.performance.getEntriesByType || l) {
+                            var d = a.performance.getEntriesByType;
+                            a.performance.getEntriesByType = function(e) {
+                                if (void 0 === e || "mark" !== e && "measure" !== e) return l && d ? d.call(a.performance, e) : [];
+                                "measure" === e && m();
+                                var n = [];
+                                for (r = 0; r < s.length; r++) s[r].entryType === e && n.push(s[r]);
+                                return n
+                            }
+                        }
+                        if ("function" != typeof a.performance.getEntriesByName || l) {
+                            var y = a.performance.getEntriesByName;
+                            a.performance.getEntriesByName = function(e, n) {
+                                if (n && "mark" !== n && "measure" !== n) return l && y ? y.call(a.performance, e, n) : [];
+                                void 0 !== n && "measure" === n && m();
+                                var t = [];
+                                for (r = 0; r < s.length; r++) void 0 !== n && s[r].entryType !== n || s[r].name === e && t.push(s[r]);
+                                return l && y && (Array.prototype.push.apply(t, y.call(a.performance, e, n)), t.sort(function(e, n) {
+                                    return e.startTime - n.startTime
+                                })), t
+                            }
+                        }
+                    }
+                    if ("function" != typeof a.performance.mark) {
+                        for (a.performance.userTimingJsUserTiming = !0, n = ["webkit", "moz", "ms"], t = ["mark", "measure", "clearMarks", "clearMeasures"], r = 0; r < t.length; r++)
+                            for (e = 0; e < n.length; e++) i = n[e] + t[r].substr(0, 1).toUpperCase() + t[r].substr(1), "function" == typeof a.performance[i] && (a.performance[t[r]] = a.performance[i], a.performance.userTimingJsUserTimingPrefixed = !0);
+                        var v = {};
+                        "function" != typeof a.performance.mark && (a.performance.mark = function(e) {
+                            var n = a.performance.now();
+                            if (void 0 === e) throw new SyntaxError("Mark name must be specified");
+                            if (a.performance.timing && e in a.performance.timing) throw new SyntaxError("Mark name is not allowed");
+                            v[e] || (v[e] = []), v[e].push(n), u({
+                                entryType: "mark",
+                                name: e,
+                                startTime: n,
+                                duration: 0
+                            })
+                        }), "function" != typeof a.performance.clearMarks && (a.performance.clearMarks = function(e) {
+                            e ? v[e] = [] : v = {}, c("mark", e)
+                        }), "function" != typeof a.performance.measure && (a.performance.measure = function(e, n, t) {
+                            var r = a.performance.now();
+                            if (void 0 === e) throw new SyntaxError("Measure must be specified");
+                            if (n) {
+                                var i = 0;
+                                if (a.performance.timing && n in a.performance.timing) {
+                                    if ("navigationStart" !== n && 0 === a.performance.timing[n]) throw new Error(n + " has a timing of 0");
+                                    i = a.performance.timing[n] - a.performance.timing.navigationStart
+                                } else {
+                                    if (!(n in v)) throw new Error(n + " mark not found");
+                                    i = v[n][v[n].length - 1]
+                                }
+                                var o = r;
+                                if (t)
+                                    if (o = 0, a.performance.timing && t in a.performance.timing) {
+                                        if ("navigationStart" !== t && 0 === a.performance.timing[t]) throw new Error(t + " has a timing of 0");
+                                        o = a.performance.timing[t] - a.performance.timing.navigationStart
+                                    } else {
+                                        if (!(t in v)) throw new Error(t + " mark not found");
+                                        o = v[t][v[t].length - 1]
+                                    }
+                                u({
+                                    entryType: "measure",
+                                    name: e,
+                                    startTime: i,
+                                    duration: o - i
+                                })
+                            } else u({
+                                entryType: "measure",
+                                name: e,
+                                startTime: 0,
+                                duration: r
+                            })
+                        }), "function" != typeof a.performance.clearMeasures && (a.performance.clearMeasures = function(e) {
+                            c("measure", e)
+                        })
+                    }
+                    void 0 === (h = function() {
+                        return a.performance
+                    }.apply(T, [])) || (g.exports = h)
+                }("undefined" != typeof window ? window : void 0)
+            }).call(T, e(10))
+        }, function(e, n) {
+            var t, r, i = e.exports = {};
+
+            function o() {
+                throw new Error("setTimeout has not been defined")
+            }
+
+            function a() {
+                throw new Error("clearTimeout has not been defined")
+            }
+
+            function u(n) {
+                if (t === setTimeout) return setTimeout(n, 0);
+                if ((t === o || !t) && setTimeout) return t = setTimeout, setTimeout(n, 0);
+                try {
+                    return t(n, 0)
+                } catch (e) {
+                    try {
+                        return t.call(null, n, 0)
+                    } catch (e) {
+                        return t.call(this, n, 0)
+                    }
+                }
+            }! function() {
+                try {
+                    t = "function" == typeof setTimeout ? setTimeout : o
+                } catch (e) {
+                    t = o
+                }
+                try {
+                    r = "function" == typeof clearTimeout ? clearTimeout : a
+                } catch (e) {
+                    r = a
+                }
+            }();
+            var c, s = [],
+                f = !1,
+                l = -1;
+
+            function m() {
+                f && c && (f = !1, c.length ? s = c.concat(s) : l = -1, s.length && p())
+            }
+
+            function p() {
+                if (!f) {
+                    var e = u(m);
+                    f = !0;
+                    for (var n = s.length; n;) {
+                        for (c = s, s = []; ++l < n;) c && c[l].run();
+                        l = -1, n = s.length
+                    }
+                    c = null, f = !1,
+                        function(n) {
+                            if (r === clearTimeout) return clearTimeout(n);
+                            if ((r === a || !r) && clearTimeout) return r = clearTimeout, clearTimeout(n);
+                            try {
+                                r(n)
+                            } catch (e) {
+                                try {
+                                    return r.call(null, n)
+                                } catch (e) {
+                                    return r.call(this, n)
+                                }
+                            }
+                        }(e)
+                }
+            }
+
+            function d(e, n) {
+                this.fun = e, this.array = n
+            }
+
+            function y() {}
+            i.nextTick = function(e) {
+                var n = new Array(arguments.length - 1);
+                if (1 < arguments.length)
+                    for (var t = 1; t < arguments.length; t++) n[t - 1] = arguments[t];
+                s.push(new d(e, n)), 1 !== s.length || f || u(p)
+            }, d.prototype.run = function() {
+                this.fun.apply(null, this.array)
+            }, i.title = "browser", i.browser = !0, i.env = {}, i.argv = [], i.version = "", i.versions = {}, i.on = y, i.addListener = y, i.once = y, i.off = y, i.removeListener = y, i.removeAllListeners = y, i.emit = y, i.prependListener = y, i.prependOnceListener = y, i.listeners = function(e) {
+                return []
+            }, i.binding = function(e) {
+                throw new Error("process.binding is not supported")
+            }, i.cwd = function() {
+                return "/"
+            }, i.chdir = function(e) {
+                throw new Error("process.chdir is not supported")
+            }, i.umask = function() {
+                return 0
+            }
+        }, function(e, n, t) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            });
+            var r = function() {
+                function r(e, n) {
+                    for (var t = 0; t < n.length; t++) {
+                        var r = n[t];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                    }
+                }
+                return function(e, n, t) {
+                    return n && r(e.prototype, n), t && r(e, t), e
+                }
+            }();
+            var i = function() {
+                function e() {
+                    var n = this;
+                    ! function(e, n) {
+                        if (!(e instanceof n)) throw new TypeError("Cannot call a class as a function")
+                    }(this, e), this.data = {}, ["clearBeaconEntryQueue", "getBeaconEntryQueue", "getEntry", "queueBeaconEntry", "setEntry"].forEach(function(e) {
+                        n[e] = n[e].bind(n)
+                    })
+                }
+                return r(e, [{
+                    key: "getEntry",
+                    value: function(e) {
+                        return this.data[e]
+                    }
+                }, {
+                    key: "setEntry",
+                    value: function(e) {
+                        var n = !(1 < arguments.length && void 0 !== arguments[1]) || arguments[1];
+                        this.data[e] = n
+                    }
+                }, {
+                    key: "getBeaconEntryQueue",
+                    value: function() {
+                        return Object.keys(this.data)
+                    }
+                }, {
+                    key: "queueBeaconEntry",
+                    value: function(e) {
+                        var n = this;
+                        Array.isArray(e) ? e.forEach(function(e) {
+                            n.setEntry(e)
+                        }) : e && this.setEntry(e)
+                    }
+                }, {
+                    key: "clearBeaconEntryQueue",
+                    value: function() {
+                        this.data = {}
+                    }
+                }]), e
+            }();
+            n.default = i
+        }, function(e, n, t) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            }), n.getDynamicEventEndObj = n.dynamicEventHelper = n.getCompletedDynamicEvents = n.createDynamicEvent = void 0;
+            var s = t(0),
+                a = t(3),
+                f = n.createDynamicEvent = function() {
+                    return new CustomEvent(s.DYNAMIC_EVENT_END_NAME, {
+                        bubbles: s.DYNAMIC_EVENT_BUBBLES,
+                        cancelable: s.DYNAMIC_EVENT_CANCELABLE
+                    })
+                };
+            n.getCompletedDynamicEvents = function() {
+                var e = (0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : []).filter(function(e) {
+                        return s.DYNAMIC_EVENT_END_SUFFIXES_REGEX.test(e.name)
+                    }),
+                    n = e.map(function(e) {
+                        var n = e.name.replace(s.DYNAMIC_EVENT_END_SUFFIXES_REGEX, "");
+                        return window.performance.getEntriesByName(n)[0]
+                    }).filter(function(e) {
+                        return void 0 !== e
+                    });
+                return [].concat(n, e)
+            }, n.dynamicEventHelper = function(e, n, t, r) {
+                var i = [],
+                    o = r || e;
+                if (window.performance.getEntriesByName(o, "mark").length) {
+                    if (n) {
+                        var a = "" + e + s.DYNAMIC_EVENT_END_SUFFIX,
+                            u = "" + e + s.DYNAMIC_EVENT_DURATION_SUFFIX;
+                        window.performance.mark(a), window.performance.measure(u, o, a), i.push(u), window.performance.clearMarks(a)
+                    } else {
+                        var c = "" + e + s.DYNAMIC_EVENT_FAILED_SUFFIX;
+                        i.push(c), window.performance.mark(c)
+                    }
+                    t && t(i), window.dispatchEvent(f())
+                }
+            }, n.getDynamicEventEndObj = function(e, n) {
+                var t = "" + e + s.DYNAMIC_EVENT_END_MARK_SUFFIX,
+                    r = "" + e + s.DYNAMIC_EVENT_DURATION_SUFFIX_NEW,
+                    i = n || e;
+                if (!window.performance.getEntriesByName(i).length) return {};
+                window.performance.mark(t), window.performance.measure(r, i, t);
+                var o = (0, a.getLatestPerfEntryByName)(r);
+                return window.performance.clearMarks(t), (0, a.perfEntryToEventEndObj)(o)
+            }
+        }, function(e, n, t) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            });
+            n.default = function() {
+                var e = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : {},
+                    t = [];
+                return (e.eventDetails || []).forEach(function(e) {
+                    var n = Object.getOwnPropertyNames(e)[0];
+                    !e[n].dynamicEvent && t.push(n)
+                }), t.sort()
+            }
+        }, function(e, n, t) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            });
+            n.initClientProfilerEvents = function(e) {
+                var n = e.beaconFn,
+                    t = e.pageLoadBeaconDelay,
+                    r = e.pageName,
+                    i = e.profileFn,
+                    o = window,
+                    a = o.addEventListener,
+                    u = o.navigator.userAgent,
+                    c = o.setTimeout;
+                a("load", function() {
+                    i("loaded " + r), c(n, t), i("onload completed")
+                }), a(/iP(ad|hone|od).+Version\/[\d\.]+.*Safari/i.test(u) ? "pagehide" : "beforeunload", n, !1)
+            }
+        }, function(e, n, t) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            }), n._safeSendBeacon = void 0;
+            var u = t(0),
+                c = n._safeSendBeacon = function(e, n) {
+                    if ("string" == typeof e)
+                        if (window && window.navigator && window.navigator.sendBeacon) {
+                            n.codePath = "navigator.sendBeacon";
+                            window.navigator.sendBeacon(e, JSON.stringify(n))
+                        } else if (window && window.XMLHttpRequest) {
+                        n.codePath = "XHMHttpRequest";
+                        try {
+                            var t = new window.XMLHttpRequest;
+                            t.open("POST", e, !1), t.setRequestHeader("Content-Type", "text/plain"), t.send(JSON.stringify(n))
+                        } catch (e) {}
+                    }
+                };
+            n.default = function() {
+                var e = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : {},
+                    n = 1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : c,
+                    t = e.beaconUrl,
+                    r = e.eventEndObjs,
+                    i = e.eventStartNames,
+                    o = e.staticDimensions,
+                    a = e.trackedEventDetails;
+                n(t, {
+                    eventsEnd: r || u.DEFAULT_BEACON_DATA.eventsEnd,
+                    eventsStart: i || u.DEFAULT_BEACON_DATA.eventsStart,
+                    staticDimensions: o || u.DEFAULT_BEACON_DATA.staticDimensions,
+                    trackedEventDetails: a || u.DEFAULT_BEACON_DATA.trackedEventDetails
+                })
+            }
+        }, function(e, n, t) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            });
+            n.default = function(e) {
+                return e.splice(0, e.length)
+            }
+        }, function(e, n, t) {
+            "use strict";
+            var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+                return typeof e
+            } : function(e) {
+                return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
+            };
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            });
+            var i = function() {
+                    function r(e, n) {
+                        for (var t = 0; t < n.length; t++) {
+                            var r = n[t];
+                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
+                        }
+                    }
+                    return function(e, n, t) {
+                        return n && r(e.prototype, n), t && r(e, t), e
+                    }
+                }(),
+                o = "function" == typeof Symbol && "symbol" === r(Symbol.iterator) ? function(e) {
+                    return void 0 === e ? "undefined" : r(e)
+                } : function(e) {
+                    return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : void 0 === e ? "undefined" : r(e)
+                };
+
+            function a(e, n, t) {
+                return n in e ? Object.defineProperty(e, n, {
+                    value: t,
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0
+                }) : e[n] = t, e
+            }
+
+            function u(e, n) {
+                if (!(e instanceof n)) throw new TypeError("Cannot call a class as a function")
+            }
+            var c = t(18),
+                s = n.EVENT_NAMES = {
+                    FULLY_LOADED: "fullyLoaded",
+                    TTFB: "TTFB",
+                    TTI: "TTI"
+                },
+                f = n.FULLY_LOADED_THRESHOLD = 2e3,
+                l = function() {
+                    return window && window.performance
+                };
+            n.NavigationTimings = function() {
+                function t() {
+                    var e, n = this;
+                    u(this, t), ["fetchTimeToInteractive", "getTimeToFirstByte", "getTimeToFirstByteOnce", "getTimeToInteractiveOnce"].forEach(function(e) {
+                        n[e] = n[e].bind(n)
+                    }), this.hasMetricBeenReturned = (a(e = {}, s.TTFB, !1), a(e, s.TTI, !1), e), this.tti = null, this.fetchTimeToInteractive()
+                }
+                return i(t, [{
+                    key: "getTimeToFirstByte",
+                    value: function() {
+                        var e;
+                        if (l() && "object" === (void 0 === (e = window.performance.timing) ? "undefined" : o(e))) {
+                            var n = window.performance.timing,
+                                t = n.requestStart,
+                                r = n.responseEnd,
+                                i = r - t;
+                            return "number" == typeof i && 0 <= i && i <= 6e5 && 0 < t && 0 < r ? (this.hasMetricBeenReturned[s.TTFB] = !0, a({}, s.TTFB, Math.round(i))) : {}
+                        }
+                        return {}
+                    }
+                }, {
+                    key: "getTimeToFirstByteOnce",
+                    value: function() {
+                        return this.hasMetricBeenReturned[s.TTFB] ? {} : this.getTimeToFirstByte()
+                    }
+                }, {
+                    key: "fetchTimeToInteractive",
+                    value: function() {
+                        var n = this;
+                        return window.Promise ? c.getFirstConsistentlyInteractive().then(function(e) {
+                            return e && (n.tti = a({}, s.TTI, Math.round(e))), e
+                        }) : null
+                    }
+                }, {
+                    key: "getTimeToInteractiveOnce",
+                    value: function() {
+                        return null === this.tti || this.hasMetricBeenReturned[s.TTI] ? {} : (this.hasMetricBeenReturned[s.TTI] = !0, this.tti)
+                    }
+                }]), t
+            }(), n.ResourceTimings = function() {
+                function e() {
+                    var n = this;
+                    u(this, e), this.fullyLoadedTimesFoundCount = 0, ["getFullyLoadedTime", "getFullyLoadedTimeOnce"].forEach(function(e) {
+                        n[e] = n[e].bind(n)
+                    })
+                }
+                return i(e, [{
+                    key: "getFullyLoadedTime",
+                    value: function() {
+                        if (l()) {
+                            var e = window.performance.getEntriesByType("resource") || [];
+                            if (e.length <= 0) return {};
+                            for (var n = 0; n < e.length; n += 1) {
+                                var t = e[n],
+                                    r = e[n + 1],
+                                    i = r ? r.startTime : window.performance.now();
+                                if (!t.startTime || !t.responseEnd) return {};
+                                if (i - t.responseEnd >= f) return this.fullyLoadedTimesFoundCount += 1, a({}, s.FULLY_LOADED, Math.round(t.responseEnd))
+                            }
+                        }
+                        return {}
+                    }
+                }, {
+                    key: "getFullyLoadedTimeOnce",
+                    value: function() {
+                        return this.fullyLoadedTimesFoundCount < 1 ? this.getFullyLoadedTime() : {}
+                    }
+                }]), e
+            }()
+        }, function(g, T, e) {
+            (function(f) {
+                var l;
+                ! function() {
+                    var r = "undefined" != typeof window && window === this ? this : void 0 !== f && null != f ? f : this,
+                        n = "function" == typeof Object.defineProperties ? Object.defineProperty : function(e, n, t) {
+                            e != Array.prototype && e != Object.prototype && (e[n] = t.value)
+                        };
+
+                    function t() {
+                        t = function() {}, r.Symbol || (r.Symbol = e)
+                    }
+                    var i = 0;
+
+                    function e(e) {
+                        return "jscomp_symbol_" + (e || "") + i++
+                    }
+
+                    function o() {
+                        t();
+                        var e = r.Symbol.iterator;
+                        e || (e = r.Symbol.iterator = r.Symbol("iterator")), "function" != typeof Array.prototype[e] && n(Array.prototype, e, {
+                            configurable: !0,
+                            writable: !0,
+                            value: function() {
+                                return a(this)
+                            }
+                        }), o = function() {}
+                    }
+
+                    function a(e) {
+                        var n, t = 0;
+                        return n = function() {
+                            return t < e.length ? {
+                                done: !1,
+                                value: e[t++]
+                            } : {
+                                done: !0
+                            }
+                        }, o(), (n = {
+                            next: n
+                        })[r.Symbol.iterator] = function() {
+                            return this
+                        }, n
+                    }
+
+                    function m(e) {
+                        o();
+                        var n = e[Symbol.iterator];
+                        return n ? n.call(e) : a(e)
+                    }
+
+                    function p(e) {
+                        if (!(e instanceof Array)) {
+                            e = m(e);
+                            for (var n, t = []; !(n = e.next()).done;) t.push(n.value);
+                            e = t
+                        }
+                        return e
+                    }
+                    var d = 0;
+                    var y = "img script iframe link audio video source".split(" ");
+
+                    function v(e, n) {
+                        for (var t = (e = m(e)).next(); !t.done; t = e.next())
+                            if (t = t.value, n.includes(t.nodeName.toLowerCase()) || v(t.children, n)) return !0;
+                        return !1
+                    }
+
+                    function E(e, n) {
+                        if (2 < e.length) return performance.now();
+                        for (var t = [], r = (n = m(n)).next(); !r.done; r = n.next()) r = r.value, t.push({
+                            timestamp: r.start,
+                            type: "requestStart"
+                        }), t.push({
+                            timestamp: r.end,
+                            type: "requestEnd"
+                        });
+                        for (r = (n = m(e)).next(); !r.done; r = n.next()) t.push({
+                            timestamp: r.value,
+                            type: "requestStart"
+                        });
+                        for (t.sort(function(e, n) {
+                                return e.timestamp - n.timestamp
+                            }), e = e.length, n = t.length - 1; 0 <= n; n--) switch (r = t[n], r.type) {
+                            case "requestStart":
+                                e--;
+                                break;
+                            case "requestEnd":
+                                if (2 < ++e) return r.timestamp;
+                                break;
+                            default:
+                                throw Error("Internal Error: This should never happen")
+                        }
+                        return 0
+                    }
+
+                    function u(e) {
+                        e = e || {}, this.w = !!e.useMutationObserver, this.u = e.minValue || null, e = window.__tti && window.__tti.e;
+                        var i, o, a, u, c, s, f, r, t, n, l = window.__tti && window.__tti.o;
+                        this.a = e ? e.map(function(e) {
+                            return {
+                                start: e.startTime,
+                                end: e.startTime + e.duration
+                            }
+                        }) : [], l && l.disconnect(), this.b = [], this.f = new Map, this.j = null, this.v = -1 / 0, this.i = !1, this.h = this.c = this.s = null, i = this.m.bind(this), o = this.l.bind(this), a = XMLHttpRequest.prototype.send, u = d++, XMLHttpRequest.prototype.send = function(e) {
+                            for (var n = [], t = 0; t < arguments.length; ++t) n[t - 0] = arguments[t];
+                            var r = this;
+                            return i(u), this.addEventListener("readystatechange", function() {
+                                4 === r.readyState && o(u)
+                            }), a.apply(this, n)
+                        }, c = this.m.bind(this), s = this.l.bind(this), f = fetch, fetch = function(e) {
+                            for (var i = [], n = 0; n < arguments.length; ++n) i[n - 0] = arguments[n];
+                            return new Promise(function(n, t) {
+                                var r = d++;
+                                c(r), f.apply(null, [].concat(p(i))).then(function(e) {
+                                    s(r), n(e)
+                                }, function(e) {
+                                    s(e), t(e)
+                                })
+                            })
+                        }, (r = this).c = new PerformanceObserver(function(e) {
+                            for (var n = (e = m(e.getEntries())).next(); !n.done; n = e.next())
+                                if ("resource" === (n = n.value).entryType && (r.b.push({
+                                        start: n.fetchStart,
+                                        end: n.responseEnd
+                                    }), h(r, E(r.g, r.b) + 5e3)), "longtask" === n.entryType) {
+                                    var t = n.startTime + n.duration;
+                                    r.a.push({
+                                        start: n.startTime,
+                                        end: t
+                                    }), h(r, t + 5e3)
+                                }
+                        }), r.c.observe({
+                            entryTypes: ["longtask", "resource"]
+                        }), this.w && (this.h = (t = this.B.bind(this), (n = new MutationObserver(function(e) {
+                            for (var n = (e = m(e)).next(); !n.done; n = e.next()) "childList" == (n = n.value).type && v(n.addedNodes, y) ? t(n) : "attributes" == n.type && y.includes(n.target.tagName.toLowerCase()) && t(n)
+                        })).observe(document, {
+                            attributes: !0,
+                            childList: !0,
+                            subtree: !0,
+                            attributeFilter: ["href", "src"]
+                        }), n))
+                    }
+
+                    function c(e) {
+                        e.i = !0;
+                        var n = 0 < e.a.length ? e.a[e.a.length - 1].end : 0,
+                            t = E(e.g, e.b);
+                        h(e, Math.max(t + 5e3, n))
+                    }
+
+                    function h(o, e) {
+                        !o.i || o.v > e || (clearTimeout(o.j), o.j = setTimeout(function() {
+                            var e = performance.timing.navigationStart,
+                                n = E(o.g, o.b);
+                            e = (window.a && window.a.A ? 1e3 * window.a.A().C - e : 0) || performance.timing.domContentLoadedEventEnd - e;
+                            if (o.u) var t = o.u;
+                            else t = performance.timing.domContentLoadedEventEnd ? (t = performance.timing).domContentLoadedEventEnd - t.navigationStart : null;
+                            var r = performance.now();
+                            null === t && h(o, Math.max(n + 5e3, r + 1e3));
+                            var i = o.a;
+                            (n = r - n < 5e3 ? null : r - (n = i.length ? i[i.length - 1].end : e) < 5e3 ? null : Math.max(n, t)) && (o.s(n), clearTimeout(o.j), o.i = !1, o.c && o.c.disconnect(), o.h && o.h.disconnect()), h(o, performance.now() + 1e3)
+                        }, e - performance.now()), o.v = e)
+                    }
+                    u.prototype.getFirstConsistentlyInteractive = function() {
+                        var n = this;
+                        return new Promise(function(e) {
+                            n.s = e, "complete" == document.readyState ? c(n) : window.addEventListener("load", function() {
+                                c(n)
+                            })
+                        })
+                    }, u.prototype.m = function(e) {
+                        this.f.set(e, performance.now())
+                    }, u.prototype.l = function(e) {
+                        this.f.delete(e)
+                    }, u.prototype.B = function() {
+                        h(this, performance.now() + 5e3)
+                    }, r.Object.defineProperties(u.prototype, {
+                        g: {
+                            configurable: !0,
+                            enumerable: !0,
+                            get: function() {
+                                return [].concat(p(this.f.values()))
+                            }
+                        }
+                    });
+                    var s = {
+                        getFirstConsistentlyInteractive: function(e) {
+                            return e = e || {}, "PerformanceLongTaskTiming" in window ? new u(e).getFirstConsistentlyInteractive() : Promise.resolve(null)
+                        }
+                    };
+                    void 0 !== g && g.exports ? g.exports = s : void 0 === (l = function() {
+                        return s
+                    }.apply(T, [])) || (g.exports = l)
+                }()
+            }).call(T, e(5))
+        }, function(e, n, t) {
+            "use strict";
+            Object.defineProperty(n, "__esModule", {
+                value: !0
+            }), n.default = function(e, n) {
+                window.appInfo = window.appInfo || {}, window.appInfo[e] = n
+            }
+        }, function(e, n) {
+            e.exports = {
+                name: "@zillow/client-profiler-core",
+                version: "3.3.0-alpha.0",
+                description: "Initialize ClientProfiler and set up eventListener",
+                main: "./dist/ClientProfiler.js",
+                files: "dist",
+                scripts: {
+                    build: "rm -rf dist && ../../node_modules/.bin/babel src --out-dir dist --ignore '**/*.test.js'",
+                    prepublish: "npm run build",
+                    test: "../../node_modules/.bin/jest"
+                },
+                author: "Velocity Performance",
+                license: "ISC",
+                dependencies: {
+                    "custom-event-polyfill": "^0.3.0",
+                    deepmerge: "^3.2.0",
+                    "navigator.sendbeacon": "0.0.13",
+                    "tti-polyfill": "^0.2.2",
+                    usertiming: "^0.1.8"
+                },
+                devDependencies: {
+                    "babel-cli": "^6.26.0"
+                }
+            }
+        }]);
+    </script>
+    <script>
+        staticClientProfilerJsonp([0], {
+            21: function(t, e, r) {
+                "use strict";
+                var n, i = function(t) {
+                        {
+                            if (t && t.__esModule) return t;
+                            var e = {};
+                            if (null != t)
+                                for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
+                            return e.default = t, e
+                        }
+                    }(r(2)),
+                    o = r(1),
+                    f = (n = o) && n.__esModule ? n : {
+                        default: n
+                    },
+                    c = r(22),
+                    s = r(23);
+                var u = i.default,
+                    a = (0, s.getAppConfig)("static-client-profiler", "client-profiler") || {};
+                Object.keys(a).length, window.ClientProfiler = new f.default(u(c.DEFAULT_BRAAVOS_CONFIG, a)), window.ClientProfiler.profile(c.PROFILER_INITIALIZED_EVENT_NAME)
+            },
+            22: function(t, e, r) {
+                "use strict";
+                Object.defineProperty(e, "__esModule", {
+                    value: !0
+                });
+                e.DEFAULT_BRAAVOS_CONFIG = {
+                    staticDimensions: {
+                        hostId: "UNKNOWN",
+                        pageName: "UNKNOWN",
+                        requestId: "UNKNOWN"
+                    }
+                }, e.PROFILER_INITIALIZED_EVENT_NAME = "mon:static-client-profiler-initialized"
+            },
+            23: function(t, e, r) {
+                "use strict";
+                (function(f) {
+                    var c = r(24),
+                        s = r(25),
+                        u = r(26),
+                        a = "ProxiedReactAppConfig",
+                        l = /^0+$/;
+                    t.exports = {
+                        getAppConfig: function(t, e) {
+                            var n, i, r = "string" == typeof e ? e : "",
+                                o = void 0;
+                            return void 0 !== f[a] && f[a][t] && (o = u({}, f[a][t][r])), o && (n = o, i = /^(true|false|yes|no)$/i, Object.keys(n).forEach(function(t) {
+                                var e, r = n[t];
+                                null !== r && ((e = r) && e.length && ("0" !== e[0] || e.indexOf && -1 !== e.indexOf(".") || l.test(e)) && s(e) && -1 === e.toString().indexOf("e") ? n[t] = Number(r) : i.test(r) && (n[t] = c(r)))
+                            }), n)
+                        }
+                    }
+                }).call(e, r(5))
+            },
+            24: function(t, e, r) {
+                "use strict";
+                t.exports = function(t) {
+                    return "string" == typeof t ? /^(true|t|yes|y|1)$/i.test(t.trim()) : "number" == typeof t ? 0 !== t : "boolean" == typeof t && t
+                }
+            },
+            25: function(t, e, r) {
+                "use strict";
+                t.exports = function(t) {
+                    var e = typeof t;
+                    if ("string" === e) {
+                        if ("" === t.trim()) return !1
+                    } else if ("number" !== e) return !1;
+                    return t - t + 1 == 1
+                }
+            },
+            26: function(t, e, r) {
+                "use strict";
+                var s = Object.getOwnPropertySymbols,
+                    u = Object.prototype.hasOwnProperty,
+                    a = Object.prototype.propertyIsEnumerable;
+                t.exports = function() {
+                    try {
+                        if (!Object.assign) return !1;
+                        var t = new String("abc");
+                        if (t[5] = "de", "5" === Object.getOwnPropertyNames(t)[0]) return !1;
+                        for (var e = {}, r = 0; r < 10; r++) e["_" + String.fromCharCode(r)] = r;
+                        if ("0123456789" !== Object.getOwnPropertyNames(e).map(function(t) {
+                                return e[t]
+                            }).join("")) return !1;
+                        var n = {};
+                        return "abcdefghijklmnopqrst".split("").forEach(function(t) {
+                            n[t] = t
+                        }), "abcdefghijklmnopqrst" === Object.keys(Object.assign({}, n)).join("")
+                    } catch (t) {
+                        return !1
+                    }
+                }() ? Object.assign : function(t, e) {
+                    for (var r, n, i = function(t) {
+                            if (null == t) throw new TypeError("Object.assign cannot be called with null or undefined");
+                            return Object(t)
+                        }(t), o = 1; o < arguments.length; o++) {
+                        for (var f in r = Object(arguments[o])) u.call(r, f) && (i[f] = r[f]);
+                        if (s) {
+                            n = s(r);
+                            for (var c = 0; c < n.length; c++) a.call(r, n[c]) && (i[n[c]] = r[n[c]])
+                        }
+                    }
+                    return i
+                }
+            }
+        }, [21]);
+    </script>
+
+
+
+
+
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link id="avast_os_ext_custom_font" href="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/fonts/fonts.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" id="sb-font-awesome-css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+<link href="{% static 'css/profile/ie.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/header.min.css' %}" type="text/css" rel="stylesheet" />
+<style>
+    @media screen and (max-width: 767px){
+.blog_page_filter_col_mobile {
+    position: relative;
+    margin-bottom: 0px;
+    z-index: 9;
+}
+.bpf_btn_in::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    bottom: 0;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.bpf_box_item {
+    width: 90%;
+    float: left;
+    padding: 10px 0 9px;
+}
+
+</style>
+
+
+        <main role="main">
+            <div class="blog_page">
+                <div class="page_banner">
+                    <div class="container">
+                        <div class="page_banner_title">نظرة عامة</div>
+                        <div class="page_banner_content">Get inspired with outdoor living tips from Shademaster.</div>
+                    </div>
+                </div>
+                <div class="blog_page_wrap">
+                    <div class="blog_page_content_wrap">
+                        <div class="blog_page_filter_col_mobile visible-xs">
+                            <div class="bpf_btn">
+                                <div class="container"> <span class="bpf_btn_in">خيارات الضبط:</span></div>
+                            </div>
+                            <div class="bpf_wrap_mobile" style="display: none;">
+                                <div class="container big-container bpf_container">
+                                    <div class="bpf_box_wrap">
+                                        <div class="bpf_box clearfix">
+                                            <div class="bpf_box_item">
+                                                <div class="bpfbi_title">حساب</div>
+                                                <ul class="bpfbi_items">
+                                                <li> <a href="/savedhomes/">المنازل المحفوظة</a></li>
+                                                <li> <a href="/EditProfile">الملف الشخصي</a></li>
+                                                <li> <a href="{% url 'Account' %}">إعدادت الحساب</a></li>
+                                                <li> <a href="{% url 'password_change' %}">كلمة المرور</a></li>
+                                                        </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="blog_page_content_col" style="">
+                            <div class="bp_items">
+                                <div class="bp_item element_anim_1 start_anim">
+                                    <div class="container big-container">
+                                        <div class="bp_item_wrap">
+                                            <div class="bp_item_in feature">
+
+
+        <div class="zsg-layout-bc zsg-layout-width zsg-layout-top zsg-layout-bottom" style="direction:rtl;overflow-x:hidden;"id="container" data-zmm-page="Profile" itemscope="" itemtype="http://schema.org/ProfilePage">
+            <main class="zsg-layout-bc-b" id="yui_3_18_1_1_1567788892614_89">
+                <div class="zsg-layout-content" id="yui_3_18_1_1_1567788892614_88">
+                    <section class="profile-container profile-restyle" data-zmm-page="Profile" id="yui_3_18_1_1_1567788892614_87">
+                        <header class="zsg-content-component" id="yui_3_18_1_1_1567788892614_86">
+                            <section id="ctcd-contact-card" class="ctcd-contact-card ctcd-type_consumer ctcd-non-region-context zsg-content-item" data-za-category="AgentTeams" data-za-label="ContactCard">
+                                <div class="ctcd-contact-card-inner">
+                                    <div class="ctcd-image-block zsg-content-item">
+                                        <div class="ctcd-profile-image-container pfl-image-circle">
+                                            {% if profile.photo %}
+                                             <img style="top: -1px;left: 0px; right: -11px;position: absolute;" class="ctcd-missing-image" src="{{ profile.photo.url }}" alt="{{profile.user.username}}'s Profile Photo">
+
+
+                                            <a class="ctcd-edit-photo-link_always-edit" >
+                                                  <input id="file" name="myfile" onchange="readFile(event)" type="file" accept="image/*" class="item-img file center-block" >تعديل الصورة
+<span class="zsg-icon-edit"></span></a>
+
+                                        </div>
+                                {% else %}
+                                            <img class="ctcd-missing-image" src="https://www.zillowstatic.com/static/images/nophoto_h_g.png" alt="{{profile.user.username}}'s Profile Photo">
+                                         <a class="ctcd-edit-photo-link_always-edit" >
+                                                  <input id="file" name="myfile" onchange="readFile(event)" type="file" accept="image/*" class="item-img file center-block" >تعديل الصورة
+<span class="zsg-icon-edit"></span></a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                    <div class="ctcd-stats-block">
+                                        <div class="ctcd-stats-block-inner">
+                                            <div class="ctcd-title">
+                                                <h1 class="ctcd-name pfl-no-margin-bottom"><span class="ctcd-user-name" itemprop="name">
+                                                    {% if profile.screenName %}
+                                                    {{profile.screenName}}
+                                                    {% else %}
+                                                    {{profile.user.username}}
+                                                    {% endif %}
+                                                </span><span class="ctcd-badge-container pfl-ws-nowrap">   </span></h1> </div>
+                                            <div class="ctcd-activity pfl-table"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="mpm-toolbar">
+                                <div class="pab-action-bar pab-action-bar_desktop zsg-lg-hide zsg-content-item">
+                                    <ul class="zsg-g"> </ul>
+                                </div>
+                                <ul class="zsg-g">
+                                    <!-- Not showing component: Child model &#39;switchToPrivate&#39; was missing. -->
+                                    <!-- Not showing component: Child model &#39;switchToPublic&#39; was missing. -->
+                                    <!-- Not showing component: Child model &#39;requestReviews&#39; was missing. -->
+                                    <li class="menu edit zsg-lg-1-4 zsg-md-1-2 zsg-sm-1-2">
+                                        <div class="menu-label button-z"><a href="#pedt-menu_toolbar" id="pedt-menu_toolbar-lnk" data-horizontal-align="left" class="zsg-menu-launch zsg-button zsg-button_fullsize"> تعديل <span class="zsg-icon-arrow-menu-down"></span></a></div>
+                                        <div class="zsg-menu pfl-ccol-menu" id="pedt-menu_toolbar" >
+                                            <ul class="zsg-menu-linklist">
+                                                <li><a href="/EditProfile" rel="nofollow" class="profile-edit-link">الملف الشخصي</a></li>
+                                                <li><a href="{% url 'Account' %}" rel="nofollow" class="profile-edit-link myz-nav-account" tabindex="10">إعدادت الحساب</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                            <div id="my-agent-on-profiles-mobile-view-div"></div>
+                            <!-- Not showing component: User is not an agent and therefore cannot have team members -->
+
+                        </header>
+                        <section>
+                            <div id="detailsToolbar" class="profile-details-toolbar">
+                                <ul>
+                                    <li><a href="javascript:window.print();"><span class="zsg-icon-print"></span> طباعة الصفحة</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </main>
+            <aside class="zsg-layout-bc-c">
+                <div class="zsg-layout-content" data-zmm-page="Profile">
+                    <!-- Not showing component: User is not an agent and therefore cannot be a team member. -->
+                    <section class="mpm-ccol-menu zsg-box zsg-content-item">
+                        <!-- Not showing component: Child model &#39;publicActionBar&#39; was missing. -->
+                        <ul class="zsg-list">
+                            <!-- Not showing component: Child model &#39;switchToPrivate&#39; was missing. -->
+                            <!-- Not showing component: Child model &#39;switchToPublic&#39; was missing. -->
+                            <!-- Not showing component: Child model &#39;requestReviews&#39; was missing. -->
+                            <li class="menu edit">
+                                <div class="menu-label button-z"><a href="#pedt-menu_menu" data-horizontal-align="left" class="zsg-menu-launch zsg-button zsg-button_fullsize"> تعديل <span class="zsg-icon-arrow-menu-down"></span></a></div>
+                                <div class="zsg-menu pfl-ccol-menu" id="pedt-menu_menu">
+                                    <ul class="zsg-menu-linklist">
+                                        <li><a href="/EditProfile" rel="nofollow" class="profile-edit-link">الملف الشخصي</a></li>
+                                        <li><a href="{% url 'Account' %}" rel="nofollow" class="profile-edit-link myz-nav-account" tabindex="10">إعدادت الحساب</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section itemtype="http://schema.org/Person" id="cCol-pro-contact-info" class="professional-summary zsg-content-item zsg-box">
+                        <h3>معلومات شخصية</h3><address><span class="zsg-hide">
+                        {% if profile.screenName %}
+                                                    {{profile.screenName}}
+                                                    {% else %}
+                                                    {{profile.user.username}}
+                                                    {% endif %}</span><dl id="profile-information" class="profile-information-list zsg-g_gutterless"><dt class="zsg-lg-2-5 profile-information-screen-name">الاسم الذي سيظهر: </dt><dd class="zsg-lg-3-5 profile-information-screen-name"> {% if profile.screenName %}
+                                                    {{profile.screenName}}
+                                                    {% else %}
+                                                    {{profile.user.username}}
+                                                    {% endif %}</dd><dt class="zsg-lg-2-5 profile-information-memeber-since">عضو منذ:</dt><dd class="zsg-lg-3-5 profile-information-memeber-since">07/19/2019</dd></dl></address></section>
+                </div>
+            </aside>
+        </div>
+
+
+
+
+
+                                                <!--<div class="bpf_box_wrap"><div class="bpf_box"><div class="bpf_box_item"><div class="bpfbi_title">Categories</div><ul class="bpfbi_items"><li> <a href="https://www.shademaster.com.au/category/verandahs">Verandahs</a></li><li> <a href="https://www.shademaster.com.au/category/patio">patio</a></li><li> <a href="https://www.shademaster.com.au/category/outdoor-areas">outdoor areas</a></li><li> <a href="https://www.shademaster.com.au/category/gazebos">gazebos</a></li><li> <a href="https://www.shademaster.com.au/category/outdoor-rooms">outdoor rooms</a></li></ul></div><div class="bpf_box_item"><div class="bpfbi_title">Date</div><ul class="bpfbi_items"><li><a href='https://www.shademaster.com.au/2016/10'>October 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/05'>May 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/04'>April 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/03'>March 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/02'>February 2016</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/11'>November 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/10'>October 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/09'>September 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/08'>August 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/07'>July 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/06'>June 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/05'>May 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/04'>April 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/03'>March 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/02'>February 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/01'>January 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2014/12'>December 2014</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2014/10'>October 2014</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2014/09'>September 2014</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2014/07'>July 2014</a>&nbsp;(1)</li></ul></div></div></div> --></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="blog_page_filter_col" style="padding-top: 0px;">
+                            <div class="container big-container bpf_container">
+                                <div class="bpf_box_wrap">
+                                    <div class="bpf_box bpf_box_sc">
+                                        <div class="bpf_box_item">
+                                            <div class="bpfbi_title">خيارات الضبط</div>
+                                            <ul class="bpfbi_items">
+                                                <li> <a href="/savedhomes/">المنازل المحفوظة</a></li>
+                                                <li> <a href="/EditProfile">الملف الشخصي</a></li>
+                                                <li> <a href="{% url 'Account' %}">إعدادت الحساب</a></li>
+                                                <li> <a href="{% url 'password_change' %}">كلمة المرور</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <!-- /wrapper -->
+    <!-- Instagram Feed JS -->
+
+
+
+
+
+
+
+
+      {% include 'footer.html' %}
+
+<style>
+    .h-c-footer.h-c-footer--topmargin {
+    margin-top: 150px;
+
+}
+</style>
+    <script src="{% static 'js/yui/yui-base-min.js' %}" type="text/javascript"></script>
+    <script>
+        YUI.GlobalConfig = {
+            "root": "3.18.1/",
+            "base": "https://www.zillowstatic.com/yui/3.18.1/",
+            "comboBase": "https://www.zillowstatic.com/c/yui?",
+            "staticDomain": "https://www.zillowstatic.com/",
+            "loggedIn": true,
+            "vstatic": {
+                "domain": "https://www.zillowstatic.com/",
+                "combo": "https://www.zillowstatic.com/c/80d5e73/lib?",
+                "base": "https://www.zillowstatic.com/vstatic/80d5e73/static/"
+            },
+            "admin-account-toolsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-admin-account-tools/c1a3188/lib?",
+                "base": "https://www.zillowstatic.com/static-admin-account-tools/c1a3188/static-admin-account-tools/"
+            },
+            "adtech-landingStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-adtech-landing/null/lib?",
+                "base": "https://www.zillowstatic.com/static-adtech-landing/null/static-adtech-landing/"
+            },
+            "advStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-adv/2ef0d63/lib?",
+                "base": "https://www.zillowstatic.com/static-adv/2ef0d63/static-adv/"
+            },
+            "adviceStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-advice/25e5aad/lib?",
+                "base": "https://www.zillowstatic.com/static-advice/25e5aad/static-advice/"
+            },
+            "agentteamsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-agentteams/db3e983/lib?",
+                "base": "https://www.zillowstatic.com/static-agentteams/db3e983/static-agentteams/"
+            },
+            "app-upsellStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-app-upsell/0060027/lib?",
+                "base": "https://www.zillowstatic.com/static-app-upsell/0060027/static-app-upsell/"
+            },
+            "app-viewsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-app-views/e7c3391/lib?",
+                "base": "https://www.zillowstatic.com/static-app-views/e7c3391/static-app-views/"
+            },
+            "async-contentStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-async-content/36c5773/lib?",
+                "base": "https://www.zillowstatic.com/static-async-content/36c5773/static-async-content/"
+            },
+            "bdpStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-bdp/416cb6f/lib?",
+                "base": "https://www.zillowstatic.com/static-bdp/416cb6f/static-bdp/"
+            },
+            "best-timeStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-best-time/c479a30/lib?",
+                "base": "https://www.zillowstatic.com/static-best-time/c479a30/static-best-time/"
+            },
+            "bproStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-bpro/3cf9b7b/lib?",
+                "base": "https://www.zillowstatic.com/static-bpro/3cf9b7b/static-bpro/"
+            },
+            "building-adminStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-building-admin/ad90a41/lib?",
+                "base": "https://www.zillowstatic.com/static-building-admin/ad90a41/static-building-admin/"
+            },
+            "chinese-landing-pageStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-chinese-landing-page/8ee294a/lib?",
+                "base": "https://www.zillowstatic.com/static-chinese-landing-page/8ee294a/static-chinese-landing-page/"
+            },
+            "claimStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-claim/a2ad0b8/lib?",
+                "base": "https://www.zillowstatic.com/static-claim/a2ad0b8/static-claim/"
+            },
+            "community-pillarStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-community-pillar/cedeb1e/lib?",
+                "base": "https://www.zillowstatic.com/static-community-pillar/cedeb1e/static-community-pillar/"
+            },
+            "complaintsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-complaints/73682e1/lib?",
+                "base": "https://www.zillowstatic.com/static-complaints/73682e1/static-complaints/"
+            },
+            "contact-formStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-contact-form/51b4bed/lib?",
+                "base": "https://www.zillowstatic.com/static-contact-form/51b4bed/static-contact-form/"
+            },
+            "contactsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-contacts/55f0ac7/lib?",
+                "base": "https://www.zillowstatic.com/static-contacts/55f0ac7/static-contacts/"
+            },
+            "email-a-friendStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-email-a-friend/847f564/lib?",
+                "base": "https://www.zillowstatic.com/static-email-a-friend/847f564/static-email-a-friend/"
+            },
+            "ecuiStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-ecui/43a4038/lib?",
+                "base": "https://www.zillowstatic.com/static-ecui/43a4038/static-ecui/"
+            },
+            "formattersStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-formatters/34b921e/lib?",
+                "base": "https://www.zillowstatic.com/static-formatters/34b921e/static-formatters/"
+            },
+            "gtmStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-gtm/c9391e2/lib?",
+                "base": "https://www.zillowstatic.com/static-gtm/c9391e2/static-gtm/"
+            },
+            "hdpStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-hdp/a8d09ea/lib?",
+                "base": "https://www.zillowstatic.com/static-hdp/a8d09ea/static-hdp/"
+            },
+            "hdp-legacy-shimStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-hdp-legacy-shim/257c863/lib?",
+                "base": "https://www.zillowstatic.com/static-hdp-legacy-shim/257c863/static-hdp-legacy-shim/"
+            },
+            "homepageStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-homepage/3727afe/lib?",
+                "base": "https://www.zillowstatic.com/static-homepage/3727afe/static-homepage/"
+            },
+            "homevaluesStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-homevalues/eea0a4b/lib?",
+                "base": "https://www.zillowstatic.com/static-homevalues/eea0a4b/static-homevalues/"
+            },
+            "inspectionsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-inspections/8ed1066/lib?",
+                "base": "https://www.zillowstatic.com/static-inspections/8ed1066/static-inspections/"
+            },
+            "instant-offerStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-instant-offer/null/lib?",
+                "base": "https://www.zillowstatic.com/static-instant-offer/null/static-instant-offer/"
+            },
+            "keystoneStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-keystone/013621e/lib?",
+                "base": "https://www.zillowstatic.com/static-keystone/013621e/static-keystone/"
+            },
+            "lazy-image-loaderStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-lazy-image-loader/3d4bf58/lib?",
+                "base": "https://www.zillowstatic.com/static-lazy-image-loader/3d4bf58/static-lazy-image-loader/"
+            },
+            "managed-lifecycleStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-managed-lifecycle/e29d665/lib?",
+                "base": "https://www.zillowstatic.com/static-managed-lifecycle/e29d665/static-managed-lifecycle/"
+            },
+            "mapStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-map/2037907/lib?",
+                "base": "https://www.zillowstatic.com/static-map/2037907/static-map/"
+            },
+            "mobile-landingpageStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-mobile-landingpage/2bfadf9/lib?",
+                "base": "https://www.zillowstatic.com/static-mobile-landingpage/2bfadf9/static-mobile-landingpage/"
+            },
+            "modalsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-modals/4cdd552/lib?",
+                "base": "https://www.zillowstatic.com/static-modals/4cdd552/static-modals/"
+            },
+            "npmStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-npm/d369a91/lib?",
+                "base": "https://www.zillowstatic.com/static-npm/d369a91/static-npm/"
+            },
+            "santas-houseStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-santas-house/9b25f76/lib?",
+                "base": "https://www.zillowstatic.com/static-santas-house/9b25f76/static-santas-house/"
+            },
+            "nc-mapStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-nc-map/8b727d1/lib?",
+                "base": "https://www.zillowstatic.com/static-nc-map/8b727d1/static-nc-map/"
+            },
+            "neighborhoodStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-neighborhood/89348a6/lib?",
+                "base": "https://www.zillowstatic.com/static-neighborhood/89348a6/static-neighborhood/"
+            },
+            "paStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-pa/a17d2a7/lib?",
+                "base": "https://www.zillowstatic.com/static-pa/a17d2a7/static-pa/"
+            },
+            "pagewrapperStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-pagewrapper/fc76d74/lib?",
+                "base": "https://www.zillowstatic.com/static-pagewrapper/fc76d74/static-pagewrapper/"
+            },
+            "paparazziStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-paparazzi/0a7c207/lib?",
+                "base": "https://www.zillowstatic.com/static-paparazzi/0a7c207/static-paparazzi/"
+            },
+            "permitsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-permits/0ea0805/lib?",
+                "base": "https://www.zillowstatic.com/static-permits/0ea0805/static-permits/"
+            },
+            "personalizationStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-personalization/b9899d2/lib?",
+                "base": "https://www.zillowstatic.com/static-personalization/b9899d2/static-personalization/"
+            },
+            "posting-pathStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-posting-path/8fbf7ba/lib?",
+                "base": "https://www.zillowstatic.com/static-posting-path/8fbf7ba/static-posting-path/"
+            },
+            "pricing-toolStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-pricing-tool/d22743d/lib?",
+                "base": "https://www.zillowstatic.com/static-pricing-tool/d22743d/static-pricing-tool/"
+            },
+            "profileStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-profile/aa91e8a/lib?",
+                "base": "https://www.zillowstatic.com/static-profile/aa91e8a/static-profile/"
+            },
+            "property-mapsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-property-maps/af51401/lib?",
+                "base": "https://www.zillowstatic.com/static-property-maps/af51401/static-property-maps/"
+            },
+            "property-photosStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-property-photos/7eaad19/lib?",
+                "base": "https://www.zillowstatic.com/static-property-photos/7eaad19/static-property-photos/"
+            },
+            "rent-affordabilityStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-rent-affordability/b6260e9/lib?",
+                "base": "https://www.zillowstatic.com/static-rent-affordability/b6260e9/static-rent-affordability/"
+            },
+            "renterprofileStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-renterprofile/bd46dac/lib?",
+                "base": "https://www.zillowstatic.com/static-renterprofile/bd46dac/static-renterprofile/"
+            },
+            "rentvsbuyStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-rentvsbuy/bbe5db1/lib?",
+                "base": "https://www.zillowstatic.com/static-rentvsbuy/bbe5db1/static-rentvsbuy/"
+            },
+            "richdataStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-richdata/916b006/lib?",
+                "base": "https://www.zillowstatic.com/static-richdata/916b006/static-richdata/"
+            },
+            "sales-historyStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-sales-history/dfdf91c/lib?",
+                "base": "https://www.zillowstatic.com/static-sales-history/dfdf91c/static-sales-history/"
+            },
+            "schoolsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-schools/88c5bb5/lib?",
+                "base": "https://www.zillowstatic.com/static-schools/88c5bb5/static-schools/"
+            },
+            "searchStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-search/081891b/lib?",
+                "base": "https://www.zillowstatic.com/static-search/081891b/static-search/"
+            },
+            "searchbarStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-searchbar/12c3c54/lib?",
+                "base": "https://www.zillowstatic.com/static-searchbar/12c3c54/static-searchbar/"
+            },
+            "sellerStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-seller/99cb128/lib?",
+                "base": "https://www.zillowstatic.com/static-seller/99cb128/static-seller/"
+            },
+            "seller-landingStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-seller-landing/a07313d/lib?",
+                "base": "https://www.zillowstatic.com/static-seller-landing/a07313d/static-seller-landing/"
+            },
+            "seopagesStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-seopages/2ab1829/lib?",
+                "base": "https://www.zillowstatic.com/static-seopages/2ab1829/static-seopages/"
+            },
+            "smart-bannerStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-smart-banner/594889c/lib?",
+                "base": "https://www.zillowstatic.com/static-smart-banner/594889c/static-smart-banner/"
+            },
+            "social-media-toolsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-social-media-tools/dcd85c8/lib?",
+                "base": "https://www.zillowstatic.com/static-social-media-tools/dcd85c8/static-social-media-tools/"
+            },
+            "third-party-adsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-third-party-ads/ec54100/lib?",
+                "base": "https://www.zillowstatic.com/static-third-party-ads/ec54100/static-third-party-ads/"
+            },
+            "topnavStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-topnav/50c3b55/lib?",
+                "base": "https://www.zillowstatic.com/static-topnav/50c3b55/static-topnav/"
+            },
+            "user-accountStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-user-account/50188a0/lib?",
+                "base": "https://www.zillowstatic.com/static-user-account/50188a0/static-user-account/"
+            },
+            "validation-regexesStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-validation-regexes/b3d0b3a/lib?",
+                "base": "https://www.zillowstatic.com/static-validation-regexes/b3d0b3a/static-validation-regexes/"
+            },
+            "vcrStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-vcr/57e2860/lib?",
+                "base": "https://www.zillowstatic.com/static-vcr/57e2860/static-vcr/"
+            },
+            "video-landingStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-video-landing/ba70953/lib?",
+                "base": "https://www.zillowstatic.com/static-video-landing/ba70953/static-video-landing/"
+            },
+            "webview-supportStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-webview-support/c3a282d/lib?",
+                "base": "https://www.zillowstatic.com/static-webview-support/c3a282d/static-webview-support/"
+            },
+            "widgetsStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-widgets/8b54f70/lib?",
+                "base": "https://www.zillowstatic.com/static-widgets/8b54f70/static-widgets/"
+            },
+            "yuiStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-yui/5b7360e/lib?",
+                "base": "https://www.zillowstatic.com/static-yui/5b7360e/static-yui/"
+            },
+            "zsgStatic": {
+                "combo": "https://www.zillowstatic.com/c/static-zsg/d2386fd/lib?",
+                "base": "https://www.zillowstatic.com/static-zsg/d2386fd/static-zsg/"
+            }
+        };
+        window.zSDLConfig = {
+            "staticDomain": "https://www.zillowstatic.com/",
+            "versions": {
+                "admin-account-toolsStatic": "static-admin-account-tools/c1a3188",
+                "adtech-landingStatic": "static-adtech-landing/null",
+                "advStatic": "static-adv/2ef0d63",
+                "adviceStatic": "static-advice/25e5aad",
+                "agentteamsStatic": "static-agentteams/db3e983",
+                "app-upsellStatic": "static-app-upsell/0060027",
+                "app-viewsStatic": "static-app-views/e7c3391",
+                "async-contentStatic": "static-async-content/36c5773",
+                "bdpStatic": "static-bdp/416cb6f",
+                "best-timeStatic": "static-best-time/c479a30",
+                "bproStatic": "static-bpro/3cf9b7b",
+                "building-adminStatic": "static-building-admin/ad90a41",
+                "chinese-landing-pageStatic": "static-chinese-landing-page/8ee294a",
+                "claimStatic": "static-claim/a2ad0b8",
+                "community-pillarStatic": "static-community-pillar/cedeb1e",
+                "complaintsStatic": "static-complaints/73682e1",
+                "contact-formStatic": "static-contact-form/51b4bed",
+                "contactsStatic": "static-contacts/55f0ac7",
+                "email-a-friendStatic": "static-email-a-friend/847f564",
+                "ecuiStatic": "static-ecui/43a4038",
+                "formattersStatic": "static-formatters/34b921e",
+                "gtmStatic": "static-gtm/c9391e2",
+                "hdpStatic": "static-hdp/a8d09ea",
+                "hdp-legacy-shimStatic": "static-hdp-legacy-shim/257c863",
+                "homepageStatic": "static-homepage/3727afe",
+                "homevaluesStatic": "static-homevalues/eea0a4b",
+                "inspectionsStatic": "static-inspections/8ed1066",
+                "instant-offerStatic": "static-instant-offer/null",
+                "keystoneStatic": "static-keystone/013621e",
+                "lazy-image-loaderStatic": "static-lazy-image-loader/3d4bf58",
+                "managed-lifecycleStatic": "static-managed-lifecycle/e29d665",
+                "mapStatic": "static-map/2037907",
+                "mobile-landingpageStatic": "static-mobile-landingpage/2bfadf9",
+                "modalsStatic": "static-modals/4cdd552",
+                "npmStatic": "static-npm/d369a91",
+                "santas-houseStatic": "static-santas-house/9b25f76",
+                "nc-mapStatic": "static-nc-map/8b727d1",
+                "neighborhoodStatic": "static-neighborhood/89348a6",
+                "paStatic": "static-pa/a17d2a7",
+                "pagewrapperStatic": "static-pagewrapper/fc76d74",
+                "paparazziStatic": "static-paparazzi/0a7c207",
+                "permitsStatic": "static-permits/0ea0805",
+                "personalizationStatic": "static-personalization/b9899d2",
+                "posting-pathStatic": "static-posting-path/8fbf7ba",
+                "pricing-toolStatic": "static-pricing-tool/d22743d",
+                "profileStatic": "static-profile/aa91e8a",
+                "property-mapsStatic": "static-property-maps/af51401",
+                "property-photosStatic": "static-property-photos/7eaad19",
+                "rent-affordabilityStatic": "static-rent-affordability/b6260e9",
+                "renterprofileStatic": "static-renterprofile/bd46dac",
+                "rentvsbuyStatic": "static-rentvsbuy/bbe5db1",
+                "richdataStatic": "static-richdata/916b006",
+                "sales-historyStatic": "static-sales-history/dfdf91c",
+                "schoolsStatic": "static-schools/88c5bb5",
+                "searchStatic": "static-search/081891b",
+                "searchbarStatic": "static-searchbar/12c3c54",
+                "sellerStatic": "static-seller/99cb128",
+                "seller-landingStatic": "static-seller-landing/a07313d",
+                "seopagesStatic": "static-seopages/2ab1829",
+                "smart-bannerStatic": "static-smart-banner/594889c",
+                "social-media-toolsStatic": "static-social-media-tools/dcd85c8",
+                "third-party-adsStatic": "static-third-party-ads/ec54100",
+                "topnavStatic": "static-topnav/50c3b55",
+                "user-accountStatic": "static-user-account/50188a0",
+                "validation-regexesStatic": "static-validation-regexes/b3d0b3a",
+                "vcrStatic": "static-vcr/57e2860",
+                "video-landingStatic": "static-video-landing/ba70953",
+                "webview-supportStatic": "static-webview-support/c3a282d",
+                "widgetsStatic": "static-widgets/8b54f70",
+                "yuiStatic": "static-yui/5b7360e",
+                "zsgStatic": "static-zsg/d2386fd",
+                "static": "static/80d5e73"
+            }
+        };
+    </script>
+
+
+    <script type="text/javascript" src="{% static 'js/yui/wombo-seed-concat.js' %}"></script>
+    <script>
+        window.zBodyScripts = (function() {
+            ClientProfiler.profile("body script request start");
+            YUI().use("event-base", "event-custom-base", "node-base", "yui-later", "z-analytics", "zillow-node-methods", function(c, b) {
+                if (b.success !== true) {
+                    c.message(b.msg, "warn");
+                    return
+                }
+                YUI.applyConfig({
+                    csrfToken: "xfLk3hhY5tJYOiOQBd9zib-ievGPXA_gthFPmOI9VAQ"
+                });
+                if (YUI.GlobalConfig.debug) {
+                    if (YUI.zDebugEvents === undefined) {
+                        YUI.zDebugEvents = {}
+                    }
+                    if (YUI.GlobalConfig.zonConsole && c.log) {
+                        window.zonLogString = window.zonLogString || "Zon Log Start";
+                        window.originalLog = c.log;
+                        window.zonLog = function(g, f, j, i, h) {
+                            if (j !== "attribute" && j !== "base" && j !== "plugin") {
+                                window.zonLogString += "\n";
+                                window.zonLogString += g + ", " + f + ", " + j + ", " + i + ", " + h
+                            }
+                            window.originalLog.call(this, g, f, j, i, h)
+                        };
+                        c.log = window.zonLog
+                    }
+
+                    function a(d) {
+                        if (!d.zFire) {
+                            d.zFire = d.fire;
+                            d.fire = function(e) {
+                                YUI.zDebugEvents[e] = (!YUI.zDebugEvents[e] ? 1 : YUI.zDebugEvents[e] + 1);
+                                d.zFire.apply(this, [].slice.call(arguments))
+                            }
+                        }
+                    }
+                    a(c.Global);
+                    a(c)
+                }
+                ClientProfiler.profile("body script callback start");
+                c.use("event-base", function(d) {
+                    d.on("domready", ClientProfiler.profile, d, "dom ready");
+                    d.after("domready", ClientProfiler.profile, d, "dom ready complete")
+                });
+                c.on("domready", function(d) {
+                    c.use("event-custom", "keystone-event-source", "z-save-home-reg-dialup_ACT-616", "z-wrapper-publish-events", function(f) {
+                        window.KES("set", "targetUrl", "https://keystone.zillow.com/event");
+                        window.KES("set", "configData", {
+                            _guid: "9d49aa70-bcea-4e8e-a3b9-1141aa8b8169",
+                            _zuid: 140600236
+                        });
+                        f.Global.publish("Keystone:TrackedEvent", {
+                            emitFacade: true,
+                            defaultFn: function(g) {
+                                if (g.action === "set" || (g.action === "send" && "hdp_contact, favorite, hdp, dwell, search, start_video, tour_start, tour_dwell, tour_pano_view, poi_typeahead, experiment_viewed".indexOf(g.key) !== -1)) {
+                                    window.KES(g.action, g.key, g.data, g.namespace)
+                                }
+                            }
+                        });
+                        f.fire("keystoneReady");
+                        var e = new f.Z.SaveHomeRegDialup();
+                        new f.Z.PriorityUiReadyPublisher()
+                    })
+                });
+                c.on("load", function(d) {
+                    c.use("z-analytics", "z-toggle-content", "zillow-link-tracking", "zsg-menus", "zsg-tooltips", function(e) {
+                        e.ZSG.Tooltips.init();
+                        e.ZSG.Menus.init();
+                        var f = e.one("#ptm-team-members-container");
+                        if (f) {
+                            f.plug(e.Z.Plugin.ToggleContent)
+                        }
+                        e.ZSG.Tooltips.init();
+                        e.Z.Analytics.init({
+                            isWebView: false,
+                            platform: "Windows"
+                        })
+                    })
+                });
+                c.on("priorityUiReady", function(d) {
+                    if (c.one(".criteo")) {
+                        ClientProfiler.profile("priorityUiReady fired with ADS_Tagless:Criteo_On")
+                    } else {
+                        if (c.one(".casale")) {
+                            ClientProfiler.profile("priorityUiReady fired with ADS_Tagless:Casale_On")
+                        } else {
+                            ClientProfiler.profile("priorityUiReady fired with ADS_Tagless:Control")
+                        }
+                    }
+                });
+                c.after("load", function(d) {
+                    c.use("io-base", "z-analytics", function(g) {
+                        (function() {
+                            g.io("/personalization/coshopping/CoShoppingDataAsyncLoader.htm")
+                        }());
+                        var e = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                        var f = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+                        g.Z.Analytics.setCustomVar({
+                            index: 20,
+                            name: "BrowserSize",
+                            value: e + "x" + f
+                        });
+                        (function() {
+                            var i = document.createElement("ins");
+                            i.className = "AdSense";
+                            i.style.display = "block";
+                            i.style.position = "absolute";
+                            i.style.top = "-1px";
+                            i.style.height = "1px";
+                            document.body.appendChild(i);
+                            var h = !i.clientHeight;
+                            g.Z.Analytics.setCustomVar({
+                                index: 101,
+                                name: "AdBlock",
+                                value: h.toString()
+                            });
+                            document.body.removeChild(i)
+                        })()
+                    })
+                });
+                c.after("priorityUiReady", function(d) {
+                    c.use("event-custom", "node-base", "z-get", "z-google-gpt-loader", "z-google-tag-manager", "zsg-responsive-subnav", function(h) {
+                        h.Global.on("Marketing:TrackedEvent", function(k) {
+                            var i = k.marketingEventName,
+                                j = k.marketingData;
+                            if (j) {
+                                h.Z.GoogleTagManager.addData(j)
+                            }
+                            if (i) {
+                                h.Z.GoogleTagManager.addEvent(i, k.marketingParams)
+                            }
+                        });
+                        var e = "delay";
+
+                        function g() {
+                            h.Z.GoogleTagManager.load({
+                                isTablet: false,
+                                isPhone: false,
+                                isMobile: false,
+                                isMobileApp: false,
+                                gaCustomDimensions: {
+                                    dimension1: "9d49aa70bcea4e8ea3b91141aa8b8169/X1-ZU13mihimqvxp8p_7kibb"
+                                }
+                            }, "GTM-P6HT97")
+                        }
+                        if (e === "delay") {
+                            h.on("load", g)
+                        } else {
+                            if (e !== "off") {
+                                g()
+                            }
+                        }
+                        new h.ZSG.ResponsiveSubnav();
+                        (function() {
+                            var l = "HYx10rg3",
+                                j;
+                            window._pxAppId = "PX" + l;
+                            j = document.cookie.match(/(?:^|; )zguid=([^;]+)/);
+                            if (j) {
+                                window._pxParam1 = j[1]
+                            }
+                            var k = document.getElementsByTagName("script")[0],
+                                i = document.createElement("script");
+                            i.async = 1;
+                            i.src = "/" + l + "/init.js";
+                            k.parentNode.insertBefore(i, k)
+                        }());
+                        h.Z.Get.js("https://js-sec.indexww.com/ht/htw-zillow2.js", function(i) {
+                            if (i) {
+                                h.log(i)
+                            }
+                        });
+                        h.Z.GoogleGptLoader.init();
+                        var f = h.one("#delay-load-zsg");
+                        if (f) {
+                            f.setAttribute("href", f.getAttribute("data-delay-href"))
+                        }
+                    })
+                });
+                c.config.loggedIn = true;
+                c.UA.zMobile = false;
+                ClientProfiler.profile("body script callback end")
+            });
+            ClientProfiler.profile("body script request end")
+        });
+        window.zBodyScripts();
+    </script>
+
+
+
+
+
+
+<style>
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  width: 370px;
+}
+
+.J-at1-auR:focus {
+    box-shadow: 0 1px 2px 0 rgba(26, 115, 232, 0.302), 0 1px 3px 1px rgba(26, 115, 232, 0.149);
+    background-color: #86b1c7;
+}
+
+.bug-Jl>.J-at1-auR:active, {
+    box-shadow: 0 1px 2px 0 rgba(26, 115, 232, 0.451), 0 2px 6px 2px rgba(26, 115, 232, 0.302);
+    background-color: #95c7e0;
+}
+
+.bug-Jl>.J-at1-auR:active::before {
+    opacity: .12;
+    transform: scale(1)
+}
+.J-at1-auR {
+    align-items: center;
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    outline: none;
+    position: relative;
+    z-index: 0;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-size: .875rem;
+    letter-spacing: .25px;
+    background: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #5f6368;
+    cursor: pointer;
+    font-weight: 500;
+    height: 36px;
+    min-width: 80px;
+    outline: none;
+    padding: 0 16px;
+    background-color: #7CA5BA;
+    color: #fff;
+    margin: 10px;
+    margin-top:12px;
+    top: 7px;
+}
+button {
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
+button {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: buttonface;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+</style>
+
+<div id="myModal" class="modal" tabindex="0" role="dialog" aria-labelledby=":2t" style="direction:rtl;text-align:right;">
+    <div class="modal-content">
+        <div id="upload-demo" class="center-block"></div>
+<button id="cropImageBtn" name="confirm_dialog_next" class="J-at1-auR">موافق</button>
+</div>
+</div>
+
+<script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+<script src="{% static 'js/js/croppie.js'%}"></script>
+
+<script>
+
+
+    if (window.matchMedia("(max-width: 767px)").matches) {
+
+$('#pedt-menu_toolbar-lnk').css({'left':'50%','right':'100%'});
+$('.ctcd-profile-image-container').css({'right':'23%'});
+$('.ctcd-agent-type, .ctcd-community-pillar, .ctcd-name, .ctcd-non-region-context .ctcd-all-activity, .ctcd-team-rank ').css({'position':'relative','right':'17%'});
+
+}
+
+
+$(".blog_page_filter_col_mobile").on("click", function(evt) {
+if ($('.bpf_btn').hasClass("open")) {
+$('.bpf_btn').removeClass('open');
+$('.bpf_wrap_mobile').hide();
+}
+else
+{
+$('.bpf_btn').addClass('open');
+$('.bpf_wrap_mobile').show();
+}
+});
+
+
+
+                // Get the modal
+var modal = document.getElementById("myModal");
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function getCookie(c_name)
+{
+    if (document.cookie.length > 0)
+    {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start != -1)
+        {
+            c_start = c_start + c_name.length + 1;
+            c_end = document.cookie.indexOf(";", c_start);
+            if (c_end == -1) c_end = document.cookie.length;
+            return unescape(document.cookie.substring(c_start,c_end));
+        }
+    }
+    return "";
+ }
+
+$(function () {
+    $.ajaxSetup({
+        headers: { "X-CSRFToken": getCookie("csrftoken") }
+    });
+});
+
+						var $uploadCrop,
+						tempFilename,
+						rawImg,
+						imageId;
+
+						var readFile = function(event) {
+									$('.upload-demo').addClass('ready');
+									console.log(URL.createObjectURL(event.target.files[0]));
+									$(".cr-image").attr("src", URL.createObjectURL(event.target.files[0]));
+									$('#myModal').show();
+						};
+
+
+						$uploadCrop = $('#upload-demo').croppie({
+							viewport: {
+								width: 180,
+								height: 180,
+								type: 'circle'
+							},
+							enforceBoundary: false,
+							enableExif: true
+						});
+
+						$('.item-img').on('change', function (event) {
+						imageId = $(this).data('id'); tempFilename = $(this).val();
+						$('#cancelCropBtn').data('id', imageId);
+						});
+						$('#cropImageBtn').on('click', function (ev) {
+							$uploadCrop.croppie('result', {
+								 type: 'canvas',
+								 size: 'viewport',
+							}).then(function (resp) {
+
+								 $.ajax({
+        url:"",
+        type: "POST",
+        data:{"image": resp},
+        success:function(data)
+        {
+		 $('.ctcd-missing-image').attr('src', resp);
+         $('.ctcd-missing-image').attr('style', 'top: -1px;left: 0px; right: -11px;position: absolute;');
+		$('#myModal').hide();
+        }
+      });
+
+
+
+							});
+						});
+				// End upload preview image
+
+$('.ctcd-profile-image-container .ctcd-edit-photo-link_always-edit, .ctcd-profile-image-container:hover .ctcd-edit-photo-link').hide();
+
+$( ".ctcd-profile-image-container" ).mouseover(function() {
+$('.ctcd-profile-image-container .ctcd-edit-photo-link_always-edit, .ctcd-profile-image-container:hover .ctcd-edit-photo-link').show();
+});
+
+$( ".ctcd-profile-image-container" ).mouseout(function() {
+$('.ctcd-profile-image-container .ctcd-edit-photo-link_always-edit, .ctcd-profile-image-container:hover .ctcd-edit-photo-link').hide();
+});
+
+</script>
+
+{% endblock %}

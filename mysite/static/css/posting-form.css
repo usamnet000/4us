@@ -1,0 +1,752 @@
+﻿.hhLayer,
+.photo-caption-lightbox-rotate-button {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none
+}
+
+.hhLayer,
+.shim {
+    -khtml-user-select: none
+}
+
+.zsg-form-field input.error,
+.zsg-form-field select.error,
+.zsg-form-field textarea.error {
+    border-color: #fc384a;
+    background-color: #fae6e6
+}
+
+.zsg-form-field input.error:hover,
+.zsg-form-field select.error:hover,
+.zsg-form-field textarea.error:hover {
+    border-color: #f86049;
+    background-color: #fdf5f5
+}
+
+.zsg-form-field input.error:focus,
+.zsg-form-field select.error:focus,
+.zsg-form-field textarea.error:focus {
+    border-color: #0074e4;
+    background-color: #fff;
+    color: inherit
+}
+
+.zsg-form-field p.error {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #fc384a
+}
+
+.yui3-uploader {
+    width: auto
+}
+
+.yui3-uploader-preview-list,
+.yui3-uploader-preview-list-archive {
+    overflow: hidden;
+    width: auto
+}
+
+.yui3-uploader-preview-list-archive.upload-photo-preview-list_lower,
+.yui3-uploader-preview-list.upload-photo-preview-list_lower {
+    margin-top: 50px
+}
+
+.yui3-uploader-preview-list-archive {
+    padding-top: 0
+}
+
+.yui3-uploader-preview-content {
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #999;
+    float: left;
+    margin-right: 14px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    position: relative;
+    border: 1px solid #ccc
+}
+
+.yui3-uploader-preview-content.is-uploading,
+.yui3-uploader-preview-content.upload-failed {
+    min-width: 146px
+}
+
+.yui3-uploader-preview-content .thumbnail {
+    background: #fff;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 110px;
+    min-width: 70px;
+    font-size: 11px;
+    position: relative;
+    text-align: center;
+    transition: border-color .1s ease
+}
+
+.yui3-uploader-preview-content .thumbnail .thumbnail-type-wrapper {
+    position: absolute;
+    right: 0;
+    left: 0
+}
+
+.yui3-uploader-preview-content .thumbnail .thumbnail-type-wrapper .thumbnail-type {
+    display: inline-block;
+    margin: 35px auto 0;
+    padding: .25em .75em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 5px
+}
+
+.yui3-uploader-preview-content .thumbnail .thumbnail-type-wrapper .thumbnail-type .zsg-icon-panorama,
+.yui3-uploader-preview-content .thumbnail .thumbnail-type-wrapper .thumbnail-type .zsg-icon-video {
+    display: block;
+    font-size: 2.5em;
+    height: .84em
+}
+
+.yui3-uploader-preview-content .thumbnail.panorama {
+    max-width: 148px;
+    overflow: hidden;
+    text-align: center
+}
+
+.yui3-uploader-preview-content .thumbnail-img {
+    height: 100%;
+    min-width: 70px;
+    max-width: 400px
+}
+
+.yui3-uploader-preview-content .upload-photo-remove-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 2px 1px 1px 2px;
+    z-index: 2
+}
+
+.yui3-uploader-preview-content.is-uploading .remove,
+.yui3-uploader-preview-content.upload-failed .remove {
+    display: none
+}
+
+.yui3-uploader-preview-content .remove:hover {
+    background-position: 2px 2px
+}
+
+.yui3-uploader-preview-content .main-image {
+    color: #555;
+    display: block;
+    font-size: 11px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 2px;
+    width: 100%
+}
+
+.yui3-uploader-preview-content .filename {
+    bottom: 8px;
+    height: 13px;
+    overflow: hidden;
+    position: absolute;
+    right: 5px;
+    line-height: 1.2em;
+    text-align: left
+}
+
+.is-uploaded .filename {
+    bottom: 4px
+}
+
+.yui3-uploader-preview-content .status-indicator,
+.yui3-uploader-preview-content .status-indicator-container {
+    box-sizing: border-box
+}
+
+.yui3-uploader-preview-content .status-indicator-container {
+    position: absolute;
+    bottom: 7px;
+    left: 7px;
+    z-index: 1;
+    font-size: 24px
+}
+
+.yui3-uploader-preview-content .status-indicator-container.zsg-icon-triangle {
+    color: #ff7800
+}
+
+.yui3-uploader-preview-content .status-indicator-container.zsg-icon-circle {
+    color: #fc384a
+}
+
+.yui3-uploader-preview-content .status-indicator {
+    position: absolute;
+    top: 1px;
+    font-size: 24px
+}
+
+.yui3-uploader-preview-content .status-indicator.zsg-icon-exclamation-mark {
+    color: #fff
+}
+
+.yui3-uploader-preview-content .zsg-loading-spinner {
+    position: absolute;
+    z-index: 2
+}
+
+.yui3-uploader-preview-content .caption,
+.yui3-uploader-preview-content .caption-background {
+    position: absolute;
+    top: 83px;
+    width: 100%;
+    z-index: 1
+}
+
+.yui3-uploader-preview-content .caption-background {
+    height: 27px;
+    background-color: #111;
+    opacity: .3
+}
+
+.yui3-uploader-preview-content .caption {
+    white-space: nowrap;
+    padding: 0 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff
+}
+
+.yui3-dd-drop {
+    cursor: move
+}
+
+.archive-photo-header {
+    margin-top: 15px
+}
+
+.archive-photo-header h3 {
+    display: inline-block;
+    margin: 0
+}
+
+.archive-photo-header a {
+    display: inline-block
+}
+
+#upload-photo-drop-target {
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    background-color: #fff;
+    opacity: .9;
+    border: 1px dashed #ccc;
+    text-align: center;
+    padding-top: 57px
+}
+
+#upload-photo-drop-target.upload-photo-drop-target_active {
+    font-weight: 700;
+    color: #0074e4
+}
+
+.instructions {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    padding: 7px
+}
+
+.is-main-image .instructions {
+    display: block;
+    z-index: 1
+}
+
+@media screen and (max-width:1024px) {
+    .is-main-image .instructions {
+        display: none
+    }
+}
+
+.zss-touch .is-main-image .instructions,
+ul[data-child-count="1"] .is-main-image .instructions {
+    display: none
+}
+
+.error-message {
+    color: #555;
+    font-size: 10px;
+    margin: 45px 5px 0
+}
+
+.error-message strong {
+    color: #c60005;
+    display: block;
+    font-size: 11px;
+    margin-bottom: 7px
+}
+
+.has-error .filename {
+    bottom: 4px
+}
+
+.has-error .thumbnail-img {
+    display: none
+}
+
+.dropzone-main-text {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #36b;
+    text-decoration: underline;
+    margin-top: 28px
+}
+
+.dropzone-main-text.no-drag-text {
+    margin-top: 43px
+}
+
+.dropzone-drag-text {
+    font-size: .9em;
+    color: #444;
+    margin-top: 5px
+}
+
+.cancel-failed .dropzone-main-text {
+    margin-top: 18px
+}
+
+.cancel-control-main-text,
+.retry-control-main-text {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #36b;
+    text-decoration: underline;
+    margin-top: 32px
+}
+
+#image-upload-dropzone.is-hot,
+.ddcurrent .thumbnail,
+.ddtarget .thumbnail {
+    border: 2px dashed #36b
+}
+
+.photo-caption-lightbox-image-container {
+    height: 180px
+}
+
+.photo-caption-lightbox-image {
+    display: block;
+    max-width: 180px;
+    max-height: 180px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#map-parent-container.edit-location-map_small .map-controls-wrapper,
+.hidden,
+.is-hidden,
+.shim {
+    display: none
+}
+
+.photo-caption-lightbox-controls {
+    text-align: center
+}
+
+.photo-caption-lightbox-controls input.caption {
+    width: 250px
+}
+
+.photo-caption-lightbox-rotate-button {
+    background-image: url(/static/images/rotate.png);
+    background-size: 13px 12px;
+    background-repeat: no-repeat;
+    background-position-y: 4px;
+    padding-left: 17px;
+    margin-left: 25px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.yui3-uploader-errors .zsg-icon-circle,
+.yui3-uploader-errors .zsg-icon-triangle {
+    position: relative;
+    float: left;
+    font-size: 24px;
+    margin-right: 10px
+}
+
+.yui3-uploader-errors .zsg-icon-triangle {
+    color: #ff7800
+}
+
+.yui3-uploader-errors .zsg-icon-circle {
+    color: #fc384a
+}
+
+.yui3-uploader-errors .zsg-icon-exclamation-mark {
+    position: absolute;
+    top: 1px;
+    font-size: 24px;
+    color: #fff
+}
+
+.yui3-uploader-errors .upload-notice-wrapper {
+    float: left;
+    background: #000;
+    height: 1.5em;
+    width: 2.5em;
+    border-radius: 3px;
+    margin-right: .5em;
+    text-align: center;
+    padding-top: 4px
+}
+
+.yui3-uploader-errors .upload-notice-wrapper .zsg-icon-panorama {
+    font-size: 15px;
+    color: #fff
+}
+
+#edit-location-map-header,
+#edit-location-map-move-header,
+#upload-photo-subheader {
+    color: #666
+}
+
+@media all and (max-width:480px) {
+    .dropzone-drag-text,
+    .is-main-image .instructions {
+        display: none
+    }
+    .yui3-uploader-preview-content.is-uploading,
+    .yui3-uploader-preview-content.upload-failed {
+        min-width: 107px
+    }
+    .yui3-uploader-preview-content .thumbnail {
+        height: 81px;
+        min-width: 50px
+    }
+    .yui3-uploader-preview-content .thumbnail .thumbnail-type-wrapper .thumbnail-type {
+        margin: 18px auto 0
+    }
+    .yui3-uploader-preview-content .thumbnail.has-caption .thumbnail-type-wrapper .thumbnail-type {
+        margin: 7px auto 0
+    }
+    .yui3-uploader-preview-content .thumbnail-img {
+        min-width: 50px;
+        max-width: 225px
+    }
+    .yui3-uploader-preview-content .caption,
+    .yui3-uploader-preview-content .caption-background {
+        top: 58px
+    }
+    .yui3-uploader-preview-content .caption-background {
+        height: 23px
+    }
+    #image-upload-dropzone,
+    #image-upload-retry {
+        height: 83px;
+        width: 107px
+    }
+    .dropzone-main-text {
+        font-size: 1em;
+        margin-top: 32px
+    }
+    .dropzone-main-text.no-drag-text {
+        margin-top: 32px
+    }
+    .cancel-failed .dropzone-main-text.no-drag-text {
+        margin-top: 18px
+    }
+    .cancel-control-main-text,
+    .retry-control-main-text {
+        font-size: 1em;
+        margin-top: 25px
+    }
+}
+
+.zss-map-container {
+    position: relative
+}
+
+.move-cursor {
+    cursor: url(/static/images/grab.cur) 0 0, move
+}
+
+.ie .move-cursor {
+    cursor: url(/static/images/grab_bing.cur), move
+}
+
+.pointer-cursor {
+    cursor: pointer
+}
+
+.grab-cursor {
+    cursor: url(/static/images/DragHandClosed.png), move
+}
+
+.ie .grab-cursor {
+    cursor: url(/static/images/DragHandClosed.cur), move
+}
+
+.hhLayer {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.shim {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    background-color: transparent;
+    opacity: 0
+}
+
+.street-view-map {
+    background-color: #e7e6e5
+}
+
+.aerial-view-map {
+    background-color: #2c3021
+}
+
+.aerial-map-container .bing-attribution {
+    background-position: 0 -50px!important
+}
+
+@media screen and (max-width:360px) {
+    .zsg-h1,
+    h1 {
+        font-size: 22px
+    }
+}
+
+@media screen and (min-width:769px) {
+    div.posting-grid_left {
+        padding-right: 20px
+    }
+    div.posting-grid_right {
+        /*padding-left: 20px*/
+    }
+    #posting-additional-information-details {
+        overflow: auto
+    }
+}
+
+#edit-location-map-instructions .zsg-icon-off-market:before {
+    background-color: #ff7800
+}
+
+#map-parent-container {
+    position: relative;
+    height: 275px
+}
+
+@media screen and (max-width:480px) {
+    #map-parent-container {
+        height: 180px
+    }
+    .posting-price-with-map {
+        margin-bottom: 30px
+    }
+}
+
+#map-parent-container.edit-location-map_small {
+    height: 105px;
+    cursor: pointer
+}
+
+#edit-location-map-radio .zsg-list_inline>li {
+    margin-left: 35px
+}
+
+#edit-location-map-radio .zsg-list_inline>li:first-child {
+    margin-left: 0
+}
+
+#photoEditorContent {
+    position: relative
+}
+
+#upload-photo-button {
+    margin-top: 19px;
+    margin-bottom: 10px
+}
+
+#posting-additional-information-what-i-love.zsg-lg-1-1,
+.home-status-fieldset {
+    margin-top: 15px
+}
+
+#upload-photo-drag-text {
+    color: #aaa
+}
+
+.yui3-uploader-content input[type=file] {
+    position: absolute
+}
+
+@media screen and (max-width:480px) {
+    .posting-home-facts-form-field-spacing,
+    .posting-home-facts-form-field-spacing.zsg-content-item {
+        margin-bottom: 15px
+    }
+}
+
+#homeDescription {
+    height: 78px
+}
+
+.posting-home-facts-turbo-zestimate {
+    background-color: #d9f0f9;
+    padding: 10px
+}
+
+.posting-open-house-date {
+    margin-bottom: 5px
+}
+
+@media screen and (max-width:480px) {
+    .posting-open-house-date {
+        margin-bottom: 15px
+    }
+    .posting-open-house-start-time {
+        margin-bottom: 5px
+    }
+    #posting-additional-information-mls {
+        margin-bottom: 15px
+    }
+    #posting-additional-information-what-i-love {
+        margin-top: 15px
+    }
+}
+
+#posting-additional-information-what-i-love {
+    margin-bottom: 30px
+}
+
+@media screen and (min-width:769px) {
+    .posting-additional-information-details-group_left,
+    .posting-additional-information-details-group_right {
+        width: 50%
+    }
+    .posting-additional-information-details-group_left {
+        float: left;
+        clear: left;
+        padding-right: 10px
+    }
+    .posting-additional-information-details-group_right {
+        float: right;
+        clear: right;
+        padding-left: 10px
+    }
+}
+
+.zsg-icon-expando-down:before,
+.zsg-icon-expando-up:before {
+    float: left;
+    padding-right:12px;
+}
+
+
+@media screen and (max-width:768px) {
+    .stripped-header .zsg-icon-expando-down:before,
+    .stripped-header .zsg-icon-expando-up:before {
+        float: none
+    }
+}
+
+.zsg-icon-expando-up {
+    color: #444
+}
+
+.zsg-h4.posting-multi-select-header {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 6px
+}
+
+.cannot-post-message {
+    margin-top: 30px
+}
+
+.cancel-listing-header {
+    color: #5fe788
+}
+
+.save-draft-message {
+    color: #666;
+    position: fixed;
+    background-color: rgba(255, 255, 255, .95);
+    opacity: 95;
+    top: 20px;
+    right: 30px;
+    z-index: 1001
+}
+
+.draft-sign-in a {
+    color: #fff;
+    text-decoration: underline
+}
+
+.editing-listing-warning-text,
+.feed-warning-text {
+    font-size: 13px
+}
+
+.description-price-disabled input[readonly],
+.description-price-disabled textarea[readonly],
+.posting-form-field-disabled input[readonly],
+.posting-form-field-disabled textarea[readonly] {
+    background-color: #EEE;
+    border-color: #CCC;
+    box-shadow: none;
+    color: #CCC;
+    cursor: default;
+    opacity: 1
+}
+
+.fsbo-posting-path-header {
+    display: inline
+}
+
+.zsg-input-overlay_left.zsg-input-overlay_left_2 input {
+    padding-left: 32px
+}
+
+.zsg-input-overlay_left.zsg-input-overlay_left_3 input {
+    padding-left: 42px
+}
+
+.zsg-input-overlay_left.zsg-input-overlay_left_4 input {
+    padding-left: 52px
+}

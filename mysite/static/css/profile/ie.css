@@ -1,0 +1,62 @@
+﻿@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .button_el {
+        padding-top: 10px;
+        padding-bottom: 2px
+    }
+    .button_el.big {
+        padding-top: 14px;
+        padding-bottom: 6px
+    }
+    .newsletter_submit {
+        padding-top: 8px
+    }
+    .rds_quote_btn {
+        width: 160px
+    }
+}
+
+@media screen and (max-width: 767px) and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .button_el {
+        padding-top: 9px;
+        padding-bottom: 1px
+    }
+    .button_el.big {
+        padding-top: 6px;
+        padding-bottom: 1px
+    }
+    .newsletter_submit {
+        padding-top: 6px
+    }
+}
+
+@supports (-ms-ime-align: auto) {
+    .button_el {
+        padding-top: 6px;
+        padding-bottom: 3px
+    }
+    .button_el.big {
+        padding-top: 12px;
+        padding-bottom: 9px
+    }
+    .newsletter_submit {
+        padding-top: 5px
+    }
+    @media screen and (max-width: 767px) {
+        .button_el {
+            padding-top: 6px;
+            padding-bottom: 3px
+        }
+        .button_el.big {
+            padding-top: 12px;
+            padding-bottom: 9px
+        }
+        .newsletter_submit {
+            padding-top: 3px
+        }
+    }
+}
+
+
+/*# sourceMappingURL=ie.css.map */

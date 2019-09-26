@@ -1,0 +1,1845 @@
+{% load static %}
+{% load humanize %}
+<head>
+    <meta charset="UTF-8">
+    <title>المدونة</title>
+     <link rel="stylesheet" href="{% static 'css/blog/style.min.css?ver=5.2.2' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/blog/tweet-intent.css?ver=5.2.2' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/blog/paxl.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/blog/icons/paxl.css' %}" type="text/css" media="all">
+    <script type="text/javascript" src="{% static 'js/jquery-migrate.min.js?ver=1.4.1' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'css/blog/prexit.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/blog/wpdiscuz.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/blog/wpdiscuz-user-content.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/blog/display.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/blog/saleproceeds.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="https://www.zillow.com/blog/zgwp/app/plugins/wpdiscuz/assets/third-party/font-awesome-5.0.6/css/fontawesome-all.min.css?ver=5.3.2" type="text/css" media="all">
+    <link rel="stylesheet" href="https://www.zillow.com/blog/zgwp/app/themes/zillow-marketing-base-theme/dist/styles/zillow2016-bbef7daf0f.css" type="text/css" media="all">
+    <script type="text/javascript" src="https://www.zillow.com/blog/zgwp/app/plugins/wpdiscuz/assets/js/wpdiscuz.js?ver=5.3.2"></script>
+    <script type="text/javascript" src="https://www.zillow.com/blog/zgwp/wp-includes/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="https://www.zillow.com/blog/zgwp/app/plugins/wpdiscuz/assets/third-party/wpdcookiejs/customcookie.js?ver=5.3.2"></script>
+    <script type="text/javascript" src="https://www.zillow.com/blog/zgwp/app/plugins/wpdiscuz/assets/third-party/autogrow/jquery.autogrowtextarea.min.js?ver=5.3.2"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var wpdiscuzAjaxObj = {
+            "url": "https:\/\/www.zillow.com\/blog\/zgwp\/wp-admin\/admin-ajax.php",
+            "customAjaxUrl": "https:\/\/www.zillow.com\/blog\/zgwp\/wp-content\/plugins\/wpdiscuz\/utils\/ajax\/wpdiscuz-ajax.php",
+            "wpdiscuz_options": {
+                "wc_hide_replies_text": "Hide Replies",
+                "wc_show_replies_text": "View Replies",
+                "wc_msg_required_fields": "Please fill out required fields",
+                "wc_invalid_field": "Some of field value is invalid",
+                "wc_error_empty_text": "please fill out this field to comment",
+                "wc_error_url_text": "url is invalid",
+                "wc_error_email_text": "email address is invalid",
+                "wc_invalid_captcha": "Invalid Captcha Code",
+                "wc_login_to_vote": "You Must Be Logged In To Vote",
+                "wc_deny_voting_from_same_ip": "You are not allowed to vote for this comment",
+                "wc_self_vote": "You cannot vote for your comment",
+                "wc_vote_only_one_time": "You've already voted for this comment",
+                "wc_voting_error": "Voting Error",
+                "wc_held_for_moderate": "Comment awaiting moderation",
+                "wc_comment_edit_not_possible": "Sorry, this comment no longer possible to edit",
+                "wc_comment_not_updated": "Sorry, the comment was not updated",
+                "wc_comment_not_edited": "You've not made any changes",
+                "wc_new_comment_button_text": "new comment",
+                "wc_new_comments_button_text": "new comments",
+                "wc_new_reply_button_text": "new reply on your comment",
+                "wc_new_replies_button_text": "new replies on your comments",
+                "wc_msg_input_min_length": "Input is too short",
+                "wc_msg_input_max_length": "Input is too long",
+                "wc_follow_user": "Follow this user",
+                "wc_unfollow_user": "Unfollow this user",
+                "wc_follow_success": "You started following this comment author",
+                "wc_follow_canceled": "You stopped following this comment author.",
+                "wc_follow_email_confirm": "Please check your email and confirm the user following request.",
+                "wc_follow_email_confirm_fail": "Sorry, we couldn't send confirmation email.",
+                "wc_follow_login_to_follow": "Please login to follow users.",
+                "wc_follow_impossible": "We are sorry, but you can't follow this user.",
+                "wc_follow_not_added": "Following failed. Please try again later.",
+                "is_user_logged_in": false,
+                "commentListLoadType": "0",
+                "commentListUpdateType": "0",
+                "commentListUpdateTimer": "30",
+                "liveUpdateGuests": "1",
+                "wc_comment_bg_color": "#FEFEFE",
+                "wc_reply_bg_color": "#F8F8F8",
+                "wpdiscuzCommentsOrder": "desc",
+                "wpdiscuzCommentOrderBy": "comment_date_gmt",
+                "commentsVoteOrder": false,
+                "wordpressThreadCommentsDepth": "5",
+                "wordpressIsPaginate": "",
+                "commentTextMaxLength": null,
+                "storeCommenterData": 100000,
+                "isCaptchaInSession": true,
+                "isGoodbyeCaptchaActive": false,
+                "socialLoginAgreementCheckbox": 0,
+                "enableFbLogin": 0,
+                "enableFbShare": 0,
+                "facebookAppID": "",
+                "facebookUseOAuth2": 0,
+                "enableGoogleLogin": 0,
+                "googleAppID": "",
+                "cookiehash": "bea7c621e87546731a1947cd60158c36",
+                "isLoadOnlyParentComments": 0,
+                "ahk": "",
+                "enableDropAnimation": 0,
+                "isNativeAjaxEnabled": 1,
+                "cookieCommentsSorting": "wpdiscuz_comments_sorting",
+                "enableLastVisitCookie": 0,
+                "version": "5.3.2",
+                "wc_post_id": 227286,
+                "loadLastCommentId": 0,
+                "lastVisitKey": "wpdiscuz_last_visit",
+                "isCookiesEnabled": false,
+                "wc_captcha_show_for_guest": "0",
+                "wc_captcha_show_for_members": "0",
+                "is_email_field_required": 1
+            }
+        };
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="https://www.zillow.com/blog/zgwp/app/plugins/wpdiscuz/assets/js/wpdiscuz.js?ver=5.3.2"></script>
+
+    <style>
+        #wpcomm .wc_new_comment {
+            background: #0074e4;
+        }
+
+        #wpcomm .wc_new_reply {
+            background: #0074e4;
+        }
+
+        #wpcomm .wc-form-wrapper {
+            background: none;
+        }
+        /* ->formBGColor */
+
+        #wpcomm .wpdiscuz-front-actions {
+            background: #F9F9F9;
+        }
+
+        #wpcomm .wpdiscuz-subscribe-bar {
+            background: #F9F9F9;
+        }
+
+        #wpcomm select,
+        #wpcomm input[type="text"],
+        #wpcomm input[type="email"],
+        #wpcomm input[type="url"],
+        #wpcomm input[type="date"],
+        #wpcomm input[type="color"] {
+            border: #D9D9D9 1px solid;
+        }
+
+        #wpcomm .wc-comment .wc-comment-right {
+            background: #FEFEFE;
+        }
+
+        #wpcomm .wc-reply .wc-comment-right {
+            background: #F8F8F8;
+        }
+
+        #wpcomm .wc-comment-right .wc-comment-text,
+        #wpcomm .wc-comment-right .wc-comment-text * {
+            font-size: 14px;
+        }
+
+        #wpcomm .wc-blog-administrator > .wc-comment-right .wc-comment-author,
+        #wpcomm .wc-blog-administrator > .wc-comment-right .wc-comment-author a {
+            color: #0074e4;
+        }
+
+        #wpcomm .wc-blog-administrator > .wc-comment-left .wc-comment-label {
+            color: #0074e4;
+            border: none;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #wpcomm .wc-blog-editor > .wc-comment-right .wc-comment-author,
+        #wpcomm .wc-blog-editor > .wc-comment-right .wc-comment-author a {
+            color: #0074e4;
+        }
+
+        #wpcomm .wc-blog-editor > .wc-comment-left .wc-comment-label {
+            color: #0074e4;
+            border: none;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #wpcomm .wc-blog-author > .wc-comment-right .wc-comment-author,
+        #wpcomm .wc-blog-author > .wc-comment-right .wc-comment-author a {
+            color: #0074e4;
+        }
+
+        #wpcomm .wc-blog-author > .wc-comment-left .wc-comment-label {
+            color: #0074e4;
+            border: none;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #wpcomm .wc-blog-contributor > .wc-comment-right .wc-comment-author,
+        #wpcomm .wc-blog-contributor > .wc-comment-right .wc-comment-author a {
+            color: #0074e4;
+        }
+
+        #wpcomm .wc-blog-contributor > .wc-comment-left .wc-comment-label {
+            color: #0074e4;
+            border: none;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #wpcomm .wc-blog-subscriber > .wc-comment-right .wc-comment-author,
+        #wpcomm .wc-blog-subscriber > .wc-comment-right .wc-comment-author a {
+            color: #0074e4;
+        }
+
+        #wpcomm .wc-blog-subscriber > .wc-comment-left .wc-comment-label {
+            color: #0074e4;
+            border: none;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #wpcomm .wc-blog-post_author > .wc-comment-right .wc-comment-author,
+        #wpcomm .wc-blog-post_author > .wc-comment-right .wc-comment-author a {
+            color: #0074e4;
+        }
+
+        #wpcomm .wc-blog-post_author > .wc-comment-left .wc-comment-label {
+            color: #0074e4;
+            border: none;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #wpcomm .wc-blog-guest > .wc-comment-right .wc-comment-author,
+        #wpcomm .wc-blog-guest > .wc-comment-right .wc-comment-author a {
+            color: #0074e4;
+        }
+
+        #wpcomm .wc-blog-guest > .wc-comment-left .wc-comment-label {
+            color: #0074e4;
+            border: none;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #wpcomm .wc-blog-wpseo_manager > .wc-comment-right .wc-comment-author,
+        #wpcomm .wc-blog-wpseo_manager > .wc-comment-right .wc-comment-author a {
+            color: #00B38F;
+        }
+
+        #wpcomm .wc-blog-wpseo_manager > .wc-comment-left .wc-comment-label {
+            color: #00B38F;
+            border: none;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #wpcomm .wc-blog-wpseo_editor > .wc-comment-right .wc-comment-author,
+        #wpcomm .wc-blog-wpseo_editor > .wc-comment-right .wc-comment-author a {
+            color: #00B38F;
+        }
+
+        #wpcomm .wc-blog-wpseo_editor > .wc-comment-left .wc-comment-label {
+            color: #00B38F;
+            border: none;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #wpcomm .wc-comment .wc-comment-left .wc-comment-label {
+            background: #ffffff;
+        }
+
+        #wpcomm .wc-comment-left .wc-follow-user {
+            color: #0074e4;
+        }
+
+        #wpcomm .wc-load-more-submit {
+            border: 1px solid #D9D9D9;
+        }
+
+        #wpcomm .wc-new-loaded-comment > .wc-comment-right {
+            background: #FFFAD6;
+        }
+
+        #wpcomm .wpdiscuz-subscribe-bar {
+            color: #777;
+        }
+
+        #wpcomm .wpdiscuz-front-actions .wpdiscuz-sbs-wrap span {
+            color: #777;
+        }
+
+        #wpcomm .page-numbers {
+            color: #555;
+            border: #555 1px solid;
+        }
+
+        #wpcomm span.current {
+            background: #555;
+        }
+
+        #wpcomm .wpdiscuz-readmore {
+            cursor: pointer;
+            color: #0074e4;
+        }
+
+        #wpcomm .wpdiscuz-textarea-wrap {
+            border: #D9D9D9 1px solid;
+        }
+
+        .wpd-custom-field .wcf-pasiv-star,
+        #wpcomm .wpdiscuz-item .wpdiscuz-rating > label {
+            color: #DDDDDD;
+        }
+
+        #wpcomm .wpdiscuz-item .wpdiscuz-rating:not(:checked) > label:hover,
+        .wpdiscuz-rating:not(:checked) > label:hover ~ label {}
+
+        #wpcomm .wpdiscuz-item .wpdiscuz-rating > input ~ label:hover,
+        #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label,
+        #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label {
+            color: #FFED85;
+        }
+
+        #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover,
+        #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover,
+        #wpcomm .wpdiscuz-item .wpdiscuz-rating > label:hover ~ input:checked ~ label,
+        #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:checked + label:hover ~ label,
+        #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover ~ label,
+        .wpd-custom-field .wcf-active-star,
+        #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label {
+            color: #FFD700;
+        }
+
+        #wpcomm .wc-comment-header {
+            border-top: 1px solid #dedede;
+        }
+
+        #wpcomm .wc-reply .wc-comment-header {
+            border-top: 1px solid #dedede;
+        }
+        /* Buttons */
+
+        #wpcomm button,
+        #wpcomm input[type="button"],
+        #wpcomm input[type="reset"],
+        #wpcomm input[type="submit"] {
+            border: 1px solid;
+            color: ;
+            background-color: ;
+        }
+
+        #wpcomm button:hover,
+        #wpcomm button:focus,
+        #wpcomm input[type="button"]:hover,
+        #wpcomm input[type="button"]:focus,
+        #wpcomm input[type="reset"]:hover,
+        #wpcomm input[type="reset"]:focus,
+        #wpcomm input[type="submit"]:hover,
+        #wpcomm input[type="submit"]:focus {
+            border: 1px solid #333333;
+            background-color: #333333;
+        }
+
+        #wpcomm .wpdiscuz-sort-buttons {
+            color: #777777;
+            float:right;
+        }
+
+        #wpcomm .wpdiscuz-sort-button {
+            color: ;
+            cursor: pointer;
+        }
+
+        #wpcomm .wpdiscuz-sort-button:hover {
+            color: #0074e4!important;
+            cursor: pointer;
+        }
+
+        #wpcomm .wpdiscuz-sort-button-active {
+            color: #0074e4!important;
+            cursor: default!important;
+        }
+
+        #wpcomm .wc-cta-button,
+        #wpcomm .wc-cta-button-x {
+            color: ;
+        }
+
+        #wpcomm .wc-vote-link.wc-up {
+            color: ;
+        }
+
+        #wpcomm .wc-vote-link.wc-down {
+            color: ;
+        }
+
+        #wpcomm .wc-vote-result {
+            color: #999999;
+        }
+
+        #wpcomm .wpf-cta {
+            color: #999999;
+        }
+
+        #wpcomm .wc-comment-link .wc-share-link .wpf-cta {
+            color: #eeeeee;
+        }
+
+        #wpcomm .wc-footer-left .wc-reply-button {
+            border: 1px solid #0074e4!important;
+            color: #0074e4;
+        }
+
+        #wpcomm .wpf-cta:hover {
+            background: #0074e4!important;
+            color: #FFFFFF;
+        }
+
+        #wpcomm .wc-footer-left .wc-reply-button.wc-cta-active,
+        #wpcomm .wc-cta-active {
+            background: #0074e4!important;
+            color: #FFFFFF;
+        }
+
+        #wpcomm .wc-cta-button:hover {
+            background: #0074e4!important;
+            color: #FFFFFF;
+        }
+
+        #wpcomm .wc-footer-right .wc-toggle,
+        #wpcomm .wc-footer-right .wc-toggle a,
+        #wpcomm .wc-footer-right .wc-toggle i {
+            color: #0074e4;
+        }
+        /* STICKY COMMENT HEADER */
+
+        #wpcomm .wc-sticky-comment.wc-comment .wc-comment-header .wpd-sticky {
+            background: #1ecea8;
+            color: #ffffff;
+        }
+
+        #wpcomm .wc-closed-comment.wc-comment .wc-comment-header .wpd-closed {
+            background: #aaaaaa;
+            color: #ffffff;
+        }
+        /* PRIVATE COMMENT HEADER */
+
+        #wpcomm .wc-private-comment.wc-comment .wc-comment-header .wpd-private {
+            background: #999999;
+            color: #ffffff;
+        }
+        /* FOLLOW LINK */
+
+        #wpcomm .wc-follow {
+            color: ;
+        }
+
+        #wpcomm .wc-follow-active {
+            color: #ff7a00;
+        }
+
+        #wpcomm .wc-follow:hover i,
+        #wpcomm .wc-unfollow:hover i,
+        #wpcomm .wc-follow-active:hover i {
+            color: #0074e4;
+        }
+
+        .wpd-wrapper .wpd-list-item.wpd-active {
+            border-top: 3px solid #0074e4;
+        }
+
+        .comments-area {
+            width: auto;
+        }
+
+        .avatar.photo {
+            border: 0!important;
+        }
+
+        .wc-blog-guest.wc-comment-label {
+            display: none!important;
+        }
+
+        .wpdiscuz-subscribe-bar {
+            display: none!important;
+        }
+
+        .wc-comment-link-input {
+            color: #000!important
+        }
+                body
+        {
+        direction:rtl;
+        text-align:right;
+        }
+        @media (max-width: 1199px){
+body.single-post #z-header-bg #z-header #z-header-text .header-category {
+    top: -410px;
+    left:85%;
+        right: 0;
+}
+}
+
+@media (min-width: 1200px){
+body.single-post #z-header-bg #z-header #z-header-text .header-category {
+ left: 72%;
+top: -35px;
+right: 14px;
+}
+}
+
+#wpcomm .wc_comm_form.wc_main_comm_form .wc-field-comment .wc-field-avatararea {
+    width: 40px;
+    margin: 17px 19px;
+    /* float: left; */
+    position: absolute;
+    z-index: 10;
+    top: 0;
+}
+    #share.hidden-xs {
+    position: fixed;
+    right: 0;
+    top: 180px;
+    left: 100%;
+}
+.wpdiscuz-loading-bar-unauth {
+    top: 10;
+    right: 42px;
+}
+
+.mobile-navbar .paxl-carat-down,.mobile-navbar .paxl-carat-up {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    right: 92%;
+    font-size: 16px;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 100%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+}
+.desktop-navbar .dropdown-menu .dropdown-item {
+    padding: 4px 13px 0px 20px;
+    text-align: right;
+}
+.dropdown-menu {
+    text-align:right;
+}
+#header-user .dropdown-menu {
+    right: 38px;
+}
+
+#wpcomm .wc-comment .wc-comment-left {
+    width: 72px;
+    float: right;
+    text-align: center;
+    line-height: 16px;
+    position: relative;
+}
+
+
+#wpcomm .wc-comment-link {
+    font-size: 12px;
+    float: left;
+    text-align: left;
+    line-height: 20px;
+    padding: 0 10 0 0px;
+    margin: 7px 5px 5px 5px;
+}
+
+#wpcomm .wc-comment-author {
+    font-size: 18px;
+    float: right;
+    white-space: normal;
+    text-align: right;
+    padding: 7px 9px 2px 0px;
+}
+#wpcomm .wc-comment .wc-comment-right {
+    margin-right: 90px;
+    padding: 0px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#wpcomm .wc-comment-footer .wc-footer-right {
+    float: left;
+    display: block;
+    margin-top: 0px;
+    line-height: 22px;
+}
+#wpcomm .wc-comment-footer .wc-footer-left {
+    float: right;
+    display: block;
+}
+#wpcomm .wc-comment-right .wc-comment-text {
+    text-align: right;
+}
+    </style>
+</head>
+<body class="post-template-default single single-post postid-227286 single-format-standard 5-myths-about-real-estate-agents-227286 sidebar-primary distinct page-frame-service wpdiscuz_5.3.2 prexit-sticky-subnav-open " cz-shortcut-listen="true">
+
+
+    <nav id="header">
+        <div id="header-user">
+            <div class="container">
+                <ul class="nav justify-content-end">
+                    {% if not user.is_authenticated %}
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link" data-zga-ga-category="utility_nav" data-zga-ga-action="click_through" data-zga-ga-label="sign_in">
+						تسجيل الدخول
+					</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link" data-zga-ga-category="utility_nav" data-zga-ga-action="click_through" data-zga-ga-label="join">
+						إنضم
+					</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item dropdown ">
+                        <a id="dropdown" href="/Profile" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							اعدادات الحساب
+						</a>
+                        <div id="dropdown-menu" class="dropdown-menu" x-placement="bottom-start" style="display:none;position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 32px, 0px);">
+                            <a href="/login" class="dropdown-item" data-zga-ga-category="utility_nav" data-zga-ga-action="click_through" data-zga-ga-label="join-as-agent">
+								إنضم كوكيل
+							</a>
+                            <a href="/logout" class="dropdown-item" data-zga-ga-category="utility_nav" data-zga-ga-action="click_through" data-zga-ga-label="sign_out">
+								تسجيل الخروج
+							</a>
+                        </div>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        <div class="main-nav-container container">
+            <div class="navbar desktop-navbar">
+                <ul id="header-nav-desktop" class="navbar-nav" style="text-align:right;">
+<li id="menu-item-125653" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-125653 nav-item dropdown"><a href="#" class="nav-link" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="buy">شراء</a><i class="paxl paxl-carat-down"></i>
+                        <div class="dropdown-menu">
+                            <a href="/For-Sale-Listings/city/mo" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="mo">منازل للبيع</a><a href="/For-Sale-Listings/city/fsbo" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="fsbo">للبيع من قبل المالك</a><a href="/For-Sale-Listings/city/open-house" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="open-house">البيوت المفتوحة</a><a href="/For-Sale-Listings/city/new-homes" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="new-homes">بناء جديد</a><a href="/For-Sale-Listings/city/coming-soon" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="coming-soon">سينهيء البناء قريباً</a></div>
+                    </li>
+                    <li id="menu-item-125661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-125633 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-125661 nav-item dropdown active"><a href="" class="nav-link active" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="Rent">تأجير</a><i class="paxl paxl-carat-down"></i>
+                        <div class="dropdown-menu">
+                            <a href="" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="" data-zga-ga-label="">استئجار المباني</a><a href="" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="">شقق للإيجار</a><a href="" class="dropdown-item active" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="">فلل للإيجار</a><a href="" class="dropdown-item active" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="">جميع قوائم الإيجار</a></div>
+                    </li>
+                    <li id="menu-item-125664" class="menu-item menu-item-type-post_type_archive menu-item-object-course menu-item-has-children menu-item-125664 nav-item dropdown"><a href="https://www.zillow.com/agent-resources/training/" class="nav-link" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="land">أرض خالية</a><i class="paxl paxl-carat-down"></i>
+                        <div class="dropdown-menu">
+                            <a href="" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="courses">أرض منزل</a><a href="" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="">أرض مزرعة</a><a href="" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label=""> جميع الأراضي</a></div>
+                    </li>
+                    <li class="nav-item dropdown d-lg-none"><a href="/Profile" class="nav-link dropdown-toggle" data-toggle="dropdown">إدارة الحساب</a><i class="paxl paxl-carat-down"></i>
+                        <div class="dropdown-menu"><a href="/login" class="dropdown-item" data-zga-ga-category="utility_nav" data-zga-ga-action="click_through" data-zga-ga-label="join">إنضم كوكيل</a><a href="" class="dropdown-item" data-zga-ga-category="utility_nav" data-zga-ga-action="click_through" data-zga-ga-label="sign_out">تسجيل الخروج</a></div>
+                    </li>
+                    <li id="menu-item-125667" class="nav-item__btn nav-item__btn--blue menu-item menu-item-type-custom menu-item-object-custom menu-item-125667 nav-item"><a href="/contact" class="nav-link" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="contact">الإتصال بنا</a></li>
+                </ul>
+            </div>
+            <a href="" class="navbar-brand" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="logo">
+                <img src="/static/img/logo-transparent.png"/>
+            </a>
+            <button class="navbar-toggler">
+                <div class="menu-text">القائمة</div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+        <div class="navbar mobile-navbar">
+            <div class="container">
+                <ul id="header-nav-mobile" class="navbar-nav">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-125653 nav-item dropdown"><a href="#" class="nav-link" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="buy">شراء</a><i id="buy" class="paxl paxl-carat-down"></i>
+                        <div class="dropdown-menu">
+                            <a href="/For-Sale-Listings/city/mo" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="mo">منازل للبيع</a><a href="/For-Sale-Listings/city/fsbo" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="fsbo">للبيع من قبل المالك</a><a href="/For-Sale-Listings/city/open-house" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="open-house">البيوت المفتوحة</a><a href="/For-Sale-Listings/city/new-homes" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="new-homes">بناء جديد</a><a href="/For-Sale-Listings/city/coming-soon" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="coming-soon">سينهيء البناء قريباً</a></div>
+                                   </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-125633 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-125661 nav-item dropdown active"><a href="" class="nav-link active" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="resources">تأجير</a><i id="Rent" class="paxl paxl-carat-down"></i>
+                        <div class="dropdown-menu">
+                            <a href="" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="" data-zga-ga-label="">استئجار المباني</a><a href="" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="">شقق للإيجار</a><a href="" class="dropdown-item active" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="">فلل للإيجار</a><a href="" class="dropdown-item active" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="">جميع قوائم الإيجار</a></div>
+                      </li>
+                    <li class="menu-item menu-item-type-post_type_archive menu-item-object-course menu-item-has-children menu-item-125664 nav-item dropdown"><a href="" class="nav-link" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="training">أرض خالية</a><i id="land" class="paxl paxl-carat-down"></i>
+                        <div class="dropdown-menu">
+                            <a href="" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="courses">أرض منزل</a><a href="" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="">أرض مزرعة</a><a href="" class="dropdown-item" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label=""> جميع الأراضي</a></div>
+                     </li>
+                    <li class="nav-item dropdown d-lg-none"><a href="/Profile" class="nav-link dropdown-toggle" data-toggle="dropdown">إدارة الحساب</a><i id="MyAccount" class="paxl paxl-carat-down"></i>
+                        <div class="dropdown-menu"><a href="/login" data-zga-ga-category="utility_nav" data-zga-ga-action="click_through" data-zga-ga-label="join">إنظم كوكيل</a><a href="/logout" class="dropdown-item" data-zga-ga-category="utility_nav" data-zga-ga-action="click_through" data-zga-ga-label="sign_out">تسجيل الخروج</a></div>
+                    </li>
+                    <li class="nav-item__btn nav-item__btn--blue menu-item menu-item-type-custom menu-item-object-custom menu-item-125667 nav-item"><a href="/contact" class="nav-link" data-zga-ga-category="top_nav" data-zga-ga-action="click_through" data-zga-ga-label="contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+            <!-- #header-static -->
+
+            <!-- sub nav specific to blog -->
+
+            <!-- Return if the blog has not assigned a menu to our subnav location -->
+
+            <!-- Desktop subnav container -->
+            <div id="prexit_subnav_sticky" class="prexit_subnav_wrapper prexit_sticky_subnav">
+                <div id="header_subnav_container">
+
+                    <!-- Add CTA based on ACF option -->
+
+                    <button id="prexit_subnav_search_button" class="subnav_search_button subnav_search_icon">
+                        <span id="subnav_search_search-icon" style="display:flex;">
+					<!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" class="icon-prexit-search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+<style type="text/css">
+	.prexit-search-st0{fill:none;stroke:#006BFF;stroke-width:2;}
+	.prexit-search-st1{fill:none;stroke:#006BFF;stroke-width:2;stroke-linecap:round;}
+</style>
+<title>Group Copy 9</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Mobile-Nav-Closed-" transform="translate(-334.000000, -18.000000)">
+		<g id="Group-2" transform="translate(-1.000000, 0.000000)">
+			<g id="Group-Copy-9" transform="translate(335.000000, 18.000000)">
+				<circle id="Oval" class="prexit-search-st0" cx="8.6" cy="8.6" r="7.6"></circle>
+				<path id="Line" class="prexit-search-st1" d="M14.6,14.6L19,19"></path>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
+				</span>
+                        <span id="subnav_search_close-icon" style="display:none">
+					<svg id="438d444c-af25-457d-ab68-e3defea2a945" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="icon-prexit-close"><title>prexit-close</title><g id="fce487b5-bf0a-42ab-8f86-0f3148b3d6ac" data-name="Page-1"><g id="57ef65ca-650d-4056-8461-210f966664fa" data-name="Mobile-Nav-Search-Open"><g id="897d43f8-ea00-4dd4-8468-8c7e6f0c6a87" data-name="Group-3"><g id="15ee6e8d-3f79-431c-8a02-94d83a6fdabd" data-name="Group-2-Copy-2"><g id="0a833ec8-7138-4724-a48b-635855b7e4bc" data-name="Group-16"><path id="64f8119f-8cd8-4010-9b47-41c8a9b034c8" data-name="Line-4-Copy-12" d="M3,3,17,16.9" transform="translate(-2 -2)" style="fill:none;stroke:#006bff;stroke-linecap:round;stroke-width:2px"></path><path d="M3,17,17,3.1" transform="translate(-2 -2)" style="fill:none;stroke:#006bff;stroke-linecap:round;stroke-width:2px"></path></g></g></g></g></g></svg>
+				</span>
+
+                    </button>
+
+                    <!-- sub nav menu -->
+                    <nav id="header_subnav" style="opacity: 1;">
+                        <!-- Create the blog home as the first item in the subnav -->
+
+                        <a id="prexit_blog_name_a" href="https://www.zillow.com/blog/ ">
+                            <span id="subnav_blogname"> المدونة
+			</span>
+                        </a>
+                        <ul id="menu-blog-topics" class="subnav_menu">
+                            <li id="menu-item-40466" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40466 current-post-ancestor current-menu-parent current-post-parent"><a title="market-trends" href="">اتجاهات السوق</a></li>
+                            <li id="menu-item-161215" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-161215"><a href="">تحسين المنزل</a></li>
+                            <li id="menu-item-198253" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-198253"><a href="">أول شخص</a></li>
+                            <li id="menu-item-161216" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-161216"><a href="">منازل فريدة من نوعها</a></li>
+                            <li id="menu-item-40465" class="menu-item menu-item-type-taxonomy menu-item-object-category  menu-item-40465"><a title="tips-advice" href="">نصائح & إستشارات</a></li>
+                            <li id="subnav_overflow_button" class="subnav_overflow_button hidden" count="0" style="">More…
+                                <ul id="subnav_overflow_items" class="hidden-links"></ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- search form container -->
+                    <div id="subnav_search_container" class="subnav_search_container">
+                        <form action="https://www.zillow.com/blog/" method="get" role="search" class="prexit-subnav-search">
+                            <div class="search_input_container">
+                                <input id="prexit-search-input" type="search" name="s" placeholder="Search Zillow Porchlight" class="prexit-form-control" required="">
+                                <input type="submit" name="submit" hidefocus="true" tabindex="-1" autocomplete="off">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- subnav_search_container -->
+
+                </div>
+                <!-- #header_subnav_container -->
+
+            </div>
+            <!-- prexit_subnav_sticky/static -->
+
+            <!-- Mobile subnav  -->
+            <div id="mobile_nav_container">
+
+                <!-- Logo/action bar -->
+                <div id="mobile_action_bar" class="mobile_action_bar">
+
+                    <!-- menu toggle button -->
+
+
+                </div>
+                <!-- .mobile_action_bar -->
+
+                <!-- Always show blog name if it's selected in ACF field -->
+                <div id="prexit_mobile_blogname" class="mobile_subnav_blogname">
+
+                    <span id="subnav_mobile_blogname">
+        Zillow Porchlight        </span>
+                </div>
+
+                <div id="mobile_subnav">
+
+                    <!-- Build toggle sub-menu button -->
+
+                    <!-- Check if the home menu item has been overridden -->
+
+                    <div class="mobile_menu_container">
+                        <!-- Use menu location here instead of menu so all themes can create the same location -->
+
+                        <!-- GA Event for home menu item -->
+
+                        <div id="prexit_mobile_blogname" class="mobile_subnav_blogname">
+                            <span id="subnav_mobile_blogname" class="">
+                        <a href="https://www.zillow.com/blog/">
+                        Zillow Porchlight                        </a>
+                    </span>
+                        </div>
+                        <ul id="menu-blog-topics-1" class="mobile_subnav_menu">
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40466"><a title="market-trends" href="https://www.zillow.com/blog/market-trends/">Market Trends</a>
+                                <button onclick="mobile_toggle_submenu(this)" class="mobile_show_submenu"><span class="mobile_submenu_toggle_up submenu_icon" style="display: block;"><!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" class="icon-prexit-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
+<style type="text/css">
+	.prexit-down-st0{fill:none;stroke:#0074E4;stroke-width:2;stroke-linecap:round;}
+</style>
+<title>Opened Copy</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Mobile-nav-open-dropdown-closed" transform="translate(-337.000000, -243.000000)">
+		<polyline id="Opened-Copy" class="prexit-down-st0" points="346,246 342,250 338,246 		"></polyline>
+	</g>
+</g>
+</svg>
+</span></button>
+                            </li>
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-161215"><a href="https://www.zillow.com/blog/home-improvement/">Home Improvement</a>
+                                <button onclick="mobile_toggle_submenu(this)" class="mobile_show_submenu"><span class="mobile_submenu_toggle_up submenu_icon" style="display: block;"><!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" class="icon-prexit-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
+<style type="text/css">
+	.prexit-down-st0{fill:none;stroke:#0074E4;stroke-width:2;stroke-linecap:round;}
+</style>
+<title>Opened Copy</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Mobile-nav-open-dropdown-closed" transform="translate(-337.000000, -243.000000)">
+		<polyline id="Opened-Copy" class="prexit-down-st0" points="346,246 342,250 338,246 		"></polyline>
+	</g>
+</g>
+</svg>
+</span></button>
+                            </li>
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-198253"><a href="https://www.zillow.com/blog/first-person/">First Person</a>
+                                <button onclick="mobile_toggle_submenu(this)" class="mobile_show_submenu"><span class="mobile_submenu_toggle_up submenu_icon" style="display: block;"><!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" class="icon-prexit-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
+<style type="text/css">
+	.prexit-down-st0{fill:none;stroke:#0074E4;stroke-width:2;stroke-linecap:round;}
+</style>
+<title>Opened Copy</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Mobile-nav-open-dropdown-closed" transform="translate(-337.000000, -243.000000)">
+		<polyline id="Opened-Copy" class="prexit-down-st0" points="346,246 342,250 338,246 		"></polyline>
+	</g>
+</g>
+</svg>
+</span></button>
+                            </li>
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-161216"><a href="https://www.zillow.com/blog/unique-homes/">Unique Homes</a>
+                                <button onclick="mobile_toggle_submenu(this)" class="mobile_show_submenu"><span class="mobile_submenu_toggle_up submenu_icon" style="display: block;"><!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" class="icon-prexit-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
+<style type="text/css">
+	.prexit-down-st0{fill:none;stroke:#0074E4;stroke-width:2;stroke-linecap:round;}
+</style>
+<title>Opened Copy</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Mobile-nav-open-dropdown-closed" transform="translate(-337.000000, -243.000000)">
+		<polyline id="Opened-Copy" class="prexit-down-st0" points="346,246 342,250 338,246 		"></polyline>
+	</g>
+</g>
+</svg>
+</span></button>
+                            </li>
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-40465"><a title="tips-advice" href="https://www.zillow.com/blog/tips-advice/">Tips &amp; Advice</a>
+                                <button onclick="mobile_toggle_submenu(this)" class="mobile_show_submenu"><span class="mobile_submenu_toggle_up submenu_icon" style="display: block;"><!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" class="icon-prexit-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
+<style type="text/css">
+	.prexit-down-st0{fill:none;stroke:#0074E4;stroke-width:2;stroke-linecap:round;}
+</style>
+<title>Opened Copy</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Mobile-nav-open-dropdown-closed" transform="translate(-337.000000, -243.000000)">
+		<polyline id="Opened-Copy" class="prexit-down-st0" points="346,246 342,250 338,246 		"></polyline>
+	</g>
+</g>
+</svg>
+</span></button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="mobile_nav_back_home">
+                        <p><a href="https://zillow.com"><span><!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" class="icon-prexit-back" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 10" style="enable-background:new 0 0 15 10;" xml:space="preserve">
+<style type="text/css">
+	.prexit-back-arrow-st0{fill:none;stroke:#0074E4;stroke-linecap:round;}
+</style>
+<title>Shape</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1_1_">
+	<g id="Mobile-nav-open-dropdown-closed" transform="translate(-337.000000, -243.000000)">
+		<polyline id="Opened-Copy" class="prexit-back-arrow-st0" points="342.2,252.5 337.8,248 342.2,243.5 		"></polyline>
+	</g>
+</g>
+<line class="prexit-back-arrow-st0" x1="13" y1="5" x2="1" y2="5"></line>
+</svg>
+</span> Return to Zillow.com</a></p>
+                    </div>
+
+                </div>
+                <!-- #mobile_subnav_menu -->
+
+                <!-- Container needed for when the search button is clicked -->
+                <div id="mobile_search_container" style="display: none;">
+                    <form action="https://www.zillow.com/blog/" method="get" role="search" class="subnav-mobile-search">
+                        <div class="search_input_container">
+                            <input id="prexit_mobile_search_input" type="search" name="s" placeholder="Search Zillow Porchlight" class="form-control" required="">
+                            <input type="submit" name="submit" hidefocus="true" tabindex="-1" autocomplete="off">
+
+                            <button id="mobile_search_button">
+                                <span id="subnav_mobile_search-icon" style="display:flex; fill:#62aef7;">
+                        <!--?xml version="1.0" encoding="utf-8"?-->
+<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" class="icon-prexit-search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+<style type="text/css">
+	.prexit-search-st0{fill:none;stroke:#006BFF;stroke-width:2;}
+	.prexit-search-st1{fill:none;stroke:#006BFF;stroke-width:2;stroke-linecap:round;}
+</style>
+<title>Group Copy 9</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1">
+	<g id="Mobile-Nav-Closed-" transform="translate(-334.000000, -18.000000)">
+		<g id="Group-2" transform="translate(-1.000000, 0.000000)">
+			<g id="Group-Copy-9" transform="translate(335.000000, 18.000000)">
+				<circle id="Oval" class="prexit-search-st0" cx="8.6" cy="8.6" r="7.6"></circle>
+				<path id="Line" class="prexit-search-st1" d="M14.6,14.6L19,19"></path>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
+                    </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <!-- #header_navigation_container -->
+
+        <div id="z-header-bg" style="background-image:url(https://wp-tid.zillowstatic.com/1/agentmyths-5d1d1d-1400x793.jpg); background-position: center center;">
+            <div id="z-header" class="">
+                <div class="toast alert alert-success alert-dismissible" role="alert">
+                    <div class="container">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="zsg-times"></span></button>
+                    </div>
+                </div>
+
+                <div id="z-header-text">
+                    <div class="container" style="text-align:right;">
+                         <h1 class="header-title">{{ topic.subject }}</h1>
+
+                        <span class="header-author">
+   <span class="header-author">  بواسطة <a href="https://www.zillow.com/blog/author/brendondesimone/" title="Posts by Brendon DeSimone" rel="nofollow">{{ topic.created_by.username }}</a>  في <strong>{{ topic.last_updated|date:"M d, Y" }}</strong></span>
+</span>
+
+                        <hr class="hidden-lg">
+
+                        <span class="header-category hidden-xs">اعلم كيف</span>
+
+                        <ul id="share" class="visible-xs visible-sm">
+                            <li>
+                                <a href="https://twitter.com/home?status=Don%27t+Believe+These+5+Myths+About+Real+Estate+Agents%20https%3A%2F%2Fwww.zillow.com%2Fblog%2F5-myths-about-real-estate-agents-227286%2F" class="twitter" target="_blank" data-ga-category="Blog" data-ga-action="Share on" data-ga-label="Twitter"><i class="zsg-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.zillow.com%2Fblog%2F5-myths-about-real-estate-agents-227286%2F" class="facebook" target="_blank" data-ga-category="Blog" data-ga-action="Share on" data-ga-label="Facebook"><i class="zsg-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.zillow.com%2Fblog%2F5-myths-about-real-estate-agents-227286%2F&amp;title=Don%27t+Believe+These+5+Myths+About+Real+Estate+Agents&amp;summary=Do+you+need+one%3F+Do+they+pocket+the+whole+commission%3F+Let%E2%80%99s+set+the+facts+straight.&amp;source=Zillow+Porchlight" class="linkedin" target="_blank" data-ga-category="Blog" data-ga-action="Share on" data-ga-label="LinkedIn"><i class="zsg-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.zillow.com%2Fblog%2F5-myths-about-real-estate-agents-227286%2F&amp;media=https%3A%2F%2Fwp-tid.zillowstatic.com%2F1%2Fagentmyths-5d1d1d.jpg&amp;description=Don%27t+Believe+These+5+Myths+About+Real+Estate+Agents" class="pinterest" target="_blank" data-ga-category="Blog" data-ga-action="Share on" data-ga-label="Pinterest"><i class="zsg-pinterest"></i></a>
+                            </li>
+                            <li>
+                                <a href="mailto:?subject=Don%27t+Believe+These+5+Myths+About+Real+Estate+Agents&amp;body=https%3A%2F%2Fwww.zillow.com%2Fblog%2F5-myths-about-real-estate-agents-227286%2F" class="email" data-ga-category="Blog" data-ga-action="Share on" data-ga-label="Email"><i class="zsg-envelope"></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="subnav" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-8">
+                        <div class="modal-content">
+                            <div class="row">
+
+                                <div class="col-sm-8 col-sm-push-4 modal-topics">
+
+                                    <h4 class="modal-title">Blog Topics</h4>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="https://www.zillow.com/blog/market-trends/" data-ga-category="Blog" data-ga-action="Navigation" data-ga-label="Market Trends"><i class="zsg-fa-signal "></i> Market Trends</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.zillow.com/blog/home-improvement/" data-ga-category="Blog" data-ga-action="Navigation" data-ga-label="Home Improvement"><i class="zsg-fa-wrench "></i> Home Improvement</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.zillow.com/blog/first-person/" data-ga-category="Blog" data-ga-action="Navigation" data-ga-label="First Person"><i class="zsg-user "></i> First Person</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.zillow.com/blog/unique-homes/" data-ga-category="Blog" data-ga-action="Navigation" data-ga-label="Unique Homes"><i class="zsg-fa-home "></i> Unique Homes</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.zillow.com/blog/tips-advice/" data-ga-category="Blog" data-ga-action="Navigation" data-ga-label="Tips &amp; Advice"><i class="zsg-fa-lightbulb-o "></i> Tips &amp; Advice</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <hr class="visible-xs">
+
+                                <div class="col-sm-4 col-sm-pull-8 modal-featured">
+
+                                    <h4 class="modal-title">Featured Post</h4>
+
+                                    <article class="post story">
+
+                                        <div class="row">
+                                            <div class="col-sm-4">
+
+                                                <div class="post-image" style="background-image: url(https://wp-tid.zillowstatic.com/1/packed-boxes-and-furniture-wrapped-for-moving-e7d6ea-300x200.jpg); background-position: center center;">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-8">
+
+                                                <p class="post-detail">
+                                                    <span class="post-category"><a href="https://www.zillow.com/blog/tips-advice/"><i class="zsg-fa-lightbulb-o"></i> Tips &amp; Advice</a></span> /
+                                                    <i class="zsg-fa-pencil"></i> story </p>
+
+                                                <h5 class="post-title"><a href="https://www.zillow.com/blog/how-much-will-you-pay-to-move-91663/">How Much Does It Cost to Move?</a></h5>
+
+                                                <p class="post-author">
+                                                    By <a href="https://www.zillow.com/blog/author/maryboone/" title="Posts by Mary Boone" rel="nofollow">Mary Boone</a> on <strong>23 Mar 2018</strong>
+                                                </p>
+
+                                                <p class="post-excerpt">
+                                                    The dollars and cents that go into moving vary greatly depending on a number of factors. </p>
+
+                                                <a href="https://www.zillow.com/blog/how-much-will-you-pay-to-move-91663/" class="post-permalink">Read Full Story <i class="zsg-chevron-right"></i></a>
+
+                                            </div>
+                                        </div>
+
+                                    </article>
+
+                                </div>
+
+                                <hr class="visible-xs">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 modal-widget">
+                        <div class="modal-content">
+
+                            <h4 class="modal-title">Zillow Tools</h4>
+                            <div class="menu-zillow-tools-container">
+                                <ul id="menu-zillow-tools" class="menu">
+                                    <li id="menu-item-198261" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198261"><a href="https://www.zillow.com/homes/">Find homes for sale</a></li>
+                                    <li id="menu-item-198262" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198262"><a href="https://www.zillow.com/homes/for_rent/">Search for rentals</a></li>
+                                    <li id="menu-item-198263" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198263"><a href="https://www.zillow.com/mortgage-rates/">Check the latest mortgage rates</a></li>
+                                    <li id="menu-item-198264" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198264"><a href="https://www.zillow.com/digs/">Get home design inspiration</a></li>
+                                    <li id="menu-item-198265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198265"><a href="https://www.zillow.com/agent-finder/">Connect with a local agent</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap container" role="document" style="position: relative;">
+        <div class="content content-main">
+            <main id="content-main" class="main" role="main" style="min-height: 1180px; padding-top: 139px;">
+
+                <div id="subnav-in-main">
+                    <div class="container">
+                        <div class="row z-mobile-subnav">
+                            <div>
+                                <h1 id="subnav-page-title" class="cat-subnav cat-subnav-tips-advice"></h1>
+                                <span class="select-wrap cat-subnav cat-subnav-tips-advice" id="z-subnav-mobile"><select data-wrapper-id="z-subnav-mobile" data-wrapper-class="cat-subnav cat-subnav-tips-advice" class="cat-subnav cat-subnav-tips-advice z-jump-menu pretty-select" style="visibility: visible;"><option data-target="https://www.zillow.com/blog/tips-advice/">All topics</option><option data-target="https://www.zillow.com/blog/market-trends/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-40466">Market Trends</option>
+<option data-target="https://www.zillow.com/blog/home-improvement/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-161215">Home Improvement</option>
+<option data-target="https://www.zillow.com/blog/first-person/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-198253">First Person</option>
+<option data-target="https://www.zillow.com/blog/unique-homes/" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-161216">Unique Homes</option>
+<option data-target="https://www.zillow.com/blog/tips-advice/" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-40465">Tips &amp; Advice</option>
+</select></span> </div>
+                        </div>
+                    </div>
+                </div>
+
+                <article class="post-227286 post type-post status-publish format-standard has-post-thumbnail hentry category-tips-advice tag-home-buying tag-home-selling tag-real-estate-agents persona-beth persona-harriet persona-susan">
+
+                    <section class="entry-content">
+                         <p class="lead">معلومات عن الوكلاء العقاريين</p>
+{{ topic.posts.first.get_message_as_markdown }}
+                    </section>
+
+                    <footer>
+                        <h3>عن المؤلف</h3>
+                        <div class="media">
+                            <div class="media-left">
+                                <img alt="{{ topic.created_by.profile.photo.url }}" src="{{ topic.created_by.profile.photo.url }}" srcset="{{ topic.created_by.profile.photo.url }}" class="avatar avatar-90 photo media-object" height="90" width="90"> </div>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="/{{topic.created_by.profile.screenName}}" title="نشر بواسطة  {{topic.created_by.username}}" rel="nofollow"> {{topic.created_by.username}}</a></h4>{{topic.created_by.profile.description}} </div>
+                              </div>
+                    </footer>
+
+                    <div class="wpdiscuz_top_clearing"></div>
+                    <div id="comments" class="comments-area">
+                        <div id="respond" style="width: 0;height: 0;clear: both;margin: 0;padding: 0;"></div>
+                        <div id="wpcomm" class="wpdiscuz_unauth wpd-default">
+                            <div class="wpdiscuz-form-top-bar">
+                                <div class="wpdiscuz-ftb-left">
+                                    <div id="wc_show_hide_loggedin_username">
+                                    </div>
+                                </div>
+                                <div class="wpd-clear"></div>
+                            </div>
+
+                            <div class="wc_social_plugin_wrapper">
+                            </div>
+                            <div class="wc-form-wrapper wc-main-form-wrapper" id="wc-main-form-wrapper-0_0">
+                                <div class="wpdiscuz-comment-message" style="display: block;"></div>
+                                <form id="wc_comm_form" class="wc_comm_form wc_main_comm_form" method="post" enctype="multipart/form-data">
+                                    <div class="wc-field-comment">
+                                        <div class="wpdiscuz-item wc-field-textarea">
+                                            <div class="wpdiscuz-textarea-wrap ">
+
+                                                <div class="wc-field-avatararea">
+                                                    <img alt="avatar" src="https://secure.gravatar.com/avatar/?s=40&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo avatar-default" height="40" width="40"> </div>
+
+                                                <textarea id="wc-textarea-0_0" placeholder="اشترك في النقاش..." required="" name="wc_comment" class="wc_comment wpd-field"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="wc-form-footer" style="display: none;">
+                                        <div class="wpd-form-row">
+                                            <div class="wpd-form-col-left">
+                                                <div class="wpdiscuz-item wc_name-wrapper wpd-has-icon">
+                                                    <div class="wpd-field-icon"><i class="fas fa-user"></i></div>
+                                                    <input value="" required="required" class="wc_name wpd-field" type="text" name="wc_name" placeholder="الأسم*" maxlength="50" pattern=".{3,50}" title="">
+                                                </div>
+                                                <div class="wpdiscuz-item wc_email-wrapper wpd-has-icon">
+                                                    <div class="wpd-field-icon"><i class="fas fa-at"></i></div>
+                                                    <input id="wc_email" value="" required="required" class="wc_email wpd-field" type="email" name="wc_email" placeholder="البريد الإلكتروني*">
+                                                </div>
+                                            </div>
+                                            <div class="wpd-form-col-right">
+                                                <div class="wc-field-submit">
+                                                    <input class="wc_comm_submit wc_not_clicked button alt" type="submit" name="submit" value="نشر التعليق">
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <input type="hidden" class="wpdiscuz_unique_id" value="0_0" name="wpdiscuz_unique_id">
+                                </form>
+                                <div class="wpdiscuz-form-bottom-bar">
+                                    <div class="wpdiscuz-fbb-left">
+                                        <div class="wpdiscuz-stat wpd-stat-threads wpd-tooltip-right">
+                                            <i class="fas fa-align-left fa-rotate-180" data-fa-transform="rotate-180"></i><span class="wpd-stat-threads-count">{{replies}}</span>
+                                            <wpdtip>التعليق</wpdtip>
+                                        </div>
+                                        <div class="wpdiscuz-stat wpd-stat-replies wpd-tooltip-left">
+                                            <i class="far fa-comments"></i><span class="wpd-stat-replies-count">0</span>
+                                            <wpdtip>الردود</wpdtip>
+                                        </div>
+                                        <div class="wpdiscuz-stat wpd-stat-subscribers wpd-tooltip-left">
+                                            <i class="fas fa-rss"></i><span>0</span>
+                                            <wpdtip>المتابعات</wpdtip>
+                                        </div>&nbsp;
+
+                                        <div class="wpdiscuz-stat wpd-stat-reacted wpd-tooltip">
+                                            <i class="fas fa-bolt"></i>
+                                            <wpdtip>ردة فعل معظم التعاليق</wpdtip>
+                                        </div>
+                                        <div class="wpdiscuz-stat wpd-stat-hot wpd-tooltip">
+                                            <i class="fab fa-hotjar"></i>
+                                            <wpdtip>قوة التعليق</wpdtip>
+                                        </div>
+                                    </div>
+                                    <div class="wpdiscuz-fbb-right">
+                                        <div class="wpdiscuz-stat wpd-stat-users wpd-tooltip">
+                                            <i class="fas fa-user-circle"></i> <span class="wpd-stat-authors-count">{{repliesAuthor}}</span>
+                                            <wpdtip>تعاليق المؤلف</wpdtip>
+                                        </div>
+                                        <div class="wpdiscuz-users wpd-tooltip-right">
+                                            <img alt="ddfgdf" src="https://secure.gravatar.com/avatar/849426ade58f177668d7dd589b03a283?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/849426ade58f177668d7dd589b03a283?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64" title="ddfgdf"><img alt="JOHN G. ANIA" src="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64" title="JOHN G. ANIA"><img alt="mario" src="https://secure.gravatar.com/avatar/683b48f6aca54098949673f303909d4b?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/683b48f6aca54098949673f303909d4b?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64" title="mario"><img alt="mario" src="https://secure.gravatar.com/avatar/5ddfa8b2b771613383406b3a8c912f75?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/5ddfa8b2b771613383406b3a8c912f75?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64" title="mario"><img alt="thomas.le990" src="https://secure.gravatar.com/avatar/2510a93ad484ebdcd94cd29b432a8545?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/2510a93ad484ebdcd94cd29b432a8545?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64" title="thomas.le990">
+                                            <wpdtip>مؤلفي التعليقات الجدد</wpdtip>
+                                        </div>
+                                    </div>
+                                    <div class="wpd-clear"></div>
+                                </div>
+                            </div>
+                            <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+                                <div class="wc-form-wrapper wc-secondary-form-wrapper" id="wc-secondary-form-wrapper-wpdiscuzuniqueid" style="display: none;">
+                                    <div class="wpdiscuz-comment-message" style="display: block;"></div>
+                                    <div class="wc-secondary-forms-social-content"></div>
+                                    <div class="clearfix"></div>
+                                    <form class="wc_comm_form wc-secondary-form-wrapper" method="post" enctype="multipart/form-data">
+                                        <div class="wc-field-comment">
+                                            <div class="wpdiscuz-item wc-field-textarea">
+                                                <div class="wpdiscuz-textarea-wrap ">
+
+                                                    <div class="wc-field-avatararea">
+                                                        <img alt="avatar" src="https://secure.gravatar.com/avatar/?s=48&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/?s=96&amp;d=mm&amp;r=g 2x" class="avatar avatar-48 photo avatar-default" height="48" width="48"> </div>
+
+                                                    <textarea id="wc-textarea-wpdiscuzuniqueid" placeholder="Join the discussion..." required="" name="wc_comment" class="wc_comment wpd-field"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="wc-form-footer" style="display: none;">
+                                            <div class="wpd-form-row">
+                                                <div class="wpd-form-col-left">
+                                                    <div class="wpdiscuz-item wc_name-wrapper wpd-has-icon">
+                                                        <div class="wpd-field-icon"><i class="fas fa-user"></i></div>
+                                                        <input value="" required="required" class="wc_name wpd-field" type="text" name="wc_name" placeholder="Name*" maxlength="50" pattern=".{3,50}" title="">
+                                                    </div>
+                                                    <div class="wpdiscuz-item wc_email-wrapper wpd-has-icon">
+                                                        <div class="wpd-field-icon"><i class="fas fa-at"></i></div>
+                                                        <input value="" required="required" class="wc_email wpd-field" type="email" name="wc_email" placeholder="Email*">
+                                                    </div>
+                                                </div>
+                                                <div class="wpd-form-col-right">
+                                                    <div class="wc-field-submit">
+                                                        <input class="wc_comm_submit wc_not_clicked button alt" type="submit" name="submit" value="Post Comment">
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <input type="hidden" class="wpdiscuz_unique_id" value="wpdiscuzuniqueid" name="wpdiscuz_unique_id">
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="wpdiscuz-front-actions ">
+                                <div class="wpdiscuz-sbs-wrap">
+                                    <span><i class="far fa-envelope" aria-hidden="true"></i>&nbsp; الإشتراك &nbsp;<i class="fas fa-caret-down" aria-hidden="true"></i></span>
+                                </div>
+
+                                <div class="wpdiscuz-sort-buttons" style="font-size:14px; color: #777;">
+                                    <i class="fas fa-caret-up" aria-hidden="true"></i>
+                                    <span class="wpdiscuz-sort-button wpdiscuz-date-sort-desc wpdiscuz-sort-button-active">الأحدث</span> <i class="fas fa-caret-up" aria-hidden="true"></i>
+                                    <span class="wpdiscuz-sort-button wpdiscuz-date-sort-asc ">الأقدم</span>
+                                    <i class="fas fa-caret-up" aria-hidden="true"></i> <span class="wpdiscuz-sort-button wpdiscuz-vote-sort-up ">معظم التصويت</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="wpdiscuz-subscribe-bar wpdiscuz-hidden">
+                                <form action="https://www.zillow.com/blog/zgwp/wp-admin/admin-ajax.php?action=addSubscription" method="post" id="wpdiscuz-subscribe-form">
+                                    <div class="wpdiscuz-subscribe-form-intro">أشعار من</div>
+                                    <div class="wpdiscuz-subscribe-form-option" style="width:40%;">
+                                        <select class="wpdiscuz_select" name="wpdiscuzSubscriptionType">
+                                            <option value="post">تعليقات المتابعة الجديدة</option>
+                                            <option value="all_comment" disabled="">ردود جديدة على تعليقاتي</option>
+                                        </select>
+                                    </div>
+                                    <div class="wpdiscuz-item wpdiscuz-subscribe-form-email">
+                                        <input class="email" type="email" name="wpdiscuzSubscriptionEmail" required="required" value="" placeholder="البريد الإلكتروني">
+                                    </div>
+                                    <div class="wpdiscuz-subscribe-form-button">
+                                        <input id="wpdiscuz_subscription_button" type="submit" value="›" name="wpdiscuz_subscription_button">
+                                    </div>
+                                    <input type="hidden" id="wpdiscuz_subscribe_form_nonce" name="wpdiscuz_subscribe_form_nonce" value="67239881ae">
+                                    <input type="hidden" name="_wp_http_referer" value="/blog/5-myths-about-real-estate-agents-227286/">
+                                    <input type="hidden" value="227286" name="wpdiscuzSubscriptionPostId">
+                                </form>
+                                <div class="wpdiscuz_clear"></div>
+                            </div>
+
+                            <div id="wcThreadWrapper" class="wc-thread-wrapper">
+
+                                  {% for post in topic.get_last_ten_posts %}
+
+
+                          {% if not forloop.last  %}
+                                <div id="wc-comm-463162_0" class="wc-comment wc-blog-guest wc_comment_level-1">
+                                    <div class="wc-comment-left">
+                                        <div class="wpd-xborder"></div>
+                                        {% if post.created_by.profile.photo.url %}
+                                        <img alt="{{ post.created_by.username }}" src="{{post.created_by.profile.photo.url}}" srcset="{{post.created_by.profile.photo.url}}" class="avatar avatar-64 photo" height="64" width="64">
+                                        {% else %}
+                                        <img alt="{{ post.created_by.username }}" src="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64">
+                                        <div class="wc-blog-guest wc-comment-label"><span>Guest</span></div>
+                                        {% endif %}
+                                    </div>
+                                    <div id="comment-463162" class="wc-comment-right">
+                                        <div class="wc-comment-header">
+                                            <div class="wc-comment-author ">{{ post.created_by.username }}</div>
+                                            <div class="wc-comment-link"><span class="wc-comment-img-link-wrap"><i class="fas fa-link wc-comment-img-link wpf-cta" data-comment-url="https://www.zillow.com/blog/5-myths-about-real-estate-agents-227286/#comment-463162" aria-hidden="true"></i></span></div>
+                                            <div class="wpdiscuz_clear"></div>
+                                        </div>
+                                        <div class="wc-comment-text">
+                                            <p>{{ post.get_message_as_markdown }}</p>
+                                        </div>
+                                        <div class="wc-comment-footer">
+                                            <div class="wc-footer-left"><span id="wc-up{{post.pk}}" class="wc-vote-link wc-up wc_vote wc_not_clicked"><i class="fas fa-plus wc-vote-img-up"></i><span>تصويت اعلى</span></span><span id="wc-vote-result{{post.pk}}" class="wc-vote-result">{{post.votes.count}}</span><span id="wc-down{{post.pk}}" class="wc-vote-link wc-down wc_vote wc_not_clicked"><i class="fas fa-minus wc-vote-img-down"></i><span>تصويت اسفل</span></span>&nbsp;</div>
+                                            <div class="wc-footer-right">
+                                                <div class="wc-comment-date"><i class="far fa-clock" aria-hidden="true"></i>{{ post.created_at|naturaltime }}</div>
+                                            </div>
+                                            <div class="wpdiscuz_clear"></div>
+                                        </div>
+                                    </div>
+                                    <div class="wpdiscuz-comment-message"></div>
+                                    <div id="wpdiscuz_form_anchor-463162_0" class="wpdiscuz_clear"></div>
+                                </div>
+                                {% endif %}
+  {% endfor %}
+
+                                <div class="wpdiscuz-comment-pagination" style="display:none;">
+                                    <div class="wc-load-more-submit-wrap">
+                                        <div class="wc-load-more-link" data-lastparentid="457902">
+                                            <button name="submit" class="wc-load-more-submit wc-loaded button">
+                                                تحميل المزيد من التعليقات </button>
+                                        </div>
+                                    </div>
+                                    <input id="wpdiscuzHasMoreComments" type="hidden" value="1">
+                                </div>
+                            </div>
+                            <div class="wpdiscuz_clear"></div>
+                        </div>
+                    </div>
+                    <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar wpdiscuz-loading-bar-unauth"></div>
+
+                </article>
+            </main>
+            <!-- /.main -->
+            <aside class="sidebar" role="complementary">
+                <section class="widget property_search_widget-2 property_search_widget">
+                    <h3>العثور على منازل في فرص</h3>
+                    <form action="/search/" method="get" target="_blank" class="property-search-form">
+                        <ul class="list-inline">
+                            <li>
+                                <input type="radio" id="property_search_widget-type-buy" name="view" value="buy" checked="">
+                                <label for="property_search_widget-type-buy" class="property_search_widget-type">
+                                    شراء </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="property_search_widget-type-rent" name="view" value="rent">
+                                <label for="property_search_widget-type-rent" class="property_search_widget-type">
+                                    إيجار </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="property_search_widget-type-sell" name="view" value="sell">
+                                <label for="property_search_widget-type-sell" class="property_search_widget-type">
+                                     بيع </label>
+                            </li>
+                        </ul>
+                        <div class="form-group">
+                            <input type="text" name='q' placeholder="المدينة أو الحيء" class="form-control property-search-input ui-autocomplete-input" required="" autocomplete="off">
+                        </div>
+                        <input type="submit" value="بحث" class="btn btn-block btn-primary">
+                    </form>
+                </section>
+                <section class="widget zblog-social-shares-6 widget_zblog-social-shares">
+                    <h3>معظم قصص النجاح</h3>
+                    <ul>
+  {% for list in topics %}
+                        <li><a href="{% url 'topic_posts' list.pk %}">{{list.subject}}</a></li>
+                          {% endfor %}
+                    </ul>
+                </section>
+                <section class="widget recent-posts-8 widget_recent_entries">
+                    <h3>أحدث القصص</h3>
+                    <ul>
+                          {% for list in topics %}
+                        <li>
+                            <a href="{% url 'topic_posts' list.pk %}">{{list.subject}}</a>
+                            <span class="post-date">{{list.last_updated|date:"M d, Y"}}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </section>
+                <section class="widget post_tag_cloud-2 widget_post_tag_cloud">
+                    <h3>علامات</h3>
+                    <div class="tagcloud"><a href="">شراء منازل</a><a href="">بيع منازل</a><a href="">وكلاء عقارات</a></div>
+                </section>
+                <div class="sidebar-bg-fill"></div>
+            </aside>
+            <!-- /.sidebar -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.wrap -->
+
+
+
+    <ul id="share" class="hidden-xs hidden-sm">
+        <li>
+            <a href="https://twitter.com/home?status=Don%27t+Believe+These+5+Myths+About+Real+Estate+Agents%20https%3A%2F%2Fwww.zillow.com%2Fblog%2F5-myths-about-real-estate-agents-227286%2F" class="twitter" target="_blank" data-ga-category="Blog" data-ga-action="Share on" data-ga-label="Twitter"><i class="zsg-twitter"></i></a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.zillow.com%2Fblog%2F5-myths-about-real-estate-agents-227286%2F" class="facebook" target="_blank" data-ga-category="Blog" data-ga-action="Share on" data-ga-label="Facebook"><i class="zsg-facebook"></i></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.zillow.com%2Fblog%2F5-myths-about-real-estate-agents-227286%2F&amp;title=Don%27t+Believe+These+5+Myths+About+Real+Estate+Agents&amp;summary=Do+you+need+one%3F+Do+they+pocket+the+whole+commission%3F+Let%E2%80%99s+set+the+facts+straight.&amp;source=Zillow+Porchlight" class="linkedin" target="_blank" data-ga-category="Blog" data-ga-action="Share on" data-ga-label="LinkedIn"><i class="zsg-linkedin"></i></a>
+        </li>
+        <li>
+            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.zillow.com%2Fblog%2F5-myths-about-real-estate-agents-227286%2F&amp;media=https%3A%2F%2Fwp-tid.zillowstatic.com%2F1%2Fagentmyths-5d1d1d.jpg&amp;description=Don%27t+Believe+These+5+Myths+About+Real+Estate+Agents" class="pinterest" target="_blank" data-ga-category="Blog" data-ga-action="Share on" data-ga-label="Pinterest"><i class="zsg-pinterest"></i></a>
+        </li>
+        <li>
+            <a href="mailto:?subject=Don%27t+Believe+These+5+Myths+About+Real+Estate+Agents&amp;body=https%3A%2F%2Fwww.zillow.com%2Fblog%2F5-myths-about-real-estate-agents-227286%2F" class="email" data-ga-category="Blog" data-ga-action="Share on" data-ga-label="Email"><i class="zsg-envelope"></i></a>
+        </li>
+    </ul>
+
+
+
+
+
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+<script>
+$('.hidden-xs').css({'padding':'0'});
+$('body.single-post #z-header-bg #z-header #z-header-text .header-category').css({'padding':'0px','top':'-26px','left':'80%','right':'0px'});
+
+
+      $('.wc_comm_form').on('submit', function(event) {
+      event.preventDefault();
+       $('#wpdiscuz-loading-bar').show();
+      $.ajax({
+          data: $(this).serialize(),
+          type: $(this).attr('method'),
+          url: $(this).attr('action'),
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+          alert(data.time);
+
+          var photo=JSON.parse(data.photo_json).photo;
+          $('#wcThreadWrapper').prepend('<div id="wc-comm-463162_0" class="wc-comment wc-blog-guest wc_comment_level-1"> <div class="wc-comment-left "> <div class="wpd-xborder"></div><div id="img"></div> <div class="wc-blog-guest wc-comment-label"><span>Guest</span></div> </div> <div id="comment-463162" class="wc-comment-right"> <div class="wc-comment-header"> <div class="wc-comment-author ">'+data.username+'</div> <div class="wc-comment-link"><span class="wc-comment-img-link-wrap"><i class="fas fa-link wc-comment-img-link wpf-cta" data-comment-url="" aria-hidden="true"></i></span></div> <div class="wpdiscuz_clear"></div> </div> <div class="wc-comment-text"> <p>'+data.message+'</p> </div> <div class="wc-comment-footer"> <div class="wc-footer-left"><span class="wc-vote-link wc-up wc_vote wc_not_clicked"><i class="fas fa-plus wc-vote-img-up"></i><span>تصويت اعلى</span></span><span class="wc-vote-result">0</span><span class="wc-vote-link wc-down wc_vote wc_not_clicked"><i class="fas fa-minus wc-vote-img-down"></i><span>تصويت اسفل</span></span>&nbsp;</div> <div class="wc-footer-right"> <div class="wc-comment-date"><i class="far fa-clock" aria-hidden="true"></i>'+data.time+'</div> </div> <div class="wpdiscuz_clear"></div> </div> </div> <div class="wpdiscuz-comment-message"></div> <div id="wpdiscuz_form_anchor-463162_0" class="wpdiscuz_clear"></div></div>');
+          if(data.photo_json.photo != "")
+          {
+          $('#img').html('<img alt="'+data.username+'" src="'+photo+'" srcset="'+photo+'" class="avatar avatar-64 photo" height="64" width="64">');
+          }
+          else
+          {
+          $('#img').html('<img alt="'+data.username+'" src="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64">');
+          }
+          },
+          error: function(xhr, status, error) {
+
+          }
+        });
+
+      });
+
+
+function getCookie(c_name)
+{
+    if (document.cookie.length > 0)
+    {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start != -1)
+        {
+            c_start = c_start + c_name.length + 1;
+            c_end = document.cookie.indexOf(";", c_start);
+            if (c_end == -1) c_end = document.cookie.length;
+            return unescape(document.cookie.substring(c_start,c_end));
+        }
+    }
+    return "";
+ }
+
+$(function () {
+    $.ajaxSetup({
+        headers: { "X-CSRFToken": getCookie("csrftoken") }
+    });
+});
+           $('.navbar-toggler').on('click', function(event) {
+   if($(this).hasClass( "active" ))
+{
+ $('html').removeClass('navbar-open').removeClass('navbar-fadein');
+       $(this).removeClass('active');
+       $('#meta').attr('content', '');
+
+      }
+      else{
+      $('html').addClass('navbar-open').addClass('navbar-fadein');
+      $('head').append('<meta id="meta" name="viewport" content="width=device-width, initial-scale=-10, shrink-to-fit=no">');
+       $(this).addClass('active');
+   }
+      });
+   $('#buy,#Rent,#land,#MyAccount').on('click', function(event) {
+   if($(this).hasClass( "active" ))
+{
+      $(this).parent('li').removeClass('open');
+      $(this).removeClass('active');
+}
+else
+{
+      $(this).parent('li').addClass('open');
+      $(this).addClass('active');
+}
+      });
+
+         $('#dropdown').on('mouseover', function(event) {
+      $('#dropdown-menu').show();
+      });
+
+         $(document).on('click', function(e) {
+          if (e.target.id != 'dropdown-menu' && $(e.target).parents('#dropdown-menu').length == 0) {
+          $('#dropdown-menu').hide();
+      }
+      });
+
+$('.wpdiscuz-date-sort-desc').on('click', function(e) {
+ if(!$(this).hasClass( "wpdiscuz-sort-button-active" ))
+   {
+$('.wpdiscuz-date-sort-asc').removeClass('wpdiscuz-sort-button-active');
+$('.wpdiscuz-vote-sort-up').removeClass('wpdiscuz-sort-button-active');
+$(this).addClass('wpdiscuz-sort-button-active');
+$('#wpdiscuz-loading-bar').show();
+
+$.ajax({
+          data: {'sort-desc':1},
+          type: 'GET',
+          url: '/SortPost/'+"{{topic.pk}}",
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+          $('#wcThreadWrapper div').each(function(i)
+{
+   $(this).remove(); // This is your rel value
+});
+          for (var i=0; i<JSON.parse(data.posts_json).posts.length;i++)
+          {
+           var photo =JSON.parse(data.posts_json).posts[i][0];
+           var username = JSON.parse(data.posts_json).posts[i][1];
+           var time = JSON.parse(data.posts_json).posts[i][2];
+           var message = JSON.parse(data.posts_json).posts[i][3];
+           var id_post = JSON.parse(data.posts_json).posts[i][4];
+           var countVote = JSON.parse(data.posts_json).posts[i][5];
+
+          $('#wcThreadWrapper').append('<div id="wc-comm-463162_0" class="wc-comment wc-blog-guest wc_comment_level-1"> <div class="wc-comment-left "> <div class="wpd-xborder"></div><div id="img'+i+'"></div> <div class="wc-blog-guest wc-comment-label"><span>Guest</span></div> </div> <div id="comment-463162" class="wc-comment-right"> <div class="wc-comment-header"> <div class="wc-comment-author ">'+username+'</div> <div class="wc-comment-link"><span class="wc-comment-img-link-wrap"><i class="fas fa-link wc-comment-img-link wpf-cta" data-comment-url="" aria-hidden="true"></i></span></div> <div class="wpdiscuz_clear"></div> </div> <div class="wc-comment-text"> <p>'+message+'</p> </div> <div class="wc-comment-footer"> <div class="wc-footer-left"><span id="wc-up'+id_post+'" class="wc-vote-link wc-up wc_vote wc_not_clicked"><i class="fas fa-plus wc-vote-img-up"></i><span>تصويت اعلى</span></span><span id="wc-vote-result'+id_post+'" class="wc-vote-result">'+countVote+'</span><span id="wc-down'+id_post+'" class="wc-vote-link wc-down wc_vote wc_not_clicked"><i class="fas fa-minus wc-vote-img-down"></i><span>تصويت اسفل</span></span>&nbsp;</div> <div class="wc-footer-right"> <div class="wc-comment-date"><i class="far fa-clock" aria-hidden="true"></i>'+time+'</div> </div> <div class="wpdiscuz_clear"></div> </div> </div> <div class="wpdiscuz-comment-message"></div> <div id="wpdiscuz_form_anchor-463162_0" class="wpdiscuz_clear"></div></div>');
+          if(photo != "")
+          {
+          $('#img'+i).html('<img alt="'+username+'" src="'+photo+'" srcset="'+photo+'" class="avatar avatar-64 photo" height="64" width="64">');
+          }
+          else
+          {
+          $('#img'+i).html('<img alt="'+username+'" src="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64">');
+          }
+          }
+
+
+$('.wc-up').on('click', function(e) {
+ var matches = $(this).attr('id').match(/(\d+)/);
+ var id;
+           if (matches) {
+           id=matches[0];
+           }
+$('#wpdiscuz-loading-bar').show();
+$.ajax({
+          data: {'votePlus':1},
+          type: 'GET',
+          url: '/VotePost/'+id,
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+          $('#wc-vote-result'+id).html(data.countVote);
+}
+});
+
+      });
+
+$('.wc-down').on('click', function(e) {
+ var matches = $(this).attr('id').match(/(\d+)/);
+ var id;
+           if (matches) {
+           id=matches[0];
+           }
+$('#wpdiscuz-loading-bar').show();
+$.ajax({
+          data: {'voteMins':1},
+          type: 'GET',
+          url: '/VotePost/'+id,
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+          $('#wc-vote-result'+id).html(data.countVote);
+}
+});
+
+      });
+
+}
+});
+
+}
+      });
+$('.wpdiscuz-date-sort-asc').on('click', function(e) {
+   if(!$(this).hasClass( "wpdiscuz-sort-button-active" ))
+{
+$('.wpdiscuz-date-sort-desc').removeClass('wpdiscuz-sort-button-active');
+$('.wpdiscuz-vote-sort-up').removeClass('wpdiscuz-sort-button-active');
+$(this).addClass('wpdiscuz-sort-button-active');
+$('#wpdiscuz-loading-bar').show();
+$.ajax({
+          data: {'sort-asc':1},
+          type: 'GET',
+          url: '/SortPost/'+"{{topic.pk}}",
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+               $('#wcThreadWrapper div').each(function(i)
+{
+   $(this).remove(); // This is your rel value
+});
+          for (var i=0; i<JSON.parse(data.posts_json).posts.length;i++)
+          {
+           var photo =JSON.parse(data.posts_json).posts[i][0];
+           var username = JSON.parse(data.posts_json).posts[i][1];
+           var time = JSON.parse(data.posts_json).posts[i][2];
+           var message = JSON.parse(data.posts_json).posts[i][3];
+           var id_post = JSON.parse(data.posts_json).posts[i][4];
+           var countVote = JSON.parse(data.posts_json).posts[i][5];
+
+          $('#wcThreadWrapper').append('<div id="wc-comm-463162_0" class="wc-comment wc-blog-guest wc_comment_level-1"> <div class="wc-comment-left "> <div class="wpd-xborder"></div><div id="img'+i+'"></div> <div class="wc-blog-guest wc-comment-label"><span>Guest</span></div> </div> <div id="comment-463162" class="wc-comment-right"> <div class="wc-comment-header"> <div class="wc-comment-author ">'+username+'</div> <div class="wc-comment-link"><span class="wc-comment-img-link-wrap"><i class="fas fa-link wc-comment-img-link wpf-cta" data-comment-url="" aria-hidden="true"></i></span></div> <div class="wpdiscuz_clear"></div> </div> <div class="wc-comment-text"> <p>'+message+'</p> </div> <div class="wc-comment-footer"> <div class="wc-footer-left"><span id="wc-up'+id_post+'" class="wc-vote-link wc-up wc_vote wc_not_clicked"><i class="fas fa-plus wc-vote-img-up"></i><span>تصويت اعلى</span></span><span id="wc-vote-result'+id_post+'" class="wc-vote-result">'+countVote+'</span><span id="wc-down'+id_post+'" class="wc-vote-link wc-down wc_vote wc_not_clicked"><i class="fas fa-minus wc-vote-img-down"></i><span>تصويت اسفل</span></span>&nbsp;</div> <div class="wc-footer-right"> <div class="wc-comment-date"><i class="far fa-clock" aria-hidden="true"></i>'+time+'</div> </div> <div class="wpdiscuz_clear"></div> </div> </div> <div class="wpdiscuz-comment-message"></div> <div id="wpdiscuz_form_anchor-463162_0" class="wpdiscuz_clear"></div></div>');
+          if(photo != "")
+          {
+          $('#img'+i).html('<img alt="'+username+'" src="'+photo+'" srcset="'+photo+'" class="avatar avatar-64 photo" height="64" width="64">');
+          }
+          else
+          {
+          $('#img'+i).html('<img alt="'+username+'" src="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64">');
+          }
+
+
+           }
+
+
+
+$('.wc-up').on('click', function(e) {
+ var matches = $(this).attr('id').match(/(\d+)/);
+ var id;
+           if (matches) {
+           id=matches[0];
+           }
+$('#wpdiscuz-loading-bar').show();
+$.ajax({
+          data: {'votePlus':1},
+          type: 'GET',
+          url: '/VotePost/'+id,
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+          $('#wc-vote-result'+id).html(data.countVote);
+}
+});
+
+      });
+
+$('.wc-down').on('click', function(e) {
+ var matches = $(this).attr('id').match(/(\d+)/);
+ var id;
+           if (matches) {
+           id=matches[0];
+           }
+$('#wpdiscuz-loading-bar').show();
+$.ajax({
+          data: {'voteMins':1},
+          type: 'GET',
+          url: '/VotePost/'+id,
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+          $('#wc-vote-result'+id).html(data.countVote);
+}
+});
+
+      });
+
+}
+});
+}
+
+
+      });
+$('.wpdiscuz-vote-sort-up').on('click', function(e) {
+   if(!$(this).hasClass( "wpdiscuz-sort-button-active" ))
+   {
+$('.wpdiscuz-date-sort-asc').removeClass('wpdiscuz-sort-button-active');
+$('.wpdiscuz-date-sort-desc').removeClass('wpdiscuz-sort-button-active');
+$('#wpdiscuz-loading-bar').show();
+$(this).addClass('wpdiscuz-sort-button-active');
+$.ajax({
+          data: {'vote-sort-up':1},
+          type: 'GET',
+          url: '/SortPost/'+"{{topic.pk}}",
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+           $('#wcThreadWrapper div').each(function(i)
+{
+   $(this).remove(); // This is your rel value
+});
+          for (var i=0; i<JSON.parse(data.posts_json).posts.length;i++)
+          {
+           var photo =JSON.parse(data.posts_json).posts[i][0];
+           var username = JSON.parse(data.posts_json).posts[i][1];
+           var time = JSON.parse(data.posts_json).posts[i][2];
+           var message = JSON.parse(data.posts_json).posts[i][3];
+           var id_post = JSON.parse(data.posts_json).posts[i][4];
+           var countVote = JSON.parse(data.posts_json).posts[i][5];
+          $('#wcThreadWrapper').append('<div id="wc-comm-463162_0" class="wc-comment wc-blog-guest wc_comment_level-1"> <div class="wc-comment-left "> <div class="wpd-xborder"></div><div id="img'+i+'"></div> <div class="wc-blog-guest wc-comment-label"><span>Guest</span></div> </div> <div id="comment-463162" class="wc-comment-right"> <div class="wc-comment-header"> <div class="wc-comment-author ">'+username+'</div> <div class="wc-comment-link"><span class="wc-comment-img-link-wrap"><i class="fas fa-link wc-comment-img-link wpf-cta" data-comment-url="" aria-hidden="true"></i></span></div> <div class="wpdiscuz_clear"></div> </div> <div class="wc-comment-text"> <p>'+message+'</p> </div> <div class="wc-comment-footer"> <div class="wc-footer-left"><span id="wc-up'+id_post+'" class="wc-vote-link wc-up wc_vote wc_not_clicked"><i class="fas fa-plus wc-vote-img-up"></i><span>تصويت اعلى</span></span><span id="wc-vote-result'+id_post+'" class="wc-vote-result">'+countVote+'</span><span id="wc-down'+id_post+'" class="wc-vote-link wc-down wc_vote wc_not_clicked"><i class="fas fa-minus wc-vote-img-down"></i><span>تصويت اسفل</span></span>&nbsp;</div> <div class="wc-footer-right"> <div class="wc-comment-date"><i class="far fa-clock" aria-hidden="true"></i>'+time+'</div> </div> <div class="wpdiscuz_clear"></div> </div> </div> <div class="wpdiscuz-comment-message"></div> <div id="wpdiscuz_form_anchor-463162_0" class="wpdiscuz_clear"></div></div>');
+          if(photo != "")
+          {
+          $('#img'+i).html('<img alt="'+username+'" src="'+photo+'" srcset="'+photo+'" class="avatar avatar-64 photo" height="64" width="64">');
+          }
+          else
+          {
+          $('#img'+i).html('<img alt="'+username+'" src="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/ff9ab1707cdfbe7dc47796721d6e0822?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo" height="64" width="64">');
+          }
+           }
+
+
+
+
+$('.wc-up').on('click', function(e) {
+ var matches = $(this).attr('id').match(/(\d+)/);
+ var id;
+           if (matches) {
+           id=matches[0];
+           }
+$('#wpdiscuz-loading-bar').show();
+$.ajax({
+          data: {'votePlus':1},
+          type: 'GET',
+          url: '/VotePost/'+id,
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+          $('#wc-vote-result'+id).html(data.countVote);
+}
+});
+
+      });
+
+$('.wc-down').on('click', function(e) {
+ var matches = $(this).attr('id').match(/(\d+)/);
+ var id;
+           if (matches) {
+           id=matches[0];
+           }
+$('#wpdiscuz-loading-bar').show();
+$.ajax({
+          data: {'voteMins':1},
+          type: 'GET',
+          url: '/VotePost/'+id,
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+          $('#wc-vote-result'+id).html(data.countVote);
+}
+});
+
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+});
+
+}
+      });
+
+
+
+
+$('.wc-up').on('click', function(e) {
+ var matches = $(this).attr('id').match(/(\d+)/);
+ var id;
+           if (matches) {
+           id=matches[0];
+           }
+$('#wpdiscuz-loading-bar').show();
+$.ajax({
+          data: {'votePlus':1},
+          type: 'GET',
+          url: '/VotePost/'+id,
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+          $('#wc-vote-result'+id).html(data.countVote);
+}
+});
+
+      });
+
+$('.wc-down').on('click', function(e) {
+ var matches = $(this).attr('id').match(/(\d+)/);
+ var id;
+           if (matches) {
+           id=matches[0];
+           }
+$('#wpdiscuz-loading-bar').show();
+$.ajax({
+          data: {'voteMins':1},
+          type: 'GET',
+          url: '/VotePost/'+id,
+          success: function(data) {
+          $('#wpdiscuz-loading-bar').hide();
+          $('#wc-vote-result'+id).html(data.countVote);
+}
+});
+
+      });
+
+    </script>

@@ -1,0 +1,6 @@
+﻿.pab-contact-lightbox-launch{display:none}
+.pab-action-bar_desktop .pab-contact-scroll,.pab-action-bar_tablet .pab-contact-scroll{display:inline-block}
+@media screen and (min-width:550px){.pab-action-bar{display:none}
+.pab-action-bar_desktop .pab-contact-lightbox-launch,.pab-action-bar_tablet .pab-contact-lightbox-launch{display:inline-block}
+.pab-action-bar_desktop .pab-contact-scroll,.pab-action-bar_tablet .pab-contact-scroll{display:none}
+}

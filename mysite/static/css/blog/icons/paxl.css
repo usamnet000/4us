@@ -1,0 +1,156 @@
+﻿@font-face {
+    font-family: paxl;
+    src: url("./paxl.eot");
+    src: url("./paxl.eot?#iefix") format("embedded-opentype"), url("./paxl.woff2") format("woff2"), url("./paxl.woff") format("woff"), url("./paxl.ttf") format("truetype"), url("./paxl.svg#paxl") format("svg");
+    font-style: normal;
+    font-weight: 400;
+}
+
+.paxl {
+    display: inline-block;
+    transform: translate(0, 0);
+    text-rendering: auto;
+    font: normal normal 400 14px/1 paxl;
+    font-size: inherit;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.paxl-lg {
+    vertical-align: -15%;
+    line-height: 0.75em;
+    font-size: 1.33333333em;
+}
+
+.paxl-2x {
+    font-size: 2em;
+}
+
+.paxl-3x {
+    font-size: 3em;
+}
+
+.paxl-4x {
+    font-size: 4em;
+}
+
+.paxl-5x {
+    font-size: 5em;
+}
+
+.paxl-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+.paxl-arrow-left::before {
+    content: "\ea01";
+}
+
+.paxl-calendar::before {
+    content: "\ea02";
+}
+
+.paxl-carat-down::before {
+    content: "\ea03";
+}
+
+.paxl-chevron-right::before {
+    content: "\ea04";
+}
+
+.paxl-clock::before {
+    content: "\ea05";
+}
+
+.paxl-close::before {
+    content: "\ea06";
+}
+
+.paxl-facebook::before {
+    content: "\ea07";
+}
+
+.paxl-instagram::before {
+    content: "\ea08";
+}
+
+.paxl-linkedin::before {
+    content: "\ea09";
+}
+
+.paxl-check-o::before {
+    content: "\ea0a";
+}
+
+.paxl-check::before {
+    content: "\ea0b";
+}
+
+.paxl-search::before {
+    content: "\ea0c";
+}
+
+.paxl-featured::before {
+    content: "\ea0d";
+}
+
+.paxl-chevron-up::before {
+    content: "\ea0e";
+}
+
+.paxl-help::before {
+    content: "\ea0f";
+}
+
+.paxl-twitter::before {
+    content: "\ea10";
+}
+
+.paxl-menu::before {
+    content: "\ea11";
+}
+
+.paxl-seperator::before {
+    content: "\ea12";
+}
+
+.paxl-house-up::before {
+    content: "\ea13";
+}
+
+.paxl-house::before {
+    content: "\ea14";
+}
+
+.paxl-agent::before {
+    content: "\ea15";
+}
+
+.paxl-globe::before {
+    content: "\ea16";
+}
+
+.paxl-rent::before {
+    content: "\ea17";
+}
+
+.paxl-mobile::before {
+    content: "\ea18";
+}
+
+.paxl-location-o::before {
+    content: "\ea19";
+}
+
+.paxl-location::before {
+    content: "\ea1a";
+}
+
+.paxl-download::before {
+    content: "\ea1b";
+}
+
+.paxl-fullscreen::before {
+    content: "\ea20";
+}

@@ -1,0 +1,506 @@
+
+{% extends 'base/Navbar.html' %}
+{% load static %}
+{% block head_title %}فرص: العقارات في اليمن{% endblock %}
+{% block extra_head %}
+<link href="{% static 'css/shademaster.css' %}" type="text/css" rel="stylesheet" media="all" />
+    <script async="" src="https://web.vortex.data.microsoft.com/collect/v1/t.js?ver='2.1'&amp;name='Ms.Webi.PageView'&amp;time='2019-09-15T16%3A22%3A15.860Z'&amp;os='Windows'&amp;appId='JS%3AOutlookCom'&amp;-ver='1.0'&amp;-impressionGuid='7ea25955-96a0-4320-97bb-596bd5fd76e5'&amp;-pageName='Undefined'&amp;-uri='https%3A%2F%2Foutlook.live.com%2Fowa%2F'&amp;-resHeight=768&amp;-resWidth=1366&amp;-pageTags='%7B%22metaTags%22%3A%7B%7D%7D'&amp;-behavior=0&amp;*baseType='Ms.Content.PageView'&amp;*cookieEnabled=true&amp;*isJs=true&amp;*title='Outlook%20%E2%80%93%20free%20personal%20email%20and%20calendar%20from%20Microsoft'&amp;*isLoggedIn=false&amp;*flashInstalled=false&amp;ext-javascript-ver='1.1'&amp;ext-javascript-libVer='4.2.14'&amp;ext-javascript-domain='outlook.live.com'&amp;ext-javascript-userConsent=false&amp;$mscomCookies=false"></script>
+    <script src="https://ow2.res.office365.com/owalanding/2019.9.4.01/javascripts/vh-check.min.js"></script>
+    <script src="https://ow2.res.office365.com/owalanding/2019.9.4.01/javascripts/jquery-3.2.1.min.js"></script>
+    <script src="https://ow2.res.office365.com/owalanding/2019.9.4.01/javascripts/lazyload.min.js"></script>
+    <script src="https://ow2.res.office365.com/owalanding/2019.9.4.01/javascripts/jquery.onscreen.js"></script>
+    <script src="https://ow2.res.office365.com/owalanding/2019.9.4.01/javascripts/detect-os.js"></script>
+    <script src="https://ow2.res.office365.com/owalanding/2019.9.4.01/javascripts/dom-scripts.js"></script>
+    <link href="https://ow2.res.office365.com/owalanding/2019.9.4.01/stylesheets/compiled.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="https://ow2.res.office365.com/owalanding/2019.9.4.01/javascripts/html5shiv.min.js"></script><![endif]-->
+<link href="{% static 'css/all-mylisting.css' %}" type="text/css" rel="stylesheet" />
+
+
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+
+
+<style>
+#bh-sl-address{
+padding:1px;
+}
+ol, ul {
+    padding-right: 14px;
+	list-style-type: none
+}
+
+.el
+{
+direction:rtl;text-align:right;
+}
+
+    body {
+	line-height: 1.2;
+	font-size: 15px;
+	margin: 0;
+	font-family: 'overpass', sans-serif;
+	overflow-y: scroll;
+	color: #545759
+	-webkit-overflow-scrolling: touch
+	direction: rtl;
+	text-align:right;
+}
+
+header, aside, nav, footer, section, article, hgroup, address, figure, figcaption, video, details, small, summary, img, main, time, dl, dt, dd, li {
+    display: inline;
+}
+body.page-frame-service {
+    line-height: 1.45;
+}
+</style>
+
+
+ <link rel="stylesheet" href="https://premieragent.zillow.com/zgwp/app/plugins/goldberg/public/goldberg.css?ver=1568328722" type="text/css" media="all">
+<link rel="stylesheet" href="{% static 'css/paxl-79.css' %}" type="text/css" media="all">
+<link rel="stylesheet" href="https://premieragent.zillow.com/re/zgwp/app/themes/paxl/dist/icons/paxl.css?ver=1568397672" type="text/css" media="all">
+<style>
+    .search_wrap input {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+     border: auto;
+    border-radius: 0;
+    background: #fff;
+    font-size: auto;
+    font-weight: 600;
+    color: #E0E0E2;
+}
+.search_wrap .icon svg {
+    width: 25px;
+    height: 25px;
+    fill: #1073FF;
+}
+.cancel_cross span::before {
+    content: "";
+    width: 2px;
+    height: 30px;
+    background-color: #1073ff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.cancel_cross span::after {
+    content: "";
+    width: 2px;
+    height: 30px;
+    background-color: #1073ff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.search_wrap input {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    border: auto;
+    border-radius: 0;
+    background: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    color: #282828;
+}
+#currentLocation,#currentLocation:hover
+{
+color:#fff;
+}
+body.page-template-goldberg .jumbotron.jumbotron-widget h1:after {
+    right: 0;
+    margin-left: 0;
+}
+.znav-links
+{
+text-align:right;
+}
+ol, ul, dl {
+    margin-bottom: 0px;
+}
+.znav .znav-dropdown-trigger {
+    background: 0 0;
+    border: 0;
+    -ms-flex: 0 0 40px;
+    flex: 0 0 40px;
+    padding: 0 25px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #7CA5BA;
+    position: relative;
+}
+.ds-price-and-tax-section-table .zsg-icon-expando-up, .home-details-ds-foreclosure-section .ds-foreclosure-table .zsg-icon-expando-down, .home-details-ds-foreclosure-section .ds-foreclosure-table .zsg-icon-expando-up, .zsg-icon-expando-down {
+    color: #7ca5ba;
+}
+.text:not(.element_anim_1),.cookieBarInner
+{
+text-align:right;
+}
+@media screen and (max-width: 767px)
+{
+.ap_text .top .title {
+    font-size: 20px;
+    text-align: center;
+}
+}
+.znav-links-help li span
+{
+font-size:16.5px;
+}
+
+</style>
+
+{% endblock %}
+  {% block content %}
+
+
+    <div style="direction:rtl;text-align:right;" class="content-container">
+        <div id="jumbotron" class="jumbotron jumbotron-fluid jumbotron-nav jumbotron-widget jumbotron-none">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-md-right">
+                        <h1>
+						 وكلاء العقارات في اليمن ...</h1>
+                        <p class="lead">
+                           مطلوب وكلاء لدى فرص للعقارات في جميع إنحاء الجمهورية اليمنية على أن يتمتع الوكلاء بخبرة واسعة في تجارة العقارات.
+                            <br>
+                            <br>
+                        </p>
+                        <ul>
+                            <li>للإتصال بنا على موقع فرص لمعرفة المعايير والمواصفات والشروط</li>
+                        </ul>
+                        <p></p>
+                    </div>
+                    <div class="col-md-6 mt-5 mt-md-0">
+                        <div class="goldberg-block goldberg-block-widget">
+<div style="padding:16px;" class="widget paxl-widget-inbound ">
+                             <form action='/search/' class="element_anim_1 start_anim" id="bh-sl-user-location" method="GET">
+            <div class="search_wrap">
+
+
+
+                <input name='q' type="search" id="bh-sl-address" placeholder="المدينة أو الحيء أو العنوان" autocomplete="off">
+                <input type="hidden" name="hidden" id="hidden_value_save">
+
+
+                <div class="icon" style="position: absolute;left: 0;right: 87%;">
+                    <div class="loup">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 45.99">
+                            <title>loup</title>
+                            <g data-name="Warstwa 2">
+                                <g data-name="Layer 1">
+                                    <path d="M19.65,39.27A19.64,19.64,0,1,1,33.54,5.75h0A19.64,19.64,0,0,1,19.65,39.27ZM19.65,2A17.64,17.64,0,1,0,32.12,7.16h0A17.59,17.59,0,0,0,19.65,2Z"></path>
+                                    <path d="M45,46a1,1,0,0,1-.71-.29L32.12,33.53a1,1,0,0,1,1.41-1.41L45.71,44.28A1,1,0,0,1,45,46Z"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="cancel_cross"><span></span></div>
+                </div>
+            </div>
+
+            <button type="submit" id="bh-sl-user-location-submit" name="bh-sl-user-location-submit" style="display:none"></button>
+        </form>
+
+</div>
+
+<div inputmode="searchBox" class="SearchBar__StyledContainer-sc-1opw0u9-0 lfRlFC StickyBar__StyledContainer-w8mbq5-0 beHqPC">
+
+أو
+    <div class="Flex-sc-1qcb5a7-0 AutoSuggest__StyledAutoSuggest-sc-1bt4w6z-0 hfRnbi">
+            <div role="combobox" aria-haspopup="listbox" aria-owns="react-autowhatever-1" aria-expanded="true" class="react-autosuggest__container react-autosuggest__container--open">
+
+                <div id="react-autowhatever-1" role="listbox" class="react-autosuggest__suggestions-container react-autosuggest__suggestions-container--open">
+                    <ul role="listbox" class="react-autosuggest__suggestions-list">
+                        <li role="option" id="react-autowhatever-1--item-0" aria-selected="false" class="react-autosuggest__suggestion react-autosuggest__suggestion--first" data-suggestion-index="0">
+                            <div class="AutoSuggestSuggestion__StyledSuggestionContainer-sc-1p2c3uz-1 lfvhjz"><span class="AutoSuggestSuggestion__IconContainer-sc-1p2c3uz-2 iVKnvO"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g transform="translate(5 1)" fill="none" fill-rule="evenodd"><path d="M.39 4.114C1.534.75 4.763 0 6.987 0s5.352.75 6.596 4.114C16.018 10.694 6.987 22 6.987 22S-1.949 11 .39 4.114z" stroke="#006AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><circle fill="#A6E5FF" cx="7" cy="7" r="3"></circle></g></svg></span>
+                                <a id="currentLocation" href="" ><div style="float:right;" class="Flex-sc-1qcb5a7-0 AutoSuggestSuggestion__TextContainer-sc-1p2c3uz-0 yCibO"><span class="Text-sc-1vuq29o-0 TextEmbold__EmboldedText-cxeqse-0 gDOGxl">الموقع الحالي</span></div></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-image " style="background-image: url(/static/img/landing-page-aerial-hero-760c81-1400x700.jpg);"></div>
+
+        </div>
+
+        <div class="content-container">
+            <main class="goldberg">
+            </main>
+        </div>
+        <!--.content-container-->
+
+    </div>
+    <!--.content-container-->
+
+        <section class="block" id="a-simple-experience" name="a-simple-experience" aria-labelledby="one-place-headline">
+            <header class="ready-to-animate">
+                <div class="media">
+                    <div class="bound">
+                        <div class="photo lazy" data-src="https://ow2.res.office365.com/owalanding/2019.9.4.01/images/efficient-commuter.jpg" )="" data-was-processed="true" style="background-image: url(&quot;https://ow2.res.office365.com/owalanding/2019.9.4.01/images/efficient-commuter.jpg&quot;);"> </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <div class="bound">
+                        <div  style="direction:rtl;text-align:right;" class="plate">
+                            <h1><span id="one-place-headline"> الوصول الى العقار</span></h1>
+                            <p>للحصول على العقارات موقع فرص يتيح للمشترين والبائعين خدمة أفضل في السوق من خلال التواصل مع العملاء المتوقعين ذوي الجودة العالية وذلك على أكبر شبكة عقارية في الإنترنت</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+
+
+<section class="ap_content">
+    <div class="ap_text wp_pdf_cont">
+        <div class="container">
+            <div class="top">
+                <div class="title_40 title element_anim_1 start_anim"> لن يفوتك أبدًا</div>
+                <div class="text element_anim_1 start_anim"> <p class="HomeContent__StyledParagraph-sc-10ww3i-1 cQYAME Text-sc-1vuq29o-0 dBvtnv">لدينا عقار يناسبك </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                <section class="colper_points">
+                    <div class="img lazyBg hidden-xs" data-src="https://www.shademaster.com.au/wp-content/uploads/2017/04/colper.jpg" data-sf="done" style="background-image: url(&quot;https://www.shademaster.com.au/wp-content/uploads/2017/04/colper.jpg&quot;);"></div>
+                    <div class="points_all lazyBg" data-src="https://www.shademaster.com.au/wp-content/uploads/2017/04/colPre_bg.png" data-src-xs="https://www.shademaster.com.au/wp-content/uploads/2017/04/colPre_bg.png" data-sf="done" style="background-image: url(&quot;https://www.shademaster.com.au/wp-content/uploads/2017/04/colPre_bg.png&quot;);">
+                        <div class="points_wrap">
+                            <div class="el element_anim_1 start_anim">
+                                <div class="nr">1</div>
+                                <div class="title"> شراء منزل</div>
+                                <div class="text">
+                                    <p>ابحث عن منزلك من خلال مشاهدة الصور الغامرة ومعظم قوائم البيانات ، بما في ذلك الأشياء التي لن تجدها في أي مكان آخر</p>
+                                </div>
+                            </div>
+                            <div class="el element_anim_1 start_anim">
+                                <div class="nr">2</div>
+                                <div class="title"> بيع المنزل</div>
+                                <div class="text">
+                                    <p>سواء أكنت تبيع بعروض فرص أو بطريقة أخرى ، فسنساعدك في تسهيل عملية بيع ناجحة.</p>
+                                </div>
+                            </div>
+                            <div class="el element_anim_1 start_anim">
+                                <div class="nr">3</div>
+                                <div class="title"> استئجار منزل</div>
+                                <div class="text">
+                                    <p>نحن بصدد إنشاء تجربة سلسة عبر الإنترنت - بدءًا من التسوق على أكبر شبكة تأجير ، وحتى تقديم الطلب ، إلى دفع الإيجار.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+<section class="ap_content" sytle="direction:rtl">
+                    <div class="ap_text">
+                        <div class="container">
+                            <div class="top">
+                                <div class="title_40 title element_anim_1 start_anim"> موقع فرص العقاري.. "سمسارك الإلكتروني"</div>
+                                <div class="text element_anim_1 start_anim">في عصر الإنترنت، قد تكون مهنة الوسيط العقاري أو السمسار في طريقها لتصبح شيء من التراث، حيث أصبح بإمكانك أن تعلن عن العقار أو قطعة الأرض التي ترغب في بيعها عن طريق عدة مواقع إلكترونية تصل لعدد غير محدود من مستخدمي الإنترنت، ونفس الأمر بالنسبة للمشتري</div>
+                            </div>
+                            <div class="points row">
+                                <div class="el element_anim_1 start_anim">
+                                    <div class="title">شراء العقار بالوكالة</div>
+                                    <div class="text">
+                                        <p>يمكن للمشترى ان يكون له وكيل يقوم بفحص العقار واللقاء مع العملاء واصحاب العلاقة ويمكن للموقع تسهيل الإجراءات اللإزمة
+                                        </p></div>
+                                    <div class="title">العقار بين يديك</div>
+                                    <div class="text">
+                                        <p>
+تعرّف على ما يريده عملاؤك بالفعل بمعلومات عن المنازل التي يرغبون بشرائها ويبحثون عنها على موقع فرص.
+</p>
+                                    </div>
+                                    <div class="title"> مرونة المعاملات</div>
+                                    <div class="text">
+                                        <p>
+يمكن للعملاء إرسال رسائل إلى البريد الإلكتروني مباشرة للوكلاء أو المالكين في موقع فرص مما يسهل عليهم اختيار المنازل التي يحبونها أو يرغبون في رؤيتها شخصيًا.</p>
+
+                                    </div>
+                                </div>
+                                <div class="el element_anim_1 start_anim">
+                                    <div class="title">لا تسرد فقط</div>
+                                    <div class="text">
+                                        <p>قم بعرض منازلك على المجتمع ، منصة تسويق المنازل الحصرية الجديدة في فرص.</p>
+                                    </div>
+                                    <div class="title">اكتشاف</div>
+                                    <div class="text">
+                                        <p>الوصول إلى أكبر جمهور من المتسوقين المنزليين عبر الإنترنت.</p>
+                                    </div>
+                                    <div class="title">إتصالات</div>
+                                    <div class="text">
+                                        <p>تواصل على الفور مع مشتري المنازل المحتملين.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="points row"><div class="el element_anim_1"><div class="title"> corrosion resistant</div><div class="text"><p>Built to withstand the harsh Australian outdoors with corrosion resistance.</p></div></div><div class="el element_anim_1"><div class="title"> colour retention</div><div class="text"><p>One of the finest and most durable modern coatings available.</p></div></div><div class="el element_anim_1"><div class="title"> smooth finish</div><div class="text"><p>Roller coating allows for a consistently smooth finish every time compared to powder coating.</p></div></div><div class="el element_anim_1"><div class="title"> Superior high gloss</div><div class="text"><p>Higher gloss coatings offer more vibrant colour, enhance fade resistance and easy maintenance.</p></div></div><div class="el element_anim_1"><div class="title"> longevity</div><div class="text"><p>High gloss coatings have high reflection capabilities, resulting in a longer lasting surface and reduced heat transfer.</p></div></div></div> --></div>
+                    </div>
+                </section>
+
+
+<section class="wp_blocks" style="direction:rtl;text-align:right">
+     <div class="wp_block">
+        <div class="cont_all">
+            <div class="cont_wrap element_anim_1 start_anim">
+                <div class="upper_15"> فله في حده</div>
+                <div class="title_30"> موقع مميز</div>
+                <div class="text">
+                    <p>يقع المنزل على شارع بجانه مدرسة وسوق تجاري ومواقف للسيارات ويحتوى على</p>
+                    <p>ثلاث غرف نوم وغرفة استقبال ، مطبخ حديث ، حمام فاخر ، غرفة معيشه </p>
+                </div>
+                <!--<div class="text"></div> --></div>
+        </div>
+        <div class="img lazyBg element_anim_1 start_anim" data-src="https://www.shademaster.com.au/wp-content/uploads/2017/04/war2.jpg" data-src-xs="https://www.shademaster.com.au/wp-content/uploads/2017/04/war2.jpg" data-sf="done" style="background-image: url(&quot;/static/img/listing1.jpg&quot;);"> <img class="lazyImg" data-src="https://www.shademaster.com.au/wp-content/uploads/2017/04/war1_s.png" src="https://www.shademaster.com.au/wp-content/uploads/2017/04/war1_s.png" data-sf="done"></div>
+    </div>
+     <div class="wp_block">
+        <div class="cont_all">
+            <div class="cont_wrap element_anim_1 start_anim">
+                <div class="upper_15"> شقة غربي شارع بغداد</div>
+                <div class="title_30"> منزل مفروش ومؤثث</div>
+                <div class="text">
+                    <p>يعتبر هذا المنزل مثالياً ويتمتع بموقع مميز قريب من المطاعم ومركز التسويق والمدارس ويشمل</p>
+                    <p>ثلاث غرف نوم واسعة واثنين حمامات فاخرة ومطبخ عصري وصالة معيشة وغرفة للضيوف.</p>
+                </div>
+                <!--<div class="text"></div> --></div>
+        </div>
+        <div class="img lazyBg element_anim_1 start_anim" data-src="https://www.shademaster.com.au/wp-content/uploads/2017/04/Smooth-Profile-White-Bay-Ceiling-Colour-14-1.jpg" data-src-xs="https://www.shademaster.com.au/wp-content/uploads/2017/04/Smooth-Profile-White-Bay-Ceiling-Colour-14-1.jpg" data-sf="done" style="background-image: url(&quot;https://www.shademaster.com.au/wp-content/uploads/2017/04/Smooth-Profile-White-Bay-Ceiling-Colour-14-1.jpg&quot;);"> <img class="lazyImg" data-src="https://www.shademaster.com.au/wp-content/uploads/2017/04/war2_s.png" src="https://www.shademaster.com.au/wp-content/uploads/2017/04/war2_s.png" data-sf="done"></div>
+    </div>
+</section>
+
+
+
+                <section sytle="direction:rtl;text-align:right;" id="goldberg-5c381d6980a87" class="goldberg-section " style="background-color: #ffffff;">
+                    <div class="goldberg-container">
+                        <div class="goldberg-row goldberg-row_middle">
+                            <div class="goldberg-column goldberg-column_center goldberg-column_12">
+                                <div class="goldberg-headline">
+                                    <h2 class="goldberg-headline_h2 ">	المضي قدما في الاتصالات	</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goldberg-steps">
+                        <div class="goldberg-container">
+                            <div class="goldberg-row">
+                                <div class="goldberg-column">
+                                    <div class="goldberg-steps_step">
+                                        <div class="goldberg-image">
+                                            <span class="goldberg-display_mobile__none">
+		<img src="https://wp-tid.zillowstatic.com/39/ZPA_Illustration_HowItWorks_1of4_300x300-448a3c.png" width="150" height="150" alt="">
+	</span>
+                                            <span class="goldberg-display_desktop__none">
+		<img src="https://wp-tid.zillowstatic.com/39/ZPA_Illustration_HowItWorks_1of4_300x300-448a3c.png" width="150" height="150" alt="">
+	</span>
+                                        </div>
+                                        <div class="goldberg-text">
+                                            <h6>تحقق العملاء</h6>
+                                            <p>اتصل بالعميل في المنزل للتأكد من استعداده للتحدث مع أحد الوكلاء</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goldberg-column">
+                                    <div class="goldberg-steps_step">
+                                        <div class="goldberg-image">
+                                            <span class="goldberg-display_mobile__none">
+		<img src="/static/img/ZPA_Illustration_HowItWorks_2of4_300x300-45d596.png" width="150" height="150" alt="">
+	</span>
+                                            <span class="goldberg-display_desktop__none">
+		<img src="/static/img/ZPA_Illustration_HowItWorks_2of4_300x300-45d596.png" width="150" height="150" alt="">
+	</span>
+                                        </div>
+                                        <div class="goldberg-text">
+                                            <h6>نتحقق من الصدارة</h6>
+                                            <p>اتصل بالعميل في المنزل للتأكد من استعداده للتحدث مع أحد الوكلاء</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goldberg-column">
+                                    <div class="goldberg-steps_step">
+                                        <div class="goldberg-image">
+                                            <span class="goldberg-display_mobile__none">
+		<img src="/static/img/ZPA_Illustration_HowItWorks_3of4_300x300-037a59.png" width="150" height="150" alt="">
+	</span>
+                                            <span class="goldberg-display_desktop__none">
+		<img src="/static/img/ZPA_Illustration_HowItWorks_3of4_300x300-037a59.png" width="150" height="150" alt="">
+	</span>
+                                        </div>
+                                        <div class="goldberg-text">
+                                            <h6>يمكنك الاتصال مباشرة</h6>
+                                            <p>نحن نتصل بك ونعرّفك على اتصالك الجديد - قم بالرد عندما يتم ذلك</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="goldberg-column">
+                                    <div class="goldberg-steps_step">
+                                        <div class="goldberg-image">
+                                            <span class="goldberg-display_mobile__none">
+		<img src="/static/img/ZPA_Illustration_HowItWorks_4of4_300x300-ff8e56.png" width="150" height="150" alt="">
+	</span>
+                                            <span class="goldberg-display_desktop__none">
+		<img src="/static/img/ZPA_Illustration_HowItWorks_4of4_300x300-ff8e56.png" width="150" height="150" alt="">
+	</span>
+                                        </div>
+                                        <div class="goldberg-text">
+                                            <h6>المزيد من الصفقات</h6>
+                                            <p>عزز علاقتك مع العملاء ، وتتبع المنازل التي يشاهدونها وذلك باستخدام أدواتنا</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+{% include 'footer.html' %}
+
+
+  <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+<script>
+
+$('#bh-sl-address').keypress(function(event){
+	var keycode = (event.keyCode ? event.keyCode : event.which);
+	if(keycode == '13' && $(this).val() != ''){
+		location.href="/search/?q="+$(this).val()+";type=homes";
+	}
+});
+$('a').click(function(event){
+location.href = $(this).attr('href');
+});
+</script>
+
+{% endblock %}
+
+

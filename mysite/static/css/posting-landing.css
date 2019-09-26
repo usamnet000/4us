@@ -1,0 +1,1335 @@
+﻿#posting-landing-overlay .property-address,
+#posting-landing-overlay input[type=radio]:checked+label h5,
+.rental-posting-landing {
+    font-weight: 700
+}
+
+#posting-landing-overlay a.posting-premier,
+.draft-sign-in a {
+    text-decoration: underline
+}
+
+@-webkit-keyframes zsgLoaderSpin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes zsgLoaderSpin {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+#posting-trapezoid {
+    bottom: 150px;
+    padding-left: 20px;
+    margin-right: -20px;
+    margin-bottom: 0;
+    background-color: #516c79
+}
+
+#posting-trapezoid.trapezoid-mmm {
+    bottom: 190px
+}
+
+#posting-trapezoid.trapezoid-rental {
+    bottom: 200px
+}
+
+#posting-trapezoid.trapezoid-coming-soon {
+    bottom: 230px
+}
+
+.has-zpid #posting-trapezoid.trapezoid-coming-soon {
+    bottom: 250px
+}
+
+@media only screen and (max-width:1279px) {
+    #posting-trapezoid {
+        bottom: 190px
+    }
+    .has-zpid #posting-trapezoid.trapezoid-coming-soon {
+        bottom: 260px
+    }
+}
+
+@media only screen and (max-width:1010px) {
+    #posting-trapezoid.trapezoid-mmm {
+        bottom: 240px
+    }
+    #posting-trapezoid.trapezoid-rental {
+        bottom: 250px
+    }
+    .has-zpid #posting-trapezoid.trapezoid-rental {
+        bottom: 200px
+    }
+}
+
+@media screen and (max-width:768px) {
+    #posting-trapezoid {
+        bottom: 190px
+    }
+    #posting-trapezoid.trapezoid-mmm {
+        bottom: 260px
+    }
+    #posting-trapezoid.trapezoid-rental {
+        bottom: 340px
+    }
+    .has-zpid #posting-trapezoid.trapezoid-rental {
+        bottom: 180px
+    }
+    #posting-trapezoid.trapezoid-coming-soon,
+    .has-zpid #posting-trapezoid.trapezoid-coming-soon {
+        bottom: 230px
+    }
+}
+
+@media only screen and (max-width:700px) {
+    #posting-trapezoid {
+        bottom: 240px
+    }
+    #posting-trapezoid.trapezoid-mmm {
+        bottom: 320px
+    }
+}
+
+@media only screen and (max-width:650px) {
+    #posting-trapezoid.trapezoid-coming-soon,
+    .has-zpid #posting-trapezoid.trapezoid-coming-soon {
+        bottom: 290px
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #posting-trapezoid {
+        bottom: 310px;
+        padding-left: 10px;
+        width: 100%;
+        font-size: 1.5rem;
+        height: 45px;
+        line-height: 45px
+    }
+    #posting-trapezoid.trapezoid-mmm {
+        bottom: 370px
+    }
+    #posting-trapezoid.trapezoid-rental {
+        bottom: 360px
+    }
+    .has-zpid #posting-trapezoid.trapezoid-rental {
+        bottom: 210px
+    }
+}
+
+#posting-trapezoid:before {
+    border-right-color: #516c79
+}
+
+#posting-trapezoid:after {
+    border-left-color: #516c79
+}
+
+#landing-background {
+    box-sizing: content-box;
+    background-image: url(/static/img/seller-landing-page-background3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 470px;
+    margin: 0 -20px;
+    padding: 0 20px;
+    width: 100%
+}
+
+.rental #landing-background {
+    background-image: url(../../images/rental-posting-page.jpg)
+}
+
+@media only screen and (max-width:600px) {
+    #landing-background {
+        margin-left: -10px;
+        margin-right: -10px;
+        padding: 0 10px;
+        /*background-position: 45% 100%*/
+    }
+}
+
+#posting-landing-overlay {
+    top: 320px;
+    height: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    text-align: right;
+    background-color: rgb(124, 165, 186);
+    opacity: 0.93;
+}
+
+#posting-landing-overlay.overlay-mmm {
+    top: 280px;
+    height: 190px
+}
+
+#posting-landing-overlay.overlay-rental {
+    top: 270px;
+    height: 200px
+}
+
+#posting-landing-overlay.overlay-coming-soon {
+    top: 240px;
+    height: 230px
+}
+
+.has-zpid #posting-landing-overlay.overlay-coming-soon {
+    height: 250px;
+    top: 220px
+}
+
+@media only screen and (max-width:1279px) {
+    #posting-landing-overlay {
+        top: 280px;
+        height: 190px
+    }
+    .has-zpid #posting-landing-overlay.overlay-coming-soon {
+        height: 260px;
+        top: 210px
+    }
+}
+
+@media only screen and (max-width:1010px) {
+    #posting-landing-overlay.overlay-mmm {
+        top: 230px;
+        height: 240px
+    }
+    #posting-landing-overlay.overlay-rental {
+        height: 250px;
+        top: 220px
+    }
+    .has-zpid #posting-landing-overlay.overlay-rental {
+        height: 200px;
+        top: 270px
+    }
+}
+
+#posting-landing-overlay #coming-soon-thumbnail img {
+    float: right
+}
+
+#posting-landing-overlay a {
+    color: #fff
+}
+
+#posting-landing-overlay h4 {
+    margin: 10px 0 0
+}
+
+#posting-landing-overlay input,
+#posting-landing-overlay select {
+    color: #000
+}
+
+#posting-landing-overlay fieldset,
+#posting-landing-overlay input {
+    display: inline-block;
+    vertical-align: top
+}
+
+#posting-landing-overlay button,
+#posting-landing-overlay input,
+#posting-landing-overlay select {
+    height: 40px;
+    margin: 8px 10px 8px 0
+}
+
+#posting-landing-overlay #address {
+    width: 460px
+}
+
+#posting-landing-overlay #addressFieldset {
+    width: 470px
+}
+
+#posting-landing-overlay #unitNumberField {
+    width: 145px
+}
+
+#posting-landing-overlay #unitFieldset {
+    width: 155px
+}
+
+#posting-landing-overlay #posting-launch-form .zsg-g {
+    display: inline
+}
+
+#posting-landing-overlay .posting-launch-form-header {
+    margin-bottom: 8px
+}
+
+@media only screen and (min-width:1279px) {
+    #posting-landing-overlay.overlay-rental #unitFieldset {
+        margin-right: 40px
+    }
+}
+
+#posting-landing-overlay #cityField {
+    width: 170px
+}
+
+#posting-landing-overlay #cityFieldset {
+    width: 180px
+}
+
+#posting-landing-overlay #stateSelection {
+    background-position: right -24px;
+    width: 80px
+}
+
+#posting-landing-overlay #stateSelection:hover {
+    background-position: right 16px
+}
+
+#posting-landing-overlay #stateSelection[disabled] {
+    background-position: right -24px
+}
+
+.zsg-form-field_error #posting-landing-overlay #stateSelection {
+    background-position: right -64px
+}
+
+#posting-landing-overlay #stateSelection:focus {
+    background-position: right 16px
+}
+
+#posting-landing-overlay #stateFieldset {
+    width: 85px
+}
+
+#posting-landing-overlay #zipCodeField {
+    width: 130px
+}
+
+#posting-landing-overlay #zipFieldset {
+    width: 140px
+}
+
+#posting-landing-overlay button {
+    width: 105px
+}
+
+.rental #posting-landing-overlay button {
+    width: 210px;
+    vertical-align: top
+}
+
+@media screen and (max-width:480px) {
+    #posting-trapezoid.trapezoid-coming-soon,
+    .has-zpid #posting-trapezoid.trapezoid-coming-soon {
+        bottom: 480px
+    }
+    .rental #posting-landing-overlay button {
+        width: 100%
+    }
+}
+
+#posting-landing-overlay button.button-with-spinner {
+    width: 125px
+}
+
+.rental #posting-landing-overlay button.button-with-spinner {
+    width: 230px
+}
+
+#posting-landing-overlay button.button-with-spinner .posting-launch-form-spinner-placeholder {
+    display: inline-block;
+    padding-left: 10px
+}
+
+@media screen and (max-width:480px) {
+    #posting-landing-overlay button.button-with-spinner {
+        width: 100%
+    }
+}
+
+#posting-landing-overlay #coming-soon-bullets-wide {
+    display: block
+}
+
+#posting-landing-overlay #coming-soon-bullets-narrow {
+    display: none
+}
+
+#posting-landing-overlay .coming-soon-bullets li {
+    margin-bottom: 1em;
+    font-size: 95%
+}
+
+#posting-landing-overlay .launch-form-error {
+    padding-right: 5px;
+    line-height: 1em;
+    margin-bottom: 0
+}
+
+#posting-landing-overlay iframe {
+    margin-top: 5px
+}
+
+#posting-landing-overlay .alert-mod {
+    letter-spacing: 0
+}
+
+#posting-landing-overlay .posting-landing-address-block,
+#posting-landing-overlay .posting-landing-unit-city-block {
+    display: inline-block;
+    vertical-align: top
+}
+
+@media screen and (max-width:768px) {
+    #posting-landing-overlay {
+        top: 340px;
+        height: 190px;
+        padding: 10px 20px
+    }
+    #posting-landing-overlay.overlay-mmm {
+        top: 270px;
+        height: 260px
+    }
+    #posting-landing-overlay.overlay-rental {
+        top: 190px;
+        height: 340px
+    }
+    .has-zpid #posting-landing-overlay.overlay-rental {
+        height: 180px;
+        top: 350px
+    }
+    #posting-landing-overlay.overlay-coming-soon,
+    .has-zpid #posting-landing-overlay.overlay-coming-soon {
+        top: 300px;
+        height: 230px
+    }
+    .rental #posting-landing-overlay #addressFieldset {
+        margin-right: 0;
+        padding-right: 0;
+        width: 100%
+    }
+    .rental #posting-landing-overlay #stateFieldset,
+    .rental #posting-landing-overlay #unitFieldset {
+        padding-right: 5px;
+        width: 50%
+    }
+    .rental #posting-landing-overlay #cityFieldset,
+    .rental #posting-landing-overlay #zipFieldset {
+        padding-left: 5px;
+        padding-right: 0;
+        width: 50%
+    }
+    .rental #posting-landing-overlay #address,
+    .rental #posting-landing-overlay #cityField,
+    .rental #posting-landing-overlay #stateSelection,
+    .rental #posting-landing-overlay #unitNumberField,
+    .rental #posting-landing-overlay #zipCodeField,
+    .rental #posting-landing-overlay button {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width:700px) {
+    #posting-landing-overlay {
+        top: 290px;
+        height: 240px
+    }
+    #posting-landing-overlay.overlay-mmm {
+        top: 210px;
+        height: 320px
+    }
+}
+
+@media only screen and (max-width:650px) {
+    #posting-landing-overlay.overlay-coming-soon,
+    .has-zpid #posting-landing-overlay.overlay-coming-soon {
+        top: 240px;
+        height: 290px
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #posting-landing-overlay {
+        padding: 10px;
+        top: 260px;
+        height: 310px
+    }
+    #posting-landing-overlay.overlay-mmm {
+        top: 200px;
+        height: 370px
+    }
+    #posting-landing-overlay.overlay-coming-soon,
+    .has-zpid #posting-landing-overlay.overlay-coming-soon {
+        top: 380px
+    }
+    #posting-landing-overlay.overlay-rental {
+        top: 210px;
+        height: 360px
+    }
+    .has-zpid #posting-landing-overlay.overlay-rental {
+        height: 210px;
+        top: 360px
+    }
+    #posting-landing-overlay fieldset {
+        width: 50%!important
+    }
+    #posting-landing-overlay button,
+    #posting-landing-overlay fieldset {
+        padding-right: 10px
+    }
+    #posting-landing-overlay #addressFieldset {
+        margin-right: 0;
+        padding-right: 0;
+        width: 100%!important
+    }
+    #posting-landing-overlay #stateFieldset,
+    #posting-landing-overlay #unitFieldset {
+        padding-right: 5px
+    }
+    #posting-landing-overlay #cityFieldset,
+    #posting-landing-overlay #zipFieldset {
+        padding-left: 5px;
+        padding-right: 0
+    }
+    #posting-landing-overlay #address,
+    #posting-landing-overlay #cityField,
+    #posting-landing-overlay #stateSelection,
+    #posting-landing-overlay #unitNumberField,
+    #posting-landing-overlay #zipCodeField,
+    #posting-landing-overlay .posting-landing-address-block {
+        width: 100%
+    }
+    #posting-landing-overlay #coming-soon-thumbnail img {
+        margin: 10px auto;
+        float: none
+    }
+    #posting-landing-overlay #coming-soon-bullets-wide {
+        display: none
+    }
+    #posting-landing-overlay #coming-soon-bullets-narrow {
+        display: block
+    }
+}
+
+.posting-launch-main-container {
+    display: none
+}
+
+.other-posting-options,
+.rental-posting-landing {
+    background-color: #dbd7c4;
+    margin: 0 -20px;
+    padding: 7px 20px 10px;
+    text-align: center
+}
+
+.other-posting-options dd,
+.other-posting-options dt {
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px
+}
+
+.other-posting-options dd {
+    text-transform: none
+}
+
+@media screen and (max-width:1024px) {
+    .other-posting-options dt {
+        display: block
+    }
+}
+
+.rental-posting-landing {
+    font-size: 13px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-transform: none
+}
+
+@media screen and (max-width:480px) {
+    #posting-landing-overlay button {
+        width: 100%
+    }
+    .has-zpid #posting-landing-overlay.overlay-rental {
+        top: 220px
+    }
+    #posting-landing-overlay.overlay-coming-soon,
+    .has-zpid #posting-landing-overlay.overlay-coming-soon {
+        top: 190px;
+        height: 480px
+    }
+    .other-posting-options,
+    .rental-posting-landing {
+        margin: 0 -10px
+    }
+    .other-posting-options dd,
+    .other-posting-options dt {
+        font-size: 13px;
+        display: block;
+        padding: 10px 0
+    }
+    .other-posting-options {
+        /*text-align: left*/
+    }
+    .other-posting-options dt {
+        padding-bottom: 0
+    }
+    .rental-posting-landing {
+        font-size: 13px
+    }
+}
+
+.seller-landing-page-sprite {
+    background-image: url(/static/img/seller-landing-page-3x.png);
+    background-size: 317px 160px
+}
+
+.posting-launch-why-post {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.posting-launch-why-post ul {
+    margin-bottom: 0
+}
+
+.posting-launch-why-post li {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+    padding-right: 38px;
+    text-align: center
+}
+
+.posting-launch-why-post li:last-child {
+    padding-right: 0
+}
+
+#coming-soon-video_content {
+    max-width: 90%
+}
+
+#coming-soon-video-content {
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden
+}
+
+#coming-soon-video-content iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.posting-launch-why-post-icon1,
+.posting-launch-why-post-icon2,
+.posting-launch-why-post-icon3,
+.posting-launch-why-post-icon4 {
+    width: 75px;
+    height: 75px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.posting-launch-why-post-icon1 {
+    background-position: -151px 0
+}
+
+.posting-launch-why-post-icon2 {
+    background-position: -76px 0;
+    margin-bottom: 15px
+}
+
+.posting-launch-why-post-icon3 {
+    background-position: 0 0
+}
+
+.posting-launch-why-post-icon4 {
+    background-position: -227px 0
+}
+
+.posting-launch-why-post-blurb-mobile {
+    display: none
+}
+
+.posting-launch-secondary-top {
+    margin-top: 40px;
+    text-align: center
+}
+
+.postlets-text {
+    padding-left: 57px;
+    padding-top: 10px
+}
+
+.postlets-logo {
+    margin-top: 7px
+}
+
+@media only screen and (max-width:920px) {
+    .zss-module-streamlined .posting-launch-secondary-top {
+        margin-bottom: 25px
+    }
+    .zss-module-streamlined h3 {
+        font-weight: 800;
+        font-size: 14px;
+        text-align: left;
+        margin: 0
+    }
+}
+
+@media screen and (max-width:768px) {
+    #landing-background {
+        height: 530px;
+    }
+    .rental.has-zpid #priceOnlyForm {
+        padding-right: 50px
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #landing-background {
+        height: 570px
+    }
+    #landing-background.coming-soon-background {
+        height: 670px
+    }
+    #posting-trapezoid:after {
+        border: 0
+    }
+}
+
+@media screen and (max-width:480px) {
+    .zss-module-streamlined .posting-launch-secondary-top {
+        margin-top: 20px
+    }
+    .zss-module-streamlined h2 {
+        margin: 0 0 20px;
+        text-align: left
+    }
+    .zss-module-streamlined h2.posting-launch-join-sellers-heading {
+        margin-left: 20px
+    }
+    .zss-module-streamlined .seller-landing-page-sprite {
+        background-size: 475px 240px
+    }
+    .zss-module-streamlined .posting-launch-why-post {
+        width: auto
+    }
+    .zss-module-streamlined .posting-launch-why-post li {
+        display: block;
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: left
+    }
+    .zss-module-streamlined .posting-launch-why-post h5 {
+        display: none
+    }
+    .zss-module-streamlined .posting-launch-why-post-icon1,
+    .zss-module-streamlined .posting-launch-why-post-icon2,
+    .zss-module-streamlined .posting-launch-why-post-icon3,
+    .zss-module-streamlined .posting-launch-why-post-icon4 {
+        float: left;
+        width: 45px;
+        height: 45px;
+        margin-right: 18px
+    }
+    .zss-module-streamlined .posting-launch-why-post-icon1 {
+        background-position: -93px -113px
+    }
+    .zss-module-streamlined .posting-launch-why-post-icon2 {
+        background-position: -47px -113px
+    }
+    .zss-module-streamlined .posting-launch-why-post-icon3 {
+        background-position: 0 -113px
+    }
+    .zss-module-streamlined .posting-launch-why-post-icon4 {
+        background-position: -139px -113px
+    }
+    .zss-module-streamlined .posting-launch-why-post-blurb-mobile {
+        display: block;
+        overflow: hidden
+    }
+    .zss-module-streamlined .posting-launch-why-post-blurb-mobile h3 {
+        margin-bottom: 0
+    }
+    .zss-module-streamlined .posting-launch-why-post-blurb-mobile p {
+        font-weight: 400;
+        font-size: 14px;
+        color: #333;
+        margin: 0
+    }
+    .rental.has-zpid #landing-background {
+        height: 430px
+    }
+    .rental.has-zpid #priceOnlyForm {
+        padding-right: 0
+    }
+    .postlets-logo {
+        float: left;
+        height: auto;
+        margin-top: 10px;
+        width: 120px
+    }
+    .postlets-text {
+        overflow: auto;
+        padding-left: 20px
+    }
+}
+
+.zsg-radio-tabs {
+    border-bottom: 1px solid #fff;
+    height: 40px;
+    white-space: nowrap
+}
+
+.zsg-radio-tabs li {
+    display: inline-block;
+    letter-spacing: normal;
+    word-spacing: normal;
+    position: relative;
+    text-align: center
+}
+
+.zsg-radio-tabs input[type=radio] {
+    border: 0;
+    left: -9999px;
+    position: absolute;
+    width: auto
+}
+
+.zsg-radio-tabs input[type=radio]:checked+label {
+    font-weight: 700;
+    border-bottom: 5px solid #fff;
+    height: 40px;
+    padding: 0!important
+}
+
+.zsg-radio-tabs input[type=radio]:checked+label+h5 {
+    padding: 0 10px 0 0
+}
+
+.zsg-radio-tabs input[type=radio]:checked+label:after {
+    background: 0 0!important
+}
+
+.zsg-radio-tabs input[type=radio]+label {
+    padding: 0 10px;
+    position: static
+}
+
+.zsg-radio-tabs input[type=radio]+label:hover {
+    color: #62aef7
+}
+
+.zsg-radio-tabs input[type=radio]+label:before {
+    border: none!important;
+    border-radius: 0!important;
+    background: 0 0!important;
+    height: 0;
+    left: -9999px;
+    top: -9999px;
+    width: 0
+}
+
+.zsg-tabs.zsg-tabs-posting-landing {
+    margin-bottom: 0;
+    border-bottom-color: #fff
+}
+
+.zsg-tabs.zsg-tabs-posting-landing li input[type=radio]:checked+label {
+    color: #fff;
+    border-bottom: 2px solid #fff
+}
+
+.zsg-tabs.zsg-tabs-posting-landing li input[type=radio]+label:hover {
+    color: #62aef7
+}
+
+#landing-background.has-error {
+    height: 530px
+}
+
+@media screen and (max-width:768px) {
+    #landing-background.has-error {
+        height: 590px
+    }
+}
+
+@media only screen and (max-width:700px) {
+    #landing-background.has-error {
+        height: 630px
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #landing-background.has-error {
+        height: 670px
+    }
+}
+
+#landing-background.has-error #posting-landing-overlay {
+    height: 240px;
+    top: 290px
+}
+
+#landing-background.has-error #posting-landing-overlay.overlay-mmm {
+    height: 280px;
+    top: 250px
+}
+
+#landing-background.has-error #posting-landing-overlay.overlay-coming-soon {
+    top: 280px;
+    height: 250px
+}
+
+@media only screen and (max-width:1279px) {
+    #landing-background.has-error #posting-landing-overlay {
+        height: 250px;
+        top: 280px
+    }
+    #landing-background.has-error #posting-landing-overlay.overlay-mmm {
+        height: 340px;
+        top: 190px
+    }
+    #landing-background.has-error #posting-landing-overlay.overlay-rental {
+        height: 290px;
+        top: 240px
+    }
+}
+
+@media only screen and (max-width:800px) {
+    #landing-background.has-error #posting-landing-overlay.overlay-mmm {
+        height: 410px;
+        top: 120px
+    }
+}
+
+@media screen and (max-width:768px) {
+    #landing-background.has-error #posting-landing-overlay {
+        height: 250px;
+        top: 340px
+    }
+    #landing-background.has-error #posting-landing-overlay.overlay-mmm {
+        height: 320px;
+        top: 270px
+    }
+    #landing-background.has-error #posting-landing-overlay.overlay-rental {
+        height: 380px;
+        top: 210px
+    }
+    .has-zpid #landing-background.has-error #posting-landing-overlay.overlay-rental {
+        top: 390px
+    }
+    #landing-background.has-error #posting-landing-overlay.overlay-coming-soon {
+        height: 330px;
+        top: 260px
+    }
+}
+
+#landing-background.has-error #posting-trapezoid {
+    bottom: 240px
+}
+
+#landing-background.has-error #posting-trapezoid.trapezoid-coming-soon,
+#landing-background.has-error #posting-trapezoid.trapezoid-mmm {
+    bottom: 280px
+}
+
+@media only screen and (max-width:1279px) {
+    #landing-background.has-error #posting-trapezoid {
+        bottom: 250px
+    }
+    #landing-background.has-error #posting-trapezoid.trapezoid-mmm {
+        bottom: 340px
+    }
+    #landing-background.has-error #posting-trapezoid.trapezoid-rental {
+        bottom: 290px
+    }
+}
+
+@media only screen and (max-width:800px) {
+    #landing-background.has-error #posting-trapezoid.trapezoid-mmm {
+        bottom: 410px
+    }
+}
+
+@media screen and (max-width:768px) {
+    #landing-background.has-error #posting-trapezoid {
+        bottom: 250px
+    }
+    #landing-background.has-error #posting-trapezoid.trapezoid-mmm {
+        bottom: 320px
+    }
+    #landing-background.has-error #posting-trapezoid.trapezoid-coming-soon {
+        bottom: 330px
+    }
+    #landing-background.has-error #posting-trapezoid.trapezoid-rental {
+        bottom: 380px
+    }
+}
+
+@media only screen and (max-width:700px) {
+    #landing-background.has-error #posting-landing-overlay {
+        height: 340px;
+        top: 290px
+    }
+    #landing-background.has-error #posting-landing-overlay.overlay-coming-soon {
+        height: 400px;
+        top: 230px
+    }
+    #landing-background.has-error #posting-landing-overlay.overlay-mmm {
+        height: 420px;
+        top: 210px
+    }
+    #landing-background.has-error #posting-landing-overlay.overlay-rental {
+        height: 340px;
+        top: 290px
+    }
+    #landing-background.has-error #posting-trapezoid {
+        bottom: 340px
+    }
+    #landing-background.has-error #posting-trapezoid.trapezoid-mmm {
+        bottom: 420px
+    }
+    #landing-background.has-error #posting-trapezoid.trapezoid-coming-soon {
+        bottom: 400px
+    }
+    #landing-background.has-error #posting-trapezoid.trapezoid-rental {
+        bottom: 340px
+    }
+}
+
+@media only screen and (max-width:600px) {
+    #landing-background.has-error #posting-landing-overlay,
+    #landing-background.has-error #posting-landing-overlay.overlay-coming-soon {
+        height: 420px;
+        top: 250px
+    }
+    #landing-background.has-error #posting-landing-overlay.overlay-rental {
+        height: 400px;
+        top: 270px
+    }
+    #landing-background.has-error #posting-landing-overlay.overlay-mmm {
+        height: 480px;
+        top: 190px
+    }
+    #landing-background.has-error #posting-trapezoid,
+    #landing-background.has-error #posting-trapezoid.trapezoid-coming-soon {
+        bottom: 420px
+    }
+    #landing-background.has-error #posting-trapezoid.trapezoid-mmm {
+        bottom: 480px
+    }
+    #landing-background.has-error #posting-trapezoid.trapezoid-rental {
+        bottom: 400px
+    }
+}
+
+#ambigous-lightbox_content {
+    max-height: 100%
+}
+
+.draft-sign-in,
+.draft-sign-in a {
+    color: #fff
+}
+
+.gte-ie9:not(.ie9) #posting-launch-form {
+    display: block
+}
+
+.coming-soon-landing-background#landing-background .zsg-notification-bar {
+    display: inline-block;
+    color: #444
+}
+
+.coming-soon-landing-background#landing-background .zsg-notification-bar h4 {
+    margin-top: 0!important
+}
+
+@media screen and (min-width:769px) {
+    .coming-soon-landing-background#landing-background {
+        margin-top: -50px;
+        height: 560px
+    }
+    .coming-soon-landing-background#landing-background .coming-soon-agent-warning-block-narrow {
+        display: none
+    }
+    .coming-soon-landing-background#landing-background .coming-soon-agent-warning-block-wide {
+        width: 39%
+    }
+    .coming-soon-landing-background#landing-background #posting-trapezoid {
+        bottom: 239px
+    }
+    .coming-soon-landing-background#landing-background #posting-fields {
+        width: 62%
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay {
+        padding: 0 12%;
+        height: 240px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay h4 {
+        margin: 14px 0 0
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay button,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay input,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay select {
+        margin: 8px 8px 8px 0
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #address {
+        width: 516px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #addressFieldset {
+        width: 529px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #unitNumberField {
+        width: 135px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #unitFieldset {
+        width: 144px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #cityField {
+        width: 135px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #cityFieldset {
+        width: 144px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #stateSelection {
+        width: 85px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #stateFieldset {
+        width: 94px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #zipCodeField {
+        width: 135px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #zipFieldset {
+        width: 145px
+    }
+}
+
+@media only screen and (max-width:1279px) {
+    .coming-soon-landing-background#landing-background #posting-landing-overlay {
+        top: 320px
+    }
+}
+
+@media only screen and (max-width:1148px) {
+    .coming-soon-landing-background#landing-background #posting-landing-overlay {
+        padding: 0 6%
+    }
+}
+
+@media only screen and (max-width:1010px) {
+    .coming-soon-landing-background#landing-background #posting-landing-overlay {
+        padding: 0 4%
+    }
+    .coming-soon-landing-background#landing-background #posting-fields {
+        width: 65%;
+        padding-right: 0
+    }
+    .coming-soon-landing-background#landing-background .coming-soon-agent-warning-block-wide {
+        width: 35%
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .coming-soon-landing-background#landing-background {
+        height: 600px
+    }
+    .coming-soon-landing-background#landing-background #posting-trapezoid {
+        bottom: 270px
+    }
+    .coming-soon-landing-background#landing-background #posting-fields {
+        padding-right: 10px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay {
+        height: 270px;
+        top: 330px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #address,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #addressFieldset,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #cityField,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #stateSelection,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #unitNumberField,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #zipCodeField,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay .posting-landing-address-block,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay .posting-landing-unit-city-block {
+        width: 100%
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #stateFieldset,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #unitFieldset {
+        width: 50%;
+        padding-right: 10px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #cityFieldset,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #zipFieldset {
+        width: 50%;
+        padding-left: 10px
+    }
+}
+
+@media screen and (max-width:768px) {
+    .coming-soon-landing-background#landing-background {
+        height: 630px
+    }
+    .coming-soon-landing-background#landing-background #posting-fields {
+        width: 100%
+    }
+    .coming-soon-landing-background#landing-background #posting-trapezoid {
+        bottom: 340px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay {
+        height: 340px;
+        top: 290px;
+        padding-top: 10px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay .posting-landing-unit-city-block {
+        width: 60%
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay .posting-landing-address-block {
+        width: 40%
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #stateFieldset {
+        width: 30%;
+        padding-right: 4%
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #zipFieldset {
+        width: 70%;
+        padding-left: 0
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #cityFieldset,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #unitFieldset {
+        padding-right: 3%;
+        padding-left: 0
+    }
+    .coming-soon-landing-background#landing-background .coming-soon-agent-warning-block-narrow {
+        display: block
+    }
+    .coming-soon-landing-background#landing-background .coming-soon-agent-warning-block-wide {
+        display: none
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .coming-soon-landing-background#landing-background {
+        height: 680px
+    }
+    .coming-soon-landing-background#landing-background #posting-trapezoid {
+        bottom: 440px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay {
+        height: 440px;
+        top: 240px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay .posting-landing-address-block,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay .posting-landing-unit-city-block,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay button {
+        width: 100%
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #stateFieldset,
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #unitFieldset {
+        padding-right: 5px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay #cityFieldset {
+        padding-right: 0
+    }
+}
+
+@media only screen and (max-width:350px) {
+    .coming-soon-landing-background#landing-background #posting-trapezoid {
+        bottom: 470px
+    }
+    .coming-soon-landing-background#landing-background #posting-landing-overlay {
+        top: 210px;
+        height: 470px
+    }
+}
+
+.coming-soon-landing-background#landing-background.has-error {
+    height: 590px
+}
+
+.coming-soon-landing-background#landing-background.has-error #posting-trapezoid {
+    bottom: 270px
+}
+
+@media only screen and (max-width:900px) {
+    .coming-soon-landing-background#landing-background.has-error {
+        height: 650px
+    }
+    .coming-soon-landing-background#landing-background.has-error #posting-trapezoid {
+        bottom: 320px
+    }
+}
+
+@media screen and (max-width:768px) {
+    .coming-soon-landing-background#landing-background.has-error {
+        height: 670px
+    }
+    .coming-soon-landing-background#landing-background.has-error #posting-trapezoid {
+        bottom: 380px
+    }
+}
+
+.coming-soon-landing-background#landing-background.has-error #posting-landing-overlay {
+    top: 320px;
+    height: 270px
+}
+
+@media only screen and (max-width:900px) {
+    .coming-soon-landing-background#landing-background.has-error #posting-landing-overlay {
+        top: 330px;
+        height: 320px
+    }
+}
+
+@media screen and (max-width:768px) {
+    .coming-soon-landing-background#landing-background.has-error #posting-landing-overlay {
+        top: 290px;
+        height: 380px
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .coming-soon-landing-background#landing-background.has-error #posting-trapezoid {
+        bottom: 500px
+    }
+    .coming-soon-landing-background#landing-background.has-error #posting-landing-overlay {
+        top: 170px;
+        height: 500px
+    }
+}
+
+@media only screen and (max-width:350px) {
+    .coming-soon-landing-background#landing-background.has-error #posting-trapezoid {
+        bottom: 520px
+    }
+    .coming-soon-landing-background#landing-background.has-error #posting-landing-overlay {
+        top: 150px;
+        height: 520px
+    }
+}

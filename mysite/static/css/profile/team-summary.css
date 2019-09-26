@@ -1,0 +1,10 @@
+﻿@keyframes zsgLoaderSpin{0%{transform:rotate(0)}
+100%{transform:rotate(360deg)}
+}
+.pts-team-ccol{padding:1px 10px}
+.pts-team-ccol .pfl-review-star_20{margin-right:3px}
+.pts-team-review-summary{width:80px}
+.pts-review-rating{line-height:1em}
+.pts-no-review-rating{line-height:1.3em}
+@media screen and (max-width:1023px){.pts-team-ccol{display:none}
+}

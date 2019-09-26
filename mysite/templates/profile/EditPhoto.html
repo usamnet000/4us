@@ -1,0 +1,327 @@
+
+{% extends 'base/Navbar.html' %}
+{% load static %}
+
+  {% block content %}
+
+
+
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+
+<link href="{% static 'css/profile/profile.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/contact-card.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/manage-profile.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/public-action-bar.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/team-member-list.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/profile-tools.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/team-summary.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/profile-professional-summary.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/z-toggle-content.css' %}" type="text/css" rel="stylesheet" />
+<style>
+    .zsg-layout-abc-b, .zsg-layout-bc-b {
+    width: 100%;
+    padding-left: 120px;
+    margin-right: 0px;
+    margin-top: 33px;
+}
+
+
+  body{
+    overflow-x:hidden;
+    overflow-y:auto;
+text-align:right;
+  }
+  .zsg-layout-abc-c, .zsg-layout-bc-c {
+    width: 300px;
+    margin-right: -300px;
+}
+
+ol, ul {
+    padding-right: 40px;
+}
+
+@media only screen and (max-width: 767px){
+/* Styles */
+#cCol-pro-contact-info
+{
+display:none;
+}
+}
+@media only screen and (min-width: 768px){
+/* Styles */
+#cCol-pro-contact-info
+{
+display:block;
+}
+}
+.zsg-tabs>li {
+    display: inline-block;
+    padding-right: 0px;
+    top: 4px;
+    font-size:14px;
+
+}
+
+
+</style>
+
+
+
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link id="avast_os_ext_custom_font" href="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/fonts/fonts.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" id="sb-font-awesome-css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+<link href="{% static 'css/profile/ie.css' %}" type="text/css" rel="stylesheet" />
+<link href="{% static 'css/profile/header.min.css' %}" type="text/css" rel="stylesheet" />
+<style>
+    @media screen and (max-width: 767px){
+.blog_page_filter_col_mobile {
+    position: relative;
+    margin-bottom: 0px;
+    z-index: 9;
+}
+.bpf_btn_in::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    bottom: 0;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.bpf_box_item {
+    width: 90%;
+    float: left;
+    padding: 10px 0 9px;
+}
+
+</style>
+
+
+
+
+        <main role="main">
+            <div class="blog_page">
+                <div class="page_banner">
+                    <div class="container">
+                        <div class="page_banner_title">نظرة عامة</div>
+                        <div class="page_banner_content">Get inspired with outdoor living tips from Shademaster.</div>
+                    </div>
+                </div>
+                <div class="blog_page_wrap">
+                    <div class="blog_page_content_wrap">
+                        <div class="blog_page_filter_col_mobile visible-xs">
+                            <div class="bpf_btn">
+                                <div class="container"> <span class="bpf_btn_in">خيارات الضبط:</span></div>
+                            </div>
+                            <div class="bpf_wrap_mobile" style="display: none;">
+                                <div class="container big-container bpf_container">
+                                    <div class="bpf_box_wrap">
+                                        <div class="bpf_box clearfix">
+                                            <div class="bpf_box_item">
+                                                <div class="bpfbi_title">حساب</div>
+                                                <ul class="bpfbi_items">
+                                                <li> <a href="https://www.shademaster.com.au/blog">المنازل المحفوظة</a></li>
+                                                <li> <a href="https://www.shademaster.com.au/category/verandahs">الملف الشخصي</a></li>
+                                                <li> <a href="https://www.shademaster.com.au/category/patio">إعدادت الحساب</a></li>
+                                                <li> <a href="https://www.shademaster.com.au/category/outdoor-areas">كلمة المرور</a></li>
+                                                        </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="blog_page_content_col" style="">
+                            <div class="bp_items">
+                                <div class="bp_item element_anim_1 start_anim">
+                                    <div class="container big-container">
+                                        <div class="bp_item_wrap">
+                                            <div class="bp_item_in feature">
+
+
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+
+    <link href="https://www.zillowstatic.com/static-profile/aa91e8a/static-profile/css/z-pages/edit-profile.css" type="text/css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" media="all" href="https://www.zillowstatic.com/s/?static.80d5e73=css/z-modules/upload-image-component.css,css/z-modules/image-upload-preview-pane.css" type="text/css">
+
+
+
+        <div class="zsg-layout-width zsg-layout-top zsg-layout-bottom" style="direction:rtl" id="yui_3_18_1_1_1567859632609_204">
+            <main class="zsg-layout-content" id="yui_3_18_1_1_1567859632609_203">
+                <h1 class="bpi_title">تعديل الصورة</h1>
+                <p class="sp_date">أضف صورة محدثة لنفسك للمساعدة في ملء ملف الشخصي الخاص بك.</p>
+                <form method="post" action="" name="editForm" id="editForm" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                    <fieldset class="photo-only" id="yui_3_18_1_1_1567859632609_202">
+                        <div class="image-uploader" id="yui_3_18_1_1_1567859632609_201">
+                            <div class="zsg-content-item" id="yui_3_18_1_1_1567859632609_19">
+                                <div id="null_upload-wrap" class="yui3-widget yui3-image-upload upload-image-component" data-context-id="1567859632069">
+                                    <div data-iframe-src="https://www.zillow.com/imaging/UploadImageFrame.htm?contextId=1567859632069&amp;imageDisplayType=13&amp;imageStatus=1&amp;imageType=2&amp;showUploadButton=true&amp;singleUpload=true" id="null_upload-target" class="yui3-image-upload-content hide-instructions">
+
+
+
+<style>
+input[type=file] {
+ position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    border: solid transparent;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 4;
+}
+
+</style>
+                                          <div class="zsg-button" style="transform: scaleX(1);">
+                                              <span>إضافة صورة شخصية</span>
+                               <input id="upload_image" name="myfile" type="file" accept="image/*" onchange="loadFile(event)" class="">
+                    </div>
+                                          </div>
+                                </div>
+                                <p class="zsg-form-help-text"> يجب أن تكون الصورة 180 بكسل 180 بكسل على الأقل وبتنسيق jpg. </p>
+                                <div class="message-bar error zsg-notification-text-error hide"></div>
+                            </div>
+                            <div id="null_preview" class="yui3-widget yui3-image-upload-preview-list" data-context-id="1567859632069" style="display:none;">
+                                <div class="firstImage"></div>
+                                <ul class="preview-images yui3-widget yui3-image-upload-preview-list-content" id="yui_3_18_1_1_1567859632609_81">
+                                    <li id="X1-IA56lxghyghu601000000000_ihtbl" class="yui3-widget yui3-image-upload-preview yui3-image-upload-preview-content mainImage">
+                                        <p class="thumbnail" id="yui_3_18_1_1_1567859632609_197">
+                                            <img alt="" id="output" src="" class="thumbnail" width="70px" height="70px">
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <ul class="action zsg-button-group">
+                            <li>
+                                <button type="submit" title="Submit" class="zsg-button_primary">حفظ</button>
+                            </li>
+                            <li>
+                                <a id="reset" name="SubmitButton" class="zsg-button">إلغاء</a>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <input type="text" name="kval" value="9DTbcbUB5gP6Y33wlBRUsxlmUG_i-KPSwY9JVHBsnT0" id="kval" style="display:none;">
+                </form>
+            </main>
+        </div>
+
+
+
+
+
+                                                <!--<div class="bpf_box_wrap"><div class="bpf_box"><div class="bpf_box_item"><div class="bpfbi_title">Categories</div><ul class="bpfbi_items"><li> <a href="https://www.shademaster.com.au/category/verandahs">Verandahs</a></li><li> <a href="https://www.shademaster.com.au/category/patio">patio</a></li><li> <a href="https://www.shademaster.com.au/category/outdoor-areas">outdoor areas</a></li><li> <a href="https://www.shademaster.com.au/category/gazebos">gazebos</a></li><li> <a href="https://www.shademaster.com.au/category/outdoor-rooms">outdoor rooms</a></li></ul></div><div class="bpf_box_item"><div class="bpfbi_title">Date</div><ul class="bpfbi_items"><li><a href='https://www.shademaster.com.au/2016/10'>October 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/05'>May 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/04'>April 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/03'>March 2016</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2016/02'>February 2016</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/11'>November 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/10'>October 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/09'>September 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/08'>August 2015</a>&nbsp;(3)</li><li><a href='https://www.shademaster.com.au/2015/07'>July 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/06'>June 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/05'>May 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/04'>April 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/03'>March 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2015/02'>February 2015</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2015/01'>January 2015</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2014/12'>December 2014</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2014/10'>October 2014</a>&nbsp;(1)</li><li><a href='https://www.shademaster.com.au/2014/09'>September 2014</a>&nbsp;(2)</li><li><a href='https://www.shademaster.com.au/2014/07'>July 2014</a>&nbsp;(1)</li></ul></div></div></div> --></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="blog_page_filter_col" style="padding-top: 0px;">
+                            <div class="container big-container bpf_container">
+                                <div class="bpf_box_wrap">
+                                    <div class="bpf_box bpf_box_sc">
+                                        <div class="bpf_box_item">
+                                            <div class="bpfbi_title">خيارات الضبط</div>
+                                            <ul class="bpfbi_items">
+                                                <li> <a href="https://www.shademaster.com.au/blog">المنازل المحفوظة</a></li>
+                                                <li> <a href="https://www.shademaster.com.au/category/verandahs">الملف الشخصي</a></li>
+                                                <li> <a href="https://www.shademaster.com.au/category/patio">إعدادت الحساب</a></li>
+                                                <li> <a href="https://www.shademaster.com.au/category/outdoor-areas">كلمة المرور</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <!-- /wrapper -->
+    <!-- Instagram Feed JS -->
+
+
+
+
+
+      {% include 'footer.html' %}
+
+<style>
+    .h-c-footer.h-c-footer--topmargin {
+    margin-top: 150px;
+
+}
+</style>
+
+ <script>
+  var loadFile = function(event) {
+  document.getElementById('null_preview').style.display= "block";
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+
+
+        <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+
+
+<script>
+
+    if (window.matchMedia("(max-width: 767px)").matches) {
+
+$('#pedt-menu_toolbar-lnk').css({'left':'50%','right':'100%'});
+$('.ctcd-profile-image-container').css({'right':'23%'});
+$('.ctcd-agent-type, .ctcd-community-pillar, .ctcd-name, .ctcd-non-region-context .ctcd-all-activity, .ctcd-team-rank ').css({'position':'relative','right':'17%'});
+
+}
+
+
+$(".blog_page_filter_col_mobile").on("click", function(evt) {
+if ($('.bpf_btn').hasClass("open")) {
+$('.bpf_btn').removeClass('open');
+$('.bpf_wrap_mobile').hide();
+}
+else
+{
+$('.bpf_btn').addClass('open');
+$('.bpf_wrap_mobile').show();
+}
+});
+
+$('#reset').click( function(){
+$('#file').val('');
+$('#output').attr('src', '');
+return false;
+});
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,91 @@
+<!-- footer -->
+<style>
+.newsletter_input:focus
+{
+	outline: 0;
+	transition: box-shadow .3s;
+	box-shadow: inset 0 0 0 #F9F9FB, 0 0 5px #62aef7;
+	border-color: #e8e5d4;
+}
+</style>
+<footer class="footer" style="direction:rtl;text-align:right;">
+    <div class="footer_sec1">
+        <div class="container">
+
+            <div class="row foot_row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 foot_col foot_col_left">
+                    <span class="foot_bg lazyBg"></span>
+                    <p class="title_58 element_anim_1 start_anim" style="text-align: center;">فرص4us</p>
+                    <p class="foot_label foot_social_label" style="font-size: 13px;text-transform: uppercase; letter-spacing: .05em;line-height: 3.30769;color:#545759;width: 100%;text-align:right">فرص هو موقع عقاري مجاني على الإنترنت حيث يمكنك البحث عن منازل للبيع ، والعثور على أسعار المنازل ، ومشاهدة قيم المنازل ، وعرض المنازل التي تم بيعها مؤخرًا ، والتحقق من معدلات الرهن العقاري. ابدأ من خلال العثور على العقارات في أفضل المناطق والعقارات في المدن الكبرى.</p>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 foot_col">
+                    <div class="foot_menu_wrap">
+
+                        <div id="footer-menu" class="menu-footer-menu-container">
+                            <ul id="menu-footer-menu" class="foot_menu clearfix">
+
+                                <li id="menu-item-1561" class="menu-item menu-item-type-post_type_archive menu-item-object-roofing_design menu-item-has-children menu-item-1561">
+
+                        </div>
+                    </div>
+                    <div class="foot_social_wrap">
+                        <div class="foot_label foot_social_label">كن مصدر إلهام من خلال متابعتنا:</div>
+                        <div class="foot_social_items">
+                            <a class="foot_social_item" href="" target="_blank"> <img class="svg_inject social_image" src="/static/img/pint.svg"> </a>
+                            <a class="foot_social_item" href="" target="_blank"> <img class="svg_inject social_image" src="/static/img/insta.svg"> </a>
+                            <a class="foot_social_item" href="" target="_blank"> <img class="svg_inject social_image" src="/static/img/fb.svg"> </a>
+                        </div>
+                    </div>
+                    <div class="foot_newsletter">
+                        <div class="foot_label foot_social_label">الاشتراك في النشرة الإخبارية على موقع فرص:</div>
+                        <div class="newsletter_add_box">
+                            <form class="newsletter_add" method="GET" action="/Subscriptions/?next={{request.path}}">
+                                <input class="newsletter_input" placeholder="عنوان البريد الإلكتروني" type="email" name="email" required="">
+                                <button class="newsletter_submit" type="submit">إنضم</button>
+                                <div class="newsletter_loader"> <i class="fa fa-spinner fa-spin fa-2x fa-fw"></i> <span class="sr-only">تحميل...</span></div>
+                            </form>
+                            <div class="newsletter_confirmation">شكر! لقد اشتركت في النشرة الإخبارية لدينا.</div>
+                            <div class="newsletter_error">هناك خطأ ما. الرجاء معاودة المحاولة في وقت لاحق.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_sec2">
+        <div class="container">
+            <div class="foot_sec2_cont">
+                <div class="foot_contact">
+                    <p>إبقى على تواصل بنا على <a href="tel:1800900650">1300 511 053</a> أو راسلنا عبر البريد الإلكتروني على العنوان <a href="mailto:enquiries@4us.com">enquiries@4us.com</a></p>
+                </div>
+                <div class="foot_jtb">
+                             ‎©2019 4us
+                           <a href="{% url 'Privacy' %}" target="_blank">سياسة الخصوصية</a>
+                           <a href="{% url 'Terms' %}" target="_blank">بنود الخدمة</a>
+                     </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /footer -->
+
+
+
+<script>
+
+ $('form').on('submit', function(event) {
+      event.preventDefault();
+$.ajax({
+    data: $(this).serialize(),
+    type: $(this).attr('method'),
+    url: $(this).attr('action'),
+          success: function(data) {
+          $('.newsletter_confirmation').removeClass('newsletter_confirmation');
+},
+error: function(xhr, status, error) {
+$('.newsletter_error').removeClass('newsletter_error');
+               }
+        });
+});
+
+</script>

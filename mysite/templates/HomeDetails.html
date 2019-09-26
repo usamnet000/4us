@@ -1,0 +1,912 @@
+﻿
+
+{% extends 'base/Navbar.html' %}
+{% load static %}
+{% load humanize %}
+{% load l10n %}
+      {% block extra_head %}
+{% block head_title %}تفاصيل المنزل{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/photogallery.css' %}">
+    <link rel="stylesheet" type="text/css" href="http://www.orangesmile.com/tmp/jquery_bold/css/custom-theme/jquery-ui-1.8.16.custom.css">
+    <link rel="stylesheet" type="text/css" href="http://www.orangesmile.com/tmp/lightbox2/src/css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="http://www.orangesmile.com/tmp/lang-switcher/css/polyglot-language-switcher-3.css">
+
+    <link rel="stylesheet" type="text/css" href="http://www.orangesmile.com/js/wowslider/city_full_900_500_90_synch_carousel_effect/engine1/style.css">
+    <link rel="stylesheet" type="text/css" href="http://www.orangesmile.com/js/wowslider/style_long.css">
+    <style type="text/css">
+
+
+#ui-datepicker-div {
+            display: none;
+        }
+
+
+    </style>
+
+
+
+<span class="notranslate" style="display: none" id="a-sp-root-template">
+
+</span>
+
+    <link href="https://www.zillowstatic.com/static-zsg/d2386fd/static-zsg/zsg/zsg-core.css" type="text/css" rel="stylesheet" media="all">
+    <link href="https://www.zillowstatic.com/static-zsg/d2386fd/static-zsg/zsg/zsg-opt.css" type="text/css" rel="stylesheet" media="all">
+
+
+
+<link rel="stylesheet" href="{% static 'css/listings.css'%}"/>
+
+    <link href="https://s.zillowstatic.com/hdp/home-details/css/home-details-69fd81dd34.css" type="text/css" rel="stylesheet">
+    <link href="https://www.zillowstatic.com/cdp/4e1f697/dist/ds-community-details/css/community-details-b5cce9f9d9.css" type="text/css" rel="stylesheet">
+
+
+    <link href="https://www.zillowstatic.com/h/027519e/dist/main-9b420960b71839a35046.css" type="text/css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" media="all" href="https://www.zillowstatic.com/s/?static-paparazzi.0a7c207=css/z-modules/hdp-home-value-chart-base.css,css/z-modules/hdp-home-value-chart-desktop.css&amp;static.80d5e73=css/z-modules/lightbox-blocks.css&amp;static-email-a-friend.847f564=css/z-modules/email-a-friend.css,css/z-modules/social-media.css&amp;static-hdp.a8d09ea=css/z-modules/hdp-owner-view-tabs-desktop.css" type="text/css">
+
+
+
+
+
+<style>
+    .zsg-g_gutterless
+    {
+    display:flex;
+    flex-wrap:wrap;
+    }
+      @media (max-width: 767px) {
+    #ds-contact-lightbox
+    {
+
+    }
+    }
+    .cf-frm-text-field:before {
+    font-family: zmod-icon-set1!important;
+    font-style: normal!important;
+    font-weight: 400!important;
+    font-variant: normal!important;
+    text-transform: none!important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-size: 17px;
+    font-size: 1.13333333rem;
+    position: absolute;
+    top: 7.5px;
+    right: 5px;
+    left:100%;
+}
+.cf-frm-text-field_email .cf-frm-input, .cf-frm-text-field_name .cf-frm-input, .cf-frm-text-field_phone .cf-frm-input {
+    padding-right: 25px;
+}
+.yui3-lightbox .yui3-lightbox-content>.lightbox-close, .yui3-lightbox .yui3-lightbox-content>.zsg-lightbox-close {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right:95%;
+    color: #2A2A33;
+    margin: -15px;
+    padding: 15px;
+}
+.zsg-button_primary:focus, .zsg-button_primary:hover {
+    background-color: #6c91af;
+    background: linear-gradient(to top, #7ca5ba, #4285b5);
+    background-repeat: repeat-x;
+    color: #FFF;
+    border-color: #7ca5ba;
+}
+</style>
+
+<style>
+
+
+#ds-data-view
+    {
+    overflow:auto;
+    overflow-X:hidden;
+    }
+    .BPgEU {
+    display: inline-block;
+    width: calc(50% - 8px);
+    margin-right: 5px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+    ol, ul {
+    padding-right: 0px;
+    padding-left:0px;
+    margin:0;
+}
+.ds-obz-logo-img
+{
+    width: 80px;
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 0;
+}
+.ds-container .ds-home-facts-and-features .ds-home-fact-list .ds-home-fact-list-item .ds-at-a-glance-icon {
+    color: #7ca5ba;
+    font-size: 20px;
+}
+.ds-text-button {
+    color: #7ca5ba;
+    padding: 0;
+    border: 0;
+    background: 0 0;
+}
+.ds-action-bar-link {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 600;
+    color: #7ca5ba;
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer;
+    height: 100%;
+}
+.ds-action-bar-light .ds-action-bar-icon-fill {
+    fill: #7ca5ba;
+}
+.ds-price-and-tax-section-table .zsg-icon-expando-up, .home-details-ds-foreclosure-section .ds-foreclosure-table .zsg-icon-expando-down, .home-details-ds-foreclosure-section .ds-foreclosure-table .zsg-icon-expando-up, .zsg-icon-expando-down {
+    color: #7ca5ba;
+}
+.ds-action-bar-light .ds-action-bar-icon-stroke {
+    stroke: #7ca5ba;
+}
+
+.ds-button.primary {
+    color: #fff;
+    border-color: #7ca5ba;
+    background-color: #7ca5ba;
+}
+.ds-button.primary:hover:not([disabled]) {
+    background-color: transparent;
+    color: #7db0ca;
+}
+.ds-button.secondary {
+    color: #7ca5ba;
+    border-color: #aaa;
+    background-color: #fff;
+}
+
+.ds-button.secondary:hover:not([disabled]) {
+    background-color: transparent;
+    border-color: #7ca5ba;
+    color: #7db0ca;
+}
+</style>
+
+
+<style>
+
+.home-details-fullscreen-lightbox .hdp-gallery-image-content {
+    height: calc(100% - 42px);
+    margin-top: 9px;
+}
+      #wowslider-container1 .ws_images, #wowslider-container1 .ws_shadow {
+    margin-bottom: 8.0em;
+}
+#contentcolumn-slider {
+    margin-left: 150px;
+    margin-right: 150px;
+    height: 600px;
+    background-color: #16161F;
+}
+
+.home-details-fullscreen-lightbox .yui3-lightbox-content .zsg-icon-x-thin {
+    position: absolute;
+    left: 18px;
+    right: 100%;
+    color: #FFF;
+    top: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px 18px 10px;
+}
+
+
+.zsg-carousel-counter {
+    position: absolute;
+    display: inline-block;
+    right: 165px;
+    top: 10px;
+    min-width: 30px;
+    border-radius: 3px;
+    padding: 5px 9px;
+    zoom: 1;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    color: #FFF;
+    background-color: #2A2A33;
+    z-index: 100;
+}
+ol, ul {
+     padding-right: 0px;
+}
+.hdp-gallery-actions .zsg-icon-mail {
+    margin-left: .3em;
+    margin-right: 0px;
+    vertical-align: text-top;
+    font-size: 1.8em;
+    display: inline-block;
+    margin-top: -4px;
+}
+.hdp-gallery-actions .zsg-icon-heart-filled, .hdp-gallery-actions .zsg-icon-heart-line, .hdp-gallery-actions .zsg-icon-photos {
+    font-size: 1.2em;
+    margin-left: .3em;
+    margin-right:0px;
+    vertical-align: sub;
+}
+  @media (max-width: 767px) {
+#contentcolumn-slider {
+    margin-left: 0%;
+    margin-right: 63%;
+    bottom: 0;
+    height: 600px;
+    background-color: #16161F;
+}
+
+#wowslider-container1 .ws_controls, #wowslider-container1 .ws_bullets, #wowslider-container1 .ws_thumbs {
+    display: block;
+}
+.photo-carousel-right-arrow.zsg-button-group,.photo-carousel-left-arrow.zsg-button-group
+{
+display:none;
+}
+.hdp-gallery-actions>li:last-child {
+display:none;
+}
+}
+
+.yui3-lightbox .yui3-lightbox-content>.lightbox-close, .yui3-lightbox .yui3-lightbox-content>.zsg-lightbox-close {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: auto;
+    color: #2A2A33;
+    margin: -15px;
+    padding: 15px;
+}
+
+.dropdown a {
+    color: #000;
+    padding-right:7px;
+    padding-left:3px;
+}
+.dropdown a:hover {
+    color: #fff;
+    background: #5e8396;
+}
+.zsg-button_primary:focus, .zsg-button_primary:hover {
+    background-color: #6c91af;
+    background: linear-gradient(to top, #7ca5ba, #94bdda);
+    background-repeat: repeat-x;
+    color: #FFF;
+    border-color: #7ca5ba;
+}
+#send-to-friend-lightbox .zsg-form-actions-row-item {
+    -ms-flex: 1 0 auto;
+    flex: 1 1;
+}
+
+
+   @media (max-width: 767px) {
+   #filter-div-for-price-mob
+{
+position: absolute;
+    left: 0;
+    right: -134%;
+}
+
+   }
+</style>
+
+
+<style>
+
+.zsg-layout-abc-b, .zsg-layout-bc-b {
+    width: 100%;
+    padding-left: 330px;
+    padding-right: 0;
+}
+    .zsg-layout-abc-c, .zsg-layout-bc-c {
+    width: 300px;
+    margin-right: -300px;
+    margin-left: 0;
+}
+
+
+.ov-listing-thermometer .proposed-action {
+    position: relative;
+    margin: 0;
+    padding: 10px 16px 0px 0px;
+}
+.ov-listing-thermometer .proposed-action .action-icon-wrapper {
+    right: 0;
+    position: absolute;
+    top: 30%;
+    margin-top: -14px;
+    display: inline-block;
+}
+.ov-listing-thermometer .proposed-action .action-link {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 95%;
+    margin-top: -12px;
+}
+.todays-activity-graph .legend.legend-rect-0 {
+    fill: #c0e0fb;
+    width: 100px;
+    transform: translate(-37px, 0px);
+}
+.todays-activity-graph .legend.legend-rect-1 {
+    fill: #4fca00;
+    width: 60px;
+}
+.ov-action-bar .hs-action:hover, .ov-action-bar .hs-action:visited {
+    color: #7ca5ba;
+}
+
+.sc-1b8bq6y-4.fbQfTC
+{
+padding-bottom: 6px;
+}
+</style>
+{% endblock %}
+  {% block content %}
+
+
+<body style="direction:rtl;text-align:right;overflow-y: scroll;" class="zsg-layout_lg owner-view tengage wide" cz-shortcut-listen="true" >
+        <!-- Google custom dimension 134. Indicates this is a legacy HDP. -->
+
+
+        <div class="zsg-layout-width">
+            <ul class="ov-tabs-desktop zsg-tabs">
+                <li id="ov-tab-public" class=""><a onclick="listingShow({{listing.pk}},'{{listing.place.address}}','{{listing.place.latitude}}','{{listing.place.longitude}}','{{listing.list_date|naturaltime}}');return false;" href="" data-za-action="Public Tab Click" data-za-category="Homes" class="za-track-event hdp-public-tab">مشاهدة العامة</a></li>
+            </ul>
+        </div>
+        <div id="owner-view-render">
+            <div id="owner-view" class="zsg-tooltip-viewport" data-reactroot="">
+                <div class="zsg-layout-bc zsg-layout-width">
+                    <main class="zsg-layout-bc-b">
+                        <div class="ov-for-sale">
+                            <div class="tab-popover"></div>
+                            <header class="home-summary zsg-content-header new-header">
+                                <div class="hs-backdrop" style="background-image:url('{{listing.place.image_main_path}}')">
+                                    <div class="hs-content">
+                                        <div class="hs-facts">
+                                            <h3 class="hs-fact-item hs-fact-home-status"><span class="hs-fact-value"></span><span class="hs-fact-label"><span class="zsg-icon-for-sale"></span> <span>{{listing.get_property_type_display}}</span></span></h3></div>
+                                        <h1>{{listing.place.address}}<div class="zsg-h2">{{listing.place.get_city_display}}</div></h1>
+                                        <div class="hs-facts price">
+                                            <h3 class="hs-fact-item"><span class="hs-fact-value">قائمة الأسعار: {{listing.price|intword|localize}} ريال</span><span class="hs-fact-label"> <span></span></span></h3></div>
+                                        <div class="hs-facts">
+                                            <h3 class="hs-fact-item"><span class="hs-fact-value">{{listing.bedrooms}}</span><span class="hs-fact-label"> <span>غرف النوم</span></span></h3>
+                                            <h3 class="hs-fact-item"><span class="middot">·</span><span class="hs-fact-value">{{listing.Bathrooms}}</span><span class="hs-fact-label"> <span>الحمامات</span></span></h3>
+                                            <h3 class="hs-fact-item"><span class="middot">·</span><span class="hs-fact-value">{{listing.lotSize}}{{listing.unitType}}</span><span class="hs-fact-label"> <span>المساحة</span></span></h3></div>
+                                    </div>
+                                </div>
+                                <div class="hs-actions">
+                                    <ul class="ov-action-bar zsg-g">
+                                        <li class="zsg-lg-1-3 popover-action"><a class="hs-action za-track-event" href="/EditPosting/{{listing.pk}}" data-za-action="Owner View Action Bar - Click" data-za-label="تعديل القائمة" data-za-category="Homes" tabindex="0"><span><span class="zsg-h2 zsg-content_collapsed action-button-icon"><span class="zsg-icon-edit action-bar-icon" aria-label="تعديل القائمة"></span></span><span class="action-button-text">تعديل القائمة</span></span></a></li>
+                                        <li class="zsg-lg-1-3 popover-action"><a class="hs-action popover-action za-track-event" href="" data-za-action="شريط إجراءات عرض المالك - انقر" data-za-label="Add 3D Home" data-za-category="Homes" tabindex="0"><span><svg xmlns="http://www.w3.org/2000/svg" style="display:none"><symbol viewBox="0 0 21.46 24.83" id="z3d-home-icon"><title>3D Homes Icon</title><path d="M21.46 6.44a.4.4 0 0 0 0-.17.4.4 0 0 0-.1-.1L10.68.05a.4.4 0 0 0-.4 0L.18 6.13a.4.4 0 0 0-.1.1.4.4 0 0 0 0 .18v12a.4.4 0 0 0 .2.36l10.42 6h.33l10.24-6a.4.4 0 0 0 .2-.35v-12zM10.5.86l9.76 5.58L10.8 12 1.2 6.47zM.8 18.22V7.17l9.6 5.54v11zm10.4 5.5v-11l9.45-5.56v11.07z"></path></symbol></svg><span class="zsg-h2 zsg-content_collapsed action-button-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="svg-icon"><use xlink:href="#z3d-home-icon"></use></svg></span><span class="action-button-text">أضف صور 3D للمنزل</span></span></a></li>
+                                        <li class="zsg-lg-1-3 more-button popover-action"><span><a class="hs-action more-button popover-action zsg-lightbox-show za-track-event" id="lightbox-more-button" data-za-action="Owner View Action Bar - Click" data-za-label="More" data-za-category="Homes" tabindex="0"><span><span class="zsg-h2 zsg-content_collapsed action-button-icon"><span class="zsg-icon-more action-bar-icon" aria-label="More"></span></span><span class="action-button-text">أكثر<span class="zsg-icon-arrow-menu-down" aria-label="More icon"></span></span>
+                                            </span>
+                                            </a><span class="more-button popover-action"><div class="home-summary-overlay more-button popover-action-overlay" data-popover-classname="more-button popover-action"></div><ul class="home-summary-menu zsg-menu" style="top:9.9%;left:40%"><li class=""><span><a class="hs-action hs-action-add-video popover-action za-track-event" href="https://www.zillow.com/video-walkthrough" data-za-action="شريط إجراءات عرض المالك - انقر" data-za-label="أضف فيديو" data-za-category="Homes" tabindex="0"><span><span class="zsg-h2 zsg-content_collapsed action-button-icon"><span class="zsg-icon-video action-bar-icon" aria-label="Add Video"></span></span><span class="action-button-text">أضف فيديو</span></span>
+                                            </a>
+                                            </span>
+                                        </li>
+                                        <li class=""><a class="hs-action zsg-lightbox-show za-track-event" data-target-id="send-to-friend-lightbox" data-zpid="247943246" data-za-action="Owner View Action Bar - Click" data-za-label="Share" data-za-category="Homes" tabindex="0"><span><span class="zsg-h2 zsg-content_collapsed action-button-icon"><span class="zsg-icon-mail action-bar-icon" aria-label="Share"></span></span><span class="action-button-text">مشاركة</span></span></a></li>
+                                        <li class=""><a class="hs-action popover-action za-track-event" href="" data-za-action="شريط إجراءات عرض المالك - انقر" data-za-label="الافراج عن المطالبة" data-za-category="Homes" tabindex="0"><span><span class="zsg-h2 zsg-content_collapsed action-button-icon"><span class="zsg-icon-release-ownership-claim action-bar-icon" aria-label="الافراج عن مطالبة الملكية"></span></span><span class="action-button-text">الافراج عن مطالبة الملكية</span></span></a></li>
+                                    </ul>
+                                    </span>
+                                    </span>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </header>
+                            <div>
+                                <div class="ov-action-bar-module zsg-notification-bar_solid zsg-g">
+                                    <div class="zsg-lg-3-4 zsg-sm-1-1">أضف لمسة شخصية وأخبر المتسوقين بما يجعل منزلك مميزًا.</div>
+                                    <div class="zsg-lg-1-4 zsg-sm-1-1">
+                                        <a href="/EditPosting/{{listing.pk}}#additionalInfoEditor" data-za-category="Homes" data-za-action="عرض المالك - ما أحب بهذا المنزل النقر" data-za-label="Alert Bar" data-za-value="1" class="ov-action-bar-module-button track-ga-event zsg-button_alt zsg-button_darkbg zsg-button_ghost">اضف ملاحظة</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <section class="zsg-content-section ov-audience-metrics ov-metrics-section">
+                                    <h2>النشاط الاخير</h2>
+                                    <div class="zsg-content-component no-bottom-margin">
+                                        <div class="zsg-centered">
+                                            <h3 class="zsg-h3 zsg-content_collapsed">أداء قائمتك متوسط</h3>
+                                            <p class="zsg-fineprint">آخر يومين من النشاط</p>
+                                            <div class="todays-activity-graph-wrap">
+                                                <svg class="todays-activity-graph" width="614" height="399.1">
+                                                    <g class="inner-chart" transform="translate(46.05,79.82000000000001)">
+                                                        <g class="bar-group" transform="translate(1, 0)">
+                                                            <rect class="bar bar-color-0" x="1" y="0" rx="2" height="219.50500000000002" width="210" transform="translate(0)"></rect>
+                                                            <rect class="bar bar-color-1" x="121" y="121.33937971978176" rx="2" height="98.16562028021826" width="138" transform="translate(-12.280000000000001)"></rect>
+                                                        </g>
+                                                        <g class="bar-group" transform="translate(281, 0)">
+                                                            <rect class="bar bar-color-0" x="1" y="219.50500000000002" rx="2" height="0" width="210" transform="translate(0)"></rect>
+                                                            <rect class="bar bar-color-1" x="121" y="219.50500000000002" rx="2" height="0" width="138" transform="translate(-12.280000000000001)"></rect>
+                                                        </g>
+                                                        <line class="h-rule" x1="-46.05" y1="218.50500000000002" x2="614" y2="218.50500000000002"></line>
+                                                        <g class="axis x groups zsg-h5" transform="translate(0,223.49600000000004)">
+                                                            <g class="tick" transform="translate(121.5,0)" style="opacity: 1;">
+                                                                <line y2="6" x2="0"></line>
+                                                                <text dy=".71em" y="9" x="0" style="text-anchor: middle;">المشاهدات</text>
+                                                            </g>
+                                                            <g class="tick" transform="translate(401.5,0)" style="opacity: 1;">
+                                                                <line y2="6" x2="0"></line>
+                                                                <text dy=".71em" y="9" x="0" style="text-anchor: middle;">الحفظ</text>
+                                                            </g>
+                                                            <path class="domain" d="M0,6V0H521.9000000000001V6"></path>
+                                                        </g>
+                                                        <g class="axis x values zsg-h5" transform="translate(0,263.406)">
+                                                            <g class="tick" transform="translate(121.5,0)" style="opacity: 1;">
+                                                                <line y2="6" x2="0"></line>
+                                                                <text dy=".71em" y="9" x="0" style="text-anchor: middle;">{{listing.views}}</text>
+                                                            </g>
+                                                            <g class="tick" transform="translate(401.5,0)" style="opacity: 1;">
+                                                                <line y2="6" x2="0"></line>
+                                                                <text dy=".71em" y="9" x="0" style="text-anchor: middle;">{{countSaved}} </text>
+                                                            </g>
+                                                            <path class="domain" d="M0,6V0H521.9000000000001V6"></path>
+                                                        </g>
+                                                    </g>
+                                                    <g class="chart-legend" transform="translate(61.39999999999998, 0)">
+                                                        <g class="legend-item" transform="translate(46.05, 0)">
+                                                            <rect class="legend legend-rect-0" x="0" y="12.0135" width="36.839999999999996" height="14.735999999999999"></rect>
+                                                            <text x="49.12" y="24">قوائم مماثلة</text>
+                                                        </g>
+                                                        <g class="legend-item" transform="translate(291.65000000000003, 0)">
+                                                            <rect class="legend legend-rect-1" x="0" y="12.0135" width="36.839999999999996" height="14.735999999999999"></rect>
+                                                            <text x="49.12" y="24">قائمتك</text>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ov-module-action">
+                                        <div class="zsg-separator_secondary"></div>
+                                        <div class="zsg-content-item"><a class="zsg-lg-1-1 zsg-centered track-ga-event" data-ga-category="Homes" data-ga-action="Expand Section - Owner View" data-ga-label="Todays Activity">رؤية جميع المقاييس</a></div>
+                                    </div>
+                                </section>
+                                <section class="zsg-content-section similar-listings ov-metrics-section">
+                                    <h2>أعلى القوائم في منطقتك</h2>
+                                    <div class="zsg-content-component">
+                                        <div class="similar-listings-ranking-text zsg-lg-1-1 zsg-separator_secondary"><span><b>قائمتك في المرتبة # {{rank}}</b><span>في المشاهدات على الانترنت من أصل 20 قوائم مماثلة. </span>
+                                            <a tabindex="0" role="button" class="zsg-icon-circle-question zsg-icon_clickable"></a>
+                                            </span>
+                                        </div>
+                                        <table class="zsg-table" style="text-align:right;">
+                                            <tbody>
+                                            {% for listingNearBy in NearByListings %}
+                                                <tr class="track-ga-event similar-listings-row clickable" data-ga-category="Homes" data-ga-action="Similar Homes Click" data-ga-label="FOR_SALE 1">
+                                                    <td class="rank">{{ forloop.counter }}</td>
+                                                    <td class="property-image"><img src="{{listing.place.image_main_path}}" alt="{{listing.place.address}}" width="100px"></td>
+                                                    <td class="property-info" style="text-align:right"><span class="price">{{listingNearBy.price|intword|localize}}</span>
+                                                        <br><span class="address"><span class="streetAddress">{{listingNearBy.place.address}}</span>
+                                                        <br><span class="city-state-zip">{{listingNearBy.place.get_city_display}}</span></span><span class="bed-bath-sqft "><span>{{listingNearBy.bedrooms}}نوم</span><span>{{listingNearBy.Bathrooms}}ح</span><span>{{listingNearBy.lotSize}}{{listingNearBy.unitType}}</span></span><span class="lot zsg-hide"><span> المساحة</span></span><span class="view-count-tiny-screen"><span>{{listingNearBy.views}}</span> <span>المشاهدات</span></span>
+                                                    </td>
+                                                    <td class="view-count"><span>{{listingNearBy.views}}</span> <span>المشاهدات</span></td>
+                                                    <td class="bed-col ">{{listingNearBy.bedrooms}} نوم</td>
+                                                    <td class="bath-col ">{{listingNearBy.Bathrooms}}حمام</td>
+                                                    <td class="sqft-col ">{{listingNearBy.lotSize}}{{listingNearBy.unitType}} المساحة</td>
+                                                    <td class="lot-size zsg-hide"> المساحة</td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table><a class="zsg-lg-1-1 zsg-centered similar-listings-show-link">اظهار الكل</a></div>
+                                </section>
+                            </div>
+                            <section class="zsg-content-section">
+                                <h2>قيمة منزلك</h2>
+                                <div class="zestimate-summary">
+                                    <div class="zsg-content-component zestimate-above-toggle">
+                                        <div class="primary-zestimate-item">
+                                            <div>
+                                                <div class="title zsg-h3 zsg-content_collapsed">تقيم
+                                                    <a tabindex="0" role="button" class="zsg-icon-circle-question zsg-icon_clickable"></a>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="zestimate-value">$339,307</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="secondary-zestimate-items">
+                                            <div class="zsg-lg-1-3 zsg-md-1-1 secondary-row"><span class="zestimate-icon zestimate-range-svg"></span>
+                                                <div class="secondary-wrapper">
+                                                    <div class="title zsg-h4 zsg-content_collapsed">حدود السعر بعد التقيم
+                                                        <a tabindex="0" role="button" class="zsg-icon-circle-question zsg-icon_clickable"></a>
+                                                    </div>
+                                                    <div class="content">$319,000 - $366,000</div>
+                                                </div>
+                                            </div>
+                                            <div class="zsg-lg-1-3 zsg-md-1-1 secondary-row"><span class="zestimate-icon zestimate-down-svg"></span>
+                                                <div class="secondary-wrapper">
+                                                    <div class="title zsg-h4 zsg-content_collapsed">تغيير آخر 30 يومًا</div>
+                                                    <div class="content">-$10,337
+                                                        <!-- --><span class="percent-decrease">(<!-- -->-3.0%<!-- -->)</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="toggle-section ov-module-action">
+                                        <div class="zsg-content-component module-separator hide">
+                                            <div class="additional-zestimate-info zsg-wrapper-body-hidden">
+                                                <div id="zest-summary-chart-placeholder"></div>
+                                                <ul class="tertiary-zestimate-items zsg-list_square">
+                                                    <li class="tertiary-item"><span class="title zsg-h4 zsg-content_collapsed">Rental Zestimate<a tabindex="0" role="button" class="zsg-icon-circle-question zsg-icon_clickable"></a></span>
+                                                        <!-- -->: <span class="content"><div class="zestimate-value">$2,500/mo</div></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="zsg-separator_secondary"></div>
+                                        <div class="zsg-content-item"><a class="toggle zsg-lg-1-1 zsg-centered">تأريخ التقيم و التفاصيل</a></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="zsg-content-section">
+                                <h2>أدوات تقيم المنزل الخاص بك</h2>
+                                <div class="zest-tools-item zsg-content-component"><span class="zest-tools-icon zest-tools-i-home-facts"></span><span class="zest-tools-button-desktop"><a class="zest-tools-button zsg-button_primary za-track-event" data-za-category="Homes" data-za-action="Zestimate Tools" data-za-label="تعديل الحقائق انقر" href="/EditPosting">مراجعة الحقائق</a></span>
+                                    <div class="zsg-content-component zest-tools-content">
+                                        <h4>مراجعة حقائق منزلك</h4>
+                                        <p>قد تؤثر حقائق المنزل غير الصحيحة أو المفقودة على تقليل من قيمة منزلك.</p>
+                                    </div>
+                                    <div class="zest-tools-button-mobile"><a class="zest-tools-button zsg-button_primary za-track-event" data-za-category="Homes" data-za-action="Zestimate Tools" data-za-label="تعديل الحقائق بالنقر" href="/EditPosting">مراجعة الحقائق</a></div>
+                                </div>
+                            </section>
+                            <section class="local-news-feed-content zsg-content-section">
+                                <h2>الأخبار المحلية</h2>
+                                <div class="local-news-feed-data">
+                                    <div class="visible-content module-separator">
+                                        <div>
+                                            <div>
+                                                <div class="zsg-separator_secondary"></div>
+                                                <div class="event-card zsg-content-component"><span class="event-card-image" style="background-image: url(&quot;https://photos.zillowstatic.com/p_b/ISj7x9xfp46j1a0000000000.jpg&quot;);"></span>
+                                                    <div class="event-section zsg-content-component"><a href="" target="_blank" class="zsg-link_primary event-data event-address-truncation ">25465 W 149th Pl</a><span class="event-data">خفض سعره إلى<strong> 325 ألف دولار </strong> (- 7 آلاف دولار)</span>
+                                                        <div class="event-distance-time"><span class="event-distance-span zsg-fineprint">0.3mi away ●&nbsp;</span><span class="event-timestamp zsg-fineprint">21h ago</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zsg-separator_secondary"></div>
+                                            <div class="event-section zsg-content-component link-container"><a class="expand-close-toggle">مشاهدة المزيد <span class="zsg-icon-expando-down"> </span> </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="mortgageFinanceTools" class="ov-module-action" style="overflow:hidden">
+                                <div class="zsg-content-component">
+                                    <div style="position: relative; transition: min-height 400ms ease 0s; min-height: 422px;">
+                                        <div style="display: block; position: absolute; width: 100%; left: 0px; opacity: 1; transition: all 0.25s ease 0s;">
+                                            <div>
+                                                <div>
+                                                    <h2 style="font-weight: 300;">أدوات الرهن العقاري</h2>
+                                                    <div class="zsg-content-component">
+                                                        <p>تعرف على الوقت المناسب لإعادة التمويل أو الحصول على HELOC.</p>
+                                                        <h4>كيف يمكن أن نساعد؟</h4></div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div style="position: relative; display: flex; align-items: center; justify-content: space-between; height: 95px; width: 100%; cursor: pointer;">
+                                                            <div style="color: rgb(102, 102, 102);"><span><svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>خفض رمز الدفع</title><defs></defs><g id="SVG" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="LOWER-PAYMENT"><circle id="Path" fill-opacity="0.2" fill="currentColor" cx="21.5" cy="21.5" r="20.5"></circle><path d="M21.5,43 C9.62587788,43 0,33.3741221 0,21.5 C0,9.62587788 9.62587788,0 21.5,0 C33.3741221,0 43,9.62587788 43,21.5 C43,33.3741221 33.3741221,43 21.5,43 Z M21.5,41 C32.2695526,41 41,32.2695526 41,21.5 C41,10.7304474 32.2695526,2 21.5,2 C10.7304474,2 2,10.7304474 2,21.5 C2,32.2695526 10.7304474,41 21.5,41 Z" id="Oval-28" fill="currentColor" fill-rule="nonzero"></path><path d="M29.2491,28.2324 L28.7511,28.5624 L29.2351,32.5374 L25.0241,32.5374 L25.3381,29.9584 L24.1091,30.1114 C23.5861,30.1774 23.0531,30.2124 22.5131,30.2124 C22.0571,30.2124 21.6051,30.1874 21.1571,30.1384 L19.9501,30.0104 L20.2581,32.5374 L16.0461,32.5374 L16.5131,28.6974 L15.9961,28.3714 C13.9501,27.0804 12.4371,25.2124 11.7431,23.0654 L11.5041,22.3284 L8.9321,22.5764 L8.9321,18.2204 L11.4911,18.4664 L11.7261,17.7244 C12.3441,15.7814 13.6241,14.0644 15.3671,12.7934 L15.7701,12.4984 L15.7031,8.0724 L20.3591,10.7054 L20.6861,10.6584 C21.2811,10.5724 21.8921,10.5264 22.5131,10.5264 C25.6391,10.5254 28.4531,11.6534 30.4731,13.4484 C32.4921,15.2484 33.7091,17.6854 33.7101,20.3694 L33.7111,20.3694 C33.7101,23.5584 31.9881,26.4104 29.2491,28.2324 M35.6421,20.3694 C35.6441,17.0864 34.1371,14.1184 31.7551,12.0054 C29.3711,9.8874 26.1041,8.5964 22.5131,8.5944 C21.9101,8.5944 21.3191,8.6324 20.7411,8.7034 L16.3601,6.2254 C16.0941,6.0764 15.8001,6.0004 15.5051,6.0004 C15.1991,6.0004 14.8911,6.0814 14.6141,6.2464 C14.0931,6.5554 13.7721,7.1144 13.7671,7.7234 L13.7671,7.7374 C13.7671,7.7494 13.7671,7.7674 13.7691,7.7904 L13.8251,11.5404 C12.1891,12.8364 10.9091,14.5004 10.1511,16.3984 L8.6921,16.2584 C8.6541,16.2534 8.6011,16.2514 8.5441,16.2514 C8.1611,16.2514 7.7901,16.3934 7.5031,16.6554 C7.1851,16.9434 6.9991,17.3634 7.0011,17.7964 L7.0001,23.0004 C7.0001,23.4324 7.1831,23.8514 7.5091,24.1464 C7.7931,24.4024 8.1631,24.5444 8.5471,24.5444 C8.5991,24.5444 8.6461,24.5434 8.6911,24.5394 L10.1741,24.3964 C11.0301,26.5074 12.5331,28.3224 14.4501,29.6624 L14.0771,32.7364 C14.0701,32.7854 14.0641,32.8494 14.0641,32.9234 C14.0641,33.3004 14.2021,33.6654 14.4561,33.9494 C14.7471,34.2794 15.1681,34.4664 15.6101,34.4684 L20.6941,34.4684 C21.1381,34.4664 21.5551,34.2804 21.8511,33.9464 C22.1011,33.6624 22.2371,33.3004 22.2371,32.9244 C22.2371,32.8604 22.2341,32.8004 22.2281,32.7454 L22.1541,32.1394 C22.2721,32.1424 22.3921,32.1444 22.5131,32.1444 C22.7191,32.1444 22.9251,32.1404 23.1281,32.1304 L23.0551,32.7384 C23.0491,32.7854 23.0431,32.8494 23.0431,32.9244 C23.0431,33.3024 23.1831,33.6664 23.4321,33.9484 C23.7281,34.2804 24.1451,34.4664 24.5881,34.4684 L29.6731,34.4684 C30.1151,34.4664 30.5311,34.2804 30.8281,33.9484 C31.0831,33.6604 31.2161,33.2944 31.2161,32.9234 C31.2161,32.8574 31.2111,32.8034 31.2071,32.7574 L30.8111,29.4964 C33.7341,27.3594 35.6421,24.0724 35.6421,20.3694" id="Fill-1" fill="currentColor"></path><path d="M23.086,12.0059 C22.552,11.9899 22.107,12.4099 22.092,12.9429 C22.075,13.4749 22.494,13.9209 23.028,13.9369 L23.027,13.9369 C23.027,13.9369 23.055,13.9379 23.139,13.9429 C23.738,13.9769 26.469,14.3299 28.278,16.1109 C28.466,16.2929 28.708,16.3829 28.949,16.3829 C29.201,16.3829 29.454,16.2849 29.644,16.0899 C30.015,15.7069 30.006,15.0959 29.622,14.7249 C26.857,12.0859 23.182,12.0269 23.086,12.0059" id="Fill-4" fill="currentColor"></path><path d="M13.8389,16.6836 C12.9869,17.5936 12.7369,18.7476 13.2839,19.2616 C13.8329,19.7766 14.9699,19.4546 15.8229,18.5436 C16.6779,17.6326 16.9259,16.4786 16.3789,15.9646 C15.8299,15.4516 14.6939,15.7726 13.8389,16.6836" id="Fill-6" fill="currentColor"></path></g></g></svg></span></div>
+                                                            <div style="flex-grow: 1; margin-left: 10px; margin-bottom: 5px;"><a style="font-weight: bold;">خفض الدفع الشهري</a>
+                                                                <div>يبدو أنك لا تستطيع خفض دفعتك الشهرية.</div>
+                                                            </div>
+                                                            <div class="zsg-lg-hide"><span class="zsg-icon-expando-right"></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div style="position: relative; display: flex; align-items: center; justify-content: space-between; height: 95px; width: 100%; cursor: pointer; border-top: 1px solid rgb(204, 204, 204);">
+                                                            <div style="color: rgb(102, 102, 102);"><span><svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>PAY FASTER</title><desc>Created with Sketch.</desc><defs></defs><g id="SVG" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="PAY-FASTER"><circle id="Path" fill-opacity="0.2" fill="currentColor" cx="21.5" cy="21.5" r="20.5"></circle><path d="M21.5,43 C9.62587788,43 0,33.3741221 0,21.5 C0,9.62587788 9.62587788,0 21.5,0 C33.3741221,0 43,9.62587788 43,21.5 C43,33.3741221 33.3741221,43 21.5,43 Z M21.5,41 C32.2695526,41 41,32.2695526 41,21.5 C41,10.7304474 32.2695526,2 21.5,2 C10.7304474,2 2,10.7304474 2,21.5 C2,32.2695526 10.7304474,41 21.5,41 Z" id="Oval-28" fill="currentColor" fill-rule="nonzero"></path><path d="M26.2120592,31.2449244 L29.9289988,31.2449244 L29.9289988,28.2400422 L26.2120592,28.2400422 L26.2120592,31.2449244 Z M12.7206658,31.2449244 L16.4283905,31.2449244 L16.4283905,28.2400422 L12.7206658,28.2400422 L12.7206658,31.2449244 Z M12.7206658,19.8905409 L16.4283905,19.8905409 L16.4283905,16.9049261 L12.7206658,16.9049261 L12.7206658,19.8905409 Z M14.607199,11.0275206 C14.607199,10.4009101 14.8936974,10.1470826 15.6015662,10.1470826 C16.3102728,10.1470826 16.5967711,10.4009101 16.5967711,11.0275206 L16.5967711,14.4755538 C16.5967711,15.1013266 16.3102728,15.3559919 15.6015662,15.3559919 C14.8936974,15.3559919 14.607199,15.1013266 14.607199,14.4755538 L14.607199,11.0275206 Z M17.0013873,19.8905409 L21.0341453,19.8905409 L21.0341453,16.9049261 L17.0013873,16.9049261 L17.0013873,19.8905409 Z M20.3430308,11.0275206 C20.3430308,10.4009101 20.6295292,10.1470826 21.3382357,10.1470826 C22.0461045,10.1470826 22.3326029,10.4009101 22.3326029,11.0275206 L22.3326029,14.4755538 C22.3326029,15.1013266 22.0461045,15.3559919 21.3382357,15.3559919 C20.6295292,15.3559919 20.3430308,15.1013266 20.3430308,14.4755538 L20.3430308,11.0275206 Z M21.6079798,19.8905409 L25.6399001,19.8905409 L25.6399001,16.9049261 L21.6079798,16.9049261 L21.6079798,19.8905409 Z M26.0788625,11.0275206 C26.0788625,10.4009101 26.3661986,10.1470826 27.0749052,10.1470826 C27.7819363,10.1470826 28.0692724,10.4009101 28.0692724,11.0275206 L28.0692724,14.4755538 C28.0692724,15.1013266 27.7819363,15.3559919 27.0749052,15.3559919 C26.3661986,15.3559919 26.0788625,15.1013266 26.0788625,14.4755538 L26.0788625,11.0275206 Z M26.2128969,19.8905409 L29.9298365,19.8905409 L29.9298365,16.9049261 L26.2128969,16.9049261 L26.2128969,19.8905409 Z M26.2120592,27.6678831 L29.9289988,27.6678831 L29.9289988,24.495458 L26.2120592,24.495458 L26.2120592,27.6678831 Z M21.6071421,27.6678831 L25.6399001,27.6678831 L25.6399001,24.495458 L21.6071421,24.495458 L21.6071421,27.6678831 Z M21.6071421,31.2449244 L25.6399001,31.2449244 L25.6399001,28.2400422 L21.6071421,28.2400422 L21.6071421,31.2449244 Z M17.0013873,31.2449244 L21.0341453,31.2449244 L21.0341453,28.2400422 L17.0013873,28.2400422 L17.0013873,31.2449244 Z M17.0013873,27.6678831 L21.0341453,27.6678831 L21.0341453,24.495458 L17.0013873,24.495458 L17.0013873,27.6678831 Z M12.7206658,23.9216235 L16.4283905,23.9216235 L16.4283905,20.4627 L12.7206658,20.4627 L12.7206658,23.9216235 Z M17.0013873,23.9216235 L21.0341453,23.9216235 L21.0341453,20.4627 L17.0013873,20.4627 L17.0013873,23.9216235 Z M21.6079798,23.9216235 L25.6399001,23.9216235 L25.6399001,20.4627 L21.6079798,20.4627 L21.6079798,23.9216235 Z M26.2128969,23.9216235 L29.9298365,23.9216235 L29.9298365,20.4627 L26.2128969,20.4627 L26.2128969,23.9216235 Z M12.7206658,27.6678831 L16.4283905,27.6678831 L16.4283905,24.495458 L12.7206658,24.495458 L12.7206658,27.6678831 Z M29.2161037,12.3167634 L29.2161037,11.0275206 C29.2161037,9.7575453 28.4160862,9.00025131 27.0749052,9.00025131 C25.7328864,9.00025131 24.9311936,9.7575453 24.9311936,11.0275206 L24.9311936,12.3167634 L23.4802719,12.3167634 L23.4802719,11.0275206 C23.4802719,9.7575453 22.6794168,9.00025131 21.3382357,9.00025131 C19.9962169,9.00025131 19.1953618,9.7575453 19.1953618,11.0275206 L19.1953618,12.3167634 L17.7436024,12.3167634 L17.7436024,11.0275206 C17.7436024,9.7575453 16.943585,9.00025131 15.6015662,9.00025131 C14.2603852,9.00025131 13.45953,9.7575453 13.45953,11.0275206 L13.45953,12.3167634 L11,12.3167634 L11,32.9664279 L31.6496645,32.9664279 L31.6496645,12.3167634 L29.2161037,12.3167634 Z" id="Page-1" fill="currentColor"></path></g></g></svg></span></div>
+                                                            <div style="flex-grow: 1; margin-left: 10px; margin-bottom: 5px;"><a style="font-weight: bold;">سداد القرض بشكل أسرع</a>
+                                                                <div>يبدو أنك لا تستطيع سداد القرض بشكل أسرع.</div>
+                                                            </div>
+                                                            <div class="zsg-lg-hide"><span class="zsg-icon-expando-right"></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div style="position: relative; display: flex; align-items: center; justify-content: space-between; height: 95px; width: 100%; cursor: pointer; border-top: 1px solid rgb(204, 204, 204);">
+                                                            <div style="color: rgb(3, 192, 74);"><span><svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>heloc icon</title><defs></defs><g id="SVG" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="HELOC"><circle id="Path" fill-opacity="0.2" fill="currentColor" cx="21.5" cy="22.5" r="20.5"></circle><path d="M21.5,43 C9.62587788,43 0,33.3741221 0,21.5 C0,9.62587788 9.62587788,0 21.5,0 C33.3741221,0 43,9.62587788 43,21.5 C43,33.3741221 33.3741221,43 21.5,43 Z M21.5,41 C32.2695526,41 41,32.2695526 41,21.5 C41,10.7304474 32.2695526,2 21.5,2 C10.7304474,2 2,10.7304474 2,21.5 C2,32.2695526 10.7304474,41 21.5,41 Z" id="Oval-28" fill="currentColor" fill-rule="nonzero"></path><path d="M7,30.9209 L35.674,30.9209 L35.674,12.9999 L7,12.9999 L7,30.9209 Z M8.593,29.3279 L34.081,29.3279 L34.081,14.5929 L8.593,14.5929 L8.593,29.3279 Z" id="Fill-1" fill="currentColor"></path><path d="M29.9824,23.2441 C30.1104,23.2441 30.4944,22.7761 30.4944,21.9251 C30.4944,21.0731 30.1104,20.6051 29.9824,20.6051 C29.8544,20.6051 29.4704,21.0731 29.4704,21.9251 C29.4704,22.7761 29.8544,23.2441 29.9824,23.2441" id="Fill-2" fill="currentColor"></path><path d="M26.5888,21.9248 C26.5888,24.6198 25.4498,26.9578 23.7818,28.1338 L32.8858,28.1338 L32.8858,15.7878 L23.8838,15.7878 C25.4958,16.9858 26.5888,19.2838 26.5888,21.9248" id="Fill-4" fill="currentColor"></path><path d="M16.0849,21.9248 C16.0849,19.2838 17.1769,16.9858 18.7899,15.7878 L9.7879,15.7878 L9.7879,28.1338 L18.8919,28.1338 C17.2239,26.9578 16.0849,24.6198 16.0849,21.9248" id="Fill-6" fill="currentColor"></path><path d="M20.1787,19.956 C20.1787,19.209 20.7857,19.031 21.0387,18.969 L21.0387,21.033 C20.7597,20.907 20.1787,20.641 20.1787,19.956 L20.1787,19.956 Z M21.6477,22.807 C21.9387,22.96 22.4957,23.226 22.4957,23.96 C22.4957,24.657 22.0147,24.898 21.6477,25 L21.6477,22.807 Z M21.2157,27.191 L21.4697,27.191 C21.6987,27.191 21.7357,27.153 21.7357,26.938 L21.7357,26.368 C22.5737,26.229 23.9517,25.645 23.9517,23.884 C23.9517,22.263 22.5597,21.718 21.7357,21.311 L21.7357,18.969 C22.2807,18.969 23.1047,19.475 23.1807,19.475 C23.2317,19.475 23.2687,19.436 23.2947,19.374 L23.6877,18.512 C23.7137,18.461 23.7257,18.423 23.7257,18.372 C23.7257,17.941 22.1047,17.662 21.7357,17.638 L21.7357,17.017 C21.7357,16.801 21.6987,16.763 21.4697,16.763 L21.2157,16.763 C20.9897,16.763 20.9497,16.801 20.9497,17.017 L20.9497,17.638 C20.3677,17.662 18.7207,18.195 18.7207,20.058 C18.7207,21.73 20.1787,22.174 20.9497,22.517 L20.9497,25 C20.1787,24.911 19.3287,24.416 19.2527,24.416 C19.2017,24.416 19.1517,24.492 19.1377,24.518 L18.7707,25.582 C18.7447,25.658 18.7447,25.658 18.7447,25.696 C18.7447,26.076 20.5197,26.368 20.9497,26.368 L20.9497,26.938 C20.9497,27.153 20.9897,27.191 21.2157,27.191 L21.2157,27.191 Z" id="Fill-8" fill="currentColor"></path></g></g></svg></span></div>
+                                                            <div style="flex-grow: 1; margin-left: 10px; margin-bottom: 5px;"><a style="font-weight: bold;">العثور على المقرض HELOC</a>
+                                                                <div>قد يكون لديك ما يكفي من الأسهم ل HELOC يصل إلى 322،342 $!</div>
+                                                            </div>
+                                                            <div class="zsg-lg-hide"><span class="zsg-icon-expando-right"></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </main>
+                    <aside class="zsg-layout-bc-c">
+                        <div class="ov-for-sale">
+                            <section class="zsg-content-section ov-listing-thermometer">
+                                <h2>استكمال القائمة</h2>
+                                <div class="completeness-progress-bar zsg-content-component">
+                                    <div class="zsg-loading-progress_lg">
+                                        <div class="zsg-loading-progress-bar" style="width:86%;background-color:#87d300"><span class="percent-complete-text">86%</span></div>
+                                    </div>
+                                    <div class="listing-completeness-message">
+                                        <p>لقد قمنا بتحليل بطاقة بياناتك وهي رائعة! يمكنك أن تبرز من خلال إضافة المزيد من التفاصيل.</p>
+                                    </div>
+                                </div>
+                                <div class="proposed-action-list zsg-content-component">
+                                    <div class="zsg-separator_secondary"></div>
+                                    <div class="proposed-action zsg-separator_secondary">
+                                        <div class="action-icon-wrapper">
+                                            <div class="warning action-icon"><span class="zsg-icon-exclamation-mark" aria-label="exclamation mark icon"></span></div>
+                                        </div>
+                                        <div class="action-message-wrapper">
+                                            <div class="action-message"><a class="zsg-link_primary track-ga-event" href="//www.zillow.com/marketing/3d-home/" data-za-category="ListingCompleteness" data-za-action="z3dHome" data-za-label="Clicked" data-za-value="1">أضف صور 3D للمنزل </a>
+                                                <div>القوائم مع صور 3D للمنزل تجتذب المزيد من المشترين المؤهلين.</div>
+                                            </div>
+                                        </div>
+                                        <div class="action-link" href="//www.zillow.com/marketing/3d-home/"><span class="zsg-icon-expando-left track-ga-event" href="//www.zillow.com/marketing/3d-home/" data-za-category="ListingCompleteness" data-za-action="z3dHome" data-za-label="Clicked" data-za-value="1"></span></div>
+                                    </div>
+                                    <div class="proposed-action zsg-separator_secondary">
+                                        <div class="action-icon-wrapper">
+                                            <div class="tip action-icon"><span class="zsg-icon-bulb" aria-label="lightbulb icon"></span></div>
+                                        </div>
+                                        <div class="action-message-wrapper">
+                                            <div class="action-message"><a class="zsg-link_primary track-ga-event" href="/editing/ContextIdRedirect.htm?path=/postings/EditPosting.htm?zpid=247943246&amp;fromapp=false#homeFactsEditor" data-za-category="ListingCompleteness" data-za-action="LongerDescription" data-za-label="Clicked" data-za-value="1">تحسين وصف المنزل</a>
+                                                <div>وصف المنزل أطول يعطي المشترين المزيد من المعلومات حول منزلك</div>
+                                            </div>
+                                        </div>
+                                        <div class="action-link" href="/EditPosting"><span class="zsg-icon-expando-left track-ga-event" href="/editing/ContextIdRedirect.htm?path=/postings/EditPosting.htm?zpid=247943246&amp;fromapp=false#homeFactsEditor" data-za-category="ListingCompleteness" data-za-action="LongerDescription" data-za-label="Clicked" data-za-value="1"></span></div>
+                                    </div>
+                                    <div class="proposed-action">
+                                        <div class="action-icon-wrapper">
+                                            <div class="tip action-icon"><span class="zsg-icon-bulb" aria-label="lightbulb icon"></span></div>
+                                        </div>
+                                        <div class="action-message-wrapper">
+                                            <div class="action-message"><a class="zsg-link_primary track-ga-event" href="/EditPosting.htm" data-za-category="ListingCompleteness" data-za-action="PriceDrop" data-za-label="Clicked" data-za-value="1">النظر في تغيير السعر</a>
+                                                <div>خفض السعر يساعد في تجديد مصلحة المشتري في منزلك</div>
+                                            </div>
+                                        </div>
+                                        <div class="action-link" href="/EditPosting"><span class="zsg-icon-expando-left track-ga-event" href="/EditPosting" data-za-category="ListingCompleteness" data-za-action="PriceDrop" data-za-label="Clicked" data-za-value="1"></span></div>
+                                    </div>
+                                </div>
+                                <div class="call-to-action zsg-content-component">
+                                    <button href="" data-za-category="ListingCompleteness" data-za-action="z3dHome" data-za-label="Clicked" data-za-value="1" class="track-ga-event zsg-button_primary zsg-button_fullsize">أضف صور 3D للمنزل</button>
+                                </div>
+                            </section>
+                        </div>
+                    </aside>
+                </div>
+                <div class="tooltip-dest">
+                    <div id="zestimate-tooltip">
+                        <div class="zsg-tooltip zsg-tooltip_animating zsg-tooltip_align-right" style="transform-origin: left 20px 0px;">
+                            <div class="zsg-tooltip-content">
+                                <a class="zsg-icon-x-thick zsg-tooltip-close-no-handler" tabindex="0" role="button"></a><span class="zsg-tooltip-arrow"></span>A Zestimate home valuation is Zillow’s estimated market value. It is not an appraisal. Use it as a starting point to determine a home’s value. <a href="/zestimate/">Learn more</a>
+                                <br>
+                                <br>Don’t agree with your home’s Zestimate? Owners can edit their home facts to make the Zestimate more accurate.</div>
+                        </div>
+                    </div>
+                    <div id="zestimate-range-tooltip">
+                        <div class="zsg-tooltip zsg-tooltip_animating zsg-tooltip_align-right" style="display:block;transform-origin: left 20px 0px;">
+                            <div class="zsg-tooltip-content">
+                                <a class="zsg-icon-x-thick zsg-tooltip-close-no-handler" tabindex="0" role="button"></a><span class="zsg-tooltip-arrow"></span>حدود التقيم هو القيمة السوقية العالية والمنخفضة التي تقدر Zillow المنزل بها. لمزيد من المعلومات ، أصغر النطاق ، وأكثر دقة في جزء التقيم <a href="/zestimate#acc">اطلع على جدول تغطية البيانات والدقة</a></div>
+                        </div>
+                    </div>
+                    <div id="restimate-tooltip">
+                        <div class="zsg-tooltip zsg-tooltip_animating zsg-tooltip_align-right" style="transform-origin: left 20px 0px;">
+                            <div class="zsg-tooltip-content">
+                                <a class="zsg-icon-x-thick zsg-tooltip-close-no-handler" tabindex="0" role="button"></a><span class="zsg-tooltip-arrow"></span>A Rent Zestimate is Zillow’s estimated monthly rental price, computed using a proprietary formula. It is a starting point in determining the monthly rental price for a specific property. <a href="https://zillow.zendesk.com/hc/en-us/articles/203340274-What-is-a-Rent-Zestimate-/">Learn more</a></div>
+                        </div>
+                    </div>
+                    <div id="similar-listings-tooltip">
+                        <div class="zsg-tooltip zsg-tooltip_animating zsg-tooltip_align-right" style="transform-origin: left 20px 0px;">
+                            <div class="zsg-tooltip-content">
+                                <a class="zsg-icon-x-thick zsg-tooltip-close-no-handler" tabindex="0" role="button"></a><span class="zsg-tooltip-arrow"></span>Similar listings are based on location and home facts. Rankings are based on views to each home today so far and yesterday.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<style>
+    #wowslider-container1 a.ws_prev {
+    left: auto;
+    background-position: 0 0;
+}
+.hdp-gallery-image-content {
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-touch-action: pan-x;
+    touch-action: pan-x;
+}
+.yui3-lightbox:not('#login-app) .yui3-lightbox-content>.lightbox-close, .yui3-lightbox .yui3-lightbox-content>.zsg-lightbox-close {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: auto;
+    color: #ffffff;
+    margin: -15px;
+    padding: 15px;
+}
+</style>
+
+<div id="photoGallery" style="display:none;">
+    <div>
+        <div id="mixed-media-lightbox" class="yui3-lightbox home-details-fullscreen-lightbox">
+            <div class="yui3-lightbox-content">
+                <a id="closephoto" class="zsg-icon-x-thin lightbox-close" title="Close" tabindex="-1" style="color:white;"></a>
+                <div class="lightbox-body zsg-tooltip-viewport">
+                    <div class="zsg-tabview">
+                        <ul class="zsg-tabs">
+                            <li class="zsg-tab_active" style="right: 0; position: absolute;padding-right: 30px;"><a class="zsg-tab-link" href="#gallery">الصور</a></li>
+                        </ul>
+                        <div id="gallery" class="zsg-tab-panel zsg-tab_active">
+                            <div>
+                                <div class="hdp-photo-gallery-lightbox-content">
+                                    <div>
+                                        <div>
+
+
+
+                                            <div class="hdp-gallery-image-content">
+                                                <div class="hdp-gallery-image">
+                                                    <div>
+                                                        <div class="zsg-carousel-counter zsg-sm-hide zsg-md-hide">1 من 1</div>
+                                                        <picture class="image">
+
+    <div id="wrap">
+
+        <div class="cl-b"></div>
+
+        <div id="contentwrapper-slider">
+            <div id="contentcolumn-slider">
+
+                <div id="wowslider-container1" class="ws_gestures" style="font-size: 7.55556px;">
+                    <div class="ws_images" style="overflow: visible;">
+
+                        <div style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; overflow: hidden;">
+                            <div class="ws_list" style="position: absolute; top: 0px; height: 100%; transform: translate3d(0px, 0px, 0px); width: 10000%; left: -700%; opacity: 0;">
+                                <div class="ws_swipe_left" style="position: absolute; top: 0px; height: 100%; overflow: hidden; width: 1%; left: -1%;"><img src="http://www.orangesmile.com/common/img_cities_original/nice--1454990-0.jpg" title="Le port de Nice" id="wows1_0" class="wows1_0" style="visibility: visible; margin-top: 0px;"></div>
+                                <ul id="photolist" style="width: 100%;">
+
+                                </ul>
+                                <div class="ws_swipe_right" style="position: absolute; top: 0px; height: 100%; overflow: hidden; width: 1%; left: 12%;"><img src="http://www.orangesmile.com/common/img_cities_original/nice--1454990-23.jpg" title="" id="wows1_11" class="wows1_11" style="visibility: visible; margin-top: 0px;"></div>
+                            </div>
+                        </div>
+                        <div class="ws_cover" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 10; background: rgb(255, 255, 255); opacity: 0;">
+                            <a href="#" style="display:none;position:absolute;left:0;top:0;width:100%;height:100%"></a>
+                        </div>
+                        <div class="ws_effect ws_carousel_basic" style="position: relative; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; perspective: 2000px; opacity: 1;">
+                            </div>
+                        <div style="position: absolute; padding: 0px; z-index: 56; right: 15px; bottom: 15px;"><a href="http://wowslider.com" style="position: relative; display: block; font-size: 15px; width: auto; height: auto; font-family: Arial; font-weight: normal; font-style: normal; padding: 1px 5px; margin: 0px; border-radius: 10px; outline: none;" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+                        <div class="ws_controls"><a href="#" class="ws_next"><span><i></i><b></b></span></a><a href="#" class="ws_prev prev"><span><i></i><b></b></span></a></div>
+                        <div class="ws-title-wrapper">
+                            <div class="ws-title" style=""></div>
+                            <div class="ws-title" style="display:none"></div>
+                        </div>
+                        <a href="#" class="ws_fullscreen"></a>
+                    </div>
+
+                    <div class="ws_thumbs" style="overflow: hidden;">
+                        <div style="top: 0px; transition: all 0ms linear 0s; left: -301px;">
+
+                        </div>
+                    </div>
+                    <!-- ws_thumbs -->
+                    <div class="ws_shadow"></div>
+                </div>
+                <!-- wowslider-container1 -->
+
+            </div>
+            <!-- end contentcolumn-slider -->
+        </div>
+        <!-- end contentwrapper-slider --></div>
+                                                            </picture>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <ul class="gallery-lightbox-nav hide-on-mobile-device">
+                                            <li class="photo-carousel-left-arrow zsg-button-group">
+                                                <div class="zsg-icon-expando-left"></div>
+                                            </li>
+                                            <li class="photo-carousel-right-arrow zsg-button-group ">
+                                               <div class="zsg-icon-expando-right"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <ul class="hdp-gallery-actions zsg-list_inline">
+                            <li>
+                                <ul class="contact-button-group">
+                                    <li class="contact-button">
+                                        <button class="contact-button-condensed ds-button fluid primary ds-label-small sm">اتصل بالوكيل</button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><span class="" id="save-hdp-button-photo"><span class="save-text">احفظ </span><span id="save-hdp-button-icon" class="zsg-icon-heart-line"></span> </span>
+                            </li>
+                            <li>مشاركة <span class="zsg-icon-mail"></span></li>
+                        </ul>
+                    </div>
+                    <div class="hdp-gallery-footer">
+                        <div class="hdp-gallery-home-info">
+                            <p>For Sale: $210,000 (3 beds, 1 bath, 1,423 sqft)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-lightbox-mask hdp-gallery-fullscreen-mask" style="display: block;"></div>
+    </div>
+</div>
+
+
+
+
+
+        <script src="{% static 'js/wowslider.js' %}"></script>
+<script src="{% static 'js/photoslider.js' %}"></script>
+
+
+
+
+
+
+        <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+        <script src="{% static 'js/Listing.js' %}"></script>
+        <script>
+    $('#cookieBar').fadeOut();
+function setCookie(cname, cvalue, exdays) {
+    var d=new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires="expires="+ d.toUTCString();
+    document.cookie=cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name=cname + "=";
+    var decodedCookie=decodeURIComponent(document.cookie);
+    var ca=decodedCookie.split(';');
+    for(var i=0;i <ca.length;i++) {
+        var c=ca[i];
+        while (c.charAt(0)==' ') {
+            c=c.substring(1);
+        }
+        if (c.indexOf(name)==0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+function listingShow(pk,address,latitude,longitude,created_dt)
+{
+loadListing(pk,address,latitude,longitude,created_dt);
+return false;
+}
+      </script>
+{% endblock %}

@@ -1,0 +1,5 @@
+redlib>=1.5.7
+redcmd>=1.2.10
+htmq>=1.0.0
+greencache>=1.0.0
+requests>=2.10.0

@@ -1,0 +1,52 @@
+
+{% extends 'base/Navbar.html' %}
+{% load static %}
+{% block head_title %}قائمة في طريقها{% endblock %}
+  {% block content %}
+<link href="{% static 'css/zsg-core.css' %}" type="text/css" rel="stylesheet" media="all" />
+<link href="{% static 'css/zsg-opt.css' %}" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;display=optional">
+   <style>
+
+
+        @font-face {
+            font-family: Ivar Headline;
+            font-display: optional;
+            src: url(/static/font/IvarHeadline-SemiBold-extended.woff2) format("woff2"), url(/static/font/IvarHeadline-SemiBold-extended.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+            unicode-range: u+0000-001f, u+0080-200f, u+2020-faff, u+fb10-ffff
+        }
+
+        @font-face {
+            font-family: Ivar Headline;
+            font-display: optional;
+            src: url(/static/font/IvarHeadline-SemiBold-core.woff2) format("woff2"), url(/static/font/IvarHeadline-SemiBold-core.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+            unicode-range: u+0020-007f, u+201?, u+fb0?
+        }
+
+    </style>
+        <div class="zsg-layout-width" style="direction:rtl;text-align:right" id="yui_3_18_1_1_1567434856473_57">
+            <main class="zsg-layout-content zsg-layout-top zsg-layout-bottom" id="yui_3_18_1_1_1567434856473_55">
+                <div class="zsg-lg-1-2-ext zsg-sm-1-1">
+                    <header>
+                        <h1 id="pagetitle">قائمة في طريقها!</h1></header>
+                    <section class="zsg-content-item">
+                        <p> تم تقديم قائمتك وهي حاليًا قيد المراجعة. ستتلقى الرد  من نظامنا الآلي في غضون الساعات القليلة القادمة إلى البريد الإلكتروني الخاص بك  حتى نتمكن من التحقق من بعض المعلومات. </p>
+                        <p><strong>قد يستغرق الأمر ما يصل إلى 24 ساعة بعد مراسلتنا قبل أن ترى قائمتك مباشرة.</strong></p>
+                        <p> شكرا لك على الإضافة مع فرص! </p>
+                        <br>
+                        <p> أسئلة حول عملية التحقق الخاصة بنا؟ تفضل بزيارة  <a href="/sell-your-home-on-zillow.htm" target="_blank">مركز المساعدة</a> لمزيد من المعلومات. </p>
+                        <p> في الأسابيع القادمة ، سنطلعك على آخر الأخبار والنصائح. </p>
+                    </section>
+                </div>
+                <div class="zsg-lg-1-2-ext zsg-sm-1-1 zsg-image zsg-content-item"></div>
+                <div class="zsg-lg-1-2-ext zsg-sm-1-1 posting-confirmation-btns"></div>
+            </main>
+        </div>
+
+{% endblock %}

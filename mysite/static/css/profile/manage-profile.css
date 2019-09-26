@@ -1,0 +1,8 @@
+﻿@keyframes zsgLoaderSpin{0%{transform:rotate(0)}
+100%{transform:rotate(360deg)}
+}
+.mpm-toolbar{display:none}
+.mpm-ccol-menu{display:block}
+@media screen and (max-width:1023px){.mpm-toolbar{display:block}
+.mpm-ccol-menu{display:none}
+}
